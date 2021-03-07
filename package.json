@@ -1,0 +1,25 @@
+{
+    "name": "nike-release-checker",
+    "version": "0.0.1",
+    "description": "Simple Nike Release checker",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "img": "node index.js img",
+        "reset": "node index.js reset",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "nike",
+        "nodejs"
+    ],
+    "author": "whoisYeshua",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "nedb": "^1.8.0",
+        "nedb-promise": "^2.0.1",
+        "prompt": "^1.1.0",
+        "terminal-image": "^1.2.1"
+    }
+}
