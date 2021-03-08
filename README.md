@@ -53,7 +53,7 @@ npm run reset
 
 ## UI preview:
 
-[Imgur](https://imgur.com/wmBlf6n.png)
+![Imgur](https://imgur.com/wmBlf6n.png)
 
 ## Countries
 
