@@ -123,10 +123,15 @@ const output = async products => {
 }
 
 const selectProduct = async (products, userSlug) => {
+    let exists
     for (const product of products) {
         if (product.slug === userSlug) {
+            exists = true
             await showProduct(product)
         }
+    }
+    if (!exists) {
+        await updateStorage()
     }
 }
 
