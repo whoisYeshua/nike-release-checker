@@ -8,7 +8,7 @@ This script lets you know the stock of Nike SNKRS products that are going to rel
 
 Script that accesses the Nike API to get product information from the upcoming feed and stores it at local DB. Then information outputs to the console, and can also be displayed if you paste correct product-URL.
 
-Script supports more than 50 countries, you can find a [list of them below](#SupportedCountries).
+Script supports more than 50 countries, you can find a [list of them below](#Countries).
 
 ## Requirements
 
@@ -53,9 +53,9 @@ npm run reset
 
 ## UI preview:
 
-[Imgur](https://i.imgur.com/zCHZI7J.png)
+[Imgur](https://imgur.com/wmBlf6n.png)
 
-## Supported Countries
+## Countries
 
 | Country Code |       Country        | Language | Emoji |
 | :----------: | :------------------: | :------: | :---: |
