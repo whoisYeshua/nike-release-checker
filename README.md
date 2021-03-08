@@ -112,3 +112,16 @@ npm run reset
 |      GB      |    United Kingdom    |  en-GB   |  🇬🇧   |
 
 Argentina, Brazil, and a couple of other countries are not supported due to the fact that they have a different API.
+
+## Access
+
+```js
+let url = new URL('https://api.nike.com/product_feed/threads/v2/')
+url.searchParams.append('filter', `marketplace(${country})`)
+url.searchParams.append('filter', `language(${language})`)
+url.searchParams.append('filter', 'channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)')
+url.searchParams.append('filter', 'upcoming(true)')
+url.searchParams.append('filter', 'exclusiveAccess(true,false)')
+```
+
+`country` is 'Country Code' and `language` is 'Language' from the [table above](#Countries)
