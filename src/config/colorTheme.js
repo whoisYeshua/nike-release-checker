@@ -1,4 +1,4 @@
-const colorTheme = {
+export const colorTheme = {
   slugTheme: ['brightMagenta'],
   modelTheme: ['brightCyan', 'bold'],
   idTheme: ['bold'],
@@ -8,5 +8,3 @@ const colorTheme = {
   lowStockTheme: ['brightRed', 'bold'],
   othersStockTheme: ['grey', 'bold'],
 }
-
-module.exports = { colorTheme }

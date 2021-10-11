@@ -1,4 +1,4 @@
-const formateData = data => {
+export const formateData = data => {
   const products = []
   for (const release of data) {
     const slug = {
@@ -34,5 +34,3 @@ const formateData = data => {
   }
   return products
 }
-
-module.exports = { formateData }

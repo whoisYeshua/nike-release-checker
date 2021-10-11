@@ -1,19 +1,19 @@
-const prompt = require('prompt')
-var colors = require('colors')
-const terminalImage = require('terminal-image')
+import prompt from 'prompt'
+import colors from 'colors'
+import terminalImage from 'terminal-image'
 
-const { getDataJSON, getDataBuffer } = require('./api/requests')
-const { availableCountries } = require('./config/availableCountries')
-const { colorTheme } = require('./config/colorTheme')
-const {
+import { getDataJSON, getDataBuffer } from './api/requests.js'
+import { availableCountries } from './config/availableCountries.js'
+import { colorTheme } from './config/colorTheme.js'
+import {
   getDatabaseCounts,
   getDatabaseDocument,
   setDatabaseDocumentBody,
   updateDatabaseDocument,
   removeDatabase,
-} = require('./database/database')
-const { countrySchema, urlSchema } = require('./scheme/shemes')
-const { formateData } = require('./util/formateData')
+} from './database/database.js'
+import { countrySchema, urlSchema } from './scheme/shemes.js'
+import { formateData } from './util/formateData.js'
 
 colors.setTheme(colorTheme)
 

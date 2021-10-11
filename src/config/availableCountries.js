@@ -1,4 +1,4 @@
-const availableCountries = {
+export const availableCountries = {
   AU: { country: 'Australia', language: 'en-GB', emoji: ' 🇦🇺  ' },
   CN: { country: 'China', language: 'zh-Hans', emoji: ' 🇨🇳  ' },
   IN: { country: 'India', language: 'en-GB', emoji: ' 🇮🇳  ' },
@@ -51,5 +51,3 @@ const availableCountries = {
   TR: { country: 'Turkey', language: 'tr', emoji: ' 🇹🇷  ' },
   GB: { country: 'United Kingdom', language: 'en-GB', emoji: ' 🇬🇧  ' },
 }
-
-module.exports = { availableCountries }

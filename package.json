@@ -2,7 +2,8 @@
     "name": "nike-release-checker",
     "version": "0.0.1",
     "description": "Simple Nike (SNKRS) Release checker",
-    "main": "./src/index.js",
+    "type": "module",
+    "exports": "./src/index.js",
     "scripts": {
         "start": "node ./src/index.js",
         "img": "node ./src/index.js img",

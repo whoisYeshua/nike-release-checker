@@ -1,4 +1,4 @@
-const Datastore = require('nedb-promise')
+import Datastore from 'nedb-promise'
 
 const database = Datastore({ filename: 'productDB', autoload: true })
 
@@ -10,7 +10,7 @@ const createBody = country => {
   }
 }
 
-const getDatabaseCounts = async () => {
+export const getDatabaseCounts = async () => {
   try {
     return await database.count({})
   } catch (error) {
@@ -19,7 +19,7 @@ const getDatabaseCounts = async () => {
   }
 }
 
-const getDatabaseDocument = async () => {
+export const getDatabaseDocument = async () => {
   try {
     return await database.findOne({ country: { $exists: true } })
   } catch (error) {
@@ -28,7 +28,7 @@ const getDatabaseDocument = async () => {
   }
 }
 
-const setDatabaseDocumentBody = async country => {
+export const setDatabaseDocumentBody = async country => {
   try {
     await database.insert(createBody(country))
   } catch (error) {
@@ -37,7 +37,7 @@ const setDatabaseDocumentBody = async country => {
   }
 }
 
-const updateDatabaseDocument = async (date, products) => {
+export const updateDatabaseDocument = async (date, products) => {
   try {
     await database.update(
       { country: { $exists: true } },
@@ -49,19 +49,11 @@ const updateDatabaseDocument = async (date, products) => {
   }
 }
 
-const removeDatabase = async () => {
+export const removeDatabase = async () => {
   try {
     await database.remove({}, { multi: true })
   } catch (error) {
     console.error(error)
     throw error
   }
-}
-
-module.exports = {
-  getDatabaseCounts,
-  getDatabaseDocument,
-  setDatabaseDocumentBody,
-  updateDatabaseDocument,
-  removeDatabase,
 }

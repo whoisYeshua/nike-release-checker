@@ -1,6 +1,6 @@
-const axios = require('axios')
+import axios from 'axios'
 
-const getDataJSON = async (country, language) => {
+export const getDataJSON = async (country, language) => {
   let url = new URL('https://api.nike.com/product_feed/threads/v2/')
   url.searchParams.append('filter', `marketplace(${country})`)
   url.searchParams.append('filter', `language(${language})`)
@@ -25,7 +25,7 @@ const getDataJSON = async (country, language) => {
   }
 }
 
-const getDataBuffer = async url => {
+export const getDataBuffer = async url => {
   const config = {
     method: 'get',
     url: url,
@@ -40,5 +40,3 @@ const getDataBuffer = async url => {
     console.error(error.message)
   }
 }
-
-module.exports = { getDataJSON, getDataBuffer }

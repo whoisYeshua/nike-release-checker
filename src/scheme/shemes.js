@@ -1,6 +1,6 @@
-const { availableCountries } = require('../config/availableCountries')
+import { availableCountries } from '../config/availableCountries.js'
 
-const countrySchema = {
+export const countrySchema = {
   properties: {
     country: {
       description: 'Choose your country alias (index)',
@@ -15,7 +15,7 @@ const countrySchema = {
     },
   },
 }
-const urlSchema = {
+export const urlSchema = {
   properties: {
     url: {
       description: 'Past product URL',
@@ -26,5 +26,3 @@ const urlSchema = {
     },
   },
 }
-
-module.exports = { countrySchema, urlSchema }
