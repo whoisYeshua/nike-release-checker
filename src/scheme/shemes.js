@@ -1,4 +1,4 @@
-import { availableCountries } from '../config/availableCountries.js'
+import { availableCountries } from '../config/index.js'
 
 export const countrySchema = {
   properties: {
@@ -15,6 +15,7 @@ export const countrySchema = {
     },
   },
 }
+
 export const urlSchema = {
   properties: {
     url: {

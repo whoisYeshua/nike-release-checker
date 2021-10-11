@@ -2,18 +2,17 @@ import prompt from 'prompt'
 import colors from 'colors'
 import terminalImage from 'terminal-image'
 
-import { getDataJSON, getDataBuffer } from './api/requests.js'
-import { availableCountries } from './config/availableCountries.js'
-import { colorTheme } from './config/colorTheme.js'
+import { getDataJSON, getDataBuffer } from './api/index.js'
+import { availableCountries, colorTheme } from './config/index.js'
 import {
   getDatabaseCounts,
   getDatabaseDocument,
   setDatabaseDocumentBody,
   updateDatabaseDocument,
   removeDatabase,
-} from './database/database.js'
-import { countrySchema, urlSchema } from './scheme/shemes.js'
-import { formateData } from './util/formateData.js'
+} from './database/index.js'
+import { countrySchema, urlSchema } from './scheme/index.js'
+import { formateData } from './util/index.js'
 
 colors.setTheme(colorTheme)
 
