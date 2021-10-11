@@ -104,7 +104,6 @@ const selectProduct = async (products, userSlug) => {
 }
 
 const showProduct = async product => {
-  console.log(product)
   console.group(product.slug.slugTheme)
 
   console.log(product.title)
