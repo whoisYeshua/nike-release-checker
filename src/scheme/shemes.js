@@ -1,6 +1,6 @@
-const { countries } = require('./available-countries')
+import { availableCountries } from '../config/index.js'
 
-const countrySchema = {
+export const countrySchema = {
   properties: {
     country: {
       description: 'Choose your country alias (index)',
@@ -9,13 +9,14 @@ const countrySchema = {
       required: true,
       maxLength: 2,
       conform: value => {
-        if (value in countries) return true
+        if (value in availableCountries) return true
         return false
       },
     },
   },
 }
-const urlSchema = {
+
+export const urlSchema = {
   properties: {
     url: {
       description: 'Past product URL',
@@ -26,5 +27,3 @@ const urlSchema = {
     },
   },
 }
-
-module.exports = { countrySchema, urlSchema }
