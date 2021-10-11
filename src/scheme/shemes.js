@@ -1,4 +1,4 @@
-const { countries } = require('./available-countries')
+const { availableCountries } = require('../config/availableCountries')
 
 const countrySchema = {
   properties: {
@@ -9,7 +9,7 @@ const countrySchema = {
       required: true,
       maxLength: 2,
       conform: value => {
-        if (value in countries) return true
+        if (value in availableCountries) return true
         return false
       },
     },
