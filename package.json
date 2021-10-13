@@ -5,6 +5,7 @@
     "type": "module",
     "exports": "./src/index.js",
     "scripts": {
+        "watch": "tsc --watch",
         "start": "node ./src/index.js",
         "img": "node ./src/index.js img",
         "reset": "node ./src/index.js reset",
@@ -28,6 +29,8 @@
         "terminal-image": "^2.0.0"
     },
     "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.0.0",
+        "@typescript-eslint/parser": "^5.0.0",
         "eslint": "^8.0.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^4.0.0",

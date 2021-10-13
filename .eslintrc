@@ -1,13 +1,23 @@
 {
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": "."
+  },
   "env": {
     "node": true,
     "es2021": true
   },
-  "parserOptions": {
-    "ecmaVersion": "latest"
-  },
-  "extends": ["eslint:recommended", "plugin:unicorn/recommended", "prettier"],
-  "plugins": ["unicorn", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:unicorn/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "plugins": ["unicorn", "@typescript-eslint", "prettier"],
   "rules": {
     "comma-dangle": ["error", "only-multiline"],
     "unicorn/prefer-module": 0,
