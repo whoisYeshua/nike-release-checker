@@ -6,7 +6,7 @@
     "exports": "./src/index.js",
     "scripts": {
         "watch": "tsc --watch",
-        "start": "node ./src/index.js",
+        "start": "node ./dist/index.js",
         "img": "node ./src/index.js img",
         "reset": "node ./src/index.js reset",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,6 +25,7 @@
         "axios": "^0.22.0",
         "nedb": "^1.8.0",
         "nedb-promise": "^2.0.1",
+        "picocolors": "^1.0.0",
         "prompt": "^1.2.0",
         "terminal-image": "^2.0.0"
     },

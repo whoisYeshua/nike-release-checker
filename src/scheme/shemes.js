@@ -8,10 +8,7 @@ export const countrySchema = {
       warning: 'Use only uppercase two-letter country code (index)',
       required: true,
       maxLength: 2,
-      conform: value => {
-        if (value in availableCountries) return true
-        return false
-      },
+      conform: value => !!availableCountries[value],
     },
   },
 }
