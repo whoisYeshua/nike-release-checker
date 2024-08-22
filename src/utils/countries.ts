@@ -1,4 +1,6 @@
-export const availableCountries = {
+import type { CountryInfo } from '../models/CountryInfo'
+
+export const countries = {
   AU: { country: 'Australia', language: 'en-GB', emoji: ' 🇦🇺  ' },
   CN: { country: 'China', language: 'zh-Hans', emoji: ' 🇨🇳  ' },
   IN: { country: 'India', language: 'en-GB', emoji: ' 🇮🇳  ' },
@@ -50,4 +52,4 @@ export const availableCountries = {
   CH: { country: 'Switzerland', language: 'en-GB', emoji: ' 🇨🇭  ' },
   TR: { country: 'Turkey', language: 'tr', emoji: ' 🇹🇷  ' },
   GB: { country: 'United Kingdom', language: 'en-GB', emoji: ' 🇬🇧  ' },
-}
+} as const satisfies Record<string, CountryInfo>
