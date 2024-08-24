@@ -1,18 +1,9 @@
-import pc from 'picocolors'
-import { Formatter } from 'picocolors/types'
+import { createElement } from 'react'
+import { render } from 'ink'
 
-let { magenta, cyan, green, yellow, red, gray, bold } = pc.createColors(true)
+import { clearOutput } from './utils/clearOutput.ts'
+import { Layout } from './layout/index.ts'
+import { Pages } from './pages/Pages.ts'
 
-export const colorTheme: Record<string, Formatter> = {
-  slugTheme: value => magenta(value),
-  modelTheme: value => cyan(bold(value)),
-  idTheme: value => bold(value),
-  stockTitleTheme: value => bold(value),
-  highStockTheme: value => green(bold(value)),
-  midStockTheme: value => yellow(bold(value)),
-  lowStockTheme: value => red(bold(value)),
-  othersStockTheme: value => gray(bold(value)),
-}
-
-console.log(colorTheme.slugTheme('red'))
-console.log(pc)
+clearOutput()
+render(createElement(Layout, null, createElement(Pages)))

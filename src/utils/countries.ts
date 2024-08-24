@@ -1,0 +1,62 @@
+export const countries = [
+	{ code: 'AU', name: 'Australia', language: 'en-GB', emoji: ' 🇦🇺  ' },
+	{ code: 'AT', name: 'Austria', language: 'de', emoji: ' 🇦🇹  ' },
+	{ code: 'BE', name: 'Belgium', language: 'de', emoji: ' 🇧🇪  ' },
+	{ code: 'BG', name: 'Bulgaria', language: 'en-GB', emoji: ' 🇧🇬  ' },
+	{ code: 'CA', name: 'Canada', language: 'en-GB', emoji: ' 🇨🇦  ' },
+	{ code: 'CL', name: 'Chile', language: 'es-419', emoji: ' 🇨🇱  ' },
+	{ code: 'CN', name: 'China', language: 'zh-Hans', emoji: ' 🇨🇳  ' },
+	{ code: 'HR', name: 'Croatia', language: 'en-GB', emoji: ' 🇭🇷  ' },
+	{ code: 'CZ', name: 'Czechia', language: 'cs', emoji: ' 🇨🇿  ' },
+	{ code: 'DK', name: 'Denmark', language: 'da', emoji: ' 🇩🇰  ' },
+	{ code: 'EG', name: 'Egypt', language: 'en-GB', emoji: ' 🇪🇬  ' },
+	{ code: 'FI', name: 'Finland', language: 'en-GB', emoji: ' 🇫🇮  ' },
+	{ code: 'FR', name: 'France', language: 'fr', emoji: ' 🇫🇷  ' },
+	{ code: 'DE', name: 'Germany', language: 'de', emoji: ' 🇩🇪  ' },
+	{ code: 'GR', name: 'Greece', language: 'el', emoji: ' 🇬🇷  ' },
+	{ code: 'HU', name: 'Hungary', language: 'en-GB', emoji: ' 🇭🇺  ' },
+	{ code: 'IN', name: 'India', language: 'en-GB', emoji: ' 🇮🇳  ' },
+	{ code: 'ID', name: 'Indonesia', language: 'en-GB', emoji: ' 🇮🇩  ' },
+	{ code: 'IE', name: 'Ireland', language: 'en-GB', emoji: ' 🇮🇪  ' },
+	{ code: 'IL', name: 'Israel', language: 'en-GB', emoji: ' 🇮🇱  ' },
+	{ code: 'IT', name: 'Italy', language: 'it', emoji: ' 🇮🇹  ' },
+	{ code: 'JP', name: 'Japan', language: 'ja', emoji: ' 🇯🇵  ' },
+	{ code: 'LU', name: 'Luxembourg', language: 'en-GB', emoji: ' 🇱🇺  ' },
+	{ code: 'MY', name: 'Malaysia', language: 'en-GB', emoji: ' 🇲🇾  ' },
+	{ code: 'MX', name: 'Mexico', language: 'es-419', emoji: ' 🇲🇽  ' },
+	{ code: 'MA', name: 'Morocco', language: 'en-GB', emoji: ' 🇲🇦  ' },
+	{ code: 'NL', name: 'Netherlands', language: 'nl', emoji: ' 🇳🇱  ' },
+	{ code: 'NZ', name: 'New Zealand', language: 'en-GB', emoji: ' 🇳🇿  ' },
+	{ code: 'NO', name: 'Norway', language: 'no', emoji: ' 🇳🇴  ' },
+	{ code: 'PH', name: 'Philippines', language: 'en-GB', emoji: ' 🇵🇭  ' },
+	{ code: 'PL', name: 'Poland', language: 'pl', emoji: ' 🇵🇱  ' },
+	{ code: 'PT', name: 'Portugal', language: 'pt-PT', emoji: ' 🇵🇹  ' },
+	{ code: 'PR', name: 'Puerto Rico', language: 'es-419', emoji: ' 🇵🇷  ' },
+	{ code: 'RO', name: 'Romania', language: 'en-GB', emoji: ' 🇷🇴  ' },
+	{ code: 'RU', name: 'Russia', language: 'ru', emoji: ' 🇷🇺  ' },
+	{ code: 'SA', name: 'Saudi Arabia', language: 'en-GB', emoji: ' 🇸🇦  ' },
+	{ code: 'SG', name: 'Singapore', language: 'en-GB', emoji: ' 🇸🇬  ' },
+	{ code: 'SK', name: 'Slovakia', language: 'en-GB', emoji: ' 🇸🇰  ' },
+	{ code: 'SI', name: 'Slovenia', language: 'en-GB', emoji: ' 🇸🇮  ' },
+	{ code: 'ZA', name: 'South Africa', language: 'en-GB', emoji: ' 🇿🇦  ' },
+	{ code: 'ES', name: 'Spain', language: 'es-ES', emoji: ' 🇪🇸  ' },
+	{ code: 'SE', name: 'Sweden', language: 'sv', emoji: ' 🇸🇪  ' },
+	{ code: 'CH', name: 'Switzerland', language: 'en-GB', emoji: ' 🇨🇭  ' },
+	{ code: 'TW', name: 'Taiwan', language: 'zh-Hant', emoji: ' 🇹🇼  ' },
+	{ code: 'TH', name: 'Thailand', language: 'th', emoji: ' 🇹🇭  ' },
+	{ code: 'TR', name: 'Turkey', language: 'tr', emoji: ' 🇹🇷  ' },
+	{ code: 'AE', name: 'United Arab Emirates', language: 'en-GB', emoji: ' 🇦🇪  ' },
+	{ code: 'GB', name: 'United Kingdom', language: 'en-GB', emoji: ' 🇬🇧  ' },
+	{ code: 'US', name: 'United States', language: 'en', emoji: ' 🇺🇸  ' },
+	{ code: 'UY', name: 'Uruguay', language: 'es-419', emoji: ' 🇺🇾  ' },
+	{ code: 'VN', name: 'Vietnam', language: 'en-GB', emoji: ' 🇻🇳  ' },
+] as const satisfies CountryInfo[]
+
+export interface CountryInfo {
+	code: string
+	name: string
+	language: string
+	emoji: string
+}
+
+export type CountryCode = (typeof countries)[number]['code']

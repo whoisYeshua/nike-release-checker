@@ -1,42 +1,36 @@
 {
-    "name": "nike-release-checker",
-    "version": "0.0.1",
-    "description": "Simple Nike (SNKRS) Release checker",
-    "type": "module",
-    "exports": "./src/index.js",
-    "scripts": {
-        "watch": "tsc --watch",
-        "start": "node ./dist/index.js",
-        "img": "node ./src/index.js img",
-        "reset": "node ./src/index.js reset",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "engines": {
-        "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-    },
-    "keywords": [
-        "nike",
-        "snkrs",
-        "nodejs"
-    ],
-    "author": "whoisYeshua",
-    "license": "ISC",
-    "dependencies": {
-        "axios": "^0.22.0",
-        "nedb": "^1.8.0",
-        "nedb-promise": "^2.0.1",
-        "picocolors": "^1.0.0",
-        "prompt": "^1.2.0",
-        "terminal-image": "^2.0.0"
-    },
-    "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.0.0",
-        "@typescript-eslint/parser": "^5.0.0",
-        "eslint": "^8.0.0",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-unicorn": "^37.0.0",
-        "prettier": "^2.3.2",
-        "typescript": "^4.5.0-beta"
-    }
+	"name": "test-cli",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"private": true,
+	"main": "index.js",
+	"scripts": {
+		"start": "node --experimental-strip-types --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.ts ",
+		"lint:ts": "tsc --noEmit"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@nanostores/persistent": "0.10.2",
+		"@nanostores/react": "0.7.3",
+		"@nanostores/router": "0.15.1",
+		"ink": "5.0.1",
+		"ink-select-input": "6.0.0",
+		"ink-spinner": "5.0.0",
+		"nanostores": "0.11.2",
+		"react": "18.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "22.5.0",
+		"@types/react": "18.3.4",
+		"chokidar": "3.6.0",
+		"msw": "2.3.5",
+		"prettier": "3.3.3",
+		"typescript": "5.5.4"
+	},
+	"engines": {
+		"node": ">=22.6"
+	}
 }
