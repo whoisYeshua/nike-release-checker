@@ -10,4 +10,6 @@ dist
 .vscode
 
 # misc
+.yalc
+yalc.lock
 .DS_Store

@@ -2,13 +2,13 @@
 	"compilerOptions": {
 		/* Visit https://aka.ms/tsconfig to read more about this file */
 		/* Language and Environment */
-		"target": "ESNext",
+		"target": "esnext",
 		"jsx": "react-jsx",
 
 		/* Modules */
-		"module": "ESNext" /* Specify what module code is generated. */,
-		"moduleResolution": "Bundler" /* Specify how TypeScript looks up a file from a given module specifier. */,
+		"module": "nodenext" /* Specify what module code is generated. */,
 		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
 
 		/* Emit */
 		"noEmit": true,
@@ -18,16 +18,17 @@
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": false,
 		"forceConsistentCasingInFileNames": true,
+		"erasableSyntaxOnly": true,
+		"verbatimModuleSyntax": true,
 
 		/* Type Checking */
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-		"verbatimModuleSyntax": true,
 
 		/* Completeness */
 		"skipLibCheck": true /* Skip type checking all .d.ts files. */
 	},
-	"include": ["src/**/*"]
+	"include": ["src", "snkrs-sdk"]
 }

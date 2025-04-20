@@ -9,4 +9,9 @@ export const inputDictionary = {
 		routeName: 'selectCountry',
 		url: '/select-country',
 	},
+	PRODUCT: {
+		key: '3',
+		routeName: 'product',
+		url: '/product',
+	},
 } as const
