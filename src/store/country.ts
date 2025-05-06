@@ -9,7 +9,7 @@ import type { CountryCode } from '#snkrs-sdk'
 
 const { HOME, COUNTRY } = inputDictionary
 
-const createCountry = () => {
+export const createCountry = () => {
 	const $country = persistentAtom<(typeof availableCountries)[number] | null>('country', null, {
 		encode: JSON.stringify,
 		decode: JSON.parse,

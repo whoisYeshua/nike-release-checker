@@ -1,5 +1,6 @@
-import { describe, test } from 'node:test'
 import assert from 'node:assert/strict'
+import { describe, test } from 'node:test'
+
 import { CustomError } from './Error.ts'
 
 describe('CustomError', () => {
@@ -34,5 +35,12 @@ describe('CustomError', () => {
 		assert.strictEqual(result.name, 'AbortError')
 		assert.strictEqual(result.message, 'This operation was aborted')
 		assert.ok(result instanceof DOMException)
+	})
+
+	test('constructor should set correct name and message', () => {
+		const error = new CustomError('Test error message')
+		assert.strictEqual(error.name, 'CustomError')
+		assert.strictEqual(error.message, 'Test error message')
+		assert.ok(error instanceof Error)
 	})
 })

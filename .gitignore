@@ -5,4 +5,4 @@ dist
 yalc.lock
 
 #db
-local.db*
+*.db*

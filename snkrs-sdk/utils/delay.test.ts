@@ -1,8 +1,10 @@
-import { afterEach, beforeEach, describe, mock, test, type Mock } from 'node:test'
 import assert from 'node:assert/strict'
+import { afterEach, beforeEach, describe, mock, test } from 'node:test'
 
 import { delay } from './delay.ts'
 import { CustomError } from './Error.ts'
+
+import type { Mock } from 'node:test'
 
 describe('delay', () => {
 	const originalSetTimeout = global.setTimeout
@@ -49,7 +51,7 @@ describe('delay', () => {
 			(error: unknown) => {
 				assert.ok(CustomError.isAbortError(error))
 				return true
-			},
+			}
 		)
 		assert.ok(mockedClearTimeout.mock.callCount(), 'should clear delay timeout when reject')
 	})
@@ -60,7 +62,44 @@ describe('delay', () => {
 
 		await delay(0, { signal })
 		assert.ok(
-			(signal.removeEventListener as Mock<typeof signal.removeEventListener>).mock.callCount(),
+			(signal.removeEventListener as Mock<typeof signal.removeEventListener>).mock.callCount()
+		)
+	})
+
+	test('should handle zero delay correctly', async () => {
+		mockedSetTimeout.mock.mockImplementation(((cb: Function) => cb()) as any)
+		await delay(0)
+		assert.strictEqual(mockedSetTimeout.mock.callCount(), 1)
+	})
+
+	test('should pass negative delay to setTimeout as is', async () => {
+		mockedSetTimeout.mock.mockImplementation(((cb: Function) => cb()) as any)
+		await delay(-100)
+		const [_, setTimeoutDelay] = mockedSetTimeout.mock.calls[0].arguments
+		assert.strictEqual(setTimeoutDelay, -100)
+	})
+
+	test('should not add abort listener when signal is not provided', async () => {
+		const signal = new AbortController().signal
+		mock.method(signal, 'addEventListener')
+
+		await delay(0)
+		assert.strictEqual(
+			(signal.addEventListener as Mock<typeof signal.addEventListener>).mock.callCount(),
+			0
+		)
+	})
+
+	test('should handle abort with custom reason', async () => {
+		const controller = new AbortController()
+		const { signal } = controller
+		const customReason = new Error('Custom abort reason')
+
+		queueMicrotask(() => controller.abort(customReason))
+
+		await assert.rejects(
+			() => delay(100, { signal }),
+			(error: unknown) => error === customReason
 		)
 	})
 })

@@ -1,5 +1,5 @@
 {
-	"name": "@sevan-aio/nike-release-checker-terminal",
+	"name": "nike-release-checker",
 	"description": "Simple terminal Nike stock checker (50+ countries)",
 	"version": "1.0.0",
 	"type": "module",
@@ -13,7 +13,7 @@
 		"start:debug": "tsx --inspect-brk --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"start:watch": "tsx --watch-path=./src --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"build": "rspack build",
-		"test": "node --experimental-strip-types --no-warnings --test",
+		"test": "node --experimental-strip-types --experimental-webstorage --localstorage-file=test.db --no-warnings --test",
 		"lint:ts": "tsc --noEmit"
 	},
 	"keywords": [
