@@ -110,7 +110,7 @@ const createSelectedModel = () => {
 export const $selectedModel = createSelectedModel()
 
 const createProductImageStore = () => {
-	const store = map<Record<string, { data?: ArrayBuffer; loading?: boolean }>>()
+	const store = map<Record<string, { data?: ArrayBuffer | null; loading: boolean }>>()
 
 	onMount(store, () => {
 		$selectedProduct.subscribe((selectedProduct) => {
@@ -118,13 +118,13 @@ const createProductImageStore = () => {
 			if (!slug || store.get()[slug]) return
 			task(async () => {
 				try {
-					store.setKey(slug, { loading: true })
+					store.setKey(slug, { loading: true, data: null })
 					const response = await fetch(selectedProduct.imageUrl)
 					if (!response.ok) return
 					const arrayBuffer = await response.arrayBuffer()
-					store.setKey(slug, { data: arrayBuffer })
-				} finally {
-					store.setKey(slug, { loading: false })
+					store.setKey(slug, { data: arrayBuffer, loading: false })
+				} catch {
+					store.setKey(slug, { data: null, loading: false })
 				}
 			})
 		})
