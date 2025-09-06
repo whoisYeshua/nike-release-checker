@@ -13,6 +13,7 @@ const stockColorMap = {
 	MEDIUM: 'yellow',
 	LOW: 'red',
 	OOS: 'gray',
+	NA: 'black',
 } satisfies Record<Level, TextProps['color']>
 
 export const SizeItem = ({ size, stock }: SizeItemProps) => {

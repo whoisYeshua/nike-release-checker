@@ -56,7 +56,9 @@ const ModelImage = () => {
 
 	if (model?.loading)
 		return (
-			<Box height={12} alignItems="center">
+			<Box height={10} alignItems="center">
+				<Spinner type="dots" />
+				<Spinner type="dots" />
 				<Spinner type="dots" />
 			</Box>
 		)

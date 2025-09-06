@@ -116,7 +116,7 @@ export interface AvailableGtin {
 	readonly styleType: 'INLINE'
 }
 
-export type Level = 'HIGH' | 'LOW' | 'MEDIUM' | 'OOS'
+export type Level = 'HIGH' | 'LOW' | 'MEDIUM' | 'OOS' | 'NA'
 
 export interface LocationID {
 	readonly id: MerchGroup

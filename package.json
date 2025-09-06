@@ -9,7 +9,7 @@
 		"#snkrs-sdk/mocks": "./snkrs-sdk/mocks/node.ts"
 	},
 	"scripts": {
-		"start": "tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
+		"start": "tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
 		"start:debug": "tsx --inspect-brk --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"start:watch": "tsx --watch-path=./src --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"build": "rspack build",
