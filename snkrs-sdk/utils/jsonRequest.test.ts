@@ -1,15 +1,17 @@
-import { describe, test, beforeEach, afterEach, mock, type Mock } from 'node:test'
 import assert from 'node:assert/strict'
-import { jsonRequest } from './jsonRequest.ts'
-import { HttpError } from './HttpError.ts'
-import { CustomError } from './Error.ts'
+import { afterEach, beforeEach, describe, mock, test } from 'node:test'
 
+import { CustomError } from './Error.ts'
+import { HttpError } from './HttpError.ts'
+import { jsonRequest } from './jsonRequest.ts'
+
+import type { Mock } from 'node:test'
 import type { RequestOptions } from './jsonRequest.ts'
 
 describe('jsonRequest', () => {
 	const defaultOptions: RequestOptions = {
 		url: new URL('http://example.com'),
-		method: 'GET',
+		method: 'GET'
 	}
 
 	const originalConsoleError = global.console.error
@@ -26,7 +28,7 @@ describe('jsonRequest', () => {
 		mockedFetch = mock.fn(originalFetch)
 		mockedSetTimeout = mock.fn(originalSetTimeout)
 
-		// Mock gloabal methods
+		// Mock global methods
 		global.console.error = mockedConsoleError // to prevent junks in console during test
 		global.fetch = mockedFetch
 		global.setTimeout = mockedSetTimeout
@@ -45,7 +47,7 @@ describe('jsonRequest', () => {
 	test('should successfully fetch and parse JSON', async () => {
 		const mockResponse = { data: 'test' }
 		mockedFetch.mock.mockImplementation(
-			async () => new Response(JSON.stringify(mockResponse), { status: 200 }),
+			async () => new Response(JSON.stringify(mockResponse), { status: 200 })
 		)
 
 		const result = await jsonRequest(defaultOptions)
@@ -60,7 +62,7 @@ describe('jsonRequest', () => {
 			(error: unknown) => {
 				assert.ok(error instanceof SyntaxError)
 				return true
-			},
+			}
 		)
 	})
 
@@ -89,7 +91,7 @@ describe('jsonRequest', () => {
 				assert.ok(error instanceof HttpError)
 				assert.strictEqual(error.statusCode, 404)
 				return true
-			},
+			}
 		)
 	})
 
@@ -104,7 +106,7 @@ describe('jsonRequest', () => {
 			(error: unknown) => {
 				assert.ok(CustomError.isAbortError(error))
 				return true
-			},
+			}
 		)
 	})
 
@@ -116,7 +118,7 @@ describe('jsonRequest', () => {
 			(error: unknown) => {
 				assert.ok(CustomError.isTimeoutError(error))
 				return true
-			},
+			}
 		)
 	})
 
@@ -124,7 +126,7 @@ describe('jsonRequest', () => {
 		const mockedAbortSignalTimeout = mock.fn(originalAbortSignal.timeout)
 		mock.method(global.AbortSignal, 'timeout', mockedAbortSignalTimeout)
 		mockedFetch.mock.mockImplementation(
-			async () => new Response(JSON.stringify({ success: true }), { status: 200 }),
+			async () => new Response(JSON.stringify({ success: true }), { status: 200 })
 		)
 
 		await jsonRequest(defaultOptions)
@@ -145,7 +147,7 @@ describe('jsonRequest', () => {
 
 		const options: RequestOptions = {
 			...defaultOptions,
-			retry: { count: retryCount, timeout: retryTimeout },
+			retry: { count: retryCount, timeout: retryTimeout }
 		}
 
 		const result = await jsonRequest(options)
@@ -188,7 +190,7 @@ describe('jsonRequest', () => {
 		const requestBody = { key: 'value' }
 
 		mockedFetch.mock.mockImplementation(
-			async () => new Response(JSON.stringify(mockResponse), { status: 200 }),
+			async () => new Response(JSON.stringify(mockResponse), { status: 200 })
 		)
 
 		const options: RequestOptions = { ...defaultOptions, method: 'POST', body: requestBody }

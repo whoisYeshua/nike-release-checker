@@ -17,7 +17,7 @@ describe('delay', () => {
 		mockedSetTimeout = mock.fn(originalSetTimeout)
 		mockedClearTimeout = mock.fn(originalClearTimeout)
 
-		// Mock gloabal methods
+		// Mock global methods
 		global.setTimeout = mockedSetTimeout
 		global.clearTimeout = mockedClearTimeout
 	})
