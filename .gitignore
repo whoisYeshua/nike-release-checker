@@ -6,3 +6,5 @@ yalc.lock
 
 #db
 *.db*
+.vercel
+.env*.local

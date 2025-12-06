@@ -1,6 +1,4 @@
-import { availableCountries, formatProductFeedResponse, getProductFeed } from '#snkrs-sdk'
-
-import { getCachedFeed, upsertFeedCache } from '../lib/cache.ts'
+import { availableCountries, formatProductFeedResponse, getProductFeed } from '../../snkrs-sdk/index.ts'
 
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 
@@ -17,18 +15,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 	}
 
 	try {
-		const cached = await getCachedFeed(targetCountry.code)
-		if (cached) {
-			const formatted = formatProductFeedResponse(cached.data)
-			return res.status(200).json(formatted)
-		}
 
 		const data = await getProductFeed({
 			countryCode: targetCountry.code,
 			language: targetCountry.language,
 		})
-
-		await upsertFeedCache(targetCountry.code, data)
 
 		const formatted = formatProductFeedResponse(data)
 		return res.status(200).json(formatted)
