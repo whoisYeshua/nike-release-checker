@@ -3,7 +3,7 @@ import { rspack } from '@rspack/core'
 
 export default defineConfig({
 	entry: './src/index.tsx',
-	target: 'node22.14',
+	target: 'node24.11',
 	output: {
 		filename: 'bundle.cjs',
 		chunkFormat: 'commonjs',

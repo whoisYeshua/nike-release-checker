@@ -1,4 +1,4 @@
-import type { Level, ProductFeed, ProductInfo } from './model.js'
+import type { Level, ProductFeed, ProductInfo } from './model.ts'
 
 interface Size {
 	id: string
