@@ -1,6 +1,6 @@
 import { delay } from './delay.ts'
 import { CustomError } from './Error.ts'
-import { RateLimitError, HttpError } from './HttpError.ts'
+import { HttpError, RateLimitError } from './HttpError.ts'
 
 interface RetryOptions {
 	count: number
@@ -23,7 +23,7 @@ const DEFAULT_ABORT_TIMEOUT = 30 * 1000 // 30 seconds
 const handleError = async (error: Error, options: RequestOptions): Promise<never> => {
 	if (CustomError.isTimeoutError(error)) {
 		console.error(
-			`Timeout: It took more than ${DEFAULT_ABORT_TIMEOUT / 1000} seconds to get the result!`,
+			`Timeout: It took more than ${DEFAULT_ABORT_TIMEOUT / 1000} seconds to get the result!`
 		)
 	} else if (CustomError.isAbortError(error)) {
 		console.error('Aborted by user action')

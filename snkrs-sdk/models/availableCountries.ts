@@ -9,7 +9,7 @@ export const availableCountries = [
 		name: 'Chile',
 		description: 'Not supported currently',
 		language: 'es-419',
-		emoji: '🇨🇱'
+		emoji: '🇨🇱',
 	}, // No dedicated API; only HTML pages are available. Not supported currently.
 	{ code: 'CN', name: 'China', description: '', language: 'zh-Hans', emoji: '🇨🇳' },
 	{ code: 'HR', name: 'Croatia', description: '', language: 'en-GB', emoji: '🇭🇷' },
@@ -61,8 +61,8 @@ export const availableCountries = [
 		name: 'Vietnam',
 		description: 'Check Thailand for SNKRS data',
 		language: 'en-GB',
-		emoji: '🇻🇳'
-	} // Looks like SNKRS redirect to Thailand
+		emoji: '🇻🇳',
+	}, // Looks like SNKRS redirect to Thailand
 ] as const satisfies AvailableCountry[]
 
 export interface AvailableCountry {

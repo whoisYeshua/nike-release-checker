@@ -11,7 +11,7 @@ import type { RequestOptions } from './jsonRequest.ts'
 describe('jsonRequest', () => {
 	const defaultOptions: RequestOptions = {
 		url: new URL('http://example.com'),
-		method: 'GET'
+		method: 'GET',
 	}
 
 	const originalConsoleError = global.console.error
@@ -147,7 +147,7 @@ describe('jsonRequest', () => {
 
 		const options: RequestOptions = {
 			...defaultOptions,
-			retry: { count: retryCount, timeout: retryTimeout }
+			retry: { count: retryCount, timeout: retryTimeout },
 		}
 
 		const result = await jsonRequest(options)

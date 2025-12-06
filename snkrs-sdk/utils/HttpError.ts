@@ -20,7 +20,7 @@ export class RateLimitError extends HttpError {
 		const retryAfterSeconds = Math.abs(parseInt(response.headers.get('Retry-After') ?? '5', 10)) // Default to 5 seconds if Retry-After is not present
 		super(
 			RateLimitError.statusCode,
-			`Too many requests to resource, cooldown in ${retryAfterSeconds} seconds.`,
+			`Too many requests to resource, cooldown in ${retryAfterSeconds} seconds.`
 		)
 		this.retryAfter = retryAfterSeconds * 1000
 	}

@@ -1,8 +1,9 @@
+import { rest } from '../utils/rest.ts'
 import { getProductFeedUrl } from './url.ts'
-import { rest, type GetOptions } from '../utils/rest.ts'
 
-import type { ProductFeedUrlParams } from './url.ts'
+import type { GetOptions } from '../utils/rest.ts'
 import type { ProductFeedResponse } from './model.ts'
+import type { ProductFeedUrlParams } from './url.ts'
 
 type GetProductFeedParams = ProductFeedUrlParams & Omit<GetOptions, 'url'>
 

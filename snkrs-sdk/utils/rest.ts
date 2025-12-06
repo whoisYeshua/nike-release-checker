@@ -1,4 +1,6 @@
-import { type RequestOptions, jsonRequest } from './jsonRequest.ts'
+import { jsonRequest } from './jsonRequest.ts'
+
+import type { RequestOptions } from './jsonRequest.ts'
 
 export type GetOptions = Pick<RequestOptions, 'url' | 'signal' | 'abortTimeout' | 'retry'>
 

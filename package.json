@@ -14,6 +14,10 @@
 		"start:watch": "tsx --watch-path=./src --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"build": "rspack build",
 		"test": "node --experimental-webstorage --localstorage-file=test.db --no-warnings --test",
+		"format": "npm run format:prettier",
+		"format:prettier": "npm run lint:prettier -- --write",
+		"lint": "npm run lint:prettier && npm run lint:ts",
+		"lint:prettier": "prettier \"**/*.{json,[jt]s,[jt]sx,[cm][jt]s}\" --check",
 		"lint:ts": "tsc --noEmit"
 	},
 	"keywords": [
