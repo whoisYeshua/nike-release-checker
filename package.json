@@ -18,7 +18,8 @@
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:prettier && npm run lint:ts",
 		"lint:prettier": "prettier \"**/*.{json,[jt]s,[jt]sx,[cm][jt]s}\" --check",
-		"lint:ts": "tsc --noEmit"
+		"lint:ts": "tsc --noEmit",
+		"ci:check-product-feed": "tsx snkrs-sdk/ci-check-product-feed.ts"
 	},
 	"keywords": [
 		"api",

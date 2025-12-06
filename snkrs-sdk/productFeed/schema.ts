@@ -1,4 +1,5 @@
 import * as v from 'valibot'
+
 import { createSnkrsRootResponseSchema } from '../models/snkrsRootResponse.ts'
 
 export const MarketplaceSchema = v.union([
@@ -12,6 +13,7 @@ export const MarketplaceSchema = v.union([
 	v.literal('CH'),
 	v.literal('CL'),
 	v.literal('CN'),
+	v.literal('CAN'),
 	v.literal('CZ'),
 	v.literal('DE'),
 	v.literal('DK'),
@@ -86,6 +88,7 @@ export const MerchGroupSchema = v.union([
 	v.literal('US'),
 	v.literal('XA'),
 	v.literal('XP'),
+	v.literal('KR'),
 ])
 
 export const LevelSchema = v.union([
@@ -149,7 +152,7 @@ export const MerchPriceSchema = v.object({
 
 export const PromoExclusionSchema = v.union([v.literal('FALSE'), v.literal('TRUE')])
 
-export const BrandSchema = v.union([v.literal('Jordan'), v.literal('Nike')])
+export const BrandSchema = v.union([v.literal('Jordan'), v.literal('Nike'), v.literal('Converse')])
 
 export const ChannelSchema = v.union([
 	v.literal('Nike Store Experiences'),
@@ -168,7 +171,12 @@ export const CustomizationSchema = v.object({
 	nikeIdStyleCode: v.string(),
 })
 
-export const GenderSchema = v.union([v.literal('BOYS'), v.literal('GIRLS'), v.literal('MEN'), v.literal('WOMEN')])
+export const GenderSchema = v.union([
+	v.literal('BOYS'),
+	v.literal('GIRLS'),
+	v.literal('MEN'),
+	v.literal('WOMEN'),
+])
 
 export const LimitRetailExperienceValueSchema = v.union([
 	v.literal('Nike App Self-Checkout'),
@@ -186,7 +194,11 @@ export const ProductRollupSchema = v.object({
 	type: v.literal('Standard'),
 })
 
-export const ProductTypeSchema = v.union([v.literal('APPAREL'), v.literal('FOOTWEAR')])
+export const ProductTypeSchema = v.union([
+	v.literal('APPAREL'),
+	v.literal('FOOTWEAR'),
+	v.literal('EQUIPMENT'),
+])
 
 export const PublishTypeSchema = v.union([v.literal('FLOW'), v.literal('LAUNCH')])
 
@@ -197,6 +209,13 @@ export const SportTagSchema = v.union([
 	v.literal('Skateboarding'),
 	v.literal('Soccer'),
 	v.literal('Tennis'),
+	v.literal('Outdoor'),
+	v.literal('Running'),
+	v.literal('Lacrosse'),
+	v.literal('Training & Gym'),
+	v.literal('Baseball'),
+	v.literal('Workouts'),
+	v.literal('Football'),
 ])
 
 export const StatusSchema = v.union([v.literal('ACTIVE'), v.literal('HOLD'), v.literal('INACTIVE')])
@@ -220,7 +239,7 @@ export const MerchProductSchema = v.object({
 	channels: v.array(ChannelSchema),
 	classificationConcepts: v.array(v.unknown()),
 	colorCode: v.string(),
-	comingSoonCountdownClock: v.boolean(),
+	comingSoonCountdownClock: v.optional(v.boolean()),
 	commerceCountryExclusions: v.array(MarketplaceSchema),
 	commerceCountryInclusions: v.array(v.unknown()),
 	commerceEndDate: v.optional(v.string()),
@@ -254,14 +273,14 @@ export const MerchProductSchema = v.object({
 	notifyMeIndicator: v.boolean(),
 	pid: v.string(),
 	preOrder: v.boolean(),
-	productGroupId: v.string(),
+	productGroupId: v.optional(v.string()),
 	productRollup: ProductRollupSchema,
 	productType: ProductTypeSchema,
 	publishType: PublishTypeSchema,
 	quantityLimit: v.number(),
 	resourceType: v.literal('merchProduct'),
 	sizeConverterId: v.string(),
-	sizeGuideId: v.string(),
+	sizeGuideId: v.optional(v.string()),
 	snapshotId: v.string(),
 	softLaunchDate: v.optional(v.string()),
 	sportTags: v.array(SportTagSchema),
@@ -303,6 +322,7 @@ export const LangLocaleSchema = v.union([
 	v.literal('fr_FR'),
 	v.literal('it_IT'),
 	v.literal('ja_JP'),
+	v.literal('ko_KR'),
 	v.literal('nl_NL'),
 	v.literal('no_NO'),
 	v.literal('pl_PL'),
@@ -324,16 +344,16 @@ export const ProductContentSchema = v.object({
 	bestFor: v.array(v.unknown()),
 	colorDescription: v.string(),
 	colors: v.array(ColorSchema),
-	description: v.string(),
-	descriptionHeading: v.string(),
-	fullTitle: v.string(),
+	description: v.optional(v.string()),
+	descriptionHeading: v.optional(v.string()),
+	fullTitle: v.optional(v.string()),
 	globalPid: v.string(),
 	langLocale: LangLocaleSchema,
 	manufacturingCountriesOfOrigin: v.array(v.string()),
 	slug: v.optional(v.string()),
-	subtitle: v.string(),
+	subtitle: v.optional(v.string()),
 	techSpec: v.string(),
-	title: v.string(),
+	title: v.optional(v.string()),
 	widths: v.array(WidthSchema),
 })
 
@@ -341,7 +361,7 @@ export const CountrySpecificationSchema = v.object({
 	country: MarketplaceSchema,
 	localizedSize: v.string(),
 	localizedSizePrefix: v.optional(
-		v.union([v.literal('CM'), v.literal('EU'), v.literal('JP'), v.literal('UK'), v.literal('US')]),
+		v.union([v.literal('CM'), v.literal('EU'), v.literal('JP'), v.literal('UK'), v.literal('US')])
 	),
 	taxInfo: v.object({
 		commodityCode: v.optional(v.string()),
@@ -420,6 +440,7 @@ export const LandscapeSchema = v.object({
 })
 
 export const SecondaryPortraitSchema = v.object({
+	view: v.optional(v.string()),
 	id: v.optional(v.string()),
 	url: v.optional(v.string()),
 	aspectRatio: v.optional(v.number()),
@@ -443,6 +464,7 @@ export const ContainerTypeEnumSchema = v.union([
 	v.literal('image'),
 	v.literal('text'),
 	v.literal('video'),
+	v.literal('story_format'),
 ])
 
 export const CoverCardPropertiesSchema = v.object({
@@ -483,13 +505,16 @@ export const CoverCardSchema = v.object({
 
 export const CustomSchema = v.object({
 	hideFromStock: v.optional(v.array(v.unknown())),
-	hideFromUpcoming: v.optional(v.array(v.object({ productId: v.string(), styleColor: v.string() }))),
+	hideFromUpcoming: v.optional(
+		v.array(v.object({ productId: v.string(), styleColor: v.string() }))
+	),
 	restricted: v.optional(v.boolean()),
 	tags: v.optional(v.array(v.string())),
 })
 
 export const MetadataDecorationPayloadSchema = v.object({
-	hideFeedCard: v.boolean(),
+	hideFeedCard: v.optional(v.boolean()),
+	previewTitleOverride: v.optional(v.string()),
 })
 
 export const MetadataDecorationSchema = v.object({
@@ -524,7 +549,10 @@ export const SocialSchema = v.object({
 	share: v.boolean(),
 })
 
-export const PublishedContentThreadTypeSchema = v.union([v.literal('multi_product'), v.literal('product')])
+export const PublishedContentThreadTypeSchema = v.union([
+	v.literal('multi_product'),
+	v.literal('product'),
+])
 
 export const PublishedContentPropertiesSchema = v.object({
 	coverCard: CoverCardSchema,
@@ -552,7 +580,11 @@ export const AttrsSchema = v.object({
 	target: v.literal('_blank'),
 })
 
-export const MarkTypeSchema = v.union([v.literal('link'), v.literal('underline')])
+export const MarkTypeSchema = v.union([
+	v.literal('link'),
+	v.literal('underline'),
+	v.literal('strong'),
+])
 
 export const MarkSchema = v.object({
 	attrs: v.optional(AttrsSchema),
@@ -682,14 +714,14 @@ export const PublishedContentSchema = v.object({
 	language: v.string(),
 	links: PublishedContentLinksSchema,
 	marketplace: MarketplaceSchema,
-	nodes: v.array(PublishedContentNodeSchema),
+	nodes: v.optional(v.array(PublishedContentNodeSchema)),
 	payloadType: v.literal('thread'),
 	preview: v.boolean(),
 	properties: PublishedContentPropertiesSchema,
 	publishEndDate: v.string(),
 	publishStartDate: v.string(),
 	resourceType: v.literal('publishedContent'),
-	subType: v.literal('thread'),
+	subType: v.union([v.literal('thread'), v.literal('story_format')]),
 	supportedLanguages: v.array(v.unknown()),
 	type: v.literal('thread'),
 	version: v.string(),
@@ -729,6 +761,7 @@ export const ProductFeedSchema = v.object({
 })
 
 export const ProductFeedResponseSchema = createSnkrsRootResponseSchema(ProductFeedSchema)
+export type ProductFeedResponseOutput = v.InferOutput<typeof ProductFeedResponseSchema>
 
 export type MarketplaceOutput = v.InferOutput<typeof MarketplaceSchema>
 export type Collectionsv2Output = v.InferOutput<typeof Collectionsv2Schema>
@@ -749,7 +782,9 @@ export type ChannelOutput = v.InferOutput<typeof ChannelSchema>
 export type ConsumerChannelOutput = v.InferOutput<typeof ConsumerChannelSchema>
 export type CustomizationOutput = v.InferOutput<typeof CustomizationSchema>
 export type GenderOutput = v.InferOutput<typeof GenderSchema>
-export type LimitRetailExperienceValueOutput = v.InferOutput<typeof LimitRetailExperienceValueSchema>
+export type LimitRetailExperienceValueOutput = v.InferOutput<
+	typeof LimitRetailExperienceValueSchema
+>
 export type LimitRetailExperienceOutput = v.InferOutput<typeof LimitRetailExperienceSchema>
 export type ProductRollupOutput = v.InferOutput<typeof ProductRollupSchema>
 export type ProductTypeOutput = v.InferOutput<typeof ProductTypeSchema>
@@ -789,8 +824,12 @@ export type ProductOutput = v.InferOutput<typeof ProductSchema>
 export type PublishOutput = v.InferOutput<typeof PublishSchema>
 export type SEOOutput = v.InferOutput<typeof SEOSchema>
 export type SocialOutput = v.InferOutput<typeof SocialSchema>
-export type PublishedContentThreadTypeOutput = v.InferOutput<typeof PublishedContentThreadTypeSchema>
-export type PublishedContentPropertiesOutput = v.InferOutput<typeof PublishedContentPropertiesSchema>
+export type PublishedContentThreadTypeOutput = v.InferOutput<
+	typeof PublishedContentThreadTypeSchema
+>
+export type PublishedContentPropertiesOutput = v.InferOutput<
+	typeof PublishedContentPropertiesSchema
+>
 export type RichTextLinkOutput = v.InferOutput<typeof RichTextLinkSchema>
 export type AttrsOutput = v.InferOutput<typeof AttrsSchema>
 export type MarkTypeOutput = v.InferOutput<typeof MarkTypeSchema>
@@ -800,7 +839,9 @@ export type JSONBodyContentOutput = v.InferOutput<typeof JSONBodyContentSchema>
 export type JSONBodyOutput = v.InferOutput<typeof JSONBodySchema>
 export type DestinationOutput = v.InferOutput<typeof DestinationSchema>
 export type ActionOutput = v.InferOutput<typeof ActionSchema>
-export type PublishedContentNodePropertiesOutput = v.InferOutput<typeof PublishedContentNodePropertiesSchema>
+export type PublishedContentNodePropertiesOutput = v.InferOutput<
+	typeof PublishedContentNodePropertiesSchema
+>
 export type PurplePropertiesOutput = v.InferOutput<typeof PurplePropertiesSchema>
 export type NodeOutput = v.InferOutput<typeof NodeSchema>
 export type PublishedContentNodeOutput = v.InferOutput<typeof PublishedContentNodeSchema>
@@ -808,4 +849,3 @@ export type PublishedContentOutput = v.InferOutput<typeof PublishedContentSchema
 export type ProductInfoOutput = v.InferOutput<typeof ProductInfoSchema>
 export type SearchOutput = v.InferOutput<typeof SearchSchema>
 export type ProductFeedOutput = v.InferOutput<typeof ProductFeedSchema>
-

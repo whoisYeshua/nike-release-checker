@@ -1,6 +1,6 @@
-import type { ProductFeedResponse } from '../../../productFeed/model.ts'
+import type { ProductFeedResponseOutput } from '../../../productFeed/schema.ts'
 
-export const mockGetProductFeedData: ProductFeedResponse = {
+export const mockGetProductFeedData: ProductFeedResponseOutput = {
 	pages: {
 		prev: '',
 		next: '',

@@ -1,13 +1,13 @@
-import type { Level, ProductFeed, ProductInfo } from './model.ts'
+import type { LevelOutput, ProductFeedOutput, ProductInfoOutput } from './schema.ts'
 
 interface Size {
 	id: string
 	gtin: string
 	size: string
-	level: Level
+	level: LevelOutput
 }
 
-export const formatProductFeedResponse = (productsFeed: ProductFeed[]) => {
+export const formatProductFeedResponse = (productsFeed: ProductFeedOutput[]) => {
 	const initialReleases = productsFeed.map(getRelease)
 	const potentialChildReleases: string[] = []
 
@@ -28,7 +28,7 @@ export const formatProductFeedResponse = (productsFeed: ProductFeed[]) => {
 	return releasesWithoutTopChilds.toSorted((a, b) => a.title.localeCompare(b.title))
 }
 
-const getRelease = (productFeed: ProductFeed) => ({
+const getRelease = (productFeed: ProductFeedOutput) => ({
 	...productFeed,
 	slug: productFeed.publishedContent.properties.seo.slug,
 	title: productFeed.publishedContent.properties.coverCard.properties.title,
@@ -52,14 +52,14 @@ const getPriority = (name: string) => {
 	return 0
 }
 
-const getProductModel = (product: ProductInfo) => ({
+const getProductModel = (product: ProductInfoOutput) => ({
 	...product,
 	modelName: product.merchProduct.labelName,
 	id: product.merchProduct.id,
 	sizes: getSizes(product),
 })
 
-const getSizes = ({ skus, availableGtins }: ProductInfo) => {
+const getSizes = ({ skus, availableGtins }: ProductInfoOutput) => {
 	const sizes: Size[] = []
 	for (const { gtin, nikeSize, id } of skus) {
 		const level = availableGtins?.find((available) => available.gtin === gtin)?.level
