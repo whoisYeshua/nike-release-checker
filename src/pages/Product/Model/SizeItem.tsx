@@ -1,11 +1,11 @@
 import { Box, Text } from 'ink'
 
-import type { Level } from '#snkrs-sdk'
+import type { LevelOutput } from '#snkrs-sdk'
 import type { TextProps } from 'ink'
 
 interface SizeItemProps {
 	size: string
-	stock: Level
+	stock: LevelOutput
 }
 
 const stockColorMap = {
@@ -14,7 +14,7 @@ const stockColorMap = {
 	LOW: 'red',
 	OOS: 'gray',
 	NA: 'black',
-} satisfies Record<Level, TextProps['color']>
+} satisfies Record<LevelOutput, TextProps['color']>
 
 export const SizeItem = ({ size, stock }: SizeItemProps) => {
 	const color = stockColorMap[stock] ?? 'gray'
