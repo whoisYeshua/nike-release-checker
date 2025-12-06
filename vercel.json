@@ -1,0 +1,10 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"rewrites": [
+		{
+			"source": "/api/upcoming-releases/:countryCode",
+			"destination": "/api/upcoming-releases/[countryCode]"
+		}
+	]
+}
+
