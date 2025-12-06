@@ -2,10 +2,10 @@ import { useMemo } from 'react'
 import { useStore } from '@nanostores/react'
 import { Box, Text } from 'ink'
 import Spinner from 'ink-spinner'
-import { isEmpty } from 'radash'
 
 import { Select } from '../components/Select/Select.tsx'
 import { $products, $selectedProductSlug } from '../store/product.ts'
+import { isEmpty } from '../utils/isEmpty.ts'
 
 export const Home = () => {
 	const { loading, data } = useStore($products.value)
