@@ -63,5 +63,5 @@ const ModelImage = () => {
 			</Box>
 		)
 
-	if (model?.data) return <Image src={model.data} height={12} />
+	if (model?.data) return <Image src={model.data} height={18} width={18} />
 }
