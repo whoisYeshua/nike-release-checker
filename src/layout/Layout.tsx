@@ -1,6 +1,7 @@
 import { Box, Spacer } from 'ink'
 
 import { useInputProcess } from '../hooks/useInputProcess.ts'
+import { theme } from '../utils/theme.ts'
 import { Footer } from './Footer.tsx'
 import { Header } from './Header.tsx'
 
@@ -14,7 +15,7 @@ export const Layout = ({ children }: LayoutProps) => {
 	useInputProcess()
 
 	return (
-		<Box flexDirection="column" height={35}>
+		<Box flexDirection="column" height={theme.sizes.fullHeight}>
 			<Header />
 			<Box paddingLeft={2}>{children}</Box>
 			<Spacer />

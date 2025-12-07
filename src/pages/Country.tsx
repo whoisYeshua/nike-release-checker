@@ -3,6 +3,7 @@ import { Box, Text } from 'ink'
 
 import { Select } from '../components/Select/Select.tsx'
 import { $country } from '../store/country.ts'
+import { theme } from '../utils/theme.ts'
 
 const countryItems = availableCountries.map(({ code, name, description }) => ({
 	label: description ? `${name} (${description})` : name,
@@ -12,6 +13,10 @@ const countryItems = availableCountries.map(({ code, name, description }) => ({
 export const Country = () => (
 	<Box flexDirection="column">
 		<Text>Select Country: </Text>
-		<Select items={countryItems} limit={27} onSelect={({ value }) => ($country.value = value)} />
+		<Select
+			items={countryItems}
+			limit={theme.sizes.fullHeight - 7}
+			onSelect={({ value }) => ($country.value = value)}
+		/>
 	</Box>
 )

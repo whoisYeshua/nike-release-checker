@@ -6,6 +6,7 @@ import Spinner from 'ink-spinner'
 import { Select } from '../components/Select/Select.tsx'
 import { $products, $selectedProductSlug } from '../store/product.ts'
 import { isEmpty } from '../utils/isEmpty.ts'
+import { theme } from '../utils/theme.ts'
 
 export const Home = () => {
 	const { loading, data } = useStore($products.value)
@@ -27,7 +28,7 @@ export const Home = () => {
 			<Text>Select Product: </Text>
 			<Select
 				items={productsList}
-				limit={27}
+				limit={theme.sizes.fullHeight - 7}
 				onSelect={({ value }) => ($selectedProductSlug.value = value)}
 			/>
 		</Box>
