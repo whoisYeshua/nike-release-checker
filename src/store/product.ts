@@ -21,13 +21,20 @@ const createProducts = () => {
 	}
 
 	const $store = map<ProductState>(initialState)
+	let lastLoadedCountryKey: string | null = null
 
 	onMount($store, () =>
 		$country.value.subscribe((country) => {
 			if (!country) return
 
-			$store.set(initialState)
 			const { code: countryCode, language } = country
+			const countryKey = `${countryCode}:${language}`
+			const state = $store.get()
+
+			if (countryKey === lastLoadedCountryKey && state.data?.length && !state.error) return
+
+			lastLoadedCountryKey = countryKey
+			$store.set(initialState)
 
 			task(async () => {
 				try {
@@ -95,13 +102,9 @@ const createSelectedModel = () => {
 		value: computed(
 			[$selectedProduct, $selectedModelIdAtom],
 			(selectedProduct, selectedModelId) => {
-				if (!selectedProduct || !selectedModelId) return selectedProduct?.models[0] || null
-
-				return (
-					selectedProduct?.models.find((model) => model.id === selectedModelId) ||
-					selectedProduct?.models[0] ||
-					null
-				)
+				if (!selectedProduct) return null
+				if (!selectedModelId) return selectedProduct.models[0] ?? null
+				return selectedProduct.models.find((model) => model.id === selectedModelId) ?? null
 			}
 		),
 		setId: $selectedModelIdAtom.set,
