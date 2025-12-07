@@ -8,3 +8,7 @@ yalc.lock
 *.db*
 .vercel
 .env*.local
+
+
+#logs
+cli.*.log

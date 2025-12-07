@@ -10,7 +10,8 @@
 	},
 	"scripts": {
 		"start": "tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
-		"start:debug": "tsx --inspect-brk --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
+		"start:debug": "cross-env LOG_LEVEL=debug tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
+		"start:remote-debug": "cross-env LOG_LEVEL=debug tsx --inspect-brk --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"start:watch": "tsx --watch-path=./src --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"build": "rspack build",
 		"vercel:build": "node -v",
@@ -40,6 +41,9 @@
 		"ink-select-input": "6.1.0",
 		"ink-spinner": "5.0.0",
 		"nanostores": "1.1.0",
+		"pino": "10.1.0",
+		"pino-roll": "4.0.0",
+		"pretty-bytes": "7.1.0",
 		"react": "19.2.1",
 		"terminal-image": "4.1.0",
 		"valibot": "1.2.0"
@@ -51,6 +55,7 @@
 		"@types/node": "24.10.1",
 		"@types/react": "19.2.7",
 		"@vercel/node": "5.5.15",
+		"cross-env": "10.1.0",
 		"msw": "2.12.4",
 		"prettier": "3.7.4",
 		"tsx": "4.21.0",

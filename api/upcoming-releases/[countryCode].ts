@@ -1,4 +1,8 @@
-import { availableCountries, formatProductFeedResponse, getProductFeed } from '../../snkrs-sdk/index.ts'
+import {
+	availableCountries,
+	formatProductFeedResponse,
+	getProductFeed,
+} from '../../snkrs-sdk/index.ts'
 
 const getTargetCountry = (countryCode: string) =>
 	availableCountries.find(({ code }) => code === countryCode)
@@ -11,7 +15,10 @@ export async function GET(request: Request) {
 
 	if (!targetCountry) {
 		const acceptableCountries = availableCountries.map(({ code }) => code).join(', ')
-		return Response.json({ error: `Country not found. Acceptable countries: ${acceptableCountries}` }, { status: 400 })
+		return Response.json(
+			{ error: `Country not found. Acceptable countries: ${acceptableCountries}` },
+			{ status: 400 }
+		)
 	}
 
 	try {
