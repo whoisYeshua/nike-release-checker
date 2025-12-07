@@ -2,9 +2,8 @@
 # Build and pack the SEA executable for macOS arm64.
 set -euo pipefail
 
-# Paths and inputs
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-DIST_DIR="${ROOT_DIR}/dist"
+SEA_CONFIG_FILE="$(pwd)/sea-config.json"
+DIST_DIR="$(pwd)/dist"
 BUNDLE="${DIST_DIR}/bundle.cjs"
 BLOB="${DIST_DIR}/sea-prep.blob"
 OUTPUT_BIN="${DIST_DIR}/nike-release-checker-macos-arm64"
@@ -14,8 +13,8 @@ NODE_BIN="$(command -v node)"
 mkdir -p "${DIST_DIR}"
 rm -f "${BLOB}" "${OUTPUT_BIN}"
 
-echo "Building bundle..."
-npm run build --prefix "${ROOT_DIR}"
+echo "Building bundle to ${BUNDLE}"
+npm run build
 
 # Ensure the bundle exists before SEA prep
 if [[ ! -f "${BUNDLE}" ]]; then
@@ -23,10 +22,10 @@ if [[ ! -f "${BUNDLE}" ]]; then
 	exit 1
 fi
 
-echo "Generating SEA blob..."
-node --experimental-sea-config "${ROOT_DIR}/sea-config.json"
+echo "Generating SEA blob using config file ${SEA_CONFIG_FILE}"
+node --experimental-sea-config "${SEA_CONFIG_FILE}"
 
-echo "Copying Node binary..."
+echo "Copying Node binary ${NODE_BIN} to ${OUTPUT_BIN}"
 cp "${NODE_BIN}" "${OUTPUT_BIN}"
 
 # Remove old signature so injection succeeds

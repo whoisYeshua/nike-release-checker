@@ -121,7 +121,10 @@ export const $selectedProduct = computed($selectedProductSlug.value, (selectedPr
 	const product =
 		$products.value.get().data?.find(({ slug }) => slug === selectedProductSlug) ?? null
 
-	logger.debug('selected product resolved', { scope: 'selected-product', slug: selectedProductSlug })
+	logger.debug('selected product resolved', {
+		scope: 'selected-product',
+		slug: selectedProductSlug,
+	})
 
 	return product
 })
@@ -161,10 +164,11 @@ const createSelectedModel = () => {
 
 				const foundModel =
 					selectedProduct.models.find((model) => model.id === selectedModelId) ?? null
-				logger.debug(
-					'selected model resolved to ' + (foundModel?.modelName ?? foundModel?.id),
-					{ scope: LOG_SCOPE, slug: selectedProduct.slug, modelId: foundModel?.id }
-				)
+				logger.debug('selected model resolved to ' + (foundModel?.modelName ?? foundModel?.id), {
+					scope: LOG_SCOPE,
+					slug: selectedProduct.slug,
+					modelId: foundModel?.id,
+				})
 
 				return foundModel
 			}
@@ -205,15 +209,12 @@ const createProductImageStore = () => {
 					if (!response.ok) return
 					const arrayBuffer = await response.arrayBuffer()
 					store.setKey(slug, { data: arrayBuffer, loading: false })
-					logger.debug(
-						'product image fetch succeeded',
-						{
-							scope: LOG_SCOPE,
-							slug,
-							imageSize: prettyBytes(arrayBuffer.byteLength),
-							totalSize: prettyBytes(getTotalStoreBufferSize()),
-						}
-					)
+					logger.debug('product image fetch succeeded', {
+						scope: LOG_SCOPE,
+						slug,
+						imageSize: prettyBytes(arrayBuffer.byteLength),
+						totalSize: prettyBytes(getTotalStoreBufferSize()),
+					})
 					logger.info('product image fetch succeeded', { scope: LOG_SCOPE, slug })
 				} catch (error) {
 					const errorMsg = error instanceof Error ? error.message : 'unknown error'

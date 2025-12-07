@@ -1,7 +1,7 @@
 import path from 'node:path'
 
-import DailyRotateFile from 'winston-daily-rotate-file'
 import { createLogger, format } from 'winston'
+import DailyRotateFile from 'winston-daily-rotate-file'
 
 const logLevel = process.env.LOG_LEVEL ?? 'info'
 const logFilePath = path.join(process.cwd(), 'cli-%DATE%.log')
