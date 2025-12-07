@@ -14,6 +14,7 @@
 		"start:remote-debug": "cross-env LOG_LEVEL=debug tsx --inspect-brk --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"start:watch": "tsx --watch-path=./src --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"build": "rspack build",
+		"build:sea": "bash ./scripts/pack-sea.sh",
 		"build:check": "node --experimental-webstorage --localstorage-file=local.db dist/bundle.cjs",
 		"vercel:build": "node -v",
 		"test": "node --experimental-webstorage --localstorage-file=test.db --no-warnings --test",
@@ -58,6 +59,7 @@
 		"@vercel/node": "5.5.15",
 		"cross-env": "10.1.0",
 		"msw": "2.12.4",
+		"postject": "1.0.0-alpha.6",
 		"prettier": "3.7.4",
 		"tsx": "4.21.0",
 		"typescript": "5.9.3"
