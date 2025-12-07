@@ -12,15 +12,12 @@ export const $router = createRouter({
 })
 
 const LOG_SCOPE = 'router'
-logger.debug({ scope: LOG_SCOPE, routes: Object.keys($router.routes) }, 'router initialized')
+logger.debug('router initialized', { scope: LOG_SCOPE, routes: Object.keys($router.routes) })
 
 $router.listen((routerState) => {
-	logger.debug(
-		{
-			scope: LOG_SCOPE,
-			route: routerState?.route,
-			params: routerState?.params,
-		},
-		'router state change'
-	)
+	logger.debug('router state change', {
+		scope: LOG_SCOPE,
+		route: routerState?.route,
+		params: routerState?.params,
+	})
 })

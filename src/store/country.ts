@@ -18,7 +18,7 @@ export const createCountry = () => {
 	})
 
 	$country.subscribe((country) => {
-		logger.info({ scope: LOG_SCOPE, country }, 'country selected')
+		logger.info('country selected', { scope: LOG_SCOPE, country })
 		$router.open(country ? HOME.url : COUNTRY.url)
 	})
 
@@ -29,14 +29,14 @@ export const createCountry = () => {
 		set value(countryCode: CountryCode) {
 			const targetCountry = availableCountries.find(({ code }) => countryCode === code)
 			if (!targetCountry) {
-				logger.info({ scope: LOG_SCOPE, countryCode }, 'country code not found')
+				logger.info('country code not found', { scope: LOG_SCOPE, countryCode })
 				return
 			}
 
 			$country.set(targetCountry)
 		},
 		reset: () => {
-			logger.info({ scope: LOG_SCOPE }, 'country reset requested')
+			logger.info('country reset requested', { scope: LOG_SCOPE })
 			$country.set(null)
 		},
 		readableValue: computed($country, (countryObj) =>

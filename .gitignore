@@ -11,4 +11,4 @@ yalc.lock
 
 
 #logs
-cli.*.log
+cli*.log

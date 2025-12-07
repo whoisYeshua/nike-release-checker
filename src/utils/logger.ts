@@ -1,30 +1,26 @@
 import path from 'node:path'
 
-import pino from 'pino'
+import DailyRotateFile from 'winston-daily-rotate-file'
+import { createLogger, format } from 'winston'
 
-const logFilePath = path.join(process.cwd(), 'cli.log')
 const logLevel = process.env.LOG_LEVEL ?? 'info'
+const logFilePath = path.join(process.cwd(), 'cli-%DATE%.log')
 
-const transport = pino.transport({
-	target: 'pino-roll',
-	options: {
-		file: logFilePath,
-		frequency: 'daily',
-		size: 50, // megabytes
-		mkdir: true,
-	},
+const fileTransport = new DailyRotateFile({
+	filename: logFilePath,
+	maxSize: '50m',
 })
 
-export const logger = pino(
-	{
-		base: undefined,
-		level: logLevel,
-		timestamp: pino.stdTimeFunctions.isoTime,
-		formatters: {
-			level(label) {
-				return { level: label }
-			},
-		},
-	},
-	transport
-)
+export const logger = createLogger({
+	level: logLevel,
+	format: format.combine(
+		format.timestamp(),
+		format.printf(({ timestamp, level, message, scope = 'app', ...rest }) => {
+			const meta = Object.keys(rest).length ? ` ${JSON.stringify(rest)}` : ''
+			return `${timestamp} [${scope}] ${level}: ${message}${meta}`
+		})
+	),
+	// Keep payload lean; pino used `base: undefined`.
+	defaultMeta: undefined,
+	transports: [fileTransport],
+})

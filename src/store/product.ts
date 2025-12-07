@@ -29,7 +29,7 @@ const createProducts = () => {
 	onMount($store, () =>
 		$country.value.subscribe((country) => {
 			if (!country) {
-				logger.debug({ scope: LOG_SCOPE }, 'country not selected, skip product load')
+				logger.debug('country not selected, skip product load', { scope: LOG_SCOPE })
 				return
 			}
 
@@ -38,32 +38,38 @@ const createProducts = () => {
 			const state = $store.get()
 
 			if (countryKey === lastLoadedCountryKey && state.data?.length && !state.error) {
-				logger.debug(
-					{ scope: LOG_SCOPE, countryKey, itemCount: state.data.length },
-					'skip reload for same country with cached data'
-				)
+				logger.debug('skip reload for same country with cached data', {
+					scope: LOG_SCOPE,
+					countryKey,
+					itemCount: state.data.length,
+				})
 				return
 			}
 
 			lastLoadedCountryKey = countryKey
 			$store.set(initialState)
-			logger.debug({ scope: LOG_SCOPE, countryKey }, 'product load started')
+			logger.debug('product load started', { scope: LOG_SCOPE, countryKey })
 
 			task(async () => {
 				try {
 					const data = formatProductFeedResponse(await getProductFeed({ countryCode, language }))
 					$store.setKey('data', data)
-					logger.info(
-						{ scope: LOG_SCOPE, countryKey, itemCount: data.length },
-						'product load succeeded'
-					)
+					logger.info('product load succeeded', {
+						scope: LOG_SCOPE,
+						countryKey,
+						itemCount: data.length,
+					})
 				} catch (error) {
 					const errorMsg = error instanceof Error ? error.message : 'Some error ocured'
 					$store.setKey('error', errorMsg)
-					logger.error({ scope: LOG_SCOPE, countryKey, error: errorMsg }, 'product load failed')
+					logger.error('product load failed', {
+						scope: LOG_SCOPE,
+						countryKey,
+						error: errorMsg,
+					})
 				} finally {
 					$store.setKey('loading', false)
-					logger.debug({ scope: LOG_SCOPE, countryKey }, 'product load finished')
+					logger.debug('product load finished', { scope: LOG_SCOPE, countryKey })
 				}
 			})
 		})
@@ -81,7 +87,7 @@ const createSelectedProductSlug = () => {
 	const $store = atom<string | null>(null)
 
 	const reset = () => {
-		logger.info({ scope: LOG_SCOPE }, 'product slug cleared')
+		logger.info('product slug cleared', { scope: LOG_SCOPE })
 		$store.set(null)
 	}
 
@@ -102,7 +108,7 @@ const createSelectedProductSlug = () => {
 			return $store
 		},
 		set value(slug: string | null) {
-			logger.info({ scope: LOG_SCOPE, slug }, 'product slug set')
+			logger.info('product slug set', { scope: LOG_SCOPE, slug })
 			$store.set(slug)
 		},
 		reset,
@@ -115,10 +121,7 @@ export const $selectedProduct = computed($selectedProductSlug.value, (selectedPr
 	const product =
 		$products.value.get().data?.find(({ slug }) => slug === selectedProductSlug) ?? null
 
-	logger.debug(
-		{ scope: 'selected-product', slug: selectedProductSlug },
-		'selected product resolved'
-	)
+	logger.debug('selected product resolved', { scope: 'selected-product', slug: selectedProductSlug })
 
 	return product
 })
@@ -128,12 +131,12 @@ const createSelectedModel = () => {
 	const $selectedModelIdAtom = atom<string | null>(null)
 
 	const reset = () => {
-		logger.info({ scope: LOG_SCOPE }, 'model cleared')
+		logger.info('model cleared', { scope: LOG_SCOPE })
 		$selectedModelIdAtom.set(null)
 	}
 
 	$selectedProductSlug.value.listen(() => {
-		logger.debug({ scope: LOG_SCOPE }, 'selected product changed, resetting model')
+		logger.debug('selected product changed, resetting model', { scope: LOG_SCOPE })
 		reset()
 	})
 
@@ -142,31 +145,32 @@ const createSelectedModel = () => {
 			[$selectedProduct, $selectedModelIdAtom],
 			(selectedProduct, selectedModelId) => {
 				if (!selectedProduct) {
-					logger.debug({ scope: LOG_SCOPE }, 'no selected product')
+					logger.debug('no selected product', { scope: LOG_SCOPE })
 					return null
 				}
 
 				if (!selectedModelId) {
 					const fallbackModel = selectedProduct.models[0] ?? null
-					logger.debug(
-						{ scope: LOG_SCOPE, slug: selectedProduct.slug, modelId: fallbackModel?.id },
-						'no model selected, trying to use first available model'
-					)
+					logger.debug('no model selected, trying to use first available model', {
+						scope: LOG_SCOPE,
+						slug: selectedProduct.slug,
+						modelId: fallbackModel?.id,
+					})
 					return fallbackModel
 				}
 
 				const foundModel =
 					selectedProduct.models.find((model) => model.id === selectedModelId) ?? null
 				logger.debug(
-					{ scope: LOG_SCOPE, slug: selectedProduct.slug, modelId: foundModel?.id },
-					'selected model resolved to ' + (foundModel?.modelName ?? foundModel?.id)
+					'selected model resolved to ' + (foundModel?.modelName ?? foundModel?.id),
+					{ scope: LOG_SCOPE, slug: selectedProduct.slug, modelId: foundModel?.id }
 				)
 
 				return foundModel
 			}
 		),
 		setId: (modelId: string) => {
-			logger.info({ scope: LOG_SCOPE, modelId }, 'model selected')
+			logger.info('model selected', { scope: LOG_SCOPE, modelId })
 			$selectedModelIdAtom.set(modelId)
 		},
 	}
@@ -180,40 +184,44 @@ const createProductImageStore = () => {
 		Object.values(store.get()).reduce((acc, { data }) => acc + (data?.byteLength ?? 0), 0)
 
 	const uniqId = crypto.randomUUID()
-	logger.debug({ scope: LOG_SCOPE, uniqId }, 'product image store created')
+	logger.debug('product image store created', { scope: LOG_SCOPE, uniqId })
 	onMount(store, () => {
-		logger.debug({ scope: LOG_SCOPE, uniqId }, 'product image store mounted')
+		logger.debug('product image store mounted', { scope: LOG_SCOPE, uniqId })
 		return $selectedProduct.subscribe((selectedProduct) => {
 			const slug = selectedProduct?.slug
 			if (!slug) {
-				logger.debug({ scope: LOG_SCOPE }, 'skip image fetch, no product selected')
+				logger.debug('skip image fetch, no product selected', { scope: LOG_SCOPE })
 				return
 			}
 			if (store.get()[slug]) {
-				logger.debug({ scope: LOG_SCOPE, uniqId, slug }, 'image already cached, skipping fetch')
+				logger.debug('image already cached, skipping fetch', { scope: LOG_SCOPE, uniqId, slug })
 				return
 			}
 			task(async () => {
 				try {
-					logger.debug({ scope: LOG_SCOPE, slug }, 'product image fetch started')
+					logger.debug('product image fetch started', { scope: LOG_SCOPE, slug })
 					store.setKey(slug, { loading: true, data: null })
 					const response = await fetch(selectedProduct.imageUrl)
 					if (!response.ok) return
 					const arrayBuffer = await response.arrayBuffer()
 					store.setKey(slug, { data: arrayBuffer, loading: false })
 					logger.debug(
+						'product image fetch succeeded',
 						{
 							scope: LOG_SCOPE,
 							slug,
 							imageSize: prettyBytes(arrayBuffer.byteLength),
 							totalSize: prettyBytes(getTotalStoreBufferSize()),
-						},
-						'product image fetch succeeded'
+						}
 					)
-					logger.info({ scope: LOG_SCOPE, slug }, 'product image fetch succeeded')
+					logger.info('product image fetch succeeded', { scope: LOG_SCOPE, slug })
 				} catch (error) {
 					const errorMsg = error instanceof Error ? error.message : 'unknown error'
-					logger.error({ scope: LOG_SCOPE, slug, error: errorMsg }, 'product image fetch errored')
+					logger.error('product image fetch errored', {
+						scope: LOG_SCOPE,
+						slug,
+						error: errorMsg,
+					})
 					store.setKey(slug, { data: null, loading: false })
 				}
 			})
@@ -228,7 +236,7 @@ export const $selectedProductImage = computed(
 	(selectedProduct, productImageStore) => {
 		const LOG_SCOPE = 'selected-product-image'
 		if (!selectedProduct) {
-			logger.debug({ scope: LOG_SCOPE }, 'no product selected, image unavailable')
+			logger.debug('no product selected, image unavailable', { scope: LOG_SCOPE })
 			return
 		}
 		return productImageStore[selectedProduct.slug]
