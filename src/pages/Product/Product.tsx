@@ -5,8 +5,8 @@ import { Box, Text } from 'ink'
 import { Image } from '../../components/Image.tsx'
 import { Select } from '../../components/Select/Select.tsx'
 import { $selectedModel, $selectedProduct, $selectedProductImage } from '../../store/product.ts'
-import { Model } from './Model/Model.tsx'
 import { theme } from '../../utils/theme.ts'
+import { Model } from './Model/Model.tsx'
 
 export const Product = () => {
 	const selectedProduct = useStore($selectedProduct)
@@ -61,5 +61,6 @@ const ModelImage = () => {
 			</Box>
 		)
 
-	if (model?.data) return <Image src={model.data} height={theme.sizes.image} width={theme.sizes.image * 2} />
+	if (model?.data)
+		return <Image src={model.data} height={theme.sizes.image} width={theme.sizes.image * 2} />
 }
