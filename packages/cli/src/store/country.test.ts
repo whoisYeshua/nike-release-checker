@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { beforeEach, describe, mock, test } from 'node:test'
 
-import { availableCountries } from '#snkrs-sdk'
+import { availableCountries } from '@nike-release-checker/sdk'
 
 import { $router } from '../router.ts'
 import { inputDictionary } from '../utils/inputDictionary.ts'

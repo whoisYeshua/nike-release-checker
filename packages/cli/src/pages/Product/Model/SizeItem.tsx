@@ -1,6 +1,6 @@
 import { Box, Text } from 'ink'
 
-import type { LevelOutput } from '#snkrs-sdk'
+import type { LevelOutput } from '@nike-release-checker/sdk'
 import type { TextProps } from 'ink'
 
 interface SizeItemProps {

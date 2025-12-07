@@ -2,8 +2,11 @@
 # Build and pack the SEA executable for macOS arm64.
 set -euo pipefail
 
-SEA_CONFIG_FILE="$(pwd)/sea-config.json"
-DIST_DIR="$(pwd)/dist"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+SEA_CONFIG_FILE="${PROJECT_ROOT}/sea-config.json"
+DIST_DIR="${PROJECT_ROOT}/dist"
 BUNDLE="${DIST_DIR}/bundle.cjs"
 BLOB="${DIST_DIR}/sea-prep.blob"
 OUTPUT_BIN="${DIST_DIR}/nike-release-checker-macos-arm64"
@@ -14,6 +17,7 @@ mkdir -p "${DIST_DIR}"
 rm -f "${BLOB}" "${OUTPUT_BIN}"
 
 echo "Building bundle to ${BUNDLE}"
+cd "${PROJECT_ROOT}"
 npm run build
 
 # Ensure the bundle exists before SEA prep

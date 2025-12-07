@@ -1,4 +1,4 @@
-import { availableCountries } from '#snkrs-sdk'
+import { availableCountries } from '@nike-release-checker/sdk'
 import { Box, Text } from 'ink'
 
 import { Select } from '../components/Select/Select.tsx'

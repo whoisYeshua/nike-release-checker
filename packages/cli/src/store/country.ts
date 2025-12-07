@@ -1,12 +1,12 @@
 import { persistentAtom } from '@nanostores/persistent'
-import { availableCountries } from '#snkrs-sdk'
+import { availableCountries } from '@nike-release-checker/sdk'
 import { computed } from 'nanostores'
 
 import { $router } from '../router.ts'
 import { inputDictionary } from '../utils/inputDictionary.ts'
 import { logger } from '../utils/logger.ts'
 
-import type { CountryCode } from '#snkrs-sdk'
+import type { CountryCode } from '@nike-release-checker/sdk'
 
 const { HOME, COUNTRY } = inputDictionary
 

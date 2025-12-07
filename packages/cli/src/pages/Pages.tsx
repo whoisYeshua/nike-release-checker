@@ -1,12 +1,12 @@
 import { useStore } from '@nanostores/react'
 
+import { ChangeSizeScreen } from '../components/ChangeSizeScreen.tsx'
 import { $router } from '../router.ts'
 import { inputDictionary } from '../utils/inputDictionary.ts'
+import { useIsTooShortHeight } from '../utils/useIsTooShortHeight.ts'
 import { Country } from './Country.tsx'
 import { Home } from './Home.tsx'
 import { Product } from './Product/Product.tsx'
-import { useIsTooShortHeight } from '../utils/useIsTooShortHeight.ts'
-import { ChangeSizeScreen } from '../components/ChangeSizeScreen.tsx'
 
 const { HOME, COUNTRY, PRODUCT } = inputDictionary
 

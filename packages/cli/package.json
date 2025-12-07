@@ -1,0 +1,48 @@
+{
+	"name": "@nike-release-checker/cli",
+	"description": "Simple terminal Nike stock checker (50+ countries)",
+	"version": "1.0.0",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"start": "tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
+		"start:debug": "cross-env LOG_LEVEL=debug tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
+		"start:remote-debug": "cross-env LOG_LEVEL=debug tsx --inspect-brk --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
+		"start:watch": "tsx --watch-path=./src --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
+		"build": "rspack build",
+		"build:sea": "bash ./scripts/pack-sea.sh",
+		"build:check": "node --experimental-webstorage --localstorage-file=local.db dist/bundle.cjs",
+		"vercel:build": "node -v",
+		"test": "node --experimental-webstorage --localstorage-file=test.db --no-warnings --test",
+		"format": "npm run format:prettier",
+		"format:prettier": "npm run lint:prettier -- --write",
+		"lint": "npm run lint:prettier && npm run lint:ts",
+		"lint:prettier": "prettier \"**/*.{json,[jt]s,[jt]sx,[cm][jt]s}\" --check",
+		"lint:ts": "tsc --noEmit --project tsconfig.json"
+	},
+	"dependencies": {
+		"@nanostores/persistent": "1.2.0",
+		"@nanostores/react": "1.0.0",
+		"@nanostores/router": "1.0.0",
+		"@nike-release-checker/sdk": "1.0.0",
+		"figures": "6.1.0",
+		"ink": "6.5.1",
+		"ink-select-input": "6.1.0",
+		"ink-spinner": "5.0.0",
+		"nanostores": "1.1.0",
+		"pretty-bytes": "7.1.0",
+		"react": "19.2.1",
+		"terminal-image": "4.1.0",
+		"winston": "3.19.0",
+		"winston-daily-rotate-file": "5.0.0"
+	},
+	"devDependencies": {
+		"@rspack/cli": "^1.6.6",
+		"@rspack/core": "^1.6.6",
+		"@types/react": "19.2.7",
+		"cross-env": "10.1.0",
+		"msw": "2.12.4",
+		"postject": "1.0.0-alpha.6",
+		"tsx": "4.21.0"
+	}
+}

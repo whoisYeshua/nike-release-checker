@@ -1,4 +1,4 @@
-import { formatProductFeedResponse, getProductFeed } from '#snkrs-sdk'
+import { formatProductFeedResponse, getProductFeed } from '@nike-release-checker/sdk'
 import { atom, computed, map, onMount, task } from 'nanostores'
 import prettyBytes from 'pretty-bytes'
 

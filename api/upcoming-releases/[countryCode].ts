@@ -2,7 +2,7 @@ import {
 	availableCountries,
 	formatProductFeedResponse,
 	getProductFeed,
-} from '../../snkrs-sdk/index.ts'
+} from '@nike-release-checker/sdk'
 
 const getTargetCountry = (countryCode: string) =>
 	availableCountries.find(({ code }) => code === countryCode)

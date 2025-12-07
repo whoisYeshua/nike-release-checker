@@ -18,7 +18,7 @@ interface StateFile {
 	lastIndex: number
 }
 
-const repoRoot = path.resolve(import.meta.dirname, '..')
+const repoRoot = path.resolve(import.meta.dirname, '..', '..')
 const stateDir = path.join(repoRoot, '.gh-cache')
 const statePath = path.join(stateDir, 'product-feed-state.json')
 
