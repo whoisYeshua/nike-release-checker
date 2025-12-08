@@ -1,5 +1,3 @@
 Dependency notes
 ----------------
 - Keep `ink-select-input` at 6.1.0. Do not bump to 6.2.0 or newer because 6.2.0 breaks number input processing. If a newer version is required, either propose a bugfix upstream or vendor the fixed source into this project.
-
-
