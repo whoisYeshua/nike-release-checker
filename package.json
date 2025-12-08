@@ -3,7 +3,9 @@
 	"description": "Simple terminal Nike stock checker (50+ countries)",
 	"version": "0.1.0",
 	"type": "module",
-	"workspaces": ["packages/*"],
+	"workspaces": [
+		"packages/*"
+	],
 	"scripts": {
 		"start": "npm run start --workspace @nike-release-checker/cli",
 		"start:debug": "npm run start:debug --workspace @nike-release-checker/cli",
@@ -16,6 +18,8 @@
 		"test": "npm run test --workspaces",
 		"format": "npm run format --workspaces",
 		"lint": "npm run lint --workspaces",
+		"changeset": "changeset",
+		"changeset:version": "changeset version",
 		"ci:check-product-feed": "npm run ci:check-product-feed --workspace @nike-release-checker/sdk"
 	},
 	"keywords": [
@@ -28,6 +32,7 @@
 	"author": "whoisYeshua",
 	"license": "ISC",
 	"devDependencies": {
+		"@changesets/cli": "2.29.8",
 		"@ianvs/prettier-plugin-sort-imports": "4.7.0",
 		"@types/node": "24.10.1",
 		"@vercel/node": "5.5.15",

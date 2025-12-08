@@ -1,0 +1,26 @@
+name: Changesets Release PR
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install
+        uses: ./.github/composite-actions/install
+
+      - name: Create or update release PR
+        uses: changesets/action@v1
+        with:
+          version: npm run changeset:version
+          commit: "chore: release"
+          title: "chore: release"

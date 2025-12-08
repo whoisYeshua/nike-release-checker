@@ -10,14 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-
-      - name: Use Node version from .nvmrc
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: ".nvmrc"
-          cache: "npm"
+      - name: Install
+        uses: ./.github/composite-actions/install
 
       - name: Restore product feed state
         id: state-cache-restore
@@ -27,9 +21,6 @@ jobs:
           key: product-feed-state-${{ runner.os }}-v1-${{ github.run_id }}
           restore-keys: |
             product-feed-state-${{ runner.os }}-v1-
-
-      - name: Install dependencies
-        run: npm ci
 
       - name: Run product feed check
         run: npm run ci:check-product-feed
