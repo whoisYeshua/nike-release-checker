@@ -6,6 +6,13 @@
 		".": "./index.ts",
 		"./mocks": "./mocks/node.ts"
 	},
+	"files": [
+		"mocks",
+		"models",
+		"productFeed",
+		"utils/**/!(*.test).ts",
+		"index.ts"
+	],
 	"scripts": {
 		"ci:check-product-feed": "tsx ci-check-product-feed.ts",
 		"format": "npm run format:prettier",
