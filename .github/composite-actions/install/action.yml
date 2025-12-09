@@ -3,12 +3,6 @@ description: Checkout, set Node from .nvmrc, and install dependencies
 runs:
   using: composite
   steps:
-    - name: Checkout
-      uses: actions/checkout@v6
-      with:
-        fetch-depth: 0       # need full history for tags/changesets
-        fetch-tags: true
-
     - name: Use Node version from .nvmrc
       uses: actions/setup-node@v6
       with:

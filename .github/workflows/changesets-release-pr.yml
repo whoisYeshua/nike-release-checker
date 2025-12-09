@@ -15,6 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0   # need full history for tags/changesets
+          fetch-tags: true
+
       - name: Install
         uses: ./.github/composite-actions/install
 
