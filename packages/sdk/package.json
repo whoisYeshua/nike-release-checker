@@ -14,7 +14,7 @@
 		"index.ts"
 	],
 	"scripts": {
-		"ci:check-product-feed": "tsx ci-check-product-feed.ts",
+		"ci:check-product-feed": "node scripts/ci-check-product-feed.ts",
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:prettier && npm run lint:ts",

@@ -4,9 +4,9 @@ import path from 'node:path'
 
 import { array, safeParse } from 'valibot'
 
-import { availableCountries } from './models/availableCountries.ts'
-import { getProductFeed } from './productFeed/api.ts'
-import { ProductFeedSchema } from './productFeed/schema.ts'
+import { availableCountries } from '../models/availableCountries.ts'
+import { getProductFeed } from '../productFeed/api.ts'
+import { ProductFeedSchema } from '../productFeed/schema.ts'
 
 /**
  * Disclaimer:
@@ -18,7 +18,7 @@ interface StateFile {
 	lastIndex: number
 }
 
-const repoRoot = path.resolve(import.meta.dirname, '..', '..')
+const repoRoot = path.resolve(import.meta.dirname, '..', '..', '..')
 const stateDir = path.join(repoRoot, '.gh-cache')
 const statePath = path.join(stateDir, 'product-feed-state.json')
 
