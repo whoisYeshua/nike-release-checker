@@ -19,7 +19,8 @@
 		"format": "npm run format --workspaces",
 		"lint": "npm run lint --workspaces",
 		"changeset": "changeset",
-		"changeset:version": "changeset version",
+		"changeset:version": "changeset version && npm i",
+		"changeset:publish": "changeset tag",
 		"ci:check-product-feed": "npm run ci:check-product-feed --workspace @nike-release-checker/sdk"
 	},
 	"keywords": [
