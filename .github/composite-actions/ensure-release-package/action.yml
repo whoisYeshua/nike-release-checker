@@ -1,5 +1,12 @@
 name: Ensure tag targets package
 description: Validates that the tag targets the given package using the format @nike-release-checker/<package>@<version>.
+outputs:
+  should_skip:
+    description: Whether downstream steps should skip because the tag is for another package.
+    value: ${{ steps.validate.outputs.should_skip }}
+  reason:
+    description: A short message describing why the validation requested skipping.
+    value: ${{ steps.validate.outputs.reason }}
 inputs:
   package:
     description: Package name expected in the tag (e.g. cli, sdk)
@@ -10,7 +17,8 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Validate tag matches package
+    - id: validate
+      name: Validate tag matches package
       shell: bash
       run: |
         set -euo pipefail
@@ -31,8 +39,12 @@ runs:
         expected_prefix="@nike-release-checker/${package}@"
 
         if [[ "$tag" != ${expected_prefix}* ]]; then
-          echo "Tag '${tag}' does not target package '${package}'. Expected prefix '${expected_prefix}<version>'."
-          exit 1
+          echo "::warning::Tag '${tag}' does not target package '${package}'. Expected prefix '${expected_prefix}<version>'."
+          echo "should_skip=true" >> "$GITHUB_OUTPUT"
+          echo "reason=Tag '${tag}' does not target package '${package}'." >> "$GITHUB_OUTPUT"
+          exit 0
         fi
 
+        echo "should_skip=false" >> "$GITHUB_OUTPUT"
+        echo "reason=" >> "$GITHUB_OUTPUT"
         echo "Validated: tag '${tag}' targets package '${package}'."

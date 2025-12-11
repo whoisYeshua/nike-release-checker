@@ -27,16 +27,19 @@ jobs:
           fetch-tags: true
 
       - name: Validate release is SDK
+        id: ensure_release
         uses: ./.github/composite-actions/ensure-release-package
         with:
           package: sdk
           tag: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
 
       - name: Install
+        if: steps.ensure_release.outputs.should_skip != 'true'
         uses: ./.github/composite-actions/install
 
       - name: Pack SDK tarball
         id: pack
+        if: steps.ensure_release.outputs.should_skip != 'true'
         run: |
           PACK_JSON=$(npm pack ./packages/sdk --json)
           echo "pack json: $PACK_JSON"
@@ -44,6 +47,7 @@ jobs:
           echo "tarball_path=$(pwd)/$TARBALL" >> "$GITHUB_OUTPUT"
 
       - name: Upload release asset
+        if: steps.ensure_release.outputs.should_skip != 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}

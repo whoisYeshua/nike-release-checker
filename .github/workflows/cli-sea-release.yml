@@ -30,27 +30,30 @@ jobs:
           fetch-tags: true
 
       - name: Validate release is CLI
+        id: ensure_release
         uses: ./.github/composite-actions/ensure-release-package
         with:
           package: cli
           tag: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
 
       - name: Install
+        if: steps.ensure_release.outputs.should_skip != 'true'
         uses: ./.github/composite-actions/install
 
       - name: Build SEA (macOS)
-        if: matrix.os == 'macos-latest'
+        if: matrix.os == 'macos-latest' && steps.ensure_release.outputs.should_skip != 'true'
         working-directory: packages/cli
         shell: bash
         run: npm run build:sea
 
       - name: Build SEA (Windows)
-        if: matrix.os == 'windows-latest'
+        if: matrix.os == 'windows-latest' && steps.ensure_release.outputs.should_skip != 'true'
         working-directory: packages/cli
         shell: pwsh
         run: npm run build:sea:win
 
       - name: Upload build artifact
+        if: steps.ensure_release.outputs.should_skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.os == 'windows-latest' && 'nike-release-checker-win-x64.exe' || 'nike-release-checker-macos-arm64' }}
@@ -63,13 +66,22 @@ jobs:
     needs: build
 
     steps:
+      - name: Validate release is CLI
+        id: ensure_release
+        uses: ./.github/composite-actions/ensure-release-package
+        with:
+          package: cli
+          tag: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+
       - name: Download artifacts
+        if: steps.ensure_release.outputs.should_skip != 'true'
         uses: actions/download-artifact@v4
         with:
           path: downloads
           merge-multiple: true
 
       - name: Upload release assets
+        if: steps.ensure_release.outputs.should_skip != 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
