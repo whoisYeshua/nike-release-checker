@@ -11,6 +11,7 @@
 		"start:watch": "tsx --watch-path=./src --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"build": "rspack build",
 		"build:sea": "bash ./scripts/pack-sea.sh",
+		"build:sea:win": "pwsh -File ./scripts/pack-sea.ps1",
 		"build:check": "node --experimental-webstorage --localstorage-file=local.db dist/bundle.cjs",
 		"vercel:build": "node -v",
 		"test": "node --experimental-webstorage --localstorage-file=test.db --no-warnings --test",

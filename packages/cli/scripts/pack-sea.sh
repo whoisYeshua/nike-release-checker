@@ -17,7 +17,6 @@ mkdir -p "${DIST_DIR}"
 rm -f "${BLOB}" "${OUTPUT_BIN}"
 
 echo "Building bundle to ${BUNDLE}"
-cd "${PROJECT_ROOT}"
 npm run build
 
 # Ensure the bundle exists before SEA prep

@@ -1,0 +1,38 @@
+name: Ensure tag targets package
+description: Validates that the tag targets the given package using the format @nike-release-checker/<package>@<version>.
+inputs:
+  package:
+    description: Package name expected in the tag (e.g. cli, sdk)
+    required: true
+  tag:
+    description: Tag name to validate
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Validate tag matches package
+      shell: bash
+      run: |
+        set -euo pipefail
+
+        package="${{ inputs.package }}"
+        tag="${{ inputs.tag }}"
+
+        if [[ -z "$package" ]]; then
+          echo "package input is required."
+          exit 1
+        fi
+
+        if [[ -z "$tag" ]]; then
+          echo "Could not determine tag name. Provide it via the 'tag' input."
+          exit 1
+        fi
+
+        expected_prefix="@nike-release-checker/${package}@"
+
+        if [[ "$tag" != ${expected_prefix}* ]]; then
+          echo "Tag '${tag}' does not target package '${package}'. Expected prefix '${expected_prefix}<version>'."
+          exit 1
+        fi
+
+        echo "Validated: tag '${tag}' targets package '${package}'."

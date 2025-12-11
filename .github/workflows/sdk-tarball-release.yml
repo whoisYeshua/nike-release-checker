@@ -18,6 +18,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Validate release is SDK
+        uses: ./.github/composite-actions/ensure-release-package
+        with:
+          package: sdk
+          tag: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+
       - name: Checkout
         uses: actions/checkout@v6
         with:
