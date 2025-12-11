@@ -22,18 +22,18 @@ jobs:
         os: [macos-latest, windows-latest]
 
     steps:
-      - name: Validate release is CLI
-        uses: ./.github/composite-actions/ensure-release-package
-        with:
-          package: cli
-          tag: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
-
       - name: Checkout
         uses: actions/checkout@v6
         with:
           ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
           fetch-depth: 0
           fetch-tags: true
+
+      - name: Validate release is CLI
+        uses: ./.github/composite-actions/ensure-release-package
+        with:
+          package: cli
+          tag: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
 
       - name: Install
         uses: ./.github/composite-actions/install
