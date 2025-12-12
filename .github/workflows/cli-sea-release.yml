@@ -66,6 +66,13 @@ jobs:
     needs: build
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
+          fetch-depth: 0
+          fetch-tags: true
+
       - name: Validate release is CLI
         id: ensure_release
         uses: ./.github/composite-actions/ensure-release-package
