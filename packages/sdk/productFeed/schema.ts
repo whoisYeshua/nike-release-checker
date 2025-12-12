@@ -609,16 +609,16 @@ export const JSONBodySchema = v.object({
 
 export const DestinationSchema = v.object({
 	product: ProductSchema,
-	type: v.literal('BUYING_TOOLS'),
+	type: v.union([v.literal('BUYING_TOOLS'), v.literal('THREAD_ID')]),
 })
 
 export const ActionSchema = v.object({
-	actionType: v.literal('cta_buying_tools'),
+	actionType: v.union([v.literal('cta_buying_tools'), v.literal('minicard_link')]),
 	analytics: AnalyticsSchema,
 	destination: DestinationSchema,
-	destinationId: v.string(),
+	destinationId: v.optional(v.string()),
 	id: v.string(),
-	product: ProductSchema,
+	product: v.optional(ProductSchema),
 })
 
 export const PublishedContentNodePropertiesSchema = v.object({
