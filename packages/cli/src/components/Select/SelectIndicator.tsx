@@ -3,7 +3,7 @@ import { Box, Text } from 'ink'
 
 import { theme } from '../../utils/theme.ts'
 
-export type SelectIndicatorProps = {
+type SelectIndicatorProps = {
 	readonly isSelected?: boolean
 }
 

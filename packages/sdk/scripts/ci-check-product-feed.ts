@@ -2,7 +2,7 @@ import { existsSync } from 'node:fs'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
-import { array, safeParse } from 'valibot'
+import { array, flatten, safeParse } from 'valibot'
 
 import { availableCountries } from '../models/availableCountries.ts'
 import { getProductFeed } from '../productFeed/api.ts'
@@ -51,7 +51,7 @@ const writeState = async (state: StateFile) => {
 	await writeFile(statePath, JSON.stringify(state, null, 2), 'utf8')
 }
 
-const formatIssues = (issues: unknown) => JSON.stringify(issues, null, 2)
+const formatIssues = (issues: Record<string, unknown> | string[]) => JSON.stringify(issues, null, 2)
 
 const { lastIndex } = await readState()
 const nextIndex = (lastIndex + 1) % eligibleCountries.length
@@ -67,9 +67,15 @@ const response = await getProductFeed({
 const result = safeParse(array(ProductFeedSchema), response)
 
 if (!result.success) {
+	const { root, nested } = flatten(result.issues)
 	const message = `ProductFeed validation failed for ${country.code} (${country.name})`
-	const detail = formatIssues(result.issues.map(({ path: _path, ...rest }) => rest))
-	throw new Error(`${message}\nIssues: ${detail}`)
+	const detail = [
+		root ? `Root: ${formatIssues(root)}` : null,
+		nested ? `Nested:\n${formatIssues(nested)}` : null,
+	]
+		.filter(Boolean)
+		.join('\n')
+	throw new Error(`${message}\n${detail}`)
 }
 
 await writeState({ lastIndex: nextIndex })

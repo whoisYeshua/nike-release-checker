@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Text } from 'ink'
 import terminalImage from 'terminal-image'
 
-export type ImageProps = {
+type ImageProps = {
 	readonly src: ArrayBuffer | string
 	readonly width?: number | string
 	readonly height?: number | string

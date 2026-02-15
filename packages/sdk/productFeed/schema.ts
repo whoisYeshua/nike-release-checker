@@ -395,18 +395,6 @@ export const SocialInterestSchema = v.object({
 	id: v.string(),
 })
 
-export const FastProductInfoSchema = v.object({
-	availability: AvailabilitySchema,
-	availableGtins: v.optional(v.array(AvailableGtinSchema)),
-	fastAvailability: v.optional(FastAvailabilitySchema),
-	launchView: v.optional(LaunchViewSchema),
-	merchPrice: MerchPriceSchema,
-	merchProduct: MerchProductSchema,
-	productContent: ProductContentSchema,
-	skus: v.array(SkusSchema),
-	socialInterest: SocialInterestSchema,
-})
-
 export const AnalyticsSchema = v.object({
 	hashKey: v.string(),
 })
@@ -736,7 +724,7 @@ export const ProductInfoSchema = v.object({
 	merchPrice: MerchPriceSchema,
 	merchProduct: MerchProductSchema,
 	productContent: ProductContentSchema,
-	skus: v.array(SkusSchema),
+	skus: v.optional(v.array(SkusSchema)),
 	socialInterest: SocialInterestSchema,
 })
 
@@ -746,7 +734,7 @@ export const SearchSchema = v.object({
 
 export const ProductFeedSchema = v.object({
 	channelId: v.string(),
-	channelName: v.literal('SNKRS Web'),
+	channelName: v.string(),
 	collectionsv2: Collectionsv2Schema,
 	collectionTermIds: v.array(v.unknown()),
 	id: v.string(),

@@ -2,7 +2,7 @@ import { Text } from 'ink'
 
 import { theme } from '../../utils/theme.ts'
 
-export type SelectItemProps = {
+type SelectItemProps = {
 	readonly isSelected?: boolean
 	readonly label: string
 }

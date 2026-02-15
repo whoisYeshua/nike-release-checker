@@ -18,7 +18,7 @@
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:prettier && npm run lint:ts",
-		"lint:prettier": "prettier \"**/*.{json,[jt]s,[jt]sx,[cm][jt]s}\" --check",
+		"lint:prettier": "prettier \"**/*.{json,[jt]s,[jt]sx,[cm][jt]s}\" --check --ignore-path ../../.prettierignore",
 		"lint:ts": "tsc --noEmit --project tsconfig.json"
 	},
 	"dependencies": {
