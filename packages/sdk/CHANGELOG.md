@@ -1,5 +1,11 @@
 # @nike-release-checker/sdk
 
+## 0.2.1
+
+### Patch Changes
+
+- update schema, make skus optional
+
 ## 0.2.0
 
 ### Minor Changes
