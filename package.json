@@ -20,7 +20,7 @@
 		"lint": "npm run lint --workspaces",
 		"changeset": "changeset",
 		"changeset:version": "changeset version && npm i",
-		"changeset:publish": "changeset tag",
+		"changeset:publish": "changeset tag && git push origin --tags",
 		"check-product-feed": "npm run check-product-feed --workspace @nike-release-checker/sdk",
 		"ci:check-product-feed": "npm run ci:check-product-feed --workspace @nike-release-checker/sdk"
 	},
@@ -35,10 +35,10 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@changesets/cli": "2.29.8",
-		"@ianvs/prettier-plugin-sort-imports": "4.7.0",
+		"@ianvs/prettier-plugin-sort-imports": "4.7.1",
 		"@types/node": "24.10.1",
-		"@vercel/node": "5.5.15",
-		"prettier": "3.7.4",
+		"@vercel/node": "5.6.3",
+		"prettier": "3.8.1",
 		"typescript": "5.9.3"
 	},
 	"engines": {
