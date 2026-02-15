@@ -4,7 +4,7 @@ import type { RequestOptions } from './jsonRequest.ts'
 
 export type GetOptions = Pick<RequestOptions, 'url' | 'signal' | 'abortTimeout' | 'retry'>
 
-export interface PostOptions extends GetOptions {
+interface PostOptions extends GetOptions {
 	body: any
 }
 

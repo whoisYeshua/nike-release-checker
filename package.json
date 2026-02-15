@@ -21,6 +21,7 @@
 		"changeset": "changeset",
 		"changeset:version": "changeset version && npm i",
 		"changeset:publish": "changeset tag",
+		"check-product-feed": "npm run check-product-feed --workspace @nike-release-checker/sdk",
 		"ci:check-product-feed": "npm run ci:check-product-feed --workspace @nike-release-checker/sdk"
 	},
 	"keywords": [
