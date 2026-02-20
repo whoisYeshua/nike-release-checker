@@ -8,20 +8,13 @@ const formatIssues = (issues: Record<string, unknown> | string[]) => JSON.string
 
 const eligibleCountries = availableCountries.filter((country) => !country.description)
 
-if (eligibleCountries.length === 0) {
-	throw new Error('No eligible countries found (description is empty).')
-}
-
 const randomIndex = Math.floor(Math.random() * eligibleCountries.length)
-const country = eligibleCountries[randomIndex]
+const index = process.argv[2] ? parseInt(process.argv[2]) : randomIndex // npm run check-product-feed 15
+const country = eligibleCountries[index]
 
-console.log(`Index: ${randomIndex}`)
+console.log(`Index: ${index}`)
 
-
-const response = await getProductFeed({
-	countryCode: country.code,
-	language: country.language,
-})
+const response = await getProductFeed({ countryCode: country.code, language: country.language })
 
 const result = safeParse(array(ProductFeedSchema), response)
 

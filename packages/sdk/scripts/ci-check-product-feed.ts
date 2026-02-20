@@ -24,10 +24,6 @@ const statePath = path.join(stateDir, 'product-feed-state.json')
 
 const eligibleCountries = availableCountries.filter((country) => !country.description)
 
-if (eligibleCountries.length === 0) {
-	throw new Error('No eligible countries found (description is empty).')
-}
-
 const readState = async (): Promise<StateFile> => {
 	if (!existsSync(statePath)) {
 		return { lastIndex: -1 }
