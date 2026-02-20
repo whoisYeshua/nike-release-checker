@@ -40,17 +40,10 @@ jobs:
         if: steps.ensure_release.outputs.should_skip != 'true'
         uses: ./.github/composite-actions/install
 
-      - name: Build SEA (macOS)
-        if: matrix.os == 'macos-latest' && steps.ensure_release.outputs.should_skip != 'true'
+      - name: Build SEA
+        if: steps.ensure_release.outputs.should_skip != 'true'
         working-directory: packages/cli
-        shell: bash
         run: npm run build:sea
-
-      - name: Build SEA (Windows)
-        if: matrix.os == 'windows-latest' && steps.ensure_release.outputs.should_skip != 'true'
-        working-directory: packages/cli
-        shell: pwsh
-        run: npm run build:sea:win
 
       - name: Upload build artifact
         if: steps.ensure_release.outputs.should_skip != 'true'
