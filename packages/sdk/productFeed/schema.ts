@@ -524,11 +524,11 @@ export const PublishSchema = v.object({
 })
 
 export const SEOSchema = v.object({
-	description: v.string(),
-	doNotIndex: v.boolean(),
-	keywords: v.string(),
-	slug: v.string(),
-	title: v.string(),
+	description: v.optional(v.string()),
+	doNotIndex: v.optional(v.boolean()),
+	keywords: v.optional(v.string()),
+	slug: v.optional(v.string()),
+	title: v.optional(v.string()),
 })
 
 export const SocialSchema = v.object({
@@ -725,7 +725,7 @@ export const ProductInfoSchema = v.object({
 	merchProduct: MerchProductSchema,
 	productContent: ProductContentSchema,
 	skus: v.optional(v.array(SkusSchema)),
-	socialInterest: SocialInterestSchema,
+	socialInterest: v.optional(SocialInterestSchema),
 })
 
 export const SearchSchema = v.object({

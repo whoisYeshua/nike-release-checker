@@ -37,7 +37,7 @@ const getRelease = (productFeed: ProductFeedOutput) => ({
 		.map(getProductModel)
 		.toSorted(
 			(a, b) =>
-				getPriority(a.modelName) - getPriority(b.modelName) ||
+				getModelPriority(a.modelName) - getModelPriority(b.modelName) ||
 				a.modelName.localeCompare(b.modelName)
 		),
 })
@@ -45,7 +45,7 @@ const getRelease = (productFeed: ProductFeedOutput) => ({
 const isChildSize = (name: string, type: 'GS' | 'PS' | 'TD') => {
 	return new RegExp(`\\(${type}\\)|\\b${type}\\b`).test(name)
 }
-const getPriority = (name: string) => {
+const getModelPriority = (name: string) => {
 	if (isChildSize(name, 'GS')) return 1
 	if (isChildSize(name, 'PS')) return 2
 	if (isChildSize(name, 'TD')) return 3
@@ -61,7 +61,7 @@ const getProductModel = (product: ProductInfoOutput) => ({
 
 const getSizes = ({ skus, availableGtins }: ProductInfoOutput) => {
 	const sizes: Size[] = []
-	for (const { gtin, nikeSize, id } of skus) {
+	for (const { gtin, nikeSize, id } of skus ?? []) {
 		const level = availableGtins?.find((available) => available.gtin === gtin)?.level
 		if (!level) continue
 		sizes.push({ id, gtin, size: nikeSize, level })
