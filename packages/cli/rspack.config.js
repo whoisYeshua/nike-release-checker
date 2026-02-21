@@ -9,9 +9,7 @@ export default defineConfig({
 		chunkFormat: 'commonjs',
 	},
 	devtool: false,
-	optimization: {
-		minimize: false,
-	},
+	optimization: { minimize: false },
 	plugins: [
 		new rspack.DefinePlugin({
 			'process.env.DEV': false,
@@ -28,15 +26,8 @@ export default defineConfig({
 						loader: 'builtin:swc-loader',
 						options: {
 							jsc: {
-								parser: {
-									syntax: 'typescript',
-									tsx: true,
-								},
-								transform: {
-									react: {
-										runtime: 'automatic',
-									},
-								},
+								parser: { syntax: 'typescript', tsx: true },
+								transform: { react: { runtime: 'automatic' }},
 							},
 						},
 					},
