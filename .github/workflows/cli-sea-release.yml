@@ -80,9 +80,11 @@ jobs:
           path: downloads
           merge-multiple: true
 
-      - name: Fix macOS binary permissions
+      - name: Package macOS binary
         if: steps.ensure_release.outputs.should_skip != 'true'
-        run: chmod +x downloads/nike-release-checker-macos-arm64
+        run: |
+          chmod +x downloads/nike-release-checker-macos-arm64
+          tar -czf downloads/nike-release-checker-macos-arm64.tar.gz -C downloads nike-release-checker-macos-arm64
 
       - name: Upload release assets
         if: steps.ensure_release.outputs.should_skip != 'true'
@@ -90,5 +92,5 @@ jobs:
         with:
           tag_name: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
           files: |
-            downloads/nike-release-checker-macos-arm64
+            downloads/nike-release-checker-macos-arm64.tar.gz
             downloads/nike-release-checker-win-x64.exe
