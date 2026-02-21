@@ -80,6 +80,10 @@ jobs:
           path: downloads
           merge-multiple: true
 
+      - name: Fix macOS binary permissions
+        if: steps.ensure_release.outputs.should_skip != 'true'
+        run: chmod +x downloads/nike-release-checker-macos-arm64
+
       - name: Upload release assets
         if: steps.ensure_release.outputs.should_skip != 'true'
         uses: softprops/action-gh-release@v2
