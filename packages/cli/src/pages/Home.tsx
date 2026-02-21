@@ -10,6 +10,7 @@ import { theme } from '../utils/theme.ts'
 
 export const Home = () => {
 	const { loading, data } = useStore($products.value)
+	const lastSlug = useStore($selectedProductSlug.lastSelected)
 	const productsList = useMemo(
 		() =>
 			data?.map((product) => ({
@@ -17,6 +18,10 @@ export const Home = () => {
 				label: `${product.title} (${product.slug})`,
 			})) ?? [],
 		[data]
+	)
+	const initialIndex = useMemo(
+		() => Math.max(0, productsList.findIndex((item) => item.value === lastSlug)),
+		[productsList, lastSlug]
 	)
 
 	if (loading) return <LoadingElement />
@@ -28,6 +33,7 @@ export const Home = () => {
 			<Text>Select Product: </Text>
 			<Select
 				items={productsList}
+				initialIndex={initialIndex}
 				limit={theme.sizes.fullHeight - 7}
 				onSelect={({ value }) => ($selectedProductSlug.value = value ?? null)}
 			/>

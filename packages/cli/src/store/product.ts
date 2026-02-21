@@ -85,6 +85,7 @@ const createProducts = () => {
 const createSelectedProductSlug = () => {
 	const LOG_SCOPE = 'selected-product-slug'
 	const $store = atom<string | null>(null)
+	const $lastSelected = atom<string | null>(null)
 
 	const reset = () => {
 		logger.info('product slug cleared', { scope: LOG_SCOPE })
@@ -110,11 +111,14 @@ const createSelectedProductSlug = () => {
 		set value(slug: string | null) {
 			logger.info('product slug set', { scope: LOG_SCOPE, slug })
 			$store.set(slug)
+			if (slug) $lastSelected.set(slug)
+		},
+		get lastSelected(): typeof $lastSelected {
+			return $lastSelected
 		},
 		reset,
 	}
 }
-
 export const $products = createProducts()
 export const $selectedProductSlug = createSelectedProductSlug()
 export const $selectedProduct = computed($selectedProductSlug.value, (selectedProductSlug) => {
