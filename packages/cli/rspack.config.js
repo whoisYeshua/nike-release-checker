@@ -27,7 +27,7 @@ export default defineConfig({
 						options: {
 							jsc: {
 								parser: { syntax: 'typescript', tsx: true },
-								transform: { react: { runtime: 'automatic' }},
+								transform: { react: { runtime: 'automatic' } },
 							},
 						},
 					},

@@ -236,7 +236,7 @@ export const $selectedProductImage = computed(
 	[$selectedProduct, $productImageStore],
 	(selectedProduct, productImageStore) => {
 		const LOG_SCOPE = 'selected-product-image'
-		if (!selectedProduct) {
+		if (!selectedProduct?.slug) {
 			logger.debug('no product selected, image unavailable', { scope: LOG_SCOPE })
 			return
 		}

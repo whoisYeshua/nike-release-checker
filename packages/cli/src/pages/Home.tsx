@@ -29,7 +29,7 @@ export const Home = () => {
 			<Select
 				items={productsList}
 				limit={theme.sizes.fullHeight - 7}
-				onSelect={({ value }) => ($selectedProductSlug.value = value)}
+				onSelect={({ value }) => ($selectedProductSlug.value = value ?? null)}
 			/>
 		</Box>
 	)
