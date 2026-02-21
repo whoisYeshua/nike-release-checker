@@ -5,5 +5,5 @@
   "linked": [],
   "access": "restricted",
   "baseBranch": "master",
-  "ignore": ["@nike-release-checker/cli"]
+  "ignore": []
 }
