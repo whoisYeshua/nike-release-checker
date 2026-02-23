@@ -23,6 +23,7 @@ const formatLocaleDate = (dateString: string | undefined, language?: string): st
 export const DateView = ({ date, type }: { date: string | undefined; type: 'start' | 'end' }) => {
 	return (
 		<Box>
+			<Text> </Text>
 			<Box width={6}>
 				<Text>{type === 'start' ? 'Start:' : 'End:'}</Text>
 			</Box>

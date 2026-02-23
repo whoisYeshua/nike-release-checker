@@ -24,6 +24,7 @@ export const Product = () => {
 	return (
 		<Box flexDirection="column">
 			<Text>
+				{' '.repeat(theme.sizes.image * 2 + 1)}
 				<Text bold>{selectedProduct.title}</Text> (slug:{' '}
 				<Text color="magenta">{selectedProduct.slug}</Text>)
 			</Text>
