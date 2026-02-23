@@ -1,12 +1,16 @@
 import { Box, Text } from 'ink'
 
-type ChangeSizeScreenProps = {
-	currentHeight: number
-	minHeight: number
-}
+type ChangeSizeScreenProps =
+	| { dimension: 'height'; currentHeight: number; minHeight: number }
+	| { dimension: 'width'; currentWidth: number; minWidth: number }
 
-export const ChangeSizeScreen = ({ currentHeight, minHeight }: ChangeSizeScreenProps) => {
-	const heightDifference = minHeight - currentHeight
+export const ChangeSizeScreen = (props: ChangeSizeScreenProps) => {
+	const isHeight = props.dimension === 'height'
+	const current = isHeight ? props.currentHeight : props.currentWidth
+	const min = isHeight ? props.minHeight : props.minWidth
+	const difference = min - current
+	const label = isHeight ? 'HEIGHT' : 'WIDTH'
+	const unit = isHeight ? 'lines' : 'columns'
 
 	return (
 		<Box
@@ -14,23 +18,23 @@ export const ChangeSizeScreen = ({ currentHeight, minHeight }: ChangeSizeScreenP
 			justifyContent="flex-end"
 		>
 			<Text bold color="yellow">
-				CHANGE TERMINAL\WINDOW HEIGHT
+				CHANGE TERMINAL\WINDOW {label}
 			</Text>
 			<Text>
-				Current height:{' '}
+				Current {label.toLowerCase()}:{' '}
 				<Text color="red" bold>
-					{currentHeight}
+					{current}
 				</Text>
 			</Text>
 			<Text>
-				Minimum required height:{' '}
+				Minimum required {label.toLowerCase()}:{' '}
 				<Text color="green" bold>
-					{minHeight}
+					{min}
 				</Text>
 			</Text>
 			<Text>
-				You should increase the height by <Text underline>{heightDifference}</Text>{' '}
-				lines
+				You should increase the {label.toLowerCase()} by <Text underline>{difference}</Text>{' '}
+				{unit}
 			</Text>
 		</Box>
 	)
