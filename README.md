@@ -1,0 +1,153 @@
+# Nike Release Checker
+
+Interactive terminal app that shows upcoming Nike SNKRS releases with stock levels, prices, and launch details. Supports 50+ countries.
+
+Built as a TypeScript monorepo with two packages:
+
+- **`@nike-release-checker/sdk`** — standalone library for fetching and formatting Nike product feed data
+- **`@nike-release-checker/cli`** — rich terminal UI built with [Ink](https://github.com/vadimdemedes/ink) (React for CLIs)
+
+
+## UI Preview
+![UI Preview](<./images/Desktop screenshot.png>)
+
+## Features
+
+- Browse upcoming SNKRS releases for your country
+- See per-size stock levels: `HIGH` / `MEDIUM` / `LOW` / `OOS`
+- View launch method (DAN/LEO), prices, and entry dates
+
+## ⭐️ Installation
+
+### Download binary (no Node.js required)
+
+Grab the latest SEA (Single Executable Application) binary from [Releases](https://github.com/whoisYeshua/nike-release-checker/releases):
+
+| Platform | File |
+| :--- | :--- |
+| macOS (Apple Silicon) | `nike-release-checker-macos-arm64.tar.gz` |
+| Windows (x64) | `nike-release-checker-win-x64.exe` |
+
+On macOS:
+
+> **macOS Gatekeeper notice:** The binary is not notarized, so macOS will block it on first launch. To allow it, go to **System Settings > Privacy & Security**, scroll down, and click **Open Anyway**. See [Apple support article](https://support.apple.com/en-us/102445) for details.
+
+### Run from source
+
+Requires `Node.js` 24.11+ — download from [nodejs.org](https://nodejs.org/en/). You can check the installed version with `node -v`.
+
+```bash
+git clone https://github.com/whoisYeshua/nike-release-checker.git
+cd nike-release-checker
+npm install
+```
+
+#### Available Commands
+
+Run the app:
+
+```bash
+npm start
+```
+
+Run with debug logging (writes to `cli-YYYY-MM-DD.log`):
+
+```bash
+npm run start:debug
+```
+
+Reset your selected country:
+
+```bash
+npm run reset
+```
+
+## Project Structure
+
+```
+nike-release-checker/
+├── packages/
+│   ├── cli/             # Terminal UI (Ink + React + nanostores)
+│   └── sdk/             # Nike API client & data formatting (valibot)
+├── .github/workflows/   # CI: releases, product feed health checks
+└── package.json         # Workspace root
+```
+
+## Countries
+
+| Country Code |       Country        | Language | Emoji |
+| :----------: | :------------------: | :------: | :---: |
+|      AU      |      Australia       |  en-GB   |  🇦🇺   |
+|      CN      |        China         | zh-Hans  |  🇨🇳   |
+|      IN      |        India         |  en-GB   |  🇮🇳   |
+|      ID      |      Indonesia       |  en-GB   |  🇮🇩   |
+|      JP      |        Japan         |    ja    |  🇯🇵   |
+|      KR      |        Korea         |    ko    |  🇰🇷   |
+|      MY      |       Malaysia       |  en-GB   |  🇲🇾   |
+|      NZ      |     New Zealand      |  en-GB   |  🇳🇿   |
+|      PH      |     Philippines      |  en-GB   |  🇵🇭   |
+|      SG      |      Singapore       |  en-GB   |  🇸🇬   |
+|      TW      |        Taiwan        | zh-Hant  |  🇹🇼   |
+|      TH      |       Thailand       |    th    |  🇹🇭   |
+|      VN      |       Vietnam        |  en-GB   |  🇻🇳   |
+|      EG      |        Egypt         |  en-GB   |  🇪🇬   |
+|      MA      |       Morocco        |  en-GB   |  🇲🇦   |
+|      ZA      |     South Africa     |  en-GB   |  🇿🇦   |
+|      CA      |        Canada        |  en-GB   |  🇨🇦   |
+|      CL      |        Chile         |  es-419  |  🇨🇱   |
+|      MX      |        Mexico        |  es-419  |  🇲🇽   |
+|      PR      |     Puerto Rico      |  es-419  |  🇵🇷   |
+|      US      |    United States     |    en    |  🇺🇸   |
+|      UY      |       Uruguay        |  es-419  |  🇺🇾   |
+|      SA      |     Saudi Arabia     |  en-GB   |  🇸🇦   |
+|      AE      | United Arab Emirates |  en-GB   |  🇦🇪   |
+|      AT      |       Austria        |    de    |  🇦🇹   |
+|      BE      |       Belgium        |    de    |  🇧🇪   |
+|      BG      |       Bulgaria       |  en-GB   |  🇧🇬   |
+|      HR      |       Croatia        |  en-GB   |  🇭🇷   |
+|      CZ      |       Czechia        |    cs    |  🇨🇿   |
+|      DK      |       Denmark        |    da    |  🇩🇰   |
+|      FI      |       Finland        |  en-GB   |  🇫🇮   |
+|      FR      |        France        |    fr    |  🇫🇷   |
+|      DE      |       Germany        |    de    |  🇩🇪   |
+|      GR      |        Greece        |    el    |  🇬🇷   |
+|      HU      |       Hungary        |  en-GB   |  🇭🇺   |
+|      IE      |       Ireland        |  en-GB   |  🇮🇪   |
+|      IL      |        Israel        |  en-GB   |  🇮🇱   |
+|      IT      |        Italy         |    it    |  🇮🇹   |
+|      LU      |      Luxembourg      |  en-GB   |  🇱🇺   |
+|      NL      |     Netherlands      |    nl    |  🇳🇱   |
+|      NO      |        Norway        |    no    |  🇳🇴   |
+|      PL      |        Poland        |    pl    |  🇵🇱   |
+|      PT      |       Portugal       |  pt-PT   |  🇵🇹   |
+|      RO      |       Romania        |  en-GB   |  🇷🇴   |
+|      RU      |        Russia        |    ru    |  🇷🇺   |
+|      SK      |       Slovakia       |  en-GB   |  🇸🇰   |
+|      SI      |       Slovenia       |  en-GB   |  🇸🇮   |
+|      ES      |        Spain         |  es-ES   |  🇪🇸   |
+|      SE      |        Sweden        |    sv    |  🇸🇪   |
+|      CH      |     Switzerland      |  en-GB   |  🇨🇭   |
+|      TR      |        Turkey        |    tr    |  🇹🇷   |
+|      GB      |    United Kingdom    |  en-GB   |  🇬🇧   |
+
+Argentina, Brazil, and a couple of other countries are not supported due to a different API.
+Chile is not supported currently. Egypt, Morocco, and Puerto Rico have no SNKRS feed. Russia is disabled. Vietnam redirects to Thailand for SNKRS data.
+
+## Nike API
+
+The SDK uses Nike's product feed endpoint:
+
+```js
+let url = new URL('https://api.nike.com/product_feed/threads/v3/')
+url.searchParams.append('filter', `marketplace(${countryCode})`)
+url.searchParams.append('filter', `language(${language})`)
+url.searchParams.append('filter', 'channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)')
+url.searchParams.append('filter', 'upcoming(true)')
+url.searchParams.append('filter', 'exclusiveAccess(true,false)')
+```
+
+`countryCode` and `language` correspond to values from the [countries table](#countries).
+
+## License
+
+ISC
