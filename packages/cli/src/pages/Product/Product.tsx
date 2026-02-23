@@ -41,6 +41,7 @@ export const Product = () => {
 					<Text>Select model:</Text>
 					<Select
 						items={selectOptions}
+						limit={undefined}
 						onHighlight={({ value }) => {
 							$selectedModel.setId(value)
 						}}

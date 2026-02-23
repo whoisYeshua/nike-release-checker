@@ -34,7 +34,6 @@ export const Home = () => {
 			<Select
 				items={productsList}
 				initialIndex={initialIndex}
-				limit={theme.sizes.fullHeight - 7}
 				onSelect={({ value }) => ($selectedProductSlug.value = value ?? null)}
 			/>
 		</Box>

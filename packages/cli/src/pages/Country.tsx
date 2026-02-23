@@ -15,7 +15,6 @@ export const Country = () => (
 		<Text>Select Country: </Text>
 		<Select
 			items={countryItems}
-			limit={theme.sizes.fullHeight - 7}
 			onSelect={({ value }) => ($country.value = value)}
 		/>
 	</Box>

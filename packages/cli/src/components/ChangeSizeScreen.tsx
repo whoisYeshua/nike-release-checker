@@ -1,17 +1,16 @@
 import { Box, Text } from 'ink'
 
-import { theme } from '../utils/theme.ts'
-import { useScreenSize } from '../utils/useScreenSize.ts'
+type ChangeSizeScreenProps = {
+	currentHeight: number
+	minHeight: number
+}
 
-export const ChangeSizeScreen = () => {
-	const { height } = useScreenSize()
-
-	const HEADER_AND_FOOTER_ROWS = 6
+export const ChangeSizeScreen = ({ currentHeight, minHeight }: ChangeSizeScreenProps) => {
+	const heightDifference = minHeight - currentHeight
 
 	return (
 		<Box
 			flexDirection="column"
-			height={theme.sizes.fullHeight - HEADER_AND_FOOTER_ROWS}
 			justifyContent="flex-end"
 		>
 			<Text bold color="yellow">
@@ -20,17 +19,17 @@ export const ChangeSizeScreen = () => {
 			<Text>
 				Current height:{' '}
 				<Text color="red" bold>
-					{height}
+					{currentHeight}
 				</Text>
 			</Text>
 			<Text>
 				Minimum required height:{' '}
 				<Text color="green" bold>
-					{theme.sizes.fullHeight}
+					{minHeight}
 				</Text>
 			</Text>
 			<Text>
-				You should increase the height by <Text underline>{theme.sizes.fullHeight - height}</Text>{' '}
+				You should increase the height by <Text underline>{heightDifference}</Text>{' '}
 				lines
 			</Text>
 		</Box>

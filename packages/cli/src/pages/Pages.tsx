@@ -12,9 +12,9 @@ const { HOME, COUNTRY, PRODUCT } = inputDictionary
 
 export const Pages = () => {
 	const page = useStore($router)
-	const isTooShortHeight = useIsTooShortHeight()
+	const { isTooShort, currentHeight, minHeight } = useIsTooShortHeight()
 
-	if (isTooShortHeight) return <ChangeSizeScreen />
+	if (isTooShort) return <ChangeSizeScreen currentHeight={currentHeight} minHeight={minHeight} />
 	if (!page) return null
 	if (page.route === HOME.routeName) return <Home />
 	if (page.route === COUNTRY.routeName) return <Country />

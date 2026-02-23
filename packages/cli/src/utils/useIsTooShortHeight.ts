@@ -1,7 +1,10 @@
 import { theme } from './theme.ts'
 import { useScreenSize } from './useScreenSize.ts'
 
-export const useIsTooShortHeight = (): boolean => {
+export const useIsTooShortHeight = () => {
 	const { height } = useScreenSize()
-	return height < theme.sizes.fullHeight
+	const minHeight = theme.sizes.fullHeight
+	const isTooShort = height < minHeight
+
+	return { isTooShort, currentHeight: height, minHeight }
 }

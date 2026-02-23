@@ -1,5 +1,6 @@
 import SelectInput from 'ink-select-input'
 
+import { theme } from '../../utils/theme.ts'
 import { SelectIndicator } from './SelectIndicator.tsx'
 import { SelectItem } from './SelectItem.tsx'
 
@@ -11,6 +12,6 @@ export const Select = <V,>({
 	...rest
 }: ComponentProps<typeof SelectInput<V>>) => {
 	return (
-		<SelectInput itemComponent={itemComponent} indicatorComponent={indicatorComponent} {...rest} />
+		<SelectInput limit={theme.sizes.fullHeight - 7} itemComponent={itemComponent} indicatorComponent={indicatorComponent} {...rest} />
 	)
 }
