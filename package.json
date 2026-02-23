@@ -1,38 +1,47 @@
 {
-    "name": "nike-release-checker",
-    "version": "0.0.1",
-    "description": "Simple Nike (SNKRS) Release checker",
-    "type": "module",
-    "exports": "./src/index.js",
-    "scripts": {
-        "start": "node ./src/index.js",
-        "img": "node ./src/index.js img",
-        "reset": "node ./src/index.js reset",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "engines": {
-        "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-    },
-    "keywords": [
-        "nike",
-        "snkrs",
-        "nodejs"
-    ],
-    "author": "whoisYeshua",
-    "license": "ISC",
-    "dependencies": {
-        "axios": "^0.22.0",
-        "nedb": "^1.8.0",
-        "nedb-promise": "^2.0.1",
-        "prompt": "^1.2.0",
-        "terminal-image": "^2.0.0"
-    },
-    "devDependencies": {
-        "eslint": "^8.0.0",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-unicorn": "^37.0.0",
-        "prettier": "^2.3.2",
-        "typescript": "^4.5.0-beta"
-    }
+	"name": "nike-release-checker",
+	"description": "Simple terminal Nike stock checker (50+ countries)",
+	"version": "0.1.0",
+	"type": "module",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"start": "npm run start --workspace @nike-release-checker/cli",
+		"start:debug": "npm run start:debug --workspace @nike-release-checker/cli",
+		"start:remote-debug": "npm run start:remote-debug --workspace @nike-release-checker/cli",
+		"start:watch": "npm run start:watch --workspace @nike-release-checker/cli",
+		"build": "npm run build --workspace @nike-release-checker/cli",
+		"build:sea": "npm run build:sea --workspace @nike-release-checker/cli",
+		"build:check": "npm run build:check --workspace @nike-release-checker/cli",
+		"vercel:build": "npm run vercel:build --workspace @nike-release-checker/cli",
+		"test": "npm run test --workspaces",
+		"format": "npm run format --workspaces",
+		"lint": "npm run lint --workspaces",
+		"changeset": "changeset",
+		"changeset:version": "changeset version && npm i",
+		"changeset:publish": "changeset tag && git push origin --tags",
+		"check-product-feed": "npm run check-product-feed --workspace @nike-release-checker/sdk",
+		"ci:check-product-feed": "npm run ci:check-product-feed --workspace @nike-release-checker/sdk"
+	},
+	"keywords": [
+		"api",
+		"snkrs",
+		"terminal",
+		"stock",
+		"nike"
+	],
+	"author": "whoisYeshua",
+	"license": "ISC",
+	"devDependencies": {
+		"@changesets/cli": "2.29.8",
+		"@ianvs/prettier-plugin-sort-imports": "4.7.1",
+		"@types/node": "24.10.1",
+		"@vercel/node": "5.6.3",
+		"prettier": "3.8.1",
+		"typescript": "5.9.3"
+	},
+	"engines": {
+		"node": "24.x"
+	}
 }

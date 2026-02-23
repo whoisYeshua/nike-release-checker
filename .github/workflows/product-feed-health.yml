@@ -1,0 +1,39 @@
+name: Product feed health
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install
+        uses: ./.github/composite-actions/install
+
+      - name: Restore product feed state
+        id: state-cache-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: .gh-cache/product-feed-state.json
+          key: product-feed-state-${{ runner.os }}-v1-${{ github.run_id }}
+          restore-keys: |
+            product-feed-state-${{ runner.os }}-v1-
+
+      - name: Run product feed check
+        run: npm run ci:check-product-feed
+
+      - name: Save product feed state
+        # Save state even on failure so the next run continues the rotation instead of repeating
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .gh-cache/product-feed-state.json
+          key: product-feed-state-${{ runner.os }}-v1-${{ github.run_id }}
+
+

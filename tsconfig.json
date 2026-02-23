@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		/* Visit https://aka.ms/tsconfig to read more about this file */
+		/* Language and Environment */
+		"target": "esnext",
+		"jsx": "react-jsx",
+
+		/* Modules */
+		"module": "nodenext" /* Specify what module code is generated. */,
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+
+		/* Emit */
+		"noEmit": true,
+
+		/* Interop Constraints */
+		"isolatedModules": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": false,
+		"forceConsistentCasingInFileNames": true,
+		"erasableSyntaxOnly": true,
+		"verbatimModuleSyntax": true,
+
+		/* Type Checking */
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+
+		/* Completeness */
+		"skipLibCheck": true /* Skip type checking all .d.ts files. */
+	},
+}

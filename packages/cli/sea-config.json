@@ -1,0 +1,8 @@
+{
+	"main": "./dist/bundle.cjs",
+	"output": "./dist/sea-prep.blob",
+	"disableExperimentalSEAWarning": true,
+	"useSnapshot": false,
+	"useCodeCache": true,
+	"execArgv": ["--experimental-webstorage", "--localstorage-file=local.db"]
+}

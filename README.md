@@ -1,59 +1,77 @@
 # Nike Release Checker
 
-## About:
+Interactive terminal app that shows upcoming Nike SNKRS releases with stock levels, prices, and launch details. Supports 50+ countries.
 
-Due to new Nike CORS policy [previous solution](https://github.com/whoisYeshua/Nike-RU-release-checker) has been deprecated, so I created the node version.
+Built as a TypeScript monorepo with two packages:
 
-This script lets you know the stock of Nike SNKRS products that are going to released.
+- **`@nike-release-checker/sdk`** — standalone library for fetching and formatting Nike product feed data
+- **`@nike-release-checker/cli`** — rich terminal UI built with [Ink](https://github.com/vadimdemedes/ink) (React for CLIs)
 
-Script that accesses the Nike API to get product information from the upcoming feed and stores it at local DB. Then information outputs to the console, and can also be displayed if you paste correct product-URL.
 
-Script supports more than 50 countries, you can find a [list of them below](#Countries).
+## UI Preview
+![UI Preview](<./images/Desktop screenshot.png>)
 
-## Requirements
+## Features
 
--   `Node.js` - you can download it from [official site](http://nodejs.org/en/). It will be required to run the script. You can check the installed version by writing the command `node -v` in your terminal.
--   `npm` - it should be installed together with Node.js. Will be required to install the modules. You can check the installed version by writing the command `npm -v` in your terminal
--   `git` - not required, but it will allow you to download the repo in one command
+- Browse upcoming SNKRS releases for your country
+- See per-size stock levels: `HIGH` / `MEDIUM` / `LOW` / `OOS`
+- View launch method (DAN/LEO), prices, and entry dates
 
-## Installation
+## ⭐️ Installation
 
--   Download repo and open folder
+### Download binary (no Node.js required)
+
+Grab the latest SEA (Single Executable Application) binary from [Releases](https://github.com/whoisYeshua/nike-release-checker/releases):
+
+| Platform | File |
+| :--- | :--- |
+| macOS (Apple Silicon) | `nike-release-checker-macos-arm64.tar.gz` |
+| Windows (x64) | `nike-release-checker-win-x64.exe` |
+
+On macOS:
+
+> **macOS Gatekeeper notice:** The binary is not notarized, so macOS will block it on first launch. To allow it, go to **System Settings > Privacy & Security**, scroll down, and click **Open Anyway**. See [Apple support article](https://support.apple.com/en-us/102445) for details.
+
+### Run from source
+
+Requires `Node.js` 24.11+ — download from [nodejs.org](https://nodejs.org/en/). You can check the installed version with `node -v`.
 
 ```bash
 git clone https://github.com/whoisYeshua/nike-release-checker.git
 cd nike-release-checker
-```
-
--   Install dependencies
-
-```bash
 npm install
 ```
 
-## Available Commands
+#### Available Commands
 
--   Run the script without product images _(there will only be a link to the image)_
+Run the app:
 
 ```bash
 npm start
 ```
 
--   Run the script with product images _(Note: High-resolution images are available in iTerm or in another terminal that has special image support. In Powershell, you will see minecraft images, but in any case, it`s still useful)_
+Run with debug logging (writes to `cli-YYYY-MM-DD.log`):
 
 ```bash
-npm run img
+npm run start:debug
 ```
 
--   Reset your selected country
+Reset your selected country:
 
 ```bash
 npm run reset
 ```
 
-## UI preview:
+## Project Structure
 
-![Imgur](https://imgur.com/wmBlf6n.png)
+```
+nike-release-checker/
+├── packages/
+│   ├── cli/             # Terminal UI (Ink + React + nanostores)
+│   └── sdk/             # Nike API client & data formatting (valibot)
+├── .github/workflows/   # CI: releases, product feed health checks
+└── package.json         # Workspace root
+```
 
 ## Countries
 
@@ -64,6 +82,7 @@ npm run reset
 |      IN      |        India         |  en-GB   |  🇮🇳   |
 |      ID      |      Indonesia       |  en-GB   |  🇮🇩   |
 |      JP      |        Japan         |    ja    |  🇯🇵   |
+|      KR      |        Korea         |    ko    |  🇰🇷   |
 |      MY      |       Malaysia       |  en-GB   |  🇲🇾   |
 |      NZ      |     New Zealand      |  en-GB   |  🇳🇿   |
 |      PH      |     Philippines      |  en-GB   |  🇵🇭   |
@@ -111,17 +130,24 @@ npm run reset
 |      TR      |        Turkey        |    tr    |  🇹🇷   |
 |      GB      |    United Kingdom    |  en-GB   |  🇬🇧   |
 
-Argentina, Brazil, and a couple of other countries are not supported due to the fact that they have a different API.
+Argentina, Brazil, and a couple of other countries are not supported due to a different API.
+Chile is not supported currently. Egypt, Morocco, and Puerto Rico have no SNKRS feed. Russia is disabled. Vietnam redirects to Thailand for SNKRS data.
 
-## Access
+## Nike API
+
+The SDK uses Nike's product feed endpoint:
 
 ```js
-let url = new URL('https://api.nike.com/product_feed/threads/v2/')
-url.searchParams.append('filter', `marketplace(${country})`)
+let url = new URL('https://api.nike.com/product_feed/threads/v3/')
+url.searchParams.append('filter', `marketplace(${countryCode})`)
 url.searchParams.append('filter', `language(${language})`)
 url.searchParams.append('filter', 'channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)')
 url.searchParams.append('filter', 'upcoming(true)')
 url.searchParams.append('filter', 'exclusiveAccess(true,false)')
 ```
 
-`country` is 'Country Code' and `language` is 'Language' from the [table above](#Countries)
+`countryCode` and `language` correspond to values from the [countries table](#countries).
+
+## License
+
+ISC

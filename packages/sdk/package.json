@@ -1,0 +1,30 @@
+{
+	"name": "@nike-release-checker/sdk",
+	"version": "0.3.0",
+	"type": "module",
+	"exports": {
+		".": "./index.ts",
+		"./mocks": "./mocks/node.ts",
+		"./mocks/handlers": "./mocks/handlers/handlers.ts"
+	},
+	"files": [
+		"mocks",
+		"models",
+		"productFeed",
+		"utils/**/!(*.test).ts",
+		"index.ts"
+	],
+	"scripts": {
+		"check-product-feed": "node scripts/check-product-feed.ts",
+		"ci:check-product-feed": "node scripts/ci-check-product-feed.ts",
+		"format": "npm run format:prettier",
+		"format:prettier": "npm run lint:prettier -- --write",
+		"lint": "npm run lint:prettier && npm run lint:ts",
+		"lint:prettier": "prettier \"**/*.{json,[jt]s,[jt]sx,[cm][jt]s}\" --check --ignore-path ../../.prettierignore",
+		"lint:ts": "tsc --noEmit --project tsconfig.json",
+		"test": "node --experimental-webstorage --localstorage-file=test.db --no-warnings --test"
+	},
+	"dependencies": {
+		"valibot": "1.2.0"
+	}
+}

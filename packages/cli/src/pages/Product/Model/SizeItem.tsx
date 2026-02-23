@@ -1,0 +1,37 @@
+import { Box, Text } from 'ink'
+
+import type { LevelOutput } from '@nike-release-checker/sdk'
+import type { TextProps } from 'ink'
+
+interface SizeItemProps {
+	size: string
+	stock: LevelOutput
+}
+
+const stockColorMap = {
+	HIGH: 'green',
+	MEDIUM: 'yellow',
+	LOW: 'red',
+	OOS: 'gray',
+	NA: 'black',
+} satisfies Record<LevelOutput, TextProps['color']>
+
+export const SizeItem = ({ size, stock }: SizeItemProps) => {
+	const color = stockColorMap[stock] ?? 'gray'
+	const bold = color === 'green'
+
+	return (
+		<Box>
+			<Box width={5}>
+				<Text color={color} bold={bold}>
+					{size}
+				</Text>
+			</Box>
+			<Box>
+				<Text color={color} bold={bold}>
+					- {stock}
+				</Text>
+			</Box>
+		</Box>
+	)
+}
