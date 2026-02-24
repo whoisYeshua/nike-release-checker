@@ -2,11 +2,7 @@
 
 Interactive terminal app that shows upcoming Nike SNKRS releases with stock levels, prices, and launch details. Supports 50+ countries.
 
-Built as a TypeScript monorepo with two packages:
-
-- **`@nike-release-checker/sdk`** — standalone library for fetching and formatting Nike product feed data
-- **`@nike-release-checker/cli`** — rich terminal UI built with [Ink](https://github.com/vadimdemedes/ink) (React for CLIs)
-
+A standalone [SDK](#sdk) is also available for developers who want to build their own tools on top of the Nike product feed.
 
 ## UI Preview
 ![UI Preview](<./images/Desktop screenshot.png>)
@@ -40,38 +36,68 @@ Requires `Node.js` 24.11+ — download from [nodejs.org](https://nodejs.org/en/)
 git clone https://github.com/whoisYeshua/nike-release-checker.git
 cd nike-release-checker
 npm install
-```
-
-#### Available Commands
-
-Run the app:
-
-```bash
 npm start
 ```
 
-Run with debug logging (writes to `cli-YYYY-MM-DD.log`):
+## SDK
+
+The `@nike-release-checker/sdk` package lets you fetch and format Nike SNKRS release data programmatically — useful if you want to build your own bots, dashboards, or notifications.
+
+### Install
+
+Grab the latest `.tgz` from [Releases](https://github.com/whoisYeshua/nike-release-checker/releases) and install it:
 
 ```bash
-npm run start:debug
+npm install https://github.com/whoisYeshua/nike-release-checker/releases/download/%40nike-release-checker%2Fsdk%400.3.0/nike-release-checker-sdk-0.3.0.tgz
 ```
 
-Reset your selected country:
+### Usage
 
-```bash
-npm run reset
+```js
+import {
+  getProductFeed,
+  formatProductFeedResponse,
+  availableCountries,
+} from '@nike-release-checker/sdk'
+
+// Pick a country
+const country = availableCountries.find(c => c.code === 'US')
+
+// Fetch upcoming releases
+const products = await getProductFeed({
+  countryCode: country.code,
+  language: country.language,
+})
+
+// Format and display
+const releases = formatProductFeedResponse(products)
+for (const release of releases) {
+  console.log(release.title, release.models.length, 'model(s)')
+}
 ```
 
-## Project Structure
+### API
 
+| Export | Description |
+| :--- | :--- |
+| `getProductFeed(params)` | Fetches upcoming SNKRS releases. Takes `countryCode` and `language` (see [Countries](#countries)), returns raw product objects. |
+| `formatProductFeedResponse(products)` | Formats raw product data into structured releases with titles, images, models, sizes, and stock levels. |
+| `availableCountries` | Array of 50+ supported countries with `code`, `name`, `language`, and `emoji` fields. |
+
+### Nike API
+
+Under the hood, the SDK calls Nike's product feed endpoint:
+
+```js
+let url = new URL('https://api.nike.com/product_feed/threads/v3/')
+url.searchParams.append('filter', `marketplace(${countryCode})`)
+url.searchParams.append('filter', `language(${language})`)
+url.searchParams.append('filter', 'channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)')
+url.searchParams.append('filter', 'upcoming(true)')
+url.searchParams.append('filter', 'exclusiveAccess(true,false)')
 ```
-nike-release-checker/
-├── packages/
-│   ├── cli/             # Terminal UI (Ink + React + nanostores)
-│   └── sdk/             # Nike API client & data formatting (valibot)
-├── .github/workflows/   # CI: releases, product feed health checks
-└── package.json         # Workspace root
-```
+
+`countryCode` and `language` correspond to values from the [countries table](#countries).
 
 ## Countries
 
@@ -132,21 +158,6 @@ nike-release-checker/
 
 Argentina, Brazil, and a couple of other countries are not supported due to a different API.
 Chile is not supported currently. Egypt, Morocco, and Puerto Rico have no SNKRS feed. Russia is disabled. Vietnam redirects to Thailand for SNKRS data.
-
-## Nike API
-
-The SDK uses Nike's product feed endpoint:
-
-```js
-let url = new URL('https://api.nike.com/product_feed/threads/v3/')
-url.searchParams.append('filter', `marketplace(${countryCode})`)
-url.searchParams.append('filter', `language(${language})`)
-url.searchParams.append('filter', 'channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)')
-url.searchParams.append('filter', 'upcoming(true)')
-url.searchParams.append('filter', 'exclusiveAccess(true,false)')
-```
-
-`countryCode` and `language` correspond to values from the [countries table](#countries).
 
 ## License
 
