@@ -12,7 +12,6 @@
 		"build": "rspack build",
 		"build:sea": "node ./scripts/pack-sea.ts",
 		"build:check": "node --experimental-webstorage --localstorage-file=local.db dist/bundle.cjs",
-		"vercel:build": "node -v",
 		"test": "node --experimental-webstorage --localstorage-file=test.db --no-warnings --test",
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
