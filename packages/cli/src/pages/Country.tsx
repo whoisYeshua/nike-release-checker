@@ -3,7 +3,6 @@ import { Box, Text } from 'ink'
 
 import { Select } from '../components/Select/Select.tsx'
 import { $country } from '../store/country.ts'
-import { theme } from '../utils/theme.ts'
 
 const countryItems = availableCountries.map(({ code, name, description }) => ({
 	label: description ? `${name} (${description})` : name,

@@ -1,0 +1,1014 @@
+[
+	{
+		"slug": "jordan-union-fragment-apparel-collection-static",
+		"title": "Apparel Collection",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/90af6983-9e99-43ae-9274-a8d2a415347e/jordan-x-union-x-fragment-apparel-collection-release-date.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 109.99,
+					"currency": "GBP"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-02-28T08:00:00.000Z",
+					"stopEntryDate": "2026-02-28T08:20:37.509Z"
+				},
+				"modelName": "M J UNI FRAG FZ HOODIE",
+				"id": "c7eec7c5-1415-59cf-863c-a9b2f1148317",
+				"sizes": [
+					{
+						"id": "fd63396e-3b1e-5029-ab37-f0d28d9661ca",
+						"gtin": "00198728479861",
+						"size": "XS",
+						"level": "LOW"
+					},
+					{
+						"id": "03b3a88f-49f3-5616-9cf9-4ee4ea30e6ff",
+						"gtin": "00198728483189",
+						"size": "S",
+						"level": "OOS"
+					},
+					{
+						"id": "1278cb29-015a-5fde-868e-e13988f0aa4d",
+						"gtin": "00198728482007",
+						"size": "M",
+						"level": "LOW"
+					},
+					{
+						"id": "812a9eaa-2ef5-527b-b50a-d2eea447cb42",
+						"gtin": "00198728480416",
+						"size": "L",
+						"level": "OOS"
+					},
+					{
+						"id": "0147bf2d-0eb8-58f3-a929-53d7ee7226e4",
+						"gtin": "00198728483332",
+						"size": "XL",
+						"level": "LOW"
+					},
+					{
+						"id": "b5290ea5-fa61-552b-af97-8e37db10d4f4",
+						"gtin": "00198728483028",
+						"size": "2XL",
+						"level": "OOS"
+					}
+				]
+			},
+			{
+				"merchPrice": {
+					"currentPrice": 109.99,
+					"currency": "GBP"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-02-28T08:00:00.000Z",
+					"stopEntryDate": "2026-02-28T08:20:30.810Z"
+				},
+				"modelName": "M J UNI FRAG LS JERSEY",
+				"id": "d78bf674-8674-511b-9afd-2d5710aec39c",
+				"sizes": [
+					{
+						"id": "2b430af3-0199-5d34-a584-7c89f0f468e9",
+						"gtin": "00198727851392",
+						"size": "XS",
+						"level": "OOS"
+					},
+					{
+						"id": "c36d8a60-d868-5614-b6f6-bd00989dc635",
+						"gtin": "00198727850043",
+						"size": "S",
+						"level": "LOW"
+					},
+					{
+						"id": "54088fbf-41d0-5208-96b0-73e9068464be",
+						"gtin": "00198727851767",
+						"size": "M",
+						"level": "OOS"
+					},
+					{
+						"id": "fc224c99-fbb7-59f1-90e1-75e17a3f9187",
+						"gtin": "00198727850128",
+						"size": "L",
+						"level": "LOW"
+					},
+					{
+						"id": "51a2a408-4f02-531e-9618-eed5c6130a48",
+						"gtin": "00198727851521",
+						"size": "XL",
+						"level": "LOW"
+					},
+					{
+						"id": "705ef0b2-2a93-5a91-8ff5-5282e5c92a68",
+						"gtin": "00198727850241",
+						"size": "2XL",
+						"level": "OOS"
+					}
+				]
+			},
+			{
+				"merchPrice": {
+					"currentPrice": 99.99,
+					"currency": "GBP"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-02-28T08:00:00.000Z",
+					"stopEntryDate": "2026-02-28T08:20:43.098Z"
+				},
+				"modelName": "M J UNI FRAG SHORT",
+				"id": "1278b36f-1d2b-5d88-875e-be11def10789",
+				"sizes": [
+					{
+						"id": "923fe661-9091-5217-bfea-1e1236f82f32",
+						"gtin": "00198727850005",
+						"size": "XS",
+						"level": "OOS"
+					},
+					{
+						"id": "2d8346e5-53ba-507e-9a99-1107927b8ba1",
+						"gtin": "00198727850456",
+						"size": "S",
+						"level": "OOS"
+					},
+					{
+						"id": "46712b3d-a7eb-5e18-9095-491cda21fe45",
+						"gtin": "00198727851859",
+						"size": "M",
+						"level": "OOS"
+					},
+					{
+						"id": "25a813ca-be94-56f6-8461-d0ee8e602f4d",
+						"gtin": "00198727851699",
+						"size": "L",
+						"level": "LOW"
+					},
+					{
+						"id": "226b344c-d199-557e-97a9-120682de6f1d",
+						"gtin": "00198727851217",
+						"size": "XL",
+						"level": "OOS"
+					},
+					{
+						"id": "71a7b615-767a-5757-92f3-257731a1c5a2",
+						"gtin": "00198727851842",
+						"size": "2XL",
+						"level": "OOS"
+					}
+				]
+			},
+			{
+				"merchPrice": {
+					"currentPrice": 49.99,
+					"currency": "GBP"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-02-28T08:00:00.000Z",
+					"stopEntryDate": "2026-02-28T08:20:11.336Z"
+				},
+				"modelName": "M J UNI FRAG TEE",
+				"id": "422e5930-7b9d-582a-af53-1a69d628b85a",
+				"sizes": [
+					{
+						"id": "34d6c82c-bba7-5479-8dfe-2844f3f4c253",
+						"gtin": "00198727847869",
+						"size": "XS",
+						"level": "LOW"
+					},
+					{
+						"id": "680bac1f-8138-5e62-a396-bd2498cb1f5f",
+						"gtin": "00198727848729",
+						"size": "S",
+						"level": "LOW"
+					},
+					{
+						"id": "890bc8b3-07eb-5fd7-a08f-e489595348b2",
+						"gtin": "00198727847944",
+						"size": "M",
+						"level": "LOW"
+					},
+					{
+						"id": "ae64adfb-3795-5548-93e9-364e9fab448e",
+						"gtin": "00198727848675",
+						"size": "L",
+						"level": "OOS"
+					},
+					{
+						"id": "327aed6a-a7e9-5631-b61e-f04ec95929ac",
+						"gtin": "00198727848521",
+						"size": "XL",
+						"level": "OOS"
+					},
+					{
+						"id": "78a3ffe7-ef72-5241-a7c0-3c3665b839b6",
+						"gtin": "00198727848286",
+						"size": "2XL",
+						"level": "OOS"
+					}
+				]
+			},
+			{
+				"merchPrice": {
+					"currentPrice": 89.99,
+					"currency": "GBP"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-02-28T08:00:00.000Z",
+					"stopEntryDate": "2026-02-28T08:20:24.154Z"
+				},
+				"modelName": "M J UNI FRAG THERMAL",
+				"id": "f086e322-acc8-545e-8f8b-0ab4f3155406",
+				"sizes": [
+					{
+						"id": "66596a45-0754-5226-86d3-0a9322a0a856",
+						"gtin": "00198727850852",
+						"size": "XS",
+						"level": "OOS"
+					},
+					{
+						"id": "726a6a3a-b06d-52b5-83ee-c8ada475448f",
+						"gtin": "00198727851002",
+						"size": "S",
+						"level": "OOS"
+					},
+					{
+						"id": "3fbedacb-6f83-51ad-ad8b-1b5b79a19d0d",
+						"gtin": "00198727851958",
+						"size": "M",
+						"level": "LOW"
+					},
+					{
+						"id": "ffa04028-373b-5994-abc9-06c9ae142857",
+						"gtin": "00198727849818",
+						"size": "L",
+						"level": "LOW"
+					},
+					{
+						"id": "bec264a2-976b-55c8-aeed-f20a67863b5c",
+						"gtin": "00198727850098",
+						"size": "XL",
+						"level": "OOS"
+					},
+					{
+						"id": "321d46ca-a76d-51cf-9f12-0ca63559e297",
+						"gtin": "00198727850784",
+						"size": "2XL",
+						"level": "OOS"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "vomero-black",
+		"title": "Black",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/1e2ce5df-fb01-4411-b1fa-96155d0b9975/vomero-black-iq0627-001-release-date.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 199.99,
+					"currency": "GBP"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-11T08:00:00.000Z"
+				},
+				"modelName": "NIKE VOMERO PRM SP",
+				"id": "9478a072-4d99-57ca-a47e-e449ca242a91",
+				"sizes": [
+					{
+						"id": "8619d0e2-66d3-5b38-8377-195bc369db38",
+						"gtin": "00198729046451",
+						"size": "4",
+						"level": "LOW"
+					},
+					{
+						"id": "d9cf56da-343f-5b86-955a-9a10eb1fabc8",
+						"gtin": "00198729042378",
+						"size": "4.5",
+						"level": "LOW"
+					},
+					{
+						"id": "d9edaee5-ac84-51c5-8ef9-a63f03ea6d55",
+						"gtin": "00198729042941",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "3883ff54-d18c-515c-bc6b-dc0781b23ba7",
+						"gtin": "00198729045942",
+						"size": "5.5",
+						"level": "LOW"
+					},
+					{
+						"id": "a78fab2c-3d36-5bc3-9f04-1c447b62155b",
+						"gtin": "00198729044525",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "0c4da221-2247-519e-b283-8c5c11470a22",
+						"gtin": "00198729043757",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "b23bd2b6-d33c-5100-8a0e-280d8e40708d",
+						"gtin": "00198729044808",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "f4e4fe19-0dad-577a-ad5d-9a1dcc077ab7",
+						"gtin": "00198729044303",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "639fec7e-a76a-58f0-b7d6-bb24d9a658d2",
+						"gtin": "00198729045904",
+						"size": "8",
+						"level": "LOW"
+					},
+					{
+						"id": "07f94b96-df12-5854-ba46-22f530389e0d",
+						"gtin": "00198729047304",
+						"size": "8.5",
+						"level": "LOW"
+					},
+					{
+						"id": "f8145652-309c-5d60-9b6e-02d6790dfd1d",
+						"gtin": "00198729047335",
+						"size": "9",
+						"level": "LOW"
+					},
+					{
+						"id": "80d664c8-7df3-59b9-86eb-046ac17d4095",
+						"gtin": "00198729044563",
+						"size": "9.5",
+						"level": "LOW"
+					},
+					{
+						"id": "b2f72747-696e-5220-916f-7445ddb82108",
+						"gtin": "00198729045522",
+						"size": "10",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "b0615d51-f9f6-5752-b75c-22df8df7c2d5",
+						"gtin": "00198729047847",
+						"size": "10.5",
+						"level": "LOW"
+					},
+					{
+						"id": "52feac23-9048-51d5-a593-700c7feeac33",
+						"gtin": "00198729045591",
+						"size": "11",
+						"level": "LOW"
+					},
+					{
+						"id": "35c89ab8-bf52-5d8e-b86d-8cdd2ce96a06",
+						"gtin": "00198729045164",
+						"size": "11.5",
+						"level": "LOW"
+					},
+					{
+						"id": "388c8bc2-a590-50a6-9384-5d3b27b56214",
+						"gtin": "00198729043429",
+						"size": "12",
+						"level": "LOW"
+					},
+					{
+						"id": "c706b536-f585-5230-bc15-2097e47d808f",
+						"gtin": "00198729042415",
+						"size": "12.5",
+						"level": "LOW"
+					},
+					{
+						"id": "76e5e5ec-d443-5668-90a4-4e8cac35c1f9",
+						"gtin": "00198729042835",
+						"size": "13",
+						"level": "LOW"
+					},
+					{
+						"id": "cb75dfe1-3552-526c-af4d-a9838d832034",
+						"gtin": "00198729045232",
+						"size": "14",
+						"level": "LOW"
+					},
+					{
+						"id": "61242528-7369-5232-a0d0-df9fca7b2452",
+						"gtin": "00198729044235",
+						"size": "15",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "womens-astra-ultra-black-3",
+		"title": "Black",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/e9a300b7-d8db-4e37-b232-92b2bffeca1c/women-s-astra-ultra-black-iq3446-010-release-date.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 99.99,
+					"currency": "GBP"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-06T08:00:00.000Z"
+				},
+				"modelName": "W NIKE ASTRA ULTRA PRM",
+				"id": "ac6479e2-9a6a-5f6d-ae40-97f8cc4f11bd",
+				"sizes": [
+					{
+						"id": "d88fa030-6a60-57c9-b197-44236d6cc4e0",
+						"gtin": "00198727677763",
+						"size": "5",
+						"level": "OOS"
+					},
+					{
+						"id": "1fbe6c06-d989-50fd-8c80-1dd23e7c1532",
+						"gtin": "00198727680107",
+						"size": "5.5",
+						"level": "LOW"
+					},
+					{
+						"id": "b617b10e-e242-5cce-90e9-8be88816532e",
+						"gtin": "00198727679422",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "043cd929-863a-58d7-9191-c6859a30bd6b",
+						"gtin": "00198727677978",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "9c5255d3-ba21-5652-85cb-878c51bcf0ad",
+						"gtin": "00198727674861",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "b7a5c4bb-9d7f-50fa-be15-372a21f22288",
+						"gtin": "00198727674311",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "4d6bde3b-e7f2-5957-ae7a-65c3e7e9be6a",
+						"gtin": "00198727675103",
+						"size": "8",
+						"level": "LOW"
+					},
+					{
+						"id": "85fe4845-744e-5334-a076-309da01907c4",
+						"gtin": "00198727677879",
+						"size": "8.5",
+						"level": "LOW"
+					},
+					{
+						"id": "c438f8f5-cfcc-597c-96ba-91b50b519cfa",
+						"gtin": "00198727680169",
+						"size": "9",
+						"level": "LOW"
+					},
+					{
+						"id": "ee64bafa-6447-59e1-8d95-328efb7d10b6",
+						"gtin": "00198727676889",
+						"size": "9.5",
+						"level": "LOW"
+					},
+					{
+						"id": "cecaa125-2f5b-5308-92fb-2da166dbd5f7",
+						"gtin": "00198727679026",
+						"size": "10",
+						"level": "LOW"
+					},
+					{
+						"id": "ee7ddc92-d45f-580e-9b41-b2ff72aeb7d8",
+						"gtin": "00198727678098",
+						"size": "10.5",
+						"level": "LOW"
+					},
+					{
+						"id": "8aa3869e-678f-5aa5-b449-7b99c6b732dc",
+						"gtin": "00198727674786",
+						"size": "11",
+						"level": "LOW"
+					},
+					{
+						"id": "2c0d43fb-1a35-536a-b8b4-d8c0f10bd865",
+						"gtin": "00198727681098",
+						"size": "11.5",
+						"level": "LOW"
+					},
+					{
+						"id": "8dff1c02-1814-51fb-b3d0-427443b6ae1d",
+						"gtin": "00198727676445",
+						"size": "12",
+						"level": "LOW"
+					},
+					{
+						"id": "9279f001-633a-5c9e-96f3-5a4563acbf03",
+						"gtin": "00198727674908",
+						"size": "12.5",
+						"level": "LOW"
+					},
+					{
+						"id": "7363d282-4194-53a1-bf05-90ba9cad2033",
+						"gtin": "00198727675332",
+						"size": "13",
+						"level": "LOW"
+					},
+					{
+						"id": "99ef230c-1b3f-5972-904f-f5b45c7d024d",
+						"gtin": "00198727679170",
+						"size": "13.5",
+						"level": "LOW"
+					},
+					{
+						"id": "24448fb3-09d4-5b60-9e04-422205f318f6",
+						"gtin": "00198727676957",
+						"size": "14",
+						"level": "LOW"
+					},
+					{
+						"id": "bf3c5a9b-79ee-5c5f-8079-8f0996fa5f2c",
+						"gtin": "00198727680824",
+						"size": "14.5",
+						"level": "LOW"
+					},
+					{
+						"id": "b984e57f-d8f8-55c6-9299-a54fd82eb962",
+						"gtin": "00198727676032",
+						"size": "16.5",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "air-jordan-1-union-fragment-black-and-varsity-red",
+		"title": "Black and Varsity Red",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/c9987670-6068-4913-b1d8-21fb9ac36fff/air-jordan-1-x-union-x-fragment-black-and-varsity-red-io7847-002-release-date.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 184.99,
+					"currency": "GBP"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-02-28T08:00:00.000Z",
+					"stopEntryDate": "2026-02-28T08:20:51.056Z"
+				},
+				"modelName": "AIR JORDAN 1 RTR HI OG SP",
+				"id": "ff0e8bee-87e3-5a40-85f9-e96c715616ef",
+				"sizes": [
+					{
+						"id": "2da9bd08-de4d-5846-94fd-471e9b49c5a9",
+						"gtin": "00198727819668",
+						"size": "3.5",
+						"level": "OOS"
+					},
+					{
+						"id": "92b395c8-c0f8-5ffd-bcb8-43472dc75093",
+						"gtin": "00198727819415",
+						"size": "4",
+						"level": "OOS"
+					},
+					{
+						"id": "d3b7ba05-0d6c-5fec-b922-1a9afaf8b6f2",
+						"gtin": "00198727819217",
+						"size": "4.5",
+						"level": "LOW"
+					},
+					{
+						"id": "fab86377-0aa5-58dd-85a2-3d1c00bd6015",
+						"gtin": "00198727820671",
+						"size": "5",
+						"level": "OOS"
+					},
+					{
+						"id": "43efbfc3-66a2-597c-a28f-78800b4b2941",
+						"gtin": "00198727819804",
+						"size": "5.5",
+						"level": "OOS"
+					},
+					{
+						"id": "9fd8d99a-3921-5eaf-a51b-a35d6c6ad4db",
+						"gtin": "00198727819859",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "f752a640-2414-5e5a-bda7-834f475ff40b",
+						"gtin": "00198727820534",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "25a476ac-b6ae-586c-b576-4dc401753ee0",
+						"gtin": "00198727820145",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "339eb6b6-2c67-5cea-98c2-e75dccefbb2e",
+						"gtin": "00198727819101",
+						"size": "7.5",
+						"level": "OOS"
+					},
+					{
+						"id": "834573c1-aadd-555c-8a1b-648a361706c0",
+						"gtin": "00198727819828",
+						"size": "8",
+						"level": "LOW"
+					},
+					{
+						"id": "d4cbd4de-4eff-5fe8-8915-676bf243a30b",
+						"gtin": "00198727819224",
+						"size": "8.5",
+						"level": "LOW"
+					},
+					{
+						"id": "07dd1c48-8c00-56ff-9cd2-8c610d8f781c",
+						"gtin": "00198727819798",
+						"size": "9",
+						"level": "LOW"
+					},
+					{
+						"id": "670a47a7-6e43-5436-b176-872feca4769c",
+						"gtin": "00198727819811",
+						"size": "9.5",
+						"level": "LOW"
+					},
+					{
+						"id": "a160665f-bbe7-5399-8eac-e5d93a821bb3",
+						"gtin": "00198727819262",
+						"size": "10",
+						"level": "LOW"
+					},
+					{
+						"id": "216b5c4f-e195-516c-ab6c-bf51781a4b28",
+						"gtin": "00198727820121",
+						"size": "10.5",
+						"level": "LOW"
+					},
+					{
+						"id": "38bc3387-b3fe-5614-82e3-9262ad76313d",
+						"gtin": "00198727819163",
+						"size": "11",
+						"level": "LOW"
+					},
+					{
+						"id": "5c4aaa11-5d88-5cef-a337-dfe383f41dd9",
+						"gtin": "00198727819651",
+						"size": "11.5",
+						"level": "LOW"
+					},
+					{
+						"id": "0fba54b1-bc36-5c02-8f4d-0ad1a94aaf57",
+						"gtin": "00198727819545",
+						"size": "12",
+						"level": "LOW"
+					},
+					{
+						"id": "32a02893-55db-547e-b8c0-3dfc077bcc8e",
+						"gtin": "00198727819538",
+						"size": "12.5",
+						"level": "OOS"
+					},
+					{
+						"id": "301aa13a-ca35-56f2-a3b2-d6a3aa20dca6",
+						"gtin": "00198727819736",
+						"size": "13",
+						"level": "LOW"
+					},
+					{
+						"id": "7fbba396-449c-59da-9401-21f38e123c3f",
+						"gtin": "00198727819774",
+						"size": "14",
+						"level": "OOS"
+					},
+					{
+						"id": "4a6e4f31-791f-59a2-90df-4468162ecae8",
+						"gtin": "00198727819910",
+						"size": "15",
+						"level": "LOW"
+					},
+					{
+						"id": "212b695e-ca9a-508a-b3ad-b81e2765eeed",
+						"gtin": "00198727819606",
+						"size": "16",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "pegasus-premium-natural-snkrs",
+		"title": "Natural",
+		"imageUrl": "",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 189.99,
+					"currency": "GBP"
+				},
+				"modelName": "PEGASUS PREMIUM SP",
+				"id": "f8d4b056-cc5b-5cc0-913d-5e12b51637d2",
+				"sizes": [
+					{
+						"id": "9240c0d8-347d-517b-8d93-a05c0fb7767f",
+						"gtin": "00198730768090",
+						"size": "4",
+						"level": "LOW"
+					},
+					{
+						"id": "7e037caf-ba22-5dbd-abb8-f83430155a5f",
+						"gtin": "00198730773636",
+						"size": "4.5",
+						"level": "LOW"
+					},
+					{
+						"id": "93c83e2b-27bb-5358-91c6-2775f2854e03",
+						"gtin": "00198730763026",
+						"size": "5",
+						"level": "OOS"
+					},
+					{
+						"id": "e6a0de9c-d57c-51d4-b47f-901763488a02",
+						"gtin": "00198730772349",
+						"size": "5.5",
+						"level": "OOS"
+					},
+					{
+						"id": "c4a0fcab-425c-56f5-b35b-66d7306ab50f",
+						"gtin": "00198730774794",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "262574d7-4f85-584e-bfaa-b15878421642",
+						"gtin": "00198730766867",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "7fc8986f-1db3-5563-abbf-6a6ccbe145a3",
+						"gtin": "00198730766775",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "e0badfe1-adff-529e-81f1-456cfed44774",
+						"gtin": "00198730774152",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "a211dbda-6d92-5720-b0a0-5a466ebaab43",
+						"gtin": "00198730774695",
+						"size": "8",
+						"level": "LOW"
+					},
+					{
+						"id": "e2bcc57d-f6dd-56b2-a8b1-04dc5f19e701",
+						"gtin": "00198730774176",
+						"size": "8.5",
+						"level": "LOW"
+					},
+					{
+						"id": "6628189e-fed0-59ce-aeb2-53644b8aa964",
+						"gtin": "00198730773193",
+						"size": "9",
+						"level": "LOW"
+					},
+					{
+						"id": "82a90ca6-7a6b-5149-83ba-9dbc2cb2dcee",
+						"gtin": "00198730774183",
+						"size": "9.5",
+						"level": "LOW"
+					},
+					{
+						"id": "7efe52d1-ab62-54f3-87b2-dc1b3ee1f172",
+						"gtin": "00198730762586",
+						"size": "10",
+						"level": "LOW"
+					},
+					{
+						"id": "d6d73108-1084-52be-aa3c-b753550ad8bf",
+						"gtin": "00198730768519",
+						"size": "10.5",
+						"level": "LOW"
+					},
+					{
+						"id": "093516b5-bf30-5aee-b39f-68188efd288d",
+						"gtin": "00198730773247",
+						"size": "11",
+						"level": "LOW"
+					},
+					{
+						"id": "3d478be9-62c6-5d56-a65e-48b365deeee4",
+						"gtin": "00198730761879",
+						"size": "11.5",
+						"level": "LOW"
+					},
+					{
+						"id": "a97f4f27-7603-5361-b4f7-844fc69b9031",
+						"gtin": "00198730770055",
+						"size": "12",
+						"level": "LOW"
+					},
+					{
+						"id": "fe5cb2b1-c312-5629-8ed6-860b8b5d91e6",
+						"gtin": "00198730762012",
+						"size": "12.5",
+						"level": "OOS"
+					},
+					{
+						"id": "507f94de-3d97-5ee4-b582-64ba4d9a6500",
+						"gtin": "00198730762944",
+						"size": "13",
+						"level": "LOW"
+					},
+					{
+						"id": "e223d868-182b-5663-b897-2fb8d2aba3f4",
+						"gtin": "00198730774244",
+						"size": "14",
+						"level": "LOW"
+					},
+					{
+						"id": "75ddaa4e-ef1d-530a-a9a0-dc8c60111610",
+						"gtin": "00198730772196",
+						"size": "15",
+						"level": "OOS"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "air-max-95-big-bubble-zip-phantom-and-light-crimson",
+		"title": "Phantom and Light Crimson",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/0fb07d93-e1ee-44ef-b55f-bb7f2c11b2d5/air-max-95-big-bubble-zip-phantom-and-light-crimson-im0695-002-release-date.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 184.99,
+					"currency": "GBP"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-07T08:00:00.000Z"
+				},
+				"modelName": "AIR MAX 95 BIG BUBBLE ZIP SP",
+				"id": "9a12c499-3bea-57fe-ae56-741865cbff78",
+				"sizes": [
+					{
+						"id": "3ee6cf1b-a246-5410-8957-c935262a6a58",
+						"gtin": "00198487530919",
+						"size": "3.5",
+						"level": "LOW"
+					},
+					{
+						"id": "cfebabc5-4933-518b-b6c0-94464ca7fcef",
+						"gtin": "00198487531190",
+						"size": "4",
+						"level": "LOW"
+					},
+					{
+						"id": "090ec4c5-97cc-5390-ab78-738e490a3227",
+						"gtin": "00198487530605",
+						"size": "4.5",
+						"level": "LOW"
+					},
+					{
+						"id": "834d0589-a006-549f-a77a-e18efde22674",
+						"gtin": "00198487530544",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "11d67617-7215-54c0-ad3a-e317f8f5d3da",
+						"gtin": "00198487531237",
+						"size": "5.5",
+						"level": "LOW"
+					},
+					{
+						"id": "67351123-81e8-5f4b-bad6-d40a18ad868e",
+						"gtin": "00198487530483",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "d5cea4c5-1c4e-5dec-a4cf-6fc37e6e85ee",
+						"gtin": "00198487531299",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "3717bf29-c8d2-5513-a4fa-823814b22066",
+						"gtin": "00198487530674",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "1289d003-990e-5e61-ae84-cc0b4f2db4c6",
+						"gtin": "00198487531268",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "1437175d-0560-59a6-9956-84fd12d56d96",
+						"gtin": "00198487531336",
+						"size": "8",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "f7d6ce54-3dbd-5914-bec4-a57927b95bd6",
+						"gtin": "00198487530759",
+						"size": "8.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "1b1d2b7a-3b7f-55d3-8feb-195a5203877b",
+						"gtin": "00198487530490",
+						"size": "9",
+						"level": "HIGH"
+					},
+					{
+						"id": "82864384-3eb2-5d1a-b12b-3acb3d03ec4b",
+						"gtin": "00198487530506",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "55916948-3bdb-5da4-9d2e-e6472b67640e",
+						"gtin": "00198487530650",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "1faa4adb-ad2e-57f5-907a-e8f76c63b9cd",
+						"gtin": "00198487531169",
+						"size": "10.5",
+						"level": "LOW"
+					},
+					{
+						"id": "4a844b66-db86-5e2f-a339-f6ba2cc49043",
+						"gtin": "00198487530636",
+						"size": "11",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "c66cccb3-e0c7-50c0-87eb-b67d2f58251d",
+						"gtin": "00198487531183",
+						"size": "11.5",
+						"level": "LOW"
+					},
+					{
+						"id": "0ecb18ef-1c7c-5a26-8bb9-f311ef07f8e6",
+						"gtin": "00198487531220",
+						"size": "12",
+						"level": "LOW"
+					},
+					{
+						"id": "62f1ab51-3d14-536d-aaeb-b8e9274dcc15",
+						"gtin": "00198487531107",
+						"size": "12.5",
+						"level": "LOW"
+					},
+					{
+						"id": "121bd2ca-688d-5c70-9af4-402ae4574e26",
+						"gtin": "00198487530810",
+						"size": "13",
+						"level": "LOW"
+					},
+					{
+						"id": "09877838-dd58-50f7-abb4-4eb0efcdfafa",
+						"gtin": "00198487531008",
+						"size": "14",
+						"level": "LOW"
+					},
+					{
+						"id": "e726ad5f-4cd5-57af-bb48-790bee921318",
+						"gtin": "00198487531022",
+						"size": "15",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	}
+]

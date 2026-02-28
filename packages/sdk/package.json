@@ -8,15 +8,23 @@
 		"./mocks/handlers": "./mocks/handlers/handlers.ts"
 	},
 	"files": [
-		"mocks",
-		"models",
-		"productFeed",
-		"utils/**/!(*.test).ts",
-		"index.ts"
+		"mocks/**/*.ts",
+		"models/**/*.ts",
+		"productFeed/**/*.ts",
+		"utils/**/*.ts",
+		"index.ts",
+		"!**/*.test.*",
+		"!**/*.spec.*",
+		"!**/__tests__/**",
+		"!**/__fixtures__/**"
 	],
 	"scripts": {
 		"check-product-feed": "node scripts/check-product-feed.ts",
 		"ci:check-product-feed": "node scripts/ci-check-product-feed.ts",
+		"regen:fixtures:jp": "node scripts/regenerate-product-feed-expected.ts jp",
+		"regen:fixtures:us": "node scripts/regenerate-product-feed-expected.ts us",
+		"regen:fixtures:uk": "node scripts/regenerate-product-feed-expected.ts uk",
+		"regen:fixtures:all": "node scripts/regenerate-product-feed-expected.ts all",
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:prettier && npm run lint:ts",

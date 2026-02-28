@@ -6,7 +6,6 @@ import Spinner from 'ink-spinner'
 import { Select } from '../components/Select/Select.tsx'
 import { $products, $selectedProductSlug } from '../store/product.ts'
 import { isEmpty } from '../utils/isEmpty.ts'
-import { theme } from '../utils/theme.ts'
 
 export const Home = () => {
 	const { loading, data } = useStore($products.value)
@@ -20,7 +19,11 @@ export const Home = () => {
 		[data]
 	)
 	const initialIndex = useMemo(
-		() => Math.max(0, productsList.findIndex((item) => item.value === lastSlug)),
+		() =>
+			Math.max(
+				0,
+				productsList.findIndex((item) => item.value === lastSlug)
+			),
 		[productsList, lastSlug]
 	)
 

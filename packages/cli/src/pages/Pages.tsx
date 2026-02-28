@@ -16,8 +16,12 @@ export const Pages = () => {
 	const { isTooShort, currentHeight, minHeight } = useIsTooShortHeight()
 	const { isTooNarrow, currentWidth, minWidth } = useIsTooNarrowWidth()
 
-	if (isTooShort) return <ChangeSizeScreen dimension="height" currentHeight={currentHeight} minHeight={minHeight} />
-	if (isTooNarrow) return <ChangeSizeScreen dimension="width" currentWidth={currentWidth} minWidth={minWidth} />
+	if (isTooShort)
+		return (
+			<ChangeSizeScreen dimension="height" currentHeight={currentHeight} minHeight={minHeight} />
+		)
+	if (isTooNarrow)
+		return <ChangeSizeScreen dimension="width" currentWidth={currentWidth} minWidth={minWidth} />
 	if (!page) return null
 	if (page.route === HOME.routeName) return <Home />
 	if (page.route === COUNTRY.routeName) return <Country />
