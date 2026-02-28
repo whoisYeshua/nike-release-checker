@@ -26,5 +26,13 @@
 	},
 	"dependencies": {
 		"valibot": "1.2.0"
+	},
+	"peerDependencies": {
+		"msw": "2.12.10"
+	},
+	"peerDependenciesMeta": {
+		"msw": {
+			"optional": true
+		}
 	}
 }
