@@ -29,3 +29,4 @@ jobs:
         with:
           commit: "chore: release"
           title: "chore: release"
+          version: "npm run changeset:version"
