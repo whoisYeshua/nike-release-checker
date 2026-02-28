@@ -12,6 +12,11 @@ export const Select = <V,>({
 	...rest
 }: ComponentProps<typeof SelectInput<V>>) => {
 	return (
-		<SelectInput limit={theme.sizes.fullHeight - 7} itemComponent={itemComponent} indicatorComponent={indicatorComponent} {...rest} />
+		<SelectInput
+			limit={theme.sizes.fullHeight - 7}
+			itemComponent={itemComponent}
+			indicatorComponent={indicatorComponent}
+			{...rest}
+		/>
 	)
 }

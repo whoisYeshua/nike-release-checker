@@ -27,9 +27,9 @@ export const Model = () => {
 				</Text>
 			</Box>
 			<Br />
-			<Box height={2} flexDirection='column'>
-			<DateView date={model?.launchView?.startEntryDate} type="start" />
-			<DateView date={model?.launchView?.stopEntryDate} type="end" />
+			<Box height={2} flexDirection="column">
+				<DateView date={model?.launchView?.startEntryDate} type="start" />
+				<DateView date={model?.launchView?.stopEntryDate} type="end" />
 			</Box>
 			<Br />
 			<Text>Size - stock:</Text>

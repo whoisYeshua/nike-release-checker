@@ -13,10 +13,7 @@ export const ChangeSizeScreen = (props: ChangeSizeScreenProps) => {
 	const unit = isHeight ? 'lines' : 'columns'
 
 	return (
-		<Box
-			flexDirection="column"
-			justifyContent="flex-end"
-		>
+		<Box flexDirection="column" justifyContent="flex-end">
 			<Text bold color="yellow">
 				CHANGE TERMINAL\WINDOW {label}
 			</Text>
@@ -33,8 +30,7 @@ export const ChangeSizeScreen = (props: ChangeSizeScreenProps) => {
 				</Text>
 			</Text>
 			<Text>
-				You should increase the {label.toLowerCase()} by <Text underline>{difference}</Text>{' '}
-				{unit}
+				You should increase the {label.toLowerCase()} by <Text underline>{difference}</Text> {unit}
 			</Text>
 		</Box>
 	)
