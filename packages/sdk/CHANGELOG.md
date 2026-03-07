@@ -1,5 +1,11 @@
 # @nike-release-checker/sdk
 
+## 0.3.2
+
+### Patch Changes
+
+- aeaae1c: Update CoverCardPropertiesSchema to make 'custom' and 'style' properties optional due JP region issues
+
 ## 0.3.1
 
 ### Patch Changes
