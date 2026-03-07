@@ -461,7 +461,7 @@ export const CoverCardPropertiesSchema = v.object({
 	body: v.optional(v.string()),
 	colorTheme: v.union([v.literal('dark'), v.literal('light')]),
 	copyId: v.string(),
-	custom: v.unknown(),
+	custom: v.optional(v.unknown()),
 	fallbacks: v.optional(v.array(v.unknown())),
 	internalName: v.optional(v.string()),
 	imageCaption: v.optional(v.string()),
@@ -477,7 +477,7 @@ export const CoverCardPropertiesSchema = v.object({
 	squarish: LandscapeSchema,
 	squarishId: v.string(),
 	squarishURL: v.string(),
-	style: StyleSchema,
+	style: v.optional(StyleSchema),
 	subtitle: v.string(),
 	title: v.string(),
 })
