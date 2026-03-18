@@ -23,7 +23,7 @@
 		"ci:check-product-feed": "node scripts/ci-check-product-feed.ts",
 		"regen:fixtures:jp": "node scripts/regenerate-product-feed-expected.ts jp",
 		"regen:fixtures:us": "node scripts/regenerate-product-feed-expected.ts us",
-		"regen:fixtures:uk": "node scripts/regenerate-product-feed-expected.ts uk",
+		"regen:fixtures:gb": "node scripts/regenerate-product-feed-expected.ts gb",
 		"regen:fixtures:all": "node scripts/regenerate-product-feed-expected.ts all",
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",

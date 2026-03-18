@@ -7,6 +7,8 @@ interface Size {
 	level: LevelOutput
 }
 
+type Release = ReturnType<typeof getRelease>
+
 export const formatProductFeedResponse = (productsFeed: ProductFeedOutput[]) => {
 	const initialReleases = productsFeed.map(getRelease)
 	const potentialChildReleases: string[] = []
@@ -25,16 +27,27 @@ export const formatProductFeedResponse = (productsFeed: ProductFeedOutput[]) => 
 		return hasManyModels || isNotTopChild
 	})
 
-	return releasesWithoutTopChilds.toSorted(compareByStartEntryDate)
+	const dedupedReleases = dedupeReleasesBySlug(releasesWithoutTopChilds)
+	
+	return dedupedReleases.toSorted(compareByStartEntryDate)
 }
 
-const compareByStartEntryDate = (
-	aRelease: ReturnType<typeof getRelease>,
-	bRelease: ReturnType<typeof getRelease>,
-) => {
+const dedupeReleasesBySlug = (releases: Release[]) => {
+	const seenSlugs = new Set<string>()
+
+	return releases.filter(({ slug }) => {
+		if (!slug) return false
+		if (seenSlugs.has(slug)) return false
+		seenSlugs.add(slug)
+		return true
+	})
+}
+
+const compareByStartEntryDate = (aRelease: Release, bRelease: Release) => {
 	const dateA = aRelease.models[0]?.launchView?.startEntryDate
 	const dateB = bRelease.models[0]?.launchView?.startEntryDate
-	if (dateA && dateB) return dateA.localeCompare(dateB) || aRelease.title.localeCompare(bRelease.title)
+	if (dateA && dateB)
+		return dateA.localeCompare(dateB) || aRelease.title.localeCompare(bRelease.title)
 	if (dateA) return -1
 	if (dateB) return 1
 	return aRelease.title.localeCompare(bRelease.title)

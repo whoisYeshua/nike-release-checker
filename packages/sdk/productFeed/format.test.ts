@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { readdirSync } from 'node:fs'
+import { existsSync, readdirSync } from 'node:fs'
 import path from 'node:path'
 import { describe, test } from 'node:test'
 
@@ -8,7 +8,7 @@ import { formatProductFeedResponse } from './format.ts'
 const REGION_BASELINES = [
 	{ code: 'jp', title: 'JAPAN (JP)' },
 	{ code: 'us', title: 'UNITED STATES (US)' },
-	{ code: 'uk', title: 'UNITED KINGDOM (UK/GB)' },
+	{ code: 'gb', legacyCode: 'uk', title: 'UNITED KINGDOM (UK/GB)' },
 ]
 
 const EXPECTED_FIXTURE_FILENAME = 'product-feed.expected.json'
@@ -18,9 +18,15 @@ const isDateDir = (entryName: string) => {
 	return /^\d{2}\.\d{2}\.\d{4}$/.test(entryName)
 }
 
-for (const { code, title } of REGION_BASELINES) {
+for (const { code, legacyCode, title } of REGION_BASELINES) {
 	describe(`formatProductFeedResponse ${title}`, () => {
-		const regionFixturesDir = path.resolve(import.meta.dirname, '__fixtures__', code)
+		const preferredRegionFixturesDir = path.resolve(import.meta.dirname, '__fixtures__', code)
+		const legacyRegionFixturesDir = legacyCode
+			? path.resolve(import.meta.dirname, '__fixtures__', legacyCode)
+			: preferredRegionFixturesDir
+		const regionFixturesDir = existsSync(preferredRegionFixturesDir)
+			? preferredRegionFixturesDir
+			: legacyRegionFixturesDir
 		const dateDirs = readdirSync(regionFixturesDir, { withFileTypes: true })
 			.filter((entry) => entry.isDirectory() && isDateDir(entry.name))
 			.map((entry) => entry.name)
@@ -37,6 +43,7 @@ for (const { code, title } of REGION_BASELINES) {
 				})
 
 				const result = formatProductFeedResponse(rawFixture.objects)
+				assert.equal(new Set(result.map(({ slug }) => slug)).size, result.length)
 				assert.partialDeepStrictEqual(result, expectedFixture)
 			})
 		}
