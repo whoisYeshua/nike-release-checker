@@ -202,22 +202,6 @@ export const ProductTypeSchema = v.union([
 
 export const PublishTypeSchema = v.union([v.literal('FLOW'), v.literal('LAUNCH')])
 
-export const SportTagSchema = v.union([
-	v.literal('Basketball'),
-	v.literal('Dance'),
-	v.literal('Lifestyle'),
-	v.literal('Skateboarding'),
-	v.literal('Soccer'),
-	v.literal('Tennis'),
-	v.literal('Outdoor'),
-	v.literal('Running'),
-	v.literal('Lacrosse'),
-	v.literal('Training & Gym'),
-	v.literal('Baseball'),
-	v.literal('Workouts'),
-	v.literal('Football'),
-])
-
 export const StatusSchema = v.union([v.literal('ACTIVE'), v.literal('HOLD'), v.literal('INACTIVE')])
 
 export const TaxonomyAttributeSchema = v.object({
@@ -283,7 +267,7 @@ export const MerchProductSchema = v.object({
 	sizeGuideId: v.optional(v.string()),
 	snapshotId: v.string(),
 	softLaunchDate: v.optional(v.string()),
-	sportTags: v.array(SportTagSchema),
+	sportTags: v.array(v.string()),
 	status: StatusSchema,
 	styleCode: v.string(),
 	styleColor: v.string(),
@@ -777,7 +761,6 @@ export type LimitRetailExperienceOutput = v.InferOutput<typeof LimitRetailExperi
 export type ProductRollupOutput = v.InferOutput<typeof ProductRollupSchema>
 export type ProductTypeOutput = v.InferOutput<typeof ProductTypeSchema>
 export type PublishTypeOutput = v.InferOutput<typeof PublishTypeSchema>
-export type SportTagOutput = v.InferOutput<typeof SportTagSchema>
 export type StatusOutput = v.InferOutput<typeof StatusSchema>
 export type TaxonomyAttributeOutput = v.InferOutput<typeof TaxonomyAttributeSchema>
 export type VasTypeOutput = v.InferOutput<typeof VasTypeSchema>
