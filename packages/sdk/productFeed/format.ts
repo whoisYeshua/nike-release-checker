@@ -28,7 +28,7 @@ export const formatProductFeedResponse = (productsFeed: ProductFeedOutput[]) => 
 	})
 
 	const dedupedReleases = dedupeReleasesBySlug(releasesWithoutTopChilds)
-	
+
 	return dedupedReleases.toSorted(compareByStartEntryDate)
 }
 
