@@ -1,5 +1,16 @@
 # @nike-release-checker/cli
 
+## 0.2.4
+
+### Patch Changes
+
+- e4b4456: update deps
+- Updated dependencies [cad67ea]
+- Updated dependencies [3e570d5]
+- Updated dependencies [e4b4456]
+- Updated dependencies [3ffbe94]
+  - @nike-release-checker/sdk@0.3.3
+
 ## 0.2.3
 
 ### Patch Changes

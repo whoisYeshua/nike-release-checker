@@ -1,5 +1,14 @@
 # @nike-release-checker/sdk
 
+## 0.3.3
+
+### Patch Changes
+
+- cad67ea: dedupe product feed releases by slug
+- 3e570d5: sort releases based on their start entry date
+- e4b4456: update deps
+- 3ffbe94: Removed SportTagSchema and replaced sportTags in MerchProductSchema with an array of strings for improved flexibility.
+
 ## 0.3.2
 
 ### Patch Changes
