@@ -1,151 +1,5 @@
 [
 	{
-		"slug": "m2k-tekno-atmosphere-grey-dark-grey-gunsmoke-jp",
-		"title": "ATMOSPHERE GREY",
-		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/d0m8qwgt2dmhouabjyc3/jp-bv0074-001-m2k-tekno.jpg",
-		"models": [
-			{
-				"merchPrice": {
-					"currentPrice": 14199,
-					"currency": "JPY"
-				},
-				"modelName": "NIKE M2K TEKNO SP",
-				"id": "84b8c02e-3f5f-5cab-87a5-43a6916d6b90",
-				"sizes": [
-					{
-						"id": "64d3a81c-bdd9-5d42-bd63-d0d3a855d6bc",
-						"gtin": "00192499094995",
-						"size": "7.5",
-						"level": "LOW"
-					},
-					{
-						"id": "144369a0-ec60-5213-89a8-a908ff388359",
-						"gtin": "00192499095008",
-						"size": "8",
-						"level": "LOW"
-					},
-					{
-						"id": "f7453b18-aa9e-515c-a62b-fa575d8b2939",
-						"gtin": "00192499095015",
-						"size": "8.5",
-						"level": "LOW"
-					},
-					{
-						"id": "dadff482-2b8f-58dc-8989-fac8a2c954d1",
-						"gtin": "00192499095114",
-						"size": "14",
-						"level": "LOW"
-					}
-				]
-			}
-		]
-	},
-	{
-		"slug": "womens-rejuven8-run-black-and-rust-factor",
-		"title": "Black and Rust Factor",
-		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/f33d0c98-5d65-44b0-ab0c-492806fafa7d/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%83%AA%E3%82%B8%E3%83%A5%E3%83%93%E3%83%8D%E3%82%A4%E3%83%88-%E3%83%A9%E3%83%B3-black-and-rust-factor-io9932-001-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-		"models": [
-			{
-				"merchPrice": {
-					"currentPrice": 22550,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "LEO",
-					"startEntryDate": "2026-03-06T00:00:00.000Z"
-				},
-				"modelName": "NIKE REJUVEN8 OG SE",
-				"id": "a2c9e371-9492-5dc9-8b17-28b0118aaba5",
-				"sizes": [
-					{
-						"id": "b8df6497-113d-5d1d-8cf7-59241fd2e713",
-						"gtin": "00198728759819",
-						"size": "5",
-						"level": "LOW"
-					},
-					{
-						"id": "f94a7e15-3c75-5016-a4bf-f675d2992bb4",
-						"gtin": "00198728767913",
-						"size": "6",
-						"level": "LOW"
-					},
-					{
-						"id": "aeaa2479-6034-5d30-851e-256a6b208ec1",
-						"gtin": "00198728763793",
-						"size": "6.5",
-						"level": "LOW"
-					},
-					{
-						"id": "399881f5-f9ac-5ef0-8aa3-fe7708d30117",
-						"gtin": "00198728768491",
-						"size": "7",
-						"level": "LOW"
-					},
-					{
-						"id": "7c07b094-286e-581d-a246-1ba83781752f",
-						"gtin": "00198728757044",
-						"size": "7.5",
-						"level": "LOW"
-					},
-					{
-						"id": "a2b1a548-28b7-587b-bd31-7b81418bade5",
-						"gtin": "00198728759666",
-						"size": "8",
-						"level": "LOW"
-					},
-					{
-						"id": "802337a2-b198-53ef-979f-bbbd3226ce09",
-						"gtin": "00198728768231",
-						"size": "8.5",
-						"level": "LOW"
-					},
-					{
-						"id": "cd974e45-0433-5924-81e0-f58961331b75",
-						"gtin": "00198728757693",
-						"size": "9",
-						"level": "LOW"
-					},
-					{
-						"id": "a8dd0843-3f02-5d96-86dc-d20714c87d0d",
-						"gtin": "00198728762871",
-						"size": "9.5",
-						"level": "LOW"
-					},
-					{
-						"id": "1d7f2802-0e44-54bf-a9f1-74715486f73d",
-						"gtin": "00198728761607",
-						"size": "10",
-						"level": "LOW"
-					},
-					{
-						"id": "3a7c54e5-a328-5dc8-b4ba-6bc625530842",
-						"gtin": "00198728772788",
-						"size": "10.5",
-						"level": "LOW"
-					},
-					{
-						"id": "653f545e-e863-51a0-8fc0-4e8f8ea1426d",
-						"gtin": "00198728754784",
-						"size": "11",
-						"level": "LOW"
-					},
-					{
-						"id": "ce8d5cbd-0e4a-52d6-89a9-72b0653cb153",
-						"gtin": "00198728768569",
-						"size": "11.5",
-						"level": "LOW"
-					},
-					{
-						"id": "0cccd589-ed3f-5a7d-8364-11c1eed9914e",
-						"gtin": "00198728766985",
-						"size": "12",
-						"level": "LOW"
-					}
-				]
-			}
-		]
-	},
-	{
 		"slug": "air-jordan-1-union-fragment-black-and-varsity-red",
 		"title": "Black and Varsity Red",
 		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/c9987670-6068-4913-b1d8-21fb9ac36fff/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%80%E3%83%B3%C2%A01%C2%A0x-%E3%83%A6%E3%83%8B%E3%82%AA%E3%83%B3%C2%A0x-%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88%C2%A0-black-and-varsity-red-io7847-002-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
@@ -258,6 +112,526 @@
 						"gtin": "00198727819736",
 						"size": "13",
 						"level": "HIGH"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "jordan-union-fragment-apparel-collection-static",
+		"title": "アパレルコレクション",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/31fe730d-7430-410f-b689-6f66d896c771/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91jordan%C2%A0x-union%C2%A0x-fragment%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 17820,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "DAN",
+					"startEntryDate": "2026-02-28T00:00:00.000Z",
+					"stopEntryDate": "2026-02-28T00:10:00.000Z"
+				},
+				"modelName": "M J UNI FRAG LS JERSEY",
+				"id": "8d8782d8-c770-5c48-be6f-19d3307e1d73",
+				"sizes": [
+					{
+						"id": "bd19984f-2f42-59be-b615-cc87b6d9330d",
+						"gtin": "00198727851392",
+						"size": "XS",
+						"level": "LOW"
+					},
+					{
+						"id": "078f098e-b73c-5670-98c5-dde45087b228",
+						"gtin": "00198727850043",
+						"size": "S",
+						"level": "LOW"
+					},
+					{
+						"id": "db731e2a-55e4-5735-b6eb-f6a72e685ff6",
+						"gtin": "00198727851767",
+						"size": "M",
+						"level": "LOW"
+					},
+					{
+						"id": "b47fa4ec-446c-59d9-80b0-b3262e4c94a2",
+						"gtin": "00198727850128",
+						"size": "L",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "fad501cf-0c80-5cc8-bec0-c4833fc09022",
+						"gtin": "00198727851521",
+						"size": "XL",
+						"level": "LOW"
+					},
+					{
+						"id": "9981f43d-dc10-5d3b-9198-f85091641d4b",
+						"gtin": "00198727850241",
+						"size": "2XL",
+						"level": "LOW"
+					}
+				]
+			},
+			{
+				"merchPrice": {
+					"currentPrice": 16500,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "DAN",
+					"startEntryDate": "2026-02-28T00:00:00.000Z",
+					"stopEntryDate": "2026-02-28T00:10:00.000Z"
+				},
+				"modelName": "M J UNI FRAG SHORT",
+				"id": "d24eaf4c-f0f7-5953-b87b-fe8896b73f07",
+				"sizes": [
+					{
+						"id": "c6a48f1e-e8b2-5197-81a6-14f97f86e50c",
+						"gtin": "00198727850005",
+						"size": "XS",
+						"level": "LOW"
+					},
+					{
+						"id": "8c207d22-d01e-5763-a1fc-29d0228f32f3",
+						"gtin": "00198727850456",
+						"size": "S",
+						"level": "LOW"
+					},
+					{
+						"id": "e8ac9229-dd27-52c4-ac72-a86b3feeaa34",
+						"gtin": "00198727851859",
+						"size": "M",
+						"level": "LOW"
+					},
+					{
+						"id": "1943055d-81d5-5728-b0a4-0d6117261c1e",
+						"gtin": "00198727851699",
+						"size": "L",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "b4d98726-8a5d-5da9-8c3f-063873c35e70",
+						"gtin": "00198727851217",
+						"size": "XL",
+						"level": "LOW"
+					}
+				]
+			},
+			{
+				"merchPrice": {
+					"currentPrice": 7480,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "DAN",
+					"startEntryDate": "2026-02-28T00:00:00.000Z",
+					"stopEntryDate": "2026-02-28T00:10:00.000Z"
+				},
+				"modelName": "M J UNI FRAG TEE",
+				"id": "5b2bd03a-a333-562f-a08d-edbd85440ea4",
+				"sizes": [
+					{
+						"id": "97198378-89fe-52f0-ab05-bf078924ac68",
+						"gtin": "00198727847869",
+						"size": "XS",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "7d35dbe8-c41f-59bf-bbaf-df776ccf22e5",
+						"gtin": "00198727848729",
+						"size": "S",
+						"level": "HIGH"
+					},
+					{
+						"id": "aaf8040e-1583-53c5-ada7-eb3ff7678588",
+						"gtin": "00198727847944",
+						"size": "M",
+						"level": "HIGH"
+					},
+					{
+						"id": "27e8e4cc-9c1d-5c1d-97fd-2c2b473ca58f",
+						"gtin": "00198727848675",
+						"size": "L",
+						"level": "HIGH"
+					},
+					{
+						"id": "b7e01462-3ad1-5972-8f22-9aed58a5eb84",
+						"gtin": "00198727848521",
+						"size": "XL",
+						"level": "HIGH"
+					},
+					{
+						"id": "1d45384d-8563-52d3-8f91-7adba56f98c4",
+						"gtin": "00198727848286",
+						"size": "2XL",
+						"level": "LOW"
+					}
+				]
+			},
+			{
+				"merchPrice": {
+					"currentPrice": 14850,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "DAN",
+					"startEntryDate": "2026-02-28T00:00:00.000Z",
+					"stopEntryDate": "2026-02-28T00:10:00.000Z"
+				},
+				"modelName": "M J UNI FRAG THERMAL",
+				"id": "441a932f-590a-5cdf-8fc3-db3eeeb8fca1",
+				"sizes": [
+					{
+						"id": "77c61596-4387-5c36-b81c-b49e64ae4618",
+						"gtin": "00198727850852",
+						"size": "XS",
+						"level": "LOW"
+					},
+					{
+						"id": "661403ae-c56d-5028-893e-d991a496ac92",
+						"gtin": "00198727851002",
+						"size": "S",
+						"level": "LOW"
+					},
+					{
+						"id": "82ce1253-1d7c-543e-9042-dc126b759602",
+						"gtin": "00198727851958",
+						"size": "M",
+						"level": "HIGH"
+					},
+					{
+						"id": "27d0d85c-f629-5a5e-9e95-e57b874d72e1",
+						"gtin": "00198727849818",
+						"size": "L",
+						"level": "HIGH"
+					},
+					{
+						"id": "04d8d52c-99ac-5901-b34e-598baba772f9",
+						"gtin": "00198727850098",
+						"size": "XL",
+						"level": "HIGH"
+					},
+					{
+						"id": "bb5fa326-c082-5929-912a-e7f263b9a569",
+						"gtin": "00198727850784",
+						"size": "2XL",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "air-max-dn8-shadow-brown-and-phantom",
+		"title": "Shadow Brown and Phantom",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/d43aad08-bf5e-4627-b891-cee5a961663b/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%C2%A0dn8-shadow-brown-and-phantom-io4479-200-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 26400,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-05T00:00:00.000Z"
+				},
+				"modelName": "AIR MAX DN8 QS",
+				"id": "8bb5399d-8d67-5cc7-aba4-87553f378429",
+				"sizes": [
+					{
+						"id": "50612a7f-042c-5dc8-99ad-134e0eab0b41",
+						"gtin": "00198730752259",
+						"size": "4",
+						"level": "LOW"
+					},
+					{
+						"id": "8a228366-6316-5d38-908e-80bf573b66c4",
+						"gtin": "00198730757483",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "90003078-807a-5409-8146-f949025c23f8",
+						"gtin": "00198730749792",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "b575757c-302b-56de-a2e5-403ea14d6751",
+						"gtin": "00198730756929",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "5d26d025-8202-52c8-befc-29c6e3617bff",
+						"gtin": "00198730748979",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "711ae995-076c-5f73-a16c-007c5e21be28",
+						"gtin": "00198730753249",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "33683d42-c845-5fb4-9939-b05dc9ac77b4",
+						"gtin": "00198730756578",
+						"size": "8",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "3759d3f3-4c1b-5261-84da-4dd286c8b28f",
+						"gtin": "00198730751108",
+						"size": "8.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "14dbea7e-cc64-5cf6-908c-b8eebff6ea3b",
+						"gtin": "00198730751313",
+						"size": "9",
+						"level": "HIGH"
+					},
+					{
+						"id": "94ebc58c-bdf5-5049-84d5-295061a8d120",
+						"gtin": "00198730750071",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "32aa3787-27dd-54b5-a597-4e5857649686",
+						"gtin": "00198730753263",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "62e372e6-b292-519c-a392-9ef88bf5883e",
+						"gtin": "00198730752167",
+						"size": "10.5",
+						"level": "LOW"
+					},
+					{
+						"id": "ef1194b4-0acc-5f79-bde7-e3e35ee6b604",
+						"gtin": "00198730746623",
+						"size": "11",
+						"level": "LOW"
+					},
+					{
+						"id": "21778f4d-0835-5d2b-ba1f-3ca790275a04",
+						"gtin": "00198730756677",
+						"size": "12",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "air-max-dn8-wolf-grey-and-anthracite",
+		"title": "Wolf Grey and Anthracite",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/c40f093c-bfd8-453c-8b84-52daed592426/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%C2%A0dn8-wolf-grey-and-anthracite-io4479-001-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 26400,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-05T00:00:00.000Z"
+				},
+				"modelName": "AIR MAX DN8 QS",
+				"id": "eceae303-d12c-56ab-8f1e-8ee19cfcbdeb",
+				"sizes": [
+					{
+						"id": "62d4121c-1e27-5db8-9261-a0aca6ed176e",
+						"gtin": "00198730754543",
+						"size": "4",
+						"level": "LOW"
+					},
+					{
+						"id": "cc94c576-ba04-583f-8d61-596752252313",
+						"gtin": "00198730752365",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "902ab34c-be0d-517b-bf15-66ff49a3bdda",
+						"gtin": "00198730756905",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "1cac5f67-d4fb-5213-874f-dc22ea180079",
+						"gtin": "00198730748368",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "d2544ab3-ca66-5af6-aaa6-c4fd3e2a3f2d",
+						"gtin": "00198730755649",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "8c8ced73-dc74-536b-8cf3-ea9cfb7473cf",
+						"gtin": "00198730755885",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "49a4381f-16fa-5a58-ac17-a0d75ebe9ebb",
+						"gtin": "00198730755632",
+						"size": "8",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "742c659e-5304-58ac-9118-bc18da3e52da",
+						"gtin": "00198730756141",
+						"size": "8.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "11f46231-13e8-504e-b166-2b959210f47d",
+						"gtin": "00198730748009",
+						"size": "9",
+						"level": "HIGH"
+					},
+					{
+						"id": "fde5067e-5f01-5bdb-9f8d-f608b1ccc7fe",
+						"gtin": "00198730756080",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "6a08af25-a2c7-5e52-83fd-1b2e12e78523",
+						"gtin": "00198730750514",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "b2ec14bd-2be8-5524-8d87-80487ed1a655",
+						"gtin": "00198730749464",
+						"size": "10.5",
+						"level": "LOW"
+					},
+					{
+						"id": "0336b3c9-3a5d-5ad7-a18e-4bbd9ff0eabf",
+						"gtin": "00198730757827",
+						"size": "11",
+						"level": "LOW"
+					},
+					{
+						"id": "f6cb0b20-be8d-513b-bddc-53834476c9ce",
+						"gtin": "00198730751276",
+						"size": "12",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "womens-rejuven8-run-black-and-rust-factor",
+		"title": "Black and Rust Factor",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/f33d0c98-5d65-44b0-ab0c-492806fafa7d/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%83%AA%E3%82%B8%E3%83%A5%E3%83%93%E3%83%8D%E3%82%A4%E3%83%88-%E3%83%A9%E3%83%B3-black-and-rust-factor-io9932-001-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 22550,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-06T00:00:00.000Z"
+				},
+				"modelName": "NIKE REJUVEN8 OG SE",
+				"id": "a2c9e371-9492-5dc9-8b17-28b0118aaba5",
+				"sizes": [
+					{
+						"id": "b8df6497-113d-5d1d-8cf7-59241fd2e713",
+						"gtin": "00198728759819",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "f94a7e15-3c75-5016-a4bf-f675d2992bb4",
+						"gtin": "00198728767913",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "aeaa2479-6034-5d30-851e-256a6b208ec1",
+						"gtin": "00198728763793",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "399881f5-f9ac-5ef0-8aa3-fe7708d30117",
+						"gtin": "00198728768491",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "7c07b094-286e-581d-a246-1ba83781752f",
+						"gtin": "00198728757044",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "a2b1a548-28b7-587b-bd31-7b81418bade5",
+						"gtin": "00198728759666",
+						"size": "8",
+						"level": "LOW"
+					},
+					{
+						"id": "802337a2-b198-53ef-979f-bbbd3226ce09",
+						"gtin": "00198728768231",
+						"size": "8.5",
+						"level": "LOW"
+					},
+					{
+						"id": "cd974e45-0433-5924-81e0-f58961331b75",
+						"gtin": "00198728757693",
+						"size": "9",
+						"level": "LOW"
+					},
+					{
+						"id": "a8dd0843-3f02-5d96-86dc-d20714c87d0d",
+						"gtin": "00198728762871",
+						"size": "9.5",
+						"level": "LOW"
+					},
+					{
+						"id": "1d7f2802-0e44-54bf-a9f1-74715486f73d",
+						"gtin": "00198728761607",
+						"size": "10",
+						"level": "LOW"
+					},
+					{
+						"id": "3a7c54e5-a328-5dc8-b4ba-6bc625530842",
+						"gtin": "00198728772788",
+						"size": "10.5",
+						"level": "LOW"
+					},
+					{
+						"id": "653f545e-e863-51a0-8fc0-4e8f8ea1426d",
+						"gtin": "00198728754784",
+						"size": "11",
+						"level": "LOW"
+					},
+					{
+						"id": "ce8d5cbd-0e4a-52d6-89a9-72b0653cb153",
+						"gtin": "00198728768569",
+						"size": "11.5",
+						"level": "LOW"
+					},
+					{
+						"id": "0cccd589-ed3f-5a7d-8364-11c1eed9914e",
+						"gtin": "00198728766985",
+						"size": "12",
+						"level": "LOW"
 					}
 				]
 			}
@@ -510,6 +884,522 @@
 				"modelName": "JORDAN 4 RETRO OG (TD)",
 				"id": "b7fa87f5-dfe5-5d16-81e9-18008b0a80b1",
 				"sizes": []
+			}
+		]
+	},
+	{
+		"slug": "womens-air-jordan-1-high-og-psychic-blue-and-pale-ivory",
+		"title": "Psychic Blue and Pale Ivory",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/a9b611e9-639c-4c0f-99d0-7e0f1500dc66/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%82%A8%E3%82%A2-%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%80%E3%83%B3%C2%A01-high-og-psychic-blue-and-pale-ivory-fd2596-102-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 26950,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-07T00:00:00.000Z"
+				},
+				"modelName": "WMNS AIR JORDAN 1 RETRO HI OG",
+				"id": "0971066c-e534-5241-9821-a865cfb87a17",
+				"sizes": [
+					{
+						"id": "bb6cd6e2-677f-5191-ad98-7b4e4c4c31a2",
+						"gtin": "00198726554874",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "87f9d4d8-ed94-525f-ae60-c71159d3fe55",
+						"gtin": "00198726576746",
+						"size": "5.5",
+						"level": "LOW"
+					},
+					{
+						"id": "c00dcf98-36e2-504f-a353-d58ed0f3b0b2",
+						"gtin": "00198726548453",
+						"size": "6",
+						"level": "HIGH"
+					},
+					{
+						"id": "1a92ca9f-b2f9-502c-bdc5-8d61e3c3eaaa",
+						"gtin": "00198726577316",
+						"size": "6.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "dff1aa00-7437-5c43-be7d-17919b23e2b7",
+						"gtin": "00198726539840",
+						"size": "7",
+						"level": "HIGH"
+					},
+					{
+						"id": "bf3a31da-7765-5552-ab84-60a70cd58cca",
+						"gtin": "00198726459827",
+						"size": "7.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "98e7f328-0bd9-5230-8eb6-15efa16ba8bc",
+						"gtin": "00198726473076",
+						"size": "8",
+						"level": "HIGH"
+					},
+					{
+						"id": "1f767cb6-51bc-552c-a7cd-effa01a24acb",
+						"gtin": "00198726438679",
+						"size": "8.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "0a7689c1-cd34-5b3c-a4a9-8974984f1112",
+						"gtin": "00198726580385",
+						"size": "9",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "edc125fc-56d1-552d-a6c7-192d5afe061b",
+						"gtin": "00198726456079",
+						"size": "9.5",
+						"level": "LOW"
+					},
+					{
+						"id": "75021fe7-2537-5e79-aeb8-2ed182427f1a",
+						"gtin": "00198726553235",
+						"size": "10",
+						"level": "LOW"
+					},
+					{
+						"id": "1dd8d33d-d125-5af1-a5e5-242e1f240d59",
+						"gtin": "00198726558346",
+						"size": "10.5",
+						"level": "LOW"
+					},
+					{
+						"id": "f82fba72-ad44-5d22-956b-dbca3c606e73",
+						"gtin": "00198726523733",
+						"size": "11",
+						"level": "LOW"
+					},
+					{
+						"id": "2db524f1-3860-58f1-90b6-ddd26e405df4",
+						"gtin": "00198726539741",
+						"size": "11.5",
+						"level": "LOW"
+					},
+					{
+						"id": "063fa4e6-064b-5235-8a6d-0cf193183a05",
+						"gtin": "00198726593446",
+						"size": "12",
+						"level": "LOW"
+					}
+				]
+			},
+			{
+				"merchPrice": {
+					"currentPrice": 12100,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-07T00:00:00.000Z"
+				},
+				"modelName": "JORDAN 1 RETRO HIGH OG (PS)",
+				"id": "ce68a457-aca1-5fee-a1a7-f9ac5963ba90",
+				"sizes": [
+					{
+						"id": "1a9e7b28-d5c9-5752-bd08-f4e8d9b4f7f5",
+						"gtin": "00198726466764",
+						"size": "10.5C",
+						"level": "LOW"
+					},
+					{
+						"id": "4ed3df1d-5a37-575c-99df-b160c52f98f6",
+						"gtin": "00198726530564",
+						"size": "11C",
+						"level": "LOW"
+					},
+					{
+						"id": "3b2db97c-d45a-5b50-b633-526e5d307794",
+						"gtin": "00198726461103",
+						"size": "11.5C",
+						"level": "LOW"
+					},
+					{
+						"id": "5ce39c30-99e6-52e9-bf22-eae0b30ceed9",
+						"gtin": "00198726581856",
+						"size": "12C",
+						"level": "LOW"
+					},
+					{
+						"id": "7cc27f4c-e2d2-5a6a-b1e1-5ed1c986fb23",
+						"gtin": "00198726493869",
+						"size": "12.5C",
+						"level": "LOW"
+					},
+					{
+						"id": "0f61236c-b90b-52cb-8948-b13146c6afef",
+						"gtin": "00198726548439",
+						"size": "13C",
+						"level": "LOW"
+					},
+					{
+						"id": "7fead1ab-675f-520c-bec1-655f1e7978b0",
+						"gtin": "00198726451371",
+						"size": "13.5C",
+						"level": "LOW"
+					},
+					{
+						"id": "f4e22bf8-54c3-5120-989a-c4943101f38c",
+						"gtin": "00198726596706",
+						"size": "1Y",
+						"level": "LOW"
+					},
+					{
+						"id": "046dc0c6-0d2f-5d63-8664-5ade7499953f",
+						"gtin": "00198726493982",
+						"size": "1.5Y",
+						"level": "LOW"
+					},
+					{
+						"id": "e1dac8e3-fe8b-558f-af87-48d12ff528d1",
+						"gtin": "00198726580071",
+						"size": "2Y",
+						"level": "LOW"
+					},
+					{
+						"id": "d9b2b1f2-5069-53bd-be60-c4f5388c96fe",
+						"gtin": "00198726566754",
+						"size": "2.5Y",
+						"level": "LOW"
+					},
+					{
+						"id": "7a0dcd6d-e377-5118-ab94-ebf6614b31c4",
+						"gtin": "00198726499236",
+						"size": "3Y",
+						"level": "LOW"
+					}
+				]
+			},
+			{
+				"merchPrice": {
+					"currentPrice": 9900,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-07T00:00:00.000Z"
+				},
+				"modelName": "JORDAN 1 RETRO HIGH OG (TD)",
+				"id": "f6743a36-6eba-568f-9713-c3c0fbcc9365",
+				"sizes": [
+					{
+						"id": "a2f30b32-530c-5cd9-a03d-b31b63c58809",
+						"gtin": "00198726438730",
+						"size": "4C",
+						"level": "LOW"
+					},
+					{
+						"id": "cd00bbaf-b172-55f3-9569-ff4a82f61637",
+						"gtin": "00198726510504",
+						"size": "5C",
+						"level": "LOW"
+					},
+					{
+						"id": "164a37e7-b75e-5e59-8f78-879143c71c7a",
+						"gtin": "00198726597710",
+						"size": "6C",
+						"level": "LOW"
+					},
+					{
+						"id": "80dcf232-6cd8-5f39-be31-69513cd9c032",
+						"gtin": "00198726383290",
+						"size": "7C",
+						"level": "LOW"
+					},
+					{
+						"id": "b0ce38b6-111c-5bfc-a9db-e86d057f7eff",
+						"gtin": "00198726483440",
+						"size": "8C",
+						"level": "LOW"
+					},
+					{
+						"id": "446806de-2f6f-5935-b198-6fc1e9d4f08d",
+						"gtin": "00198726583799",
+						"size": "9C",
+						"level": "LOW"
+					},
+					{
+						"id": "27a58c39-634a-5f7c-ab5e-3e891809a449",
+						"gtin": "00198726591978",
+						"size": "10C",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "air-max-95-big-bubble-volt-and-university-red",
+		"title": "Volt and University Red",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/698e4e9e-b52e-4856-a3cd-4493960cc8ab/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%C2%A095-%E3%83%93%E3%83%83%E3%82%B0-%E3%83%90%E3%83%96%E3%83%AB-volt-and-university-red-iq0620-100-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 25520,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-11T00:00:00.000Z"
+				},
+				"modelName": "AIR MAX 95 SP",
+				"id": "d286ee85-054e-503e-a956-98d28a97422e",
+				"sizes": [
+					{
+						"id": "9df26402-d8f8-5ffb-9e58-4b16136f15d6",
+						"gtin": "00198729043566",
+						"size": "4",
+						"level": "LOW"
+					},
+					{
+						"id": "dcd8d551-e18d-59d1-a867-2b899d542ed3",
+						"gtin": "00198729045515",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "b46402ee-ab02-519f-baec-88fd67ba1470",
+						"gtin": "00198729043672",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "2eaabc43-c813-582a-a18e-9bd0ae41519f",
+						"gtin": "00198729046369",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "2bbc0324-3584-5073-86d2-1c556ff373b2",
+						"gtin": "00198729042262",
+						"size": "7",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "21653586-5a32-52d4-8a8d-041ed518697d",
+						"gtin": "00198729044679",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "fd672f7e-736a-5c67-b446-a1acba7b7bd2",
+						"gtin": "00198729043511",
+						"size": "8",
+						"level": "HIGH"
+					},
+					{
+						"id": "bd8e4693-a7a9-5e88-9f57-5431bd4e9147",
+						"gtin": "00198729046031",
+						"size": "8.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "008400c2-b3b0-580e-afa4-6a601b6696f6",
+						"gtin": "00198729044150",
+						"size": "9",
+						"level": "HIGH"
+					},
+					{
+						"id": "e5dda793-479d-5af3-a6b7-08bae185d60d",
+						"gtin": "00198729046376",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "7b4eb796-1d72-54ce-aff5-478ed9ac61b5",
+						"gtin": "00198729042255",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "f767d45f-1b1a-54fa-9f3b-afaa2be0c865",
+						"gtin": "00198729042286",
+						"size": "10.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "dccec429-7b18-5096-b32b-fa04bca79303",
+						"gtin": "00198729041852",
+						"size": "11",
+						"level": "LOW"
+					},
+					{
+						"id": "14256bc9-b6b1-5e78-957b-07f370f86b7e",
+						"gtin": "00198729044143",
+						"size": "12",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "air-force-1-07-multi-color",
+		"title": "Multi-Color",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/b9ba7faf-f672-437f-b11a-f1f90ef519e7/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%83%95%E3%82%A9%E3%83%BC%E3%82%B9%C2%A01%C2%A0-07-multi-color-iq3472-298-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 19800,
+					"currency": "JPY"
+				},
+				"launchView": {
+					"method": "LEO",
+					"startEntryDate": "2026-03-12T00:00:00.000Z"
+				},
+				"modelName": "AIR FORCE 1 '07 PRM",
+				"id": "3bb673ac-4dcd-55a2-affc-c7f3130dde03",
+				"sizes": [
+					{
+						"id": "23cb965c-6761-52ff-aa20-e6356f62e9c3",
+						"gtin": "00198727661335",
+						"size": "4",
+						"level": "LOW"
+					},
+					{
+						"id": "e9300955-52b0-5653-854e-7f57fb64ce11",
+						"gtin": "00198727664435",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "b60e9d96-4026-5c6c-b657-e5cf505007fd",
+						"gtin": "00198727660345",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "78f41779-9389-5816-b583-96072191c971",
+						"gtin": "00198727662158",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "4124712d-c9ef-5a59-82a6-d2894314a705",
+						"gtin": "00198727667573",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "0516210a-d0d9-5b39-8ab0-c34a8bb06ef7",
+						"gtin": "00198727665418",
+						"size": "7.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "9c8ea3e4-b7aa-5cbf-b094-7fbe8b78a128",
+						"gtin": "00198727657390",
+						"size": "8",
+						"level": "HIGH"
+					},
+					{
+						"id": "c3b2e800-b17e-5752-a419-391c90004ee9",
+						"gtin": "00198727662011",
+						"size": "8.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "e9714943-3d12-530c-b7b2-ddfa2198d81a",
+						"gtin": "00198727665135",
+						"size": "9",
+						"level": "HIGH"
+					},
+					{
+						"id": "61cebcd5-0403-5e66-9a5b-f25fce8a7268",
+						"gtin": "00198727657369",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "026ae1b1-e68e-5243-a2ee-7507383b5524",
+						"gtin": "00198727663551",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "d5395985-ade9-55f1-8c6b-78f1004be4ef",
+						"gtin": "00198727665500",
+						"size": "10.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "43353a64-6130-592a-8930-043f8c346a56",
+						"gtin": "00198727657260",
+						"size": "11",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "039bec6b-091f-51f3-896e-b14250700cce",
+						"gtin": "00198727668488",
+						"size": "11.5",
+						"level": "LOW"
+					},
+					{
+						"id": "83367b04-0024-5228-b1eb-c2a5d1a9982d",
+						"gtin": "00198727668983",
+						"size": "12",
+						"level": "LOW"
+					},
+					{
+						"id": "9e7bfab8-b011-5d99-8502-948627848cc8",
+						"gtin": "00198727663063",
+						"size": "13",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "m2k-tekno-atmosphere-grey-dark-grey-gunsmoke-jp",
+		"title": "ATMOSPHERE GREY",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/d0m8qwgt2dmhouabjyc3/jp-bv0074-001-m2k-tekno.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"currentPrice": 14199,
+					"currency": "JPY"
+				},
+				"modelName": "NIKE M2K TEKNO SP",
+				"id": "84b8c02e-3f5f-5cab-87a5-43a6916d6b90",
+				"sizes": [
+					{
+						"id": "64d3a81c-bdd9-5d42-bd63-d0d3a855d6bc",
+						"gtin": "00192499094995",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "144369a0-ec60-5213-89a8-a908ff388359",
+						"gtin": "00192499095008",
+						"size": "8",
+						"level": "LOW"
+					},
+					{
+						"id": "f7453b18-aa9e-515c-a62b-fa575d8b2939",
+						"gtin": "00192499095015",
+						"size": "8.5",
+						"level": "LOW"
+					},
+					{
+						"id": "dadff482-2b8f-58dc-8989-fac8a2c954d1",
+						"gtin": "00192499095114",
+						"size": "14",
+						"level": "LOW"
+					}
+				]
 			}
 		]
 	},
@@ -782,896 +1672,6 @@
 						"id": "7a79fc69-2443-59a7-87a3-48ad9bb31e98",
 						"gtin": "00198726539635",
 						"size": "10C",
-						"level": "LOW"
-					}
-				]
-			}
-		]
-	},
-	{
-		"slug": "air-force-1-07-multi-color",
-		"title": "Multi-Color",
-		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/b9ba7faf-f672-437f-b11a-f1f90ef519e7/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%83%95%E3%82%A9%E3%83%BC%E3%82%B9%C2%A01%C2%A0-07-multi-color-iq3472-298-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-		"models": [
-			{
-				"merchPrice": {
-					"currentPrice": 19800,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "LEO",
-					"startEntryDate": "2026-03-12T00:00:00.000Z"
-				},
-				"modelName": "AIR FORCE 1 '07 PRM",
-				"id": "3bb673ac-4dcd-55a2-affc-c7f3130dde03",
-				"sizes": [
-					{
-						"id": "23cb965c-6761-52ff-aa20-e6356f62e9c3",
-						"gtin": "00198727661335",
-						"size": "4",
-						"level": "LOW"
-					},
-					{
-						"id": "e9300955-52b0-5653-854e-7f57fb64ce11",
-						"gtin": "00198727664435",
-						"size": "5",
-						"level": "LOW"
-					},
-					{
-						"id": "b60e9d96-4026-5c6c-b657-e5cf505007fd",
-						"gtin": "00198727660345",
-						"size": "6",
-						"level": "LOW"
-					},
-					{
-						"id": "78f41779-9389-5816-b583-96072191c971",
-						"gtin": "00198727662158",
-						"size": "6.5",
-						"level": "LOW"
-					},
-					{
-						"id": "4124712d-c9ef-5a59-82a6-d2894314a705",
-						"gtin": "00198727667573",
-						"size": "7",
-						"level": "LOW"
-					},
-					{
-						"id": "0516210a-d0d9-5b39-8ab0-c34a8bb06ef7",
-						"gtin": "00198727665418",
-						"size": "7.5",
-						"level": "MEDIUM"
-					},
-					{
-						"id": "9c8ea3e4-b7aa-5cbf-b094-7fbe8b78a128",
-						"gtin": "00198727657390",
-						"size": "8",
-						"level": "HIGH"
-					},
-					{
-						"id": "c3b2e800-b17e-5752-a419-391c90004ee9",
-						"gtin": "00198727662011",
-						"size": "8.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "e9714943-3d12-530c-b7b2-ddfa2198d81a",
-						"gtin": "00198727665135",
-						"size": "9",
-						"level": "HIGH"
-					},
-					{
-						"id": "61cebcd5-0403-5e66-9a5b-f25fce8a7268",
-						"gtin": "00198727657369",
-						"size": "9.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "026ae1b1-e68e-5243-a2ee-7507383b5524",
-						"gtin": "00198727663551",
-						"size": "10",
-						"level": "HIGH"
-					},
-					{
-						"id": "d5395985-ade9-55f1-8c6b-78f1004be4ef",
-						"gtin": "00198727665500",
-						"size": "10.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "43353a64-6130-592a-8930-043f8c346a56",
-						"gtin": "00198727657260",
-						"size": "11",
-						"level": "MEDIUM"
-					},
-					{
-						"id": "039bec6b-091f-51f3-896e-b14250700cce",
-						"gtin": "00198727668488",
-						"size": "11.5",
-						"level": "LOW"
-					},
-					{
-						"id": "83367b04-0024-5228-b1eb-c2a5d1a9982d",
-						"gtin": "00198727668983",
-						"size": "12",
-						"level": "LOW"
-					},
-					{
-						"id": "9e7bfab8-b011-5d99-8502-948627848cc8",
-						"gtin": "00198727663063",
-						"size": "13",
-						"level": "LOW"
-					}
-				]
-			}
-		]
-	},
-	{
-		"slug": "womens-air-jordan-1-high-og-psychic-blue-and-pale-ivory",
-		"title": "Psychic Blue and Pale Ivory",
-		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/a9b611e9-639c-4c0f-99d0-7e0f1500dc66/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%82%A8%E3%82%A2-%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%80%E3%83%B3%C2%A01-high-og-psychic-blue-and-pale-ivory-fd2596-102-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-		"models": [
-			{
-				"merchPrice": {
-					"currentPrice": 26950,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "LEO",
-					"startEntryDate": "2026-03-07T00:00:00.000Z"
-				},
-				"modelName": "WMNS AIR JORDAN 1 RETRO HI OG",
-				"id": "0971066c-e534-5241-9821-a865cfb87a17",
-				"sizes": [
-					{
-						"id": "bb6cd6e2-677f-5191-ad98-7b4e4c4c31a2",
-						"gtin": "00198726554874",
-						"size": "5",
-						"level": "LOW"
-					},
-					{
-						"id": "87f9d4d8-ed94-525f-ae60-c71159d3fe55",
-						"gtin": "00198726576746",
-						"size": "5.5",
-						"level": "LOW"
-					},
-					{
-						"id": "c00dcf98-36e2-504f-a353-d58ed0f3b0b2",
-						"gtin": "00198726548453",
-						"size": "6",
-						"level": "HIGH"
-					},
-					{
-						"id": "1a92ca9f-b2f9-502c-bdc5-8d61e3c3eaaa",
-						"gtin": "00198726577316",
-						"size": "6.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "dff1aa00-7437-5c43-be7d-17919b23e2b7",
-						"gtin": "00198726539840",
-						"size": "7",
-						"level": "HIGH"
-					},
-					{
-						"id": "bf3a31da-7765-5552-ab84-60a70cd58cca",
-						"gtin": "00198726459827",
-						"size": "7.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "98e7f328-0bd9-5230-8eb6-15efa16ba8bc",
-						"gtin": "00198726473076",
-						"size": "8",
-						"level": "HIGH"
-					},
-					{
-						"id": "1f767cb6-51bc-552c-a7cd-effa01a24acb",
-						"gtin": "00198726438679",
-						"size": "8.5",
-						"level": "MEDIUM"
-					},
-					{
-						"id": "0a7689c1-cd34-5b3c-a4a9-8974984f1112",
-						"gtin": "00198726580385",
-						"size": "9",
-						"level": "MEDIUM"
-					},
-					{
-						"id": "edc125fc-56d1-552d-a6c7-192d5afe061b",
-						"gtin": "00198726456079",
-						"size": "9.5",
-						"level": "LOW"
-					},
-					{
-						"id": "75021fe7-2537-5e79-aeb8-2ed182427f1a",
-						"gtin": "00198726553235",
-						"size": "10",
-						"level": "LOW"
-					},
-					{
-						"id": "1dd8d33d-d125-5af1-a5e5-242e1f240d59",
-						"gtin": "00198726558346",
-						"size": "10.5",
-						"level": "LOW"
-					},
-					{
-						"id": "f82fba72-ad44-5d22-956b-dbca3c606e73",
-						"gtin": "00198726523733",
-						"size": "11",
-						"level": "LOW"
-					},
-					{
-						"id": "2db524f1-3860-58f1-90b6-ddd26e405df4",
-						"gtin": "00198726539741",
-						"size": "11.5",
-						"level": "LOW"
-					},
-					{
-						"id": "063fa4e6-064b-5235-8a6d-0cf193183a05",
-						"gtin": "00198726593446",
-						"size": "12",
-						"level": "LOW"
-					}
-				]
-			},
-			{
-				"merchPrice": {
-					"currentPrice": 12100,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "LEO",
-					"startEntryDate": "2026-03-07T00:00:00.000Z"
-				},
-				"modelName": "JORDAN 1 RETRO HIGH OG (PS)",
-				"id": "ce68a457-aca1-5fee-a1a7-f9ac5963ba90",
-				"sizes": [
-					{
-						"id": "1a9e7b28-d5c9-5752-bd08-f4e8d9b4f7f5",
-						"gtin": "00198726466764",
-						"size": "10.5C",
-						"level": "LOW"
-					},
-					{
-						"id": "4ed3df1d-5a37-575c-99df-b160c52f98f6",
-						"gtin": "00198726530564",
-						"size": "11C",
-						"level": "LOW"
-					},
-					{
-						"id": "3b2db97c-d45a-5b50-b633-526e5d307794",
-						"gtin": "00198726461103",
-						"size": "11.5C",
-						"level": "LOW"
-					},
-					{
-						"id": "5ce39c30-99e6-52e9-bf22-eae0b30ceed9",
-						"gtin": "00198726581856",
-						"size": "12C",
-						"level": "LOW"
-					},
-					{
-						"id": "7cc27f4c-e2d2-5a6a-b1e1-5ed1c986fb23",
-						"gtin": "00198726493869",
-						"size": "12.5C",
-						"level": "LOW"
-					},
-					{
-						"id": "0f61236c-b90b-52cb-8948-b13146c6afef",
-						"gtin": "00198726548439",
-						"size": "13C",
-						"level": "LOW"
-					},
-					{
-						"id": "7fead1ab-675f-520c-bec1-655f1e7978b0",
-						"gtin": "00198726451371",
-						"size": "13.5C",
-						"level": "LOW"
-					},
-					{
-						"id": "f4e22bf8-54c3-5120-989a-c4943101f38c",
-						"gtin": "00198726596706",
-						"size": "1Y",
-						"level": "LOW"
-					},
-					{
-						"id": "046dc0c6-0d2f-5d63-8664-5ade7499953f",
-						"gtin": "00198726493982",
-						"size": "1.5Y",
-						"level": "LOW"
-					},
-					{
-						"id": "e1dac8e3-fe8b-558f-af87-48d12ff528d1",
-						"gtin": "00198726580071",
-						"size": "2Y",
-						"level": "LOW"
-					},
-					{
-						"id": "d9b2b1f2-5069-53bd-be60-c4f5388c96fe",
-						"gtin": "00198726566754",
-						"size": "2.5Y",
-						"level": "LOW"
-					},
-					{
-						"id": "7a0dcd6d-e377-5118-ab94-ebf6614b31c4",
-						"gtin": "00198726499236",
-						"size": "3Y",
-						"level": "LOW"
-					}
-				]
-			},
-			{
-				"merchPrice": {
-					"currentPrice": 9900,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "LEO",
-					"startEntryDate": "2026-03-07T00:00:00.000Z"
-				},
-				"modelName": "JORDAN 1 RETRO HIGH OG (TD)",
-				"id": "f6743a36-6eba-568f-9713-c3c0fbcc9365",
-				"sizes": [
-					{
-						"id": "a2f30b32-530c-5cd9-a03d-b31b63c58809",
-						"gtin": "00198726438730",
-						"size": "4C",
-						"level": "LOW"
-					},
-					{
-						"id": "cd00bbaf-b172-55f3-9569-ff4a82f61637",
-						"gtin": "00198726510504",
-						"size": "5C",
-						"level": "LOW"
-					},
-					{
-						"id": "164a37e7-b75e-5e59-8f78-879143c71c7a",
-						"gtin": "00198726597710",
-						"size": "6C",
-						"level": "LOW"
-					},
-					{
-						"id": "80dcf232-6cd8-5f39-be31-69513cd9c032",
-						"gtin": "00198726383290",
-						"size": "7C",
-						"level": "LOW"
-					},
-					{
-						"id": "b0ce38b6-111c-5bfc-a9db-e86d057f7eff",
-						"gtin": "00198726483440",
-						"size": "8C",
-						"level": "LOW"
-					},
-					{
-						"id": "446806de-2f6f-5935-b198-6fc1e9d4f08d",
-						"gtin": "00198726583799",
-						"size": "9C",
-						"level": "LOW"
-					},
-					{
-						"id": "27a58c39-634a-5f7c-ab5e-3e891809a449",
-						"gtin": "00198726591978",
-						"size": "10C",
-						"level": "LOW"
-					}
-				]
-			}
-		]
-	},
-	{
-		"slug": "air-max-dn8-shadow-brown-and-phantom",
-		"title": "Shadow Brown and Phantom",
-		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/d43aad08-bf5e-4627-b891-cee5a961663b/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%C2%A0dn8-shadow-brown-and-phantom-io4479-200-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-		"models": [
-			{
-				"merchPrice": {
-					"currentPrice": 26400,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "LEO",
-					"startEntryDate": "2026-03-05T00:00:00.000Z"
-				},
-				"modelName": "AIR MAX DN8 QS",
-				"id": "8bb5399d-8d67-5cc7-aba4-87553f378429",
-				"sizes": [
-					{
-						"id": "50612a7f-042c-5dc8-99ad-134e0eab0b41",
-						"gtin": "00198730752259",
-						"size": "4",
-						"level": "LOW"
-					},
-					{
-						"id": "8a228366-6316-5d38-908e-80bf573b66c4",
-						"gtin": "00198730757483",
-						"size": "5",
-						"level": "LOW"
-					},
-					{
-						"id": "90003078-807a-5409-8146-f949025c23f8",
-						"gtin": "00198730749792",
-						"size": "6",
-						"level": "LOW"
-					},
-					{
-						"id": "b575757c-302b-56de-a2e5-403ea14d6751",
-						"gtin": "00198730756929",
-						"size": "6.5",
-						"level": "LOW"
-					},
-					{
-						"id": "5d26d025-8202-52c8-befc-29c6e3617bff",
-						"gtin": "00198730748979",
-						"size": "7",
-						"level": "LOW"
-					},
-					{
-						"id": "711ae995-076c-5f73-a16c-007c5e21be28",
-						"gtin": "00198730753249",
-						"size": "7.5",
-						"level": "LOW"
-					},
-					{
-						"id": "33683d42-c845-5fb4-9939-b05dc9ac77b4",
-						"gtin": "00198730756578",
-						"size": "8",
-						"level": "MEDIUM"
-					},
-					{
-						"id": "3759d3f3-4c1b-5261-84da-4dd286c8b28f",
-						"gtin": "00198730751108",
-						"size": "8.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "14dbea7e-cc64-5cf6-908c-b8eebff6ea3b",
-						"gtin": "00198730751313",
-						"size": "9",
-						"level": "HIGH"
-					},
-					{
-						"id": "94ebc58c-bdf5-5049-84d5-295061a8d120",
-						"gtin": "00198730750071",
-						"size": "9.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "32aa3787-27dd-54b5-a597-4e5857649686",
-						"gtin": "00198730753263",
-						"size": "10",
-						"level": "HIGH"
-					},
-					{
-						"id": "62e372e6-b292-519c-a392-9ef88bf5883e",
-						"gtin": "00198730752167",
-						"size": "10.5",
-						"level": "LOW"
-					},
-					{
-						"id": "ef1194b4-0acc-5f79-bde7-e3e35ee6b604",
-						"gtin": "00198730746623",
-						"size": "11",
-						"level": "LOW"
-					},
-					{
-						"id": "21778f4d-0835-5d2b-ba1f-3ca790275a04",
-						"gtin": "00198730756677",
-						"size": "12",
-						"level": "LOW"
-					}
-				]
-			}
-		]
-	},
-	{
-		"slug": "air-max-95-big-bubble-volt-and-university-red",
-		"title": "Volt and University Red",
-		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/698e4e9e-b52e-4856-a3cd-4493960cc8ab/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%C2%A095-%E3%83%93%E3%83%83%E3%82%B0-%E3%83%90%E3%83%96%E3%83%AB-volt-and-university-red-iq0620-100-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-		"models": [
-			{
-				"merchPrice": {
-					"currentPrice": 25520,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "LEO",
-					"startEntryDate": "2026-03-11T00:00:00.000Z"
-				},
-				"modelName": "AIR MAX 95 SP",
-				"id": "d286ee85-054e-503e-a956-98d28a97422e",
-				"sizes": [
-					{
-						"id": "9df26402-d8f8-5ffb-9e58-4b16136f15d6",
-						"gtin": "00198729043566",
-						"size": "4",
-						"level": "LOW"
-					},
-					{
-						"id": "dcd8d551-e18d-59d1-a867-2b899d542ed3",
-						"gtin": "00198729045515",
-						"size": "5",
-						"level": "LOW"
-					},
-					{
-						"id": "b46402ee-ab02-519f-baec-88fd67ba1470",
-						"gtin": "00198729043672",
-						"size": "6",
-						"level": "LOW"
-					},
-					{
-						"id": "2eaabc43-c813-582a-a18e-9bd0ae41519f",
-						"gtin": "00198729046369",
-						"size": "6.5",
-						"level": "LOW"
-					},
-					{
-						"id": "2bbc0324-3584-5073-86d2-1c556ff373b2",
-						"gtin": "00198729042262",
-						"size": "7",
-						"level": "MEDIUM"
-					},
-					{
-						"id": "21653586-5a32-52d4-8a8d-041ed518697d",
-						"gtin": "00198729044679",
-						"size": "7.5",
-						"level": "LOW"
-					},
-					{
-						"id": "fd672f7e-736a-5c67-b446-a1acba7b7bd2",
-						"gtin": "00198729043511",
-						"size": "8",
-						"level": "HIGH"
-					},
-					{
-						"id": "bd8e4693-a7a9-5e88-9f57-5431bd4e9147",
-						"gtin": "00198729046031",
-						"size": "8.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "008400c2-b3b0-580e-afa4-6a601b6696f6",
-						"gtin": "00198729044150",
-						"size": "9",
-						"level": "HIGH"
-					},
-					{
-						"id": "e5dda793-479d-5af3-a6b7-08bae185d60d",
-						"gtin": "00198729046376",
-						"size": "9.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "7b4eb796-1d72-54ce-aff5-478ed9ac61b5",
-						"gtin": "00198729042255",
-						"size": "10",
-						"level": "HIGH"
-					},
-					{
-						"id": "f767d45f-1b1a-54fa-9f3b-afaa2be0c865",
-						"gtin": "00198729042286",
-						"size": "10.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "dccec429-7b18-5096-b32b-fa04bca79303",
-						"gtin": "00198729041852",
-						"size": "11",
-						"level": "LOW"
-					},
-					{
-						"id": "14256bc9-b6b1-5e78-957b-07f370f86b7e",
-						"gtin": "00198729044143",
-						"size": "12",
-						"level": "LOW"
-					}
-				]
-			}
-		]
-	},
-	{
-		"slug": "air-max-dn8-wolf-grey-and-anthracite",
-		"title": "Wolf Grey and Anthracite",
-		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/c40f093c-bfd8-453c-8b84-52daed592426/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%C2%A0dn8-wolf-grey-and-anthracite-io4479-001-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-		"models": [
-			{
-				"merchPrice": {
-					"currentPrice": 26400,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "LEO",
-					"startEntryDate": "2026-03-05T00:00:00.000Z"
-				},
-				"modelName": "AIR MAX DN8 QS",
-				"id": "eceae303-d12c-56ab-8f1e-8ee19cfcbdeb",
-				"sizes": [
-					{
-						"id": "62d4121c-1e27-5db8-9261-a0aca6ed176e",
-						"gtin": "00198730754543",
-						"size": "4",
-						"level": "LOW"
-					},
-					{
-						"id": "cc94c576-ba04-583f-8d61-596752252313",
-						"gtin": "00198730752365",
-						"size": "5",
-						"level": "LOW"
-					},
-					{
-						"id": "902ab34c-be0d-517b-bf15-66ff49a3bdda",
-						"gtin": "00198730756905",
-						"size": "6",
-						"level": "LOW"
-					},
-					{
-						"id": "1cac5f67-d4fb-5213-874f-dc22ea180079",
-						"gtin": "00198730748368",
-						"size": "6.5",
-						"level": "LOW"
-					},
-					{
-						"id": "d2544ab3-ca66-5af6-aaa6-c4fd3e2a3f2d",
-						"gtin": "00198730755649",
-						"size": "7",
-						"level": "LOW"
-					},
-					{
-						"id": "8c8ced73-dc74-536b-8cf3-ea9cfb7473cf",
-						"gtin": "00198730755885",
-						"size": "7.5",
-						"level": "LOW"
-					},
-					{
-						"id": "49a4381f-16fa-5a58-ac17-a0d75ebe9ebb",
-						"gtin": "00198730755632",
-						"size": "8",
-						"level": "MEDIUM"
-					},
-					{
-						"id": "742c659e-5304-58ac-9118-bc18da3e52da",
-						"gtin": "00198730756141",
-						"size": "8.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "11f46231-13e8-504e-b166-2b959210f47d",
-						"gtin": "00198730748009",
-						"size": "9",
-						"level": "HIGH"
-					},
-					{
-						"id": "fde5067e-5f01-5bdb-9f8d-f608b1ccc7fe",
-						"gtin": "00198730756080",
-						"size": "9.5",
-						"level": "HIGH"
-					},
-					{
-						"id": "6a08af25-a2c7-5e52-83fd-1b2e12e78523",
-						"gtin": "00198730750514",
-						"size": "10",
-						"level": "HIGH"
-					},
-					{
-						"id": "b2ec14bd-2be8-5524-8d87-80487ed1a655",
-						"gtin": "00198730749464",
-						"size": "10.5",
-						"level": "LOW"
-					},
-					{
-						"id": "0336b3c9-3a5d-5ad7-a18e-4bbd9ff0eabf",
-						"gtin": "00198730757827",
-						"size": "11",
-						"level": "LOW"
-					},
-					{
-						"id": "f6cb0b20-be8d-513b-bddc-53834476c9ce",
-						"gtin": "00198730751276",
-						"size": "12",
-						"level": "LOW"
-					}
-				]
-			}
-		]
-	},
-	{
-		"slug": "jordan-union-fragment-apparel-collection-static",
-		"title": "アパレルコレクション",
-		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/31fe730d-7430-410f-b689-6f66d896c771/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91jordan%C2%A0x-union%C2%A0x-fragment%E3%82%A2%E3%83%91%E3%83%AC%E3%83%AB%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-		"models": [
-			{
-				"merchPrice": {
-					"currentPrice": 17820,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "DAN",
-					"startEntryDate": "2026-02-28T00:00:00.000Z",
-					"stopEntryDate": "2026-02-28T00:10:00.000Z"
-				},
-				"modelName": "M J UNI FRAG LS JERSEY",
-				"id": "8d8782d8-c770-5c48-be6f-19d3307e1d73",
-				"sizes": [
-					{
-						"id": "bd19984f-2f42-59be-b615-cc87b6d9330d",
-						"gtin": "00198727851392",
-						"size": "XS",
-						"level": "LOW"
-					},
-					{
-						"id": "078f098e-b73c-5670-98c5-dde45087b228",
-						"gtin": "00198727850043",
-						"size": "S",
-						"level": "LOW"
-					},
-					{
-						"id": "db731e2a-55e4-5735-b6eb-f6a72e685ff6",
-						"gtin": "00198727851767",
-						"size": "M",
-						"level": "LOW"
-					},
-					{
-						"id": "b47fa4ec-446c-59d9-80b0-b3262e4c94a2",
-						"gtin": "00198727850128",
-						"size": "L",
-						"level": "MEDIUM"
-					},
-					{
-						"id": "fad501cf-0c80-5cc8-bec0-c4833fc09022",
-						"gtin": "00198727851521",
-						"size": "XL",
-						"level": "LOW"
-					},
-					{
-						"id": "9981f43d-dc10-5d3b-9198-f85091641d4b",
-						"gtin": "00198727850241",
-						"size": "2XL",
-						"level": "LOW"
-					}
-				]
-			},
-			{
-				"merchPrice": {
-					"currentPrice": 16500,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "DAN",
-					"startEntryDate": "2026-02-28T00:00:00.000Z",
-					"stopEntryDate": "2026-02-28T00:10:00.000Z"
-				},
-				"modelName": "M J UNI FRAG SHORT",
-				"id": "d24eaf4c-f0f7-5953-b87b-fe8896b73f07",
-				"sizes": [
-					{
-						"id": "c6a48f1e-e8b2-5197-81a6-14f97f86e50c",
-						"gtin": "00198727850005",
-						"size": "XS",
-						"level": "LOW"
-					},
-					{
-						"id": "8c207d22-d01e-5763-a1fc-29d0228f32f3",
-						"gtin": "00198727850456",
-						"size": "S",
-						"level": "LOW"
-					},
-					{
-						"id": "e8ac9229-dd27-52c4-ac72-a86b3feeaa34",
-						"gtin": "00198727851859",
-						"size": "M",
-						"level": "LOW"
-					},
-					{
-						"id": "1943055d-81d5-5728-b0a4-0d6117261c1e",
-						"gtin": "00198727851699",
-						"size": "L",
-						"level": "MEDIUM"
-					},
-					{
-						"id": "b4d98726-8a5d-5da9-8c3f-063873c35e70",
-						"gtin": "00198727851217",
-						"size": "XL",
-						"level": "LOW"
-					}
-				]
-			},
-			{
-				"merchPrice": {
-					"currentPrice": 7480,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "DAN",
-					"startEntryDate": "2026-02-28T00:00:00.000Z",
-					"stopEntryDate": "2026-02-28T00:10:00.000Z"
-				},
-				"modelName": "M J UNI FRAG TEE",
-				"id": "5b2bd03a-a333-562f-a08d-edbd85440ea4",
-				"sizes": [
-					{
-						"id": "97198378-89fe-52f0-ab05-bf078924ac68",
-						"gtin": "00198727847869",
-						"size": "XS",
-						"level": "MEDIUM"
-					},
-					{
-						"id": "7d35dbe8-c41f-59bf-bbaf-df776ccf22e5",
-						"gtin": "00198727848729",
-						"size": "S",
-						"level": "HIGH"
-					},
-					{
-						"id": "aaf8040e-1583-53c5-ada7-eb3ff7678588",
-						"gtin": "00198727847944",
-						"size": "M",
-						"level": "HIGH"
-					},
-					{
-						"id": "27e8e4cc-9c1d-5c1d-97fd-2c2b473ca58f",
-						"gtin": "00198727848675",
-						"size": "L",
-						"level": "HIGH"
-					},
-					{
-						"id": "b7e01462-3ad1-5972-8f22-9aed58a5eb84",
-						"gtin": "00198727848521",
-						"size": "XL",
-						"level": "HIGH"
-					},
-					{
-						"id": "1d45384d-8563-52d3-8f91-7adba56f98c4",
-						"gtin": "00198727848286",
-						"size": "2XL",
-						"level": "LOW"
-					}
-				]
-			},
-			{
-				"merchPrice": {
-					"currentPrice": 14850,
-					"currency": "JPY"
-				},
-				"launchView": {
-					"method": "DAN",
-					"startEntryDate": "2026-02-28T00:00:00.000Z",
-					"stopEntryDate": "2026-02-28T00:10:00.000Z"
-				},
-				"modelName": "M J UNI FRAG THERMAL",
-				"id": "441a932f-590a-5cdf-8fc3-db3eeeb8fca1",
-				"sizes": [
-					{
-						"id": "77c61596-4387-5c36-b81c-b49e64ae4618",
-						"gtin": "00198727850852",
-						"size": "XS",
-						"level": "LOW"
-					},
-					{
-						"id": "661403ae-c56d-5028-893e-d991a496ac92",
-						"gtin": "00198727851002",
-						"size": "S",
-						"level": "LOW"
-					},
-					{
-						"id": "82ce1253-1d7c-543e-9042-dc126b759602",
-						"gtin": "00198727851958",
-						"size": "M",
-						"level": "HIGH"
-					},
-					{
-						"id": "27d0d85c-f629-5a5e-9e95-e57b874d72e1",
-						"gtin": "00198727849818",
-						"size": "L",
-						"level": "HIGH"
-					},
-					{
-						"id": "04d8d52c-99ac-5901-b34e-598baba772f9",
-						"gtin": "00198727850098",
-						"size": "XL",
-						"level": "HIGH"
-					},
-					{
-						"id": "bb5fa326-c082-5929-912a-e7f263b9a569",
-						"gtin": "00198727850784",
-						"size": "2XL",
 						"level": "LOW"
 					}
 				]

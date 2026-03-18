@@ -25,7 +25,19 @@ export const formatProductFeedResponse = (productsFeed: ProductFeedOutput[]) => 
 		return hasManyModels || isNotTopChild
 	})
 
-	return releasesWithoutTopChilds.toSorted((a, b) => a.title.localeCompare(b.title))
+	return releasesWithoutTopChilds.toSorted(compareByStartEntryDate)
+}
+
+const compareByStartEntryDate = (
+	aRelease: ReturnType<typeof getRelease>,
+	bRelease: ReturnType<typeof getRelease>,
+) => {
+	const dateA = aRelease.models[0]?.launchView?.startEntryDate
+	const dateB = bRelease.models[0]?.launchView?.startEntryDate
+	if (dateA && dateB) return dateA.localeCompare(dateB) || aRelease.title.localeCompare(bRelease.title)
+	if (dateA) return -1
+	if (dateB) return 1
+	return aRelease.title.localeCompare(bRelease.title)
 }
 
 const getRelease = (productFeed: ProductFeedOutput) => ({
