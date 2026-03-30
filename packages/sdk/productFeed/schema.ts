@@ -289,7 +289,7 @@ export const ColorTypeSchema = v.union([
 ])
 
 export const ColorSchema = v.object({
-	hex: v.string(),
+	hex: v.optional(v.string()),
 	name: v.string(),
 	type: ColorTypeSchema,
 })
