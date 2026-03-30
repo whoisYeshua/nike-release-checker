@@ -1,5 +1,11 @@
 # @nike-release-checker/sdk
 
+## 0.3.4
+
+### Patch Changes
+
+- b1ec4c8: fix(sdk): make `hex` optional in product feed `ColorSchema` to handle Nike API responses missing the field
+
 ## 0.3.3
 
 ### Patch Changes
