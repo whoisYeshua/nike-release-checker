@@ -1,5 +1,13 @@
 # @nike-release-checker/sdk
 
+## 0.3.6
+
+### Patch Changes
+
+- 40ff084: migrate to TS6, update deps
+- ec83ec5: Update GitHub Actions to newer major versions for release artifact handling and product feed state caching.
+- 56e067f: Accept the new `filmstrip` and `stacked` product feed container types.
+
 ## 0.3.5
 
 ### Patch Changes
