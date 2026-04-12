@@ -437,6 +437,8 @@ export const ContainerTypeEnumSchema = v.union([
 	v.literal('text'),
 	v.literal('video'),
 	v.literal('story_format'),
+	v.literal('filmstrip'),
+	v.literal('stacked'),
 ])
 
 export const CoverCardPropertiesSchema = v.object({
