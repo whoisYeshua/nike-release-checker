@@ -8,7 +8,6 @@
 		/* Modules */
 		"module": "nodenext" /* Specify what module code is generated. */,
 		"allowImportingTsExtensions": true,
-		"resolveJsonModule": true,
 
 		/* Emit */
 		"noEmit": true,
@@ -16,7 +15,6 @@
 		/* Interop Constraints */
 		"isolatedModules": true,
 		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": false,
 		"forceConsistentCasingInFileNames": true,
 		"erasableSyntaxOnly": true,
 		"verbatimModuleSyntax": true,
@@ -26,6 +24,7 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
+		"types": ["node"],
 
 		/* Completeness */
 		"skipLibCheck": true /* Skip type checking all .d.ts files. */

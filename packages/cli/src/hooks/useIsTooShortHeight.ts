@@ -1,8 +1,9 @@
-import { theme } from './theme.ts'
-import { useScreenSize } from './useScreenSize.ts'
+import { useWindowSize } from 'ink'
+
+import { theme } from '../utils/theme.ts'
 
 export const useIsTooShortHeight = () => {
-	const { height } = useScreenSize()
+	const { rows: height } = useWindowSize()
 	const minHeight = theme.sizes.fullHeight
 	const isTooShort = height < minHeight
 

@@ -1,8 +1,9 @@
-import { theme } from './theme.ts'
-import { useScreenSize } from './useScreenSize.ts'
+import { useWindowSize } from 'ink'
+
+import { theme } from '../utils/theme.ts'
 
 export const useIsTooNarrowWidth = () => {
-	const { width } = useScreenSize()
+	const { columns: width } = useWindowSize()
 	const minWidth = theme.sizes.fullWidth
 	const isTooNarrow = width < minWidth
 

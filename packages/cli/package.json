@@ -25,22 +25,22 @@
 		"@nanostores/router": "1.0.0",
 		"@nike-release-checker/sdk": "0.3.5",
 		"figures": "6.1.0",
-		"ink": "6.7.0",
+		"ink": "7.0.0",
 		"ink-select-input": "6.1.0",
 		"ink-spinner": "5.0.0",
 		"nanostores": "1.2.0",
 		"pretty-bytes": "7.1.0",
-		"react": "19.2.4",
+		"react": "19.2.5",
 		"terminal-image": "4.2.0",
 		"winston": "3.19.0",
 		"winston-daily-rotate-file": "5.0.0"
 	},
 	"devDependencies": {
-		"@rspack/cli": "1.7.9",
-		"@rspack/core": "1.7.9",
+		"@rspack/cli": "1.7.11",
+		"@rspack/core": "1.7.11",
 		"@types/react": "19.2.14",
 		"cross-env": "10.1.0",
-		"msw": "2.12.13",
+		"msw": "2.13.2",
 		"postject": "1.0.0-alpha.6",
 		"tsx": "4.21.0"
 	}
