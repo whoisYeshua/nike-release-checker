@@ -1,5 +1,11 @@
 # @nike-release-checker/sdk
 
+## 0.3.5
+
+### Patch Changes
+
+- db944ce: Fix ProductFeed DestinationSchema to support URL destination type
+
 ## 0.3.4
 
 ### Patch Changes
