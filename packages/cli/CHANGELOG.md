@@ -1,5 +1,12 @@
 # @nike-release-checker/cli
 
+## 0.2.6
+
+### Patch Changes
+
+- Updated dependencies [db944ce]
+  - @nike-release-checker/sdk@0.3.5
+
 ## 0.2.5
 
 ### Patch Changes
