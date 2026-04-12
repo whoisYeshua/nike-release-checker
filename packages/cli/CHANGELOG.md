@@ -1,5 +1,20 @@
 # @nike-release-checker/cli
 
+## 0.3.0
+
+### Minor Changes
+
+- c63f256: Migrate to ink-picture and improve product image stability
+
+### Patch Changes
+
+- 40ff084: migrate to TS6, update deps
+- ec83ec5: Update GitHub Actions to newer major versions for release artifact handling and product feed state caching.
+- Updated dependencies [40ff084]
+- Updated dependencies [ec83ec5]
+- Updated dependencies [56e067f]
+  - @nike-release-checker/sdk@0.3.6
+
 ## 0.2.6
 
 ### Patch Changes
