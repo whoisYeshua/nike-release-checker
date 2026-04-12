@@ -47,7 +47,7 @@ jobs:
 
       - name: Upload build artifact
         if: steps.ensure_release.outputs.should_skip != 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.os == 'windows-latest' && 'nike-release-checker-win-x64.exe' || 'nike-release-checker-macos-arm64' }}
           path: ${{ matrix.os == 'windows-latest' && 'packages/cli/dist/nike-release-checker-win-x64.exe' || 'packages/cli/dist/nike-release-checker-macos-arm64' }}
@@ -75,7 +75,7 @@ jobs:
 
       - name: Download artifacts
         if: steps.ensure_release.outputs.should_skip != 'true'
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           path: downloads
           merge-multiple: true
