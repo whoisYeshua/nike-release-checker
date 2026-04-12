@@ -1,10 +1,10 @@
 import { useMemo } from 'react'
 import { useStore } from '@nanostores/react'
 import { Box, Text } from 'ink'
+import ProductImage from 'ink-picture'
 
-import { Image } from '../../components/Image.tsx'
 import { Select } from '../../components/Select/Select.tsx'
-import { $selectedModel, $selectedProduct, $selectedProductImage } from '../../store/product.ts'
+import { $selectedModel, $selectedProduct } from '../../store/product.ts'
 import { theme } from '../../utils/theme.ts'
 import { Model } from './Model/Model.tsx'
 
@@ -54,15 +54,13 @@ export const Product = () => {
 }
 
 const ModelImage = () => {
-	const model = useStore($selectedProductImage)
+	const selectedProduct = useStore($selectedProduct)
 
-	if (model?.loading)
-		return (
-			<Box alignItems="center" height={theme.sizes.image}>
-				<Text>Image loading...</Text>
-			</Box>
-		)
+	if (!selectedProduct?.imageUrl) return null
 
-	if (model?.data)
-		return <Image src={model.data} height={theme.sizes.image} width={theme.sizes.image * 2} />
+	return (
+		<Box height={6}>
+			<ProductImage src={selectedProduct.imageUrl} />
+		</Box>
+	)
 }

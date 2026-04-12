@@ -1,11 +1,10 @@
 import { useStore } from '@nanostores/react'
 
 import { ChangeSizeScreen } from '../components/ChangeSizeScreen.tsx'
-import { $router } from '../router.ts'
-import { inputDictionary } from '../utils/inputDictionary.ts'
 import { useIsTooNarrowWidth } from '../hooks/useIsTooNarrowWidth.ts'
 import { useIsTooShortHeight } from '../hooks/useIsTooShortHeight.ts'
-
+import { $router } from '../router.ts'
+import { inputDictionary } from '../utils/inputDictionary.ts'
 import { Country } from './Country.tsx'
 import { Home } from './Home.tsx'
 import { Product } from './Product/Product.tsx'

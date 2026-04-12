@@ -1,6 +1,5 @@
 import { formatProductFeedResponse, getProductFeed } from '@nike-release-checker/sdk'
 import { atom, computed, map, onMount, task } from 'nanostores'
-import prettyBytes from 'pretty-bytes'
 
 import { $router } from '../router.ts'
 import { inputDictionary } from '../utils/inputDictionary.ts'
@@ -184,66 +183,3 @@ const createSelectedModel = () => {
 	}
 }
 export const $selectedModel = createSelectedModel()
-
-const createProductImageStore = () => {
-	const LOG_SCOPE = 'product-image'
-	const store = map<Record<string, { data?: ArrayBuffer | null; loading: boolean }>>()
-	const getTotalStoreBufferSize = () =>
-		Object.values(store.get()).reduce((acc, { data }) => acc + (data?.byteLength ?? 0), 0)
-
-	const uniqId = crypto.randomUUID()
-	logger.debug('product image store created', { scope: LOG_SCOPE, uniqId })
-	onMount(store, () => {
-		logger.debug('product image store mounted', { scope: LOG_SCOPE, uniqId })
-		return $selectedProduct.subscribe((selectedProduct) => {
-			const slug = selectedProduct?.slug
-			if (!slug) {
-				logger.debug('skip image fetch, no product selected', { scope: LOG_SCOPE })
-				return
-			}
-			if (store.get()[slug]) {
-				logger.debug('image already cached, skipping fetch', { scope: LOG_SCOPE, uniqId, slug })
-				return
-			}
-			task(async () => {
-				try {
-					logger.debug('product image fetch started', { scope: LOG_SCOPE, slug })
-					store.setKey(slug, { loading: true, data: null })
-					const response = await fetch(selectedProduct.imageUrl)
-					if (!response.ok) return
-					const arrayBuffer = await response.arrayBuffer()
-					store.setKey(slug, { data: arrayBuffer, loading: false })
-					logger.debug('product image fetch succeeded', {
-						scope: LOG_SCOPE,
-						slug,
-						imageSize: prettyBytes(arrayBuffer.byteLength),
-						totalSize: prettyBytes(getTotalStoreBufferSize()),
-					})
-					logger.info('product image fetch succeeded', { scope: LOG_SCOPE, slug })
-				} catch (error) {
-					const errorMsg = error instanceof Error ? error.message : 'unknown error'
-					logger.error('product image fetch errored', {
-						scope: LOG_SCOPE,
-						slug,
-						error: errorMsg,
-					})
-					store.setKey(slug, { data: null, loading: false })
-				}
-			})
-		})
-	})
-
-	return store
-}
-const $productImageStore = createProductImageStore()
-export const $selectedProductImage = computed(
-	[$selectedProduct, $productImageStore],
-	(selectedProduct, productImageStore) => {
-		const LOG_SCOPE = 'selected-product-image'
-		if (!selectedProduct?.slug) {
-			logger.debug('no product selected, image unavailable', { scope: LOG_SCOPE })
-			return
-		}
-		return productImageStore[selectedProduct.slug]
-	}
-)

@@ -3,7 +3,7 @@ export const theme = {
 		snkrsRed: '#FF5C7D',
 	},
 	sizes: {
-		image: 5, // 5 for iTerm2, and 4 for VSCode due Image render bug, which adds extra empty lines to bottom
+		image: 6,
 		fullHeight: 27,
 		fullWidth: 110,
 	},
