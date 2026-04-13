@@ -8,8 +8,9 @@
 	],
 	"scripts": {
 		"start": "npm run start --workspace @nike-release-checker/cli",
+		"start:mock": "npm run start:mock --workspace @nike-release-checker/cli",
 		"start:debug": "npm run start:debug --workspace @nike-release-checker/cli",
-		"start:remote-debug": "npm run start:remote-debug --workspace @nike-release-checker/cli",
+		"start:devtools-debug": "npm run start:devtools-debug --workspace @nike-release-checker/cli",
 		"start:watch": "npm run start:watch --workspace @nike-release-checker/cli",
 		"build": "npm run build --workspace @nike-release-checker/cli",
 		"build:sea": "npm run build:sea --workspace @nike-release-checker/cli",

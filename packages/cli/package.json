@@ -6,9 +6,10 @@
 	"private": true,
 	"scripts": {
 		"start": "tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
+		"start:mock": "tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
 		"start:debug": "cross-env LOG_LEVEL=debug tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
-		"start:remote-debug": "cross-env LOG_LEVEL=debug tsx --inspect-brk --experimental-webstorage --localstorage-file=local.db --no-warnings --experimental-network-inspection src/devEntry.ts",
-		"start:watch": "tsx --watch-path=./src --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
+		"start:devtools-debug": "cross-env LOG_LEVEL=debug tsx --experimental-webstorage --localstorage-file=local.db --inspect-brk --no-warnings --experimental-network-inspection src/index.tsx",
+		"start:watch": "tsx --watch-path=./src --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
 		"build": "rspack build",
 		"build:sea": "node ./scripts/pack-sea.ts",
 		"build:check": "node --experimental-webstorage --localstorage-file=local.db dist/bundle.cjs",

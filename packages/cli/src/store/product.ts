@@ -137,7 +137,7 @@ const createSelectedModel = () => {
 	const $selectedModelIdAtom = atom<string | null>(null)
 
 	const reset = () => {
-		logger.info('model cleared', { scope: LOG_SCOPE })
+		logger.info('selected model cleared', { scope: LOG_SCOPE })
 		$selectedModelIdAtom.set(null)
 	}
 

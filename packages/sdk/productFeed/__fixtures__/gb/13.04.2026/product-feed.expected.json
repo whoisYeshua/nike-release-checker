@@ -1,0 +1,2150 @@
+[
+  {
+    "slug": "nike-sb-dunk-low-som-tum-canvas-and-parachute-beige",
+    "title": "Canvas and Parachute Beige",
+    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/02abc6e6-8eb8-4d8b-9015-39a49fbeef07/nike-sb-dunk-low-som-tum-canvas-and-parachute-beige-ib6206-701-release-date.jpg",
+    "models": [
+      {
+        "launchView": {
+          "id": "602979ba-f0a4-3f26-8431-59ceab5e498c",
+          "resourceType": "launchview",
+          "productId": "46fb7696-5fc6-52e5-958f-2df9f3ec4b53",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-14T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/602979ba-f0a4-3f26-8431-59ceab5e498c"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "e83bb4c6-d426-5b00-bc2d-af9402589cfb",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775756298",
+          "productId": "46fb7696-5fc6-52e5-958f-2df9f3ec4b53",
+          "parentId": "46fb7696-5fc6-52e5-958f-2df9f3ec4b53",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-09T17:38:18.897Z",
+          "country": "GB",
+          "msrp": 109.99,
+          "fullPrice": 109.99,
+          "currentPrice": 109.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/e83bb4c6-d426-5b00-bc2d-af9402589cfb"
+            }
+          }
+        },
+        "modelName": "NIKE SB DUNK LOW PRO",
+        "id": "46fb7696-5fc6-52e5-958f-2df9f3ec4b53",
+        "sizes": [
+          {
+            "id": "62d98284-4f73-5384-a93f-92a56ee12cd0",
+            "gtin": "00198730159560",
+            "size": "4",
+            "level": "LOW"
+          },
+          {
+            "id": "434355d6-1bb2-5ce3-a5bf-6d7abe8be124",
+            "gtin": "00198729988898",
+            "size": "4.5",
+            "level": "LOW"
+          },
+          {
+            "id": "dd74c985-5bb7-583b-90d2-f3e6fffd505d",
+            "gtin": "00198730132389",
+            "size": "5",
+            "level": "LOW"
+          },
+          {
+            "id": "778af7a8-cbba-5623-b3f5-286feb2bbf4d",
+            "gtin": "00198730152844",
+            "size": "5.5",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "6457a7fe-42db-5931-b57e-cd0a896999ee",
+            "gtin": "00198730177908",
+            "size": "6",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "1352e147-1de0-5918-a41e-d98c3f4ea0ca",
+            "gtin": "00198730164182",
+            "size": "6.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "31b4ee18-f4ab-5d7a-99db-23530dd06dfc",
+            "gtin": "00198730179070",
+            "size": "7",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "f27ae14e-8759-5707-ace8-c63c81a6fda9",
+            "gtin": "00198730144399",
+            "size": "7.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "0be1582d-fb4f-59cb-97bc-712558a83a52",
+            "gtin": "00198730205120",
+            "size": "8",
+            "level": "HIGH"
+          },
+          {
+            "id": "9711c552-fd39-5b3e-a52c-5dd936ef11d5",
+            "gtin": "00198730081557",
+            "size": "8.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "490f37cd-a19a-52ce-b90d-2ef3c67b089e",
+            "gtin": "00198730069807",
+            "size": "9",
+            "level": "HIGH"
+          },
+          {
+            "id": "b0cacb67-8164-5276-b894-d2232bbfc201",
+            "gtin": "00198730088549",
+            "size": "9.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "84e37e43-f4dd-5648-ace0-fdf75b145784",
+            "gtin": "00198730103389",
+            "size": "10",
+            "level": "HIGH"
+          },
+          {
+            "id": "bd4d665e-24a1-570e-abc9-2b525a45a411",
+            "gtin": "00198730133140",
+            "size": "10.5",
+            "level": "LOW"
+          },
+          {
+            "id": "f8aa5c0e-2995-52d2-b088-b52a9cabd221",
+            "gtin": "00198730205069",
+            "size": "11",
+            "level": "LOW"
+          },
+          {
+            "id": "e05fabb2-df42-5f50-86dd-c7d16f1cdb6f",
+            "gtin": "00198730105932",
+            "size": "11.5",
+            "level": "LOW"
+          },
+          {
+            "id": "b44c35a6-8177-5ab9-ab56-b1368f9faa70",
+            "gtin": "00198730201689",
+            "size": "12",
+            "level": "LOW"
+          },
+          {
+            "id": "4a47b29f-5beb-5db4-943e-a97cd58d2c01",
+            "gtin": "00198730057569",
+            "size": "13",
+            "level": "LOW"
+          },
+          {
+            "id": "859c241d-d8f8-5c95-baa8-77dcb376d2ff",
+            "gtin": "00198730175386",
+            "size": "14",
+            "level": "LOW"
+          },
+          {
+            "id": "3b5b270b-1bae-5c5a-b977-f2b8d85f1ce6",
+            "gtin": "00198730185903",
+            "size": "15",
+            "level": "LOW"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "womens-general-purpose-shoe-bricolage-light-cream-and-pine-green",
+    "title": "Light Cream and Pine Green",
+    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/13ffec43-1cb9-436d-9eb5-ed92d47081d8/women-s-general-purpose-shoe-bricolage-light-cream-and-pine-green-da6672-100-release-date.jpg",
+    "models": [
+      {
+        "launchView": {
+          "id": "b3404f6e-7472-3561-8f55-926fe2c14181",
+          "resourceType": "launchview",
+          "productId": "55924e9b-64c1-5249-b24a-53c7b1415791",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-14T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/b3404f6e-7472-3561-8f55-926fe2c14181"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "923cf1bb-e7f3-5163-b12f-a774c1fd9a75",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775650903",
+          "productId": "55924e9b-64c1-5249-b24a-53c7b1415791",
+          "parentId": "55924e9b-64c1-5249-b24a-53c7b1415791",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-08T12:21:43.767Z",
+          "country": "GB",
+          "msrp": 99.99,
+          "fullPrice": 99.99,
+          "currentPrice": 99.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/923cf1bb-e7f3-5163-b12f-a774c1fd9a75"
+            }
+          }
+        },
+        "modelName": "GENERAL PURPOSE SHOE",
+        "id": "55924e9b-64c1-5249-b24a-53c7b1415791",
+        "sizes": [
+          {
+            "id": "ca9f050c-22c8-5ed0-9bc0-6b8a22d6e545",
+            "gtin": "00196155524390",
+            "size": "5",
+            "level": "HIGH"
+          },
+          {
+            "id": "30e24e76-72fd-5cda-8bfb-ce76112d7cd1",
+            "gtin": "00196155524406",
+            "size": "5.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "5ec3ac9f-d820-5bcf-9364-54124c259f58",
+            "gtin": "00196155524413",
+            "size": "6",
+            "level": "HIGH"
+          },
+          {
+            "id": "2b5a4d83-a964-50f2-bc01-5560248c766f",
+            "gtin": "00196155524420",
+            "size": "6.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "495c3a0c-65fb-5827-becf-2aa041b7243d",
+            "gtin": "00196155524437",
+            "size": "7",
+            "level": "HIGH"
+          },
+          {
+            "id": "1ccb713c-19cb-5671-8096-c8da350ce4a1",
+            "gtin": "00196155524444",
+            "size": "7.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "08a81af6-2f65-5411-96eb-73773d30b79d",
+            "gtin": "00196155524451",
+            "size": "8",
+            "level": "HIGH"
+          },
+          {
+            "id": "542572fb-94f8-5bd1-a3a1-66dbeba4d550",
+            "gtin": "00196155524468",
+            "size": "8.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "d2f9e5a1-9eb5-551a-b641-988e84a45d58",
+            "gtin": "00196155524475",
+            "size": "9",
+            "level": "HIGH"
+          },
+          {
+            "id": "0365dcd4-dcb4-5a03-8979-8df09cb87db1",
+            "gtin": "00196155524482",
+            "size": "9.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "1ee45790-1b61-5f72-bcb6-eb64a6e61841",
+            "gtin": "00196155524499",
+            "size": "10",
+            "level": "HIGH"
+          },
+          {
+            "id": "50817708-41fa-5380-86b6-c7841f94595d",
+            "gtin": "00196155524505",
+            "size": "10.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "6c069722-0067-56bb-b54e-b3aa3b064601",
+            "gtin": "00196155524512",
+            "size": "11",
+            "level": "HIGH"
+          },
+          {
+            "id": "6945a342-f1a5-56b6-ad26-10597412a54b",
+            "gtin": "00196155524529",
+            "size": "11.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "995beb37-ec4c-5b8d-878b-4c0374cb6ed2",
+            "gtin": "00196155524536",
+            "size": "12",
+            "level": "HIGH"
+          },
+          {
+            "id": "f3e0612e-08aa-5dad-b567-ad9b31a36f8e",
+            "gtin": "00196155524543",
+            "size": "12.5",
+            "level": "LOW"
+          },
+          {
+            "id": "e59dfbda-fec5-533c-8311-1a2880d2fd23",
+            "gtin": "00196155524550",
+            "size": "13",
+            "level": "HIGH"
+          },
+          {
+            "id": "99a5eb21-3692-56c0-b676-83c94d2ecb3d",
+            "gtin": "00196155524574",
+            "size": "14",
+            "level": "HIGH"
+          },
+          {
+            "id": "85b7389c-ac9a-5f84-9a2d-972a1e56d035",
+            "gtin": "00196155524598",
+            "size": "15.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "ead2ecec-e4e4-5fb1-87df-fd5ca00171fe",
+            "gtin": "00196155524604",
+            "size": "16.5",
+            "level": "HIGH"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "jordan-teyana-taylor-apparel-collection-static",
+    "title": "Apparel Collection",
+    "imageUrl": "",
+    "models": [
+      {
+        "launchView": {
+          "id": "a8863612-de68-31b0-84d7-846e037fcded",
+          "resourceType": "launchview",
+          "productId": "f04b18c9-d082-533e-adce-b5c3a774cced",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-15T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/a8863612-de68-31b0-84d7-846e037fcded"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "a2b15777-600a-5b13-adc0-d770b1760539",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775562720",
+          "productId": "f04b18c9-d082-533e-adce-b5c3a774cced",
+          "parentId": "f04b18c9-d082-533e-adce-b5c3a774cced",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-07T11:52:00.640Z",
+          "country": "GB",
+          "msrp": 39.99,
+          "fullPrice": 39.99,
+          "currentPrice": 39.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/a2b15777-600a-5b13-adc0-d770b1760539"
+            }
+          }
+        },
+        "modelName": "U J ED PLS CSH CREW 4PR 144 TT",
+        "id": "f04b18c9-d082-533e-adce-b5c3a774cced",
+        "sizes": [
+          {
+            "id": "ecc79c05-4838-5326-be44-09269ed073ac",
+            "gtin": "00198728089640",
+            "size": "S",
+            "level": "LOW"
+          },
+          {
+            "id": "afae2034-7b5d-5b6f-9b2a-990023046cf4",
+            "gtin": "00198728090875",
+            "size": "M",
+            "level": "LOW"
+          },
+          {
+            "id": "6d0530a3-d8d1-54c1-af0a-96e439c82212",
+            "gtin": "00198728089152",
+            "size": "L",
+            "level": "LOW"
+          },
+          {
+            "id": "df3768fa-86df-59ff-9eb6-be2db5fffc78",
+            "gtin": "00198728090967",
+            "size": "XL",
+            "level": "LOW"
+          }
+        ]
+      },
+      {
+        "launchView": {
+          "id": "1953acb3-fec4-398e-901c-a83ccd759329",
+          "resourceType": "launchview",
+          "productId": "cfe38747-ccf1-5e32-9740-1bbd0eeda28e",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-15T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/1953acb3-fec4-398e-901c-a83ccd759329"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "b3d00568-9420-54bf-9c06-a4e350991211",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775562719",
+          "productId": "cfe38747-ccf1-5e32-9740-1bbd0eeda28e",
+          "parentId": "cfe38747-ccf1-5e32-9740-1bbd0eeda28e",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-07T11:51:59.689Z",
+          "country": "GB",
+          "msrp": 129.99,
+          "fullPrice": 129.99,
+          "currentPrice": 129.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/b3d00568-9420-54bf-9c06-a4e350991211"
+            }
+          }
+        },
+        "modelName": "W J TEY FLC PANT SP",
+        "id": "cfe38747-ccf1-5e32-9740-1bbd0eeda28e",
+        "sizes": [
+          {
+            "id": "11bec649-d402-59ab-a802-1557124d4a49",
+            "gtin": "00198727850142",
+            "size": "XS",
+            "level": "LOW"
+          },
+          {
+            "id": "f70b4c29-b32a-5461-bb13-6050eafcbfdb",
+            "gtin": "00198727851019",
+            "size": "S",
+            "level": "LOW"
+          },
+          {
+            "id": "bb57f7ee-14c2-5e85-af95-170a942dd2d1",
+            "gtin": "00198727851903",
+            "size": "M",
+            "level": "LOW"
+          },
+          {
+            "id": "6e22f723-87c7-582a-9885-bf283d65659e",
+            "gtin": "00198727852016",
+            "size": "L",
+            "level": "LOW"
+          },
+          {
+            "id": "ac043b48-ba69-5da9-984b-2cf335326bd0",
+            "gtin": "00198727850418",
+            "size": "XL",
+            "level": "LOW"
+          }
+        ]
+      },
+      {
+        "launchView": {
+          "id": "ff589356-c30a-31d9-8cc8-48167e76cddf",
+          "resourceType": "launchview",
+          "productId": "c754fdfb-1588-51df-afd2-e8317491292d",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-15T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/ff589356-c30a-31d9-8cc8-48167e76cddf"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "15ab737a-17ef-534d-997e-a25156b86872",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775562719",
+          "productId": "c754fdfb-1588-51df-afd2-e8317491292d",
+          "parentId": "c754fdfb-1588-51df-afd2-e8317491292d",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-07T11:51:59.762Z",
+          "country": "GB",
+          "msrp": 184.99,
+          "fullPrice": 184.99,
+          "currentPrice": 184.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/15ab737a-17ef-534d-997e-a25156b86872"
+            }
+          }
+        },
+        "modelName": "W J TEY JUMPSUIT SP",
+        "id": "c754fdfb-1588-51df-afd2-e8317491292d",
+        "sizes": [
+          {
+            "id": "d06a7828-bba7-5b72-8755-d4a3a59535d6",
+            "gtin": "00198727851347",
+            "size": "XS",
+            "level": "LOW"
+          },
+          {
+            "id": "5f4fc3b2-fd9e-593f-8c5b-16b260c3f0f3",
+            "gtin": "00198727849412",
+            "size": "S",
+            "level": "LOW"
+          },
+          {
+            "id": "9b315b4f-69d5-5a49-8c5a-6308475e8f66",
+            "gtin": "00198727850913",
+            "size": "M",
+            "level": "LOW"
+          },
+          {
+            "id": "035e4d60-9040-525a-9c03-896e7118833f",
+            "gtin": "00198727850272",
+            "size": "L",
+            "level": "LOW"
+          },
+          {
+            "id": "40fb253d-4206-5719-a686-cb01a282f423",
+            "gtin": "00198727850876",
+            "size": "XL",
+            "level": "LOW"
+          }
+        ]
+      },
+      {
+        "launchView": {
+          "id": "6181f91a-0af0-352f-a433-135d91f223fd",
+          "resourceType": "launchview",
+          "productId": "bc299b53-ab9a-5d1f-865a-3a006e4ff7ba",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-15T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/6181f91a-0af0-352f-a433-135d91f223fd"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "c614332b-8b83-5c7c-9551-a10428589f76",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775562719",
+          "productId": "bc299b53-ab9a-5d1f-865a-3a006e4ff7ba",
+          "parentId": "bc299b53-ab9a-5d1f-865a-3a006e4ff7ba",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-07T11:51:59.714Z",
+          "country": "GB",
+          "msrp": 134.99,
+          "fullPrice": 134.99,
+          "currentPrice": 134.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/c614332b-8b83-5c7c-9551-a10428589f76"
+            }
+          }
+        },
+        "modelName": "W J TEY LAYER HOODIE SP",
+        "id": "bc299b53-ab9a-5d1f-865a-3a006e4ff7ba",
+        "sizes": [
+          {
+            "id": "8af8de56-f52a-59d4-a7e0-b5d96a9baa5c",
+            "gtin": "00198727848934",
+            "size": "XS",
+            "level": "LOW"
+          },
+          {
+            "id": "1caf76ca-83ff-575d-9bcc-7b09a72feed2",
+            "gtin": "00198727848507",
+            "size": "S",
+            "level": "LOW"
+          },
+          {
+            "id": "3d24c785-1632-5318-88d5-0d6e8f09ba89",
+            "gtin": "00198727848217",
+            "size": "M",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "1db7cef8-9224-5dab-9f9b-40beaaab2020",
+            "gtin": "00198727848804",
+            "size": "L",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "476ff870-f968-5306-899d-58223ebbdb8e",
+            "gtin": "00198727848156",
+            "size": "XL",
+            "level": "LOW"
+          }
+        ]
+      },
+      {
+        "launchView": {
+          "id": "90b0a61a-d6f4-37ae-ab7b-3d156e7941d6",
+          "resourceType": "launchview",
+          "productId": "a14a7db2-de49-58a8-b84b-d4646b34eb11",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-15T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/90b0a61a-d6f4-37ae-ab7b-3d156e7941d6"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "3257155d-ad1e-5d5e-91a4-6e950e4f28b1",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775562720",
+          "productId": "a14a7db2-de49-58a8-b84b-d4646b34eb11",
+          "parentId": "a14a7db2-de49-58a8-b84b-d4646b34eb11",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-07T11:52:00.822Z",
+          "country": "GB",
+          "msrp": 54.99,
+          "fullPrice": 54.99,
+          "currentPrice": 54.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/3257155d-ad1e-5d5e-91a4-6e950e4f28b1"
+            }
+          }
+        },
+        "modelName": "W J TEY SS TOP SP",
+        "id": "a14a7db2-de49-58a8-b84b-d4646b34eb11",
+        "sizes": [
+          {
+            "id": "1e81abf1-a9d5-5e23-8268-dbf41e09cfc7",
+            "gtin": "00198727850975",
+            "size": "XS",
+            "level": "LOW"
+          },
+          {
+            "id": "3aed9a47-9044-5e41-b6c7-75584fbd783d",
+            "gtin": "00198727849962",
+            "size": "S",
+            "level": "LOW"
+          },
+          {
+            "id": "dbc67a02-3b8b-5713-9093-1b1f043fcd57",
+            "gtin": "00198727850968",
+            "size": "M",
+            "level": "LOW"
+          },
+          {
+            "id": "bffbefa4-3e51-5df4-b173-11e00a1fdebd",
+            "gtin": "00198727849566",
+            "size": "L",
+            "level": "LOW"
+          },
+          {
+            "id": "8901f5d7-a7de-59f2-a6b3-c9c5dae497e1",
+            "gtin": "00198727850661",
+            "size": "XL",
+            "level": "LOW"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "womens-shox-z-calistra-labelhood-black-and-university-red-1",
+    "title": "Black and University Red",
+    "imageUrl": "",
+    "models": [
+      {
+        "launchView": {
+          "id": "753a2489-dd63-3b79-96ef-2525b51996e3",
+          "resourceType": "launchview",
+          "productId": "eec04da1-3bc2-54f9-bbd9-c5c06ac94c48",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-15T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/753a2489-dd63-3b79-96ef-2525b51996e3"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "06b31db3-a8cb-5637-9749-a343aeaf6b96",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775767018",
+          "productId": "eec04da1-3bc2-54f9-bbd9-c5c06ac94c48",
+          "parentId": "eec04da1-3bc2-54f9-bbd9-c5c06ac94c48",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-09T20:36:58.034Z",
+          "country": "GB",
+          "msrp": 169.99,
+          "fullPrice": 169.99,
+          "currentPrice": 169.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/06b31db3-a8cb-5637-9749-a343aeaf6b96"
+            }
+          }
+        },
+        "modelName": "W NIKE SHOX Z CALISTRA",
+        "id": "eec04da1-3bc2-54f9-bbd9-c5c06ac94c48",
+        "sizes": [
+          {
+            "id": "0a86a4c5-09c9-5b9a-9141-98d5c308ec01",
+            "gtin": "00198962627813",
+            "size": "5",
+            "level": "OOS"
+          },
+          {
+            "id": "b9a3d722-6099-5543-8448-7c5f7417333d",
+            "gtin": "00198962627677",
+            "size": "5.5",
+            "level": "LOW"
+          },
+          {
+            "id": "1a09b138-03d3-5f7d-ad9a-09589edb1623",
+            "gtin": "00198962627646",
+            "size": "6",
+            "level": "LOW"
+          },
+          {
+            "id": "d857bee8-23bd-55bf-ba48-0f23aba6f382",
+            "gtin": "00198962627912",
+            "size": "6.5",
+            "level": "LOW"
+          },
+          {
+            "id": "2ab5851b-ec24-5ebf-97b4-45592204fba8",
+            "gtin": "00198962627714",
+            "size": "7",
+            "level": "LOW"
+          },
+          {
+            "id": "addc9a77-bc63-55ad-a40c-c9b9979f83eb",
+            "gtin": "00198962627707",
+            "size": "7.5",
+            "level": "LOW"
+          },
+          {
+            "id": "67fc6c67-4201-5a60-b016-218d70d61c7e",
+            "gtin": "00198962627578",
+            "size": "8",
+            "level": "LOW"
+          },
+          {
+            "id": "58110551-8754-52c8-8288-02465cb3c302",
+            "gtin": "00198962627899",
+            "size": "8.5",
+            "level": "LOW"
+          },
+          {
+            "id": "165df784-b986-556a-a30f-69a8da83ca26",
+            "gtin": "00198962627738",
+            "size": "9",
+            "level": "LOW"
+          },
+          {
+            "id": "ca9be6eb-6db6-576b-b498-069c5b12290b",
+            "gtin": "00198962627684",
+            "size": "9.5",
+            "level": "LOW"
+          },
+          {
+            "id": "cd3aa7c8-dcad-52dd-a281-93d0c9a7638d",
+            "gtin": "00198962627851",
+            "size": "10",
+            "level": "LOW"
+          },
+          {
+            "id": "6cadd1b1-326a-5e81-ad61-65203e8248cb",
+            "gtin": "00198962627806",
+            "size": "10.5",
+            "level": "LOW"
+          },
+          {
+            "id": "b01e53be-b16e-56c6-be87-31a53c309761",
+            "gtin": "00198962627752",
+            "size": "11",
+            "level": "LOW"
+          },
+          {
+            "id": "3029089c-7374-5b73-8ddb-a8033b75072f",
+            "gtin": "00198962627622",
+            "size": "11.5",
+            "level": "LOW"
+          },
+          {
+            "id": "a8c3516e-8fd1-5dac-bacb-ea5b132118be",
+            "gtin": "00198962627776",
+            "size": "12",
+            "level": "LOW"
+          },
+          {
+            "id": "935e2911-6f1f-5bf1-895d-3bd7efbaedd8",
+            "gtin": "00198963138875",
+            "size": "12.5",
+            "level": "LOW"
+          },
+          {
+            "id": "df2590b8-3726-5799-87bf-fbf335ba51b6",
+            "gtin": "00198963160852",
+            "size": "13",
+            "level": "LOW"
+          },
+          {
+            "id": "b491485e-62e8-54a6-b1cc-2cbf14d90859",
+            "gtin": "00198963166328",
+            "size": "13.5",
+            "level": "LOW"
+          },
+          {
+            "id": "0b84dd24-1fb1-5c83-9c5d-317bad54452e",
+            "gtin": "00198963159696",
+            "size": "14",
+            "level": "LOW"
+          },
+          {
+            "id": "1044b012-0964-501f-8260-baa18371d12a",
+            "gtin": "00198963163082",
+            "size": "14.5",
+            "level": "LOW"
+          },
+          {
+            "id": "0dba82cb-ce3a-55c7-be62-66384eb22254",
+            "gtin": "00198963175672",
+            "size": "15.5",
+            "level": "LOW"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "air-jordan-3-teyana-taylor-concrete-rose",
+    "title": "Concrete Rose",
+    "imageUrl": "",
+    "models": [
+      {
+        "launchView": {
+          "id": "76a9f5a1-56f0-3a6c-b98f-b91a0993e4b4",
+          "resourceType": "launchview",
+          "productId": "2a7571c0-f3f4-58cd-b423-4d411cdaf3e8",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-15T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/76a9f5a1-56f0-3a6c-b98f-b91a0993e4b4"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "ab717c2a-388a-5e4b-b63a-e32f933fce6b",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775555410",
+          "productId": "2a7571c0-f3f4-58cd-b423-4d411cdaf3e8",
+          "parentId": "2a7571c0-f3f4-58cd-b423-4d411cdaf3e8",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-07T09:50:10.560Z",
+          "country": "GB",
+          "msrp": 204.99,
+          "fullPrice": 204.99,
+          "currentPrice": 204.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/ab717c2a-388a-5e4b-b63a-e32f933fce6b"
+            }
+          }
+        },
+        "modelName": "WMNS AIR JORDAN 3 RETRO OG SP",
+        "id": "2a7571c0-f3f4-58cd-b423-4d411cdaf3e8",
+        "sizes": [
+          {
+            "id": "9523a941-9709-51f4-a548-babf840c5764",
+            "gtin": "00198727842376",
+            "size": "5",
+            "level": "LOW"
+          },
+          {
+            "id": "5dfdfabc-fdf8-5c1a-87f4-a35e7c7e0174",
+            "gtin": "00198727847111",
+            "size": "5.5",
+            "level": "LOW"
+          },
+          {
+            "id": "7488847e-a820-5ab1-8c38-f8f9e91da2b2",
+            "gtin": "00198727836252",
+            "size": "6",
+            "level": "LOW"
+          },
+          {
+            "id": "9b778536-48f9-5799-bbc0-e57c3da3d276",
+            "gtin": "00198727828417",
+            "size": "6.5",
+            "level": "LOW"
+          },
+          {
+            "id": "9b41c560-fb25-50f4-aca9-3a34afac96ee",
+            "gtin": "00198727832797",
+            "size": "7",
+            "level": "LOW"
+          },
+          {
+            "id": "379dc9d2-7ca2-5f95-9038-c608da64ff3e",
+            "gtin": "00198727824778",
+            "size": "7.5",
+            "level": "LOW"
+          },
+          {
+            "id": "601c2a3f-2eaa-5421-9efb-361705796882",
+            "gtin": "00198727840839",
+            "size": "8",
+            "level": "LOW"
+          },
+          {
+            "id": "33986607-70b7-5c71-a0d6-d0067b392423",
+            "gtin": "00198727821661",
+            "size": "8.5",
+            "level": "LOW"
+          },
+          {
+            "id": "29a57374-3c57-507d-9c5e-d2b35d214094",
+            "gtin": "00198727839611",
+            "size": "9",
+            "level": "LOW"
+          },
+          {
+            "id": "f5b199fa-6dc7-58ed-b6ea-b05f5d1c56eb",
+            "gtin": "00198727830205",
+            "size": "9.5",
+            "level": "LOW"
+          },
+          {
+            "id": "4c3f93dd-370f-5710-8101-7f9a9efb2555",
+            "gtin": "00198727823818",
+            "size": "10",
+            "level": "LOW"
+          },
+          {
+            "id": "e6a28f5a-8f8b-57b1-924e-dd96915d908c",
+            "gtin": "00198727842383",
+            "size": "10.5",
+            "level": "LOW"
+          },
+          {
+            "id": "52317ece-cb60-5e51-b566-a085efaefced",
+            "gtin": "00198727828899",
+            "size": "11",
+            "level": "LOW"
+          },
+          {
+            "id": "434f34f3-212e-5ee9-9d9d-ae9b70171373",
+            "gtin": "00198727835323",
+            "size": "11.5",
+            "level": "LOW"
+          },
+          {
+            "id": "2f2a4082-1eaa-5756-80bb-669e0e978976",
+            "gtin": "00198727839505",
+            "size": "12",
+            "level": "LOW"
+          },
+          {
+            "id": "0deba0ee-e970-54b5-becc-af632e5146be",
+            "gtin": "00198727836467",
+            "size": "12.5",
+            "level": "LOW"
+          },
+          {
+            "id": "1e4879b6-9522-5537-b407-b4946b6cdfd9",
+            "gtin": "00198727846985",
+            "size": "13",
+            "level": "LOW"
+          },
+          {
+            "id": "497830e0-e7d4-5ad1-96f0-ac172c3c8694",
+            "gtin": "00198727822224",
+            "size": "14",
+            "level": "OOS"
+          },
+          {
+            "id": "93dbeb0e-01ad-5c80-8e4a-47a3dc2e8cbe",
+            "gtin": "00198727828264",
+            "size": "16.5",
+            "level": "OOS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "air-force-1-07-central-cee-dark-beetroot-and-red-oxide",
+    "title": "Dark Beetroot and Red Oxide",
+    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/29e1004b-b9fa-4194-866f-b08ba61b6a8d/air-force-1-07-x-syna-dark-beetroot-and-red-oxide-io9970-638-release-date.jpg",
+    "models": [
+      {
+        "launchView": {
+          "id": "d02efaf8-5832-38c1-bbc1-0763d68a2e8c",
+          "resourceType": "launchview",
+          "productId": "f47d5755-4223-52ed-a10d-2194d182ba36",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-17T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/d02efaf8-5832-38c1-bbc1-0763d68a2e8c"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "7336a937-4c89-55a0-86f1-11254d0a98b6",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775828212",
+          "productId": "f47d5755-4223-52ed-a10d-2194d182ba36",
+          "parentId": "f47d5755-4223-52ed-a10d-2194d182ba36",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-10T13:36:52.470Z",
+          "country": "GB",
+          "msrp": 134.99,
+          "fullPrice": 134.99,
+          "currentPrice": 134.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/7336a937-4c89-55a0-86f1-11254d0a98b6"
+            }
+          }
+        },
+        "modelName": "NIKE AIR FORCE 1 '07",
+        "id": "f47d5755-4223-52ed-a10d-2194d182ba36",
+        "sizes": [
+          {
+            "id": "a6a1f9c9-c77c-5bfc-b2c7-4c7167bea043",
+            "gtin": "00198727565619",
+            "size": "6.5",
+            "level": "LOW"
+          },
+          {
+            "id": "177a1357-c075-5bf3-a691-5077a635f52d",
+            "gtin": "00198727564100",
+            "size": "7",
+            "level": "LOW"
+          },
+          {
+            "id": "54109e86-fa77-5b30-aebe-ec760a9b4dad",
+            "gtin": "00198727564308",
+            "size": "8",
+            "level": "HIGH"
+          },
+          {
+            "id": "4d209a07-97f3-5f83-857d-2cbff17cf6dc",
+            "gtin": "00198727567491",
+            "size": "8.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "6cb1590a-1a76-5265-ad2a-483078bff3b3",
+            "gtin": "00198727569228",
+            "size": "9",
+            "level": "HIGH"
+          },
+          {
+            "id": "5ba2cdb4-47fc-5de8-82cb-b04fec1c1e01",
+            "gtin": "00198727561949",
+            "size": "9.5",
+            "level": "HIGH"
+          },
+          {
+            "id": "922d3ff8-12ed-57c1-85de-53ba965b13f7",
+            "gtin": "00198727566777",
+            "size": "10",
+            "level": "HIGH"
+          },
+          {
+            "id": "d364225e-e08e-57cd-840e-f888aef70844",
+            "gtin": "00198727567286",
+            "size": "10.5",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "bce28d85-e5c8-58d3-aa8b-e12fd1610c0a",
+            "gtin": "00198727571016",
+            "size": "11",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "96b84ce5-cafe-507a-930d-4da460cb9ce3",
+            "gtin": "00198727561123",
+            "size": "11.5",
+            "level": "LOW"
+          },
+          {
+            "id": "7a88a122-662e-5f64-a9c2-2ccd8ba5ea8d",
+            "gtin": "00198727560348",
+            "size": "12",
+            "level": "LOW"
+          },
+          {
+            "id": "fea0c91c-2324-5404-8ef7-49d2b0f30374",
+            "gtin": "00198727568573",
+            "size": "12.5",
+            "level": "LOW"
+          },
+          {
+            "id": "661fdd38-71bd-5c43-ab04-06b73dbfc06c",
+            "gtin": "00198727564834",
+            "size": "13",
+            "level": "LOW"
+          },
+          {
+            "id": "2bd74759-4f1e-5e55-a249-6812fef65fa5",
+            "gtin": "00198727566739",
+            "size": "14",
+            "level": "LOW"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "air-max-plus-homecoming-pan-african-black-and-university-red",
+    "title": "Black and University Red",
+    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/3dd77758-185b-49f8-91c7-b58e8dbf0ae2/air-max-plus-x-homecoming-pan-african-black-and-university-red-im4960-001-release-date.jpg",
+    "models": [
+      {
+        "launchView": {
+          "id": "03a4f41c-e163-302d-8c8d-4cbf5d0f2057",
+          "resourceType": "launchview",
+          "productId": "ce843926-4127-5980-8635-bec5a3b28f3d",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-23T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/03a4f41c-e163-302d-8c8d-4cbf5d0f2057"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "da30cca2-f975-5ad5-ac40-a2f5bcf102a0",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775680380",
+          "productId": "ce843926-4127-5980-8635-bec5a3b28f3d",
+          "parentId": "ce843926-4127-5980-8635-bec5a3b28f3d",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-08T20:33:00.132Z",
+          "country": "GB",
+          "msrp": 174.99,
+          "fullPrice": 174.99,
+          "currentPrice": 174.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/da30cca2-f975-5ad5-ac40-a2f5bcf102a0"
+            }
+          }
+        },
+        "modelName": "NIKE AIR MAX PLUS",
+        "id": "ce843926-4127-5980-8635-bec5a3b28f3d",
+        "sizes": [
+          {
+            "id": "6970ff49-2750-5427-b5d3-49257558b15d",
+            "gtin": "00198731397909",
+            "size": "4",
+            "level": "LOW"
+          },
+          {
+            "id": "1943ca6b-acb2-5441-9b7b-14146edae5b6",
+            "gtin": "00198731398777",
+            "size": "4.5",
+            "level": "LOW"
+          },
+          {
+            "id": "73c97d84-cc8e-5dc5-a0e1-a5c32754db89",
+            "gtin": "00198731401125",
+            "size": "5",
+            "level": "LOW"
+          },
+          {
+            "id": "89193f0a-4b3c-53c6-a10b-92f2686ff2f1",
+            "gtin": "00198731395295",
+            "size": "5.5",
+            "level": "LOW"
+          },
+          {
+            "id": "42317964-afe7-5425-8154-44de531a4466",
+            "gtin": "00198731394038",
+            "size": "6",
+            "level": "LOW"
+          },
+          {
+            "id": "58c7aa1c-33f7-573b-b76c-10b395d11ee7",
+            "gtin": "00198731398081",
+            "size": "6.5",
+            "level": "LOW"
+          },
+          {
+            "id": "45a0bfe0-2355-5814-ac62-ef4d65a33c22",
+            "gtin": "00198731400746",
+            "size": "7",
+            "level": "LOW"
+          },
+          {
+            "id": "2691bdcb-78e5-5adb-ad13-1d262712aae6",
+            "gtin": "00198731394854",
+            "size": "7.5",
+            "level": "LOW"
+          },
+          {
+            "id": "63c21fa5-5c18-5f59-8efd-e3d829891124",
+            "gtin": "00198731398067",
+            "size": "8",
+            "level": "LOW"
+          },
+          {
+            "id": "c5b74b83-b036-5cc1-9477-3dca5d1c360d",
+            "gtin": "00198731400760",
+            "size": "8.5",
+            "level": "LOW"
+          },
+          {
+            "id": "26a8aceb-578f-53f5-a2e2-3393a483e199",
+            "gtin": "00198731399750",
+            "size": "9",
+            "level": "LOW"
+          },
+          {
+            "id": "1d1156fc-da0a-5569-9fe8-9c5b61718b27",
+            "gtin": "00198731393550",
+            "size": "9.5",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "d05fe261-ed49-5bdd-9e53-890c7e12e6e0",
+            "gtin": "00198731398050",
+            "size": "10",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "93b82aa8-f195-561f-975b-53f8b5037c93",
+            "gtin": "00198731394281",
+            "size": "10.5",
+            "level": "LOW"
+          },
+          {
+            "id": "bdb27538-b4cd-5335-a033-be85c2f20180",
+            "gtin": "00198731396438",
+            "size": "11",
+            "level": "LOW"
+          },
+          {
+            "id": "6244d83d-d32d-5c7d-806c-529857f48b98",
+            "gtin": "00198731399255",
+            "size": "11.5",
+            "level": "LOW"
+          },
+          {
+            "id": "0554ad21-22d4-5d84-9633-8234c4f80592",
+            "gtin": "00198731399675",
+            "size": "12",
+            "level": "LOW"
+          },
+          {
+            "id": "3d2999ee-c6b4-5bce-b65c-b6b19f090716",
+            "gtin": "00198731399453",
+            "size": "12.5",
+            "level": "LOW"
+          },
+          {
+            "id": "19e5b536-d668-566a-b120-7a404aaf4b11",
+            "gtin": "00198731400029",
+            "size": "13",
+            "level": "LOW"
+          },
+          {
+            "id": "a753dec9-df53-5ccc-9ae0-e617e88e2e66",
+            "gtin": "00198731398951",
+            "size": "14",
+            "level": "LOW"
+          },
+          {
+            "id": "e9c89bc4-22c7-5ac3-80cd-9d4334048765",
+            "gtin": "00198731400807",
+            "size": "15",
+            "level": "LOW"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "air-max-plus-homecoming-african-sunrise-bright-mandarin-and-safety-orange",
+    "title": "Bright Mandarin and Safety Orange",
+    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/11507b9a-04b4-4754-8bdf-b557567e0a30/air-max-plus-x-homecoming-african-sunrise-bright-mandarin-and-safety-orange-im4960-800-release-date.jpg",
+    "models": [
+      {
+        "launchView": {
+          "id": "efb9c188-e871-3e51-8ffb-55e04816caf6",
+          "resourceType": "launchview",
+          "productId": "f80bf609-177e-5a38-9a9b-e151113aa0bf",
+          "method": "LEO",
+          "paymentMethod": "PREPAY",
+          "startEntryDate": "2026-04-23T07:00:00.000Z",
+          "links": {
+            "self": {
+              "ref": "/launch/launch_views/v2/efb9c188-e871-3e51-8ffb-55e04816caf6"
+            }
+          }
+        },
+        "merchPrice": {
+          "id": "f4ef813c-3a64-55af-a259-1798b2602b54",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001775680382",
+          "productId": "f80bf609-177e-5a38-9a9b-e151113aa0bf",
+          "parentId": "f80bf609-177e-5a38-9a9b-e151113aa0bf",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-08T20:33:02.420Z",
+          "country": "GB",
+          "msrp": 174.99,
+          "fullPrice": 174.99,
+          "currentPrice": 174.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "TRUE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/f4ef813c-3a64-55af-a259-1798b2602b54"
+            }
+          }
+        },
+        "modelName": "NIKE AIR MAX PLUS",
+        "id": "f80bf609-177e-5a38-9a9b-e151113aa0bf",
+        "sizes": [
+          {
+            "id": "9ea575c1-0b67-5ed8-a4ee-e5ef324c9334",
+            "gtin": "00198731400937",
+            "size": "4",
+            "level": "LOW"
+          },
+          {
+            "id": "aa3841b7-4e30-5c77-a2e0-3d7c5db35a26",
+            "gtin": "00198731394724",
+            "size": "4.5",
+            "level": "LOW"
+          },
+          {
+            "id": "059ba252-9b48-5aae-a303-a9674936f023",
+            "gtin": "00198731398326",
+            "size": "5",
+            "level": "LOW"
+          },
+          {
+            "id": "75189c56-814e-58f1-93b9-978f8e5fcd71",
+            "gtin": "00198731394595",
+            "size": "5.5",
+            "level": "LOW"
+          },
+          {
+            "id": "47df87b1-f6f2-52b8-a008-5cb72ae691e2",
+            "gtin": "00198731394922",
+            "size": "6",
+            "level": "LOW"
+          },
+          {
+            "id": "163d06f3-c9ec-55d6-8f87-dd2dbe4a91da",
+            "gtin": "00198731398708",
+            "size": "6.5",
+            "level": "LOW"
+          },
+          {
+            "id": "c31dfd9a-8d7f-5190-b996-f6b21660827c",
+            "gtin": "00198731394465",
+            "size": "7",
+            "level": "LOW"
+          },
+          {
+            "id": "c956636a-e5ae-5bf5-a3b0-8387b199f3cd",
+            "gtin": "00198731399712",
+            "size": "7.5",
+            "level": "LOW"
+          },
+          {
+            "id": "b1dd0089-3c52-5744-acf9-77069c30b083",
+            "gtin": "00198731399460",
+            "size": "8",
+            "level": "LOW"
+          },
+          {
+            "id": "5152d7cb-bbd0-5efd-898c-f41127418b12",
+            "gtin": "00198731397459",
+            "size": "8.5",
+            "level": "LOW"
+          },
+          {
+            "id": "0a800d30-ab98-5ef0-827f-567022ab34f5",
+            "gtin": "00198731399903",
+            "size": "9",
+            "level": "LOW"
+          },
+          {
+            "id": "76dcd54f-4d5c-5bb2-83da-b439ac39e2ce",
+            "gtin": "00198731393581",
+            "size": "9.5",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "4b81c095-6357-5cf3-9038-b3b1ee0ae2db",
+            "gtin": "00198731393536",
+            "size": "10",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "f446750a-dc02-5210-b6f3-2f4764a7a269",
+            "gtin": "00198731397237",
+            "size": "10.5",
+            "level": "LOW"
+          },
+          {
+            "id": "f14e175f-164a-5d00-9c31-2042a91c50c2",
+            "gtin": "00198731399880",
+            "size": "11",
+            "level": "LOW"
+          },
+          {
+            "id": "e976f377-68cf-54db-ae7a-fe98f3413b94",
+            "gtin": "00198731395790",
+            "size": "11.5",
+            "level": "LOW"
+          },
+          {
+            "id": "0c4347d2-e995-50fb-a952-d35e2e34e7cb",
+            "gtin": "00198731397077",
+            "size": "12",
+            "level": "LOW"
+          },
+          {
+            "id": "ac087f2c-ac71-54fc-a528-e2b39698dbf6",
+            "gtin": "00198731393666",
+            "size": "12.5",
+            "level": "LOW"
+          },
+          {
+            "id": "00a7034c-f8a2-5d33-b8e2-532d3a197b42",
+            "gtin": "00198731393611",
+            "size": "13",
+            "level": "LOW"
+          },
+          {
+            "id": "99a9cb28-ccc6-50b4-9b72-44a2459da0da",
+            "gtin": "00198731397664",
+            "size": "14",
+            "level": "LOW"
+          },
+          {
+            "id": "15a845a0-0ba2-55bc-a838-a3b3fd678801",
+            "gtin": "00198731395622",
+            "size": "15",
+            "level": "LOW"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "vomero-black-1",
+    "title": "Black",
+    "imageUrl": "",
+    "models": [
+      {
+        "merchPrice": {
+          "id": "421b9fd8-e40a-505a-b3d0-02ce6628ab19",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001776072117",
+          "productId": "9478a072-4d99-57ca-a47e-e449ca242a91",
+          "parentId": "9478a072-4d99-57ca-a47e-e449ca242a91",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-13T09:21:57.483Z",
+          "country": "GB",
+          "msrp": 199.99,
+          "fullPrice": 199.99,
+          "currentPrice": 199.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "FALSE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/421b9fd8-e40a-505a-b3d0-02ce6628ab19"
+            }
+          }
+        },
+        "modelName": "NIKE VOMERO PRM SP",
+        "id": "9478a072-4d99-57ca-a47e-e449ca242a91",
+        "sizes": [
+          {
+            "id": "8619d0e2-66d3-5b38-8377-195bc369db38",
+            "gtin": "00198729046451",
+            "size": "4",
+            "level": "OOS"
+          },
+          {
+            "id": "d9cf56da-343f-5b86-955a-9a10eb1fabc8",
+            "gtin": "00198729042378",
+            "size": "4.5",
+            "level": "OOS"
+          },
+          {
+            "id": "d9edaee5-ac84-51c5-8ef9-a63f03ea6d55",
+            "gtin": "00198729042941",
+            "size": "5",
+            "level": "LOW"
+          },
+          {
+            "id": "3883ff54-d18c-515c-bc6b-dc0781b23ba7",
+            "gtin": "00198729045942",
+            "size": "5.5",
+            "level": "LOW"
+          },
+          {
+            "id": "a78fab2c-3d36-5bc3-9f04-1c447b62155b",
+            "gtin": "00198729044525",
+            "size": "6",
+            "level": "LOW"
+          },
+          {
+            "id": "0c4da221-2247-519e-b283-8c5c11470a22",
+            "gtin": "00198729043757",
+            "size": "6.5",
+            "level": "OOS"
+          },
+          {
+            "id": "b23bd2b6-d33c-5100-8a0e-280d8e40708d",
+            "gtin": "00198729044808",
+            "size": "7",
+            "level": "OOS"
+          },
+          {
+            "id": "f4e4fe19-0dad-577a-ad5d-9a1dcc077ab7",
+            "gtin": "00198729044303",
+            "size": "7.5",
+            "level": "OOS"
+          },
+          {
+            "id": "639fec7e-a76a-58f0-b7d6-bb24d9a658d2",
+            "gtin": "00198729045904",
+            "size": "8",
+            "level": "LOW"
+          },
+          {
+            "id": "07f94b96-df12-5854-ba46-22f530389e0d",
+            "gtin": "00198729047304",
+            "size": "8.5",
+            "level": "LOW"
+          },
+          {
+            "id": "f8145652-309c-5d60-9b6e-02d6790dfd1d",
+            "gtin": "00198729047335",
+            "size": "9",
+            "level": "LOW"
+          },
+          {
+            "id": "80d664c8-7df3-59b9-86eb-046ac17d4095",
+            "gtin": "00198729044563",
+            "size": "9.5",
+            "level": "LOW"
+          },
+          {
+            "id": "b2f72747-696e-5220-916f-7445ddb82108",
+            "gtin": "00198729045522",
+            "size": "10",
+            "level": "LOW"
+          },
+          {
+            "id": "b0615d51-f9f6-5752-b75c-22df8df7c2d5",
+            "gtin": "00198729047847",
+            "size": "10.5",
+            "level": "LOW"
+          },
+          {
+            "id": "52feac23-9048-51d5-a593-700c7feeac33",
+            "gtin": "00198729045591",
+            "size": "11",
+            "level": "LOW"
+          },
+          {
+            "id": "35c89ab8-bf52-5d8e-b86d-8cdd2ce96a06",
+            "gtin": "00198729045164",
+            "size": "11.5",
+            "level": "LOW"
+          },
+          {
+            "id": "388c8bc2-a590-50a6-9384-5d3b27b56214",
+            "gtin": "00198729043429",
+            "size": "12",
+            "level": "LOW"
+          },
+          {
+            "id": "c706b536-f585-5230-bc15-2097e47d808f",
+            "gtin": "00198729042415",
+            "size": "12.5",
+            "level": "LOW"
+          },
+          {
+            "id": "76e5e5ec-d443-5668-90a4-4e8cac35c1f9",
+            "gtin": "00198729042835",
+            "size": "13",
+            "level": "LOW"
+          },
+          {
+            "id": "cb75dfe1-3552-526c-af4d-a9838d832034",
+            "gtin": "00198729045232",
+            "size": "14",
+            "level": "OOS"
+          },
+          {
+            "id": "61242528-7369-5232-a0d0-df9fca7b2452",
+            "gtin": "00198729044235",
+            "size": "15",
+            "level": "OOS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "vomero-black",
+    "title": "Black",
+    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/1e2ce5df-fb01-4411-b1fa-96155d0b9975/vomero-black-iq0627-001-release-date.jpg",
+    "models": [
+      {
+        "merchPrice": {
+          "id": "421b9fd8-e40a-505a-b3d0-02ce6628ab19",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001776072117",
+          "productId": "9478a072-4d99-57ca-a47e-e449ca242a91",
+          "parentId": "9478a072-4d99-57ca-a47e-e449ca242a91",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-13T09:21:57.483Z",
+          "country": "GB",
+          "msrp": 199.99,
+          "fullPrice": 199.99,
+          "currentPrice": 199.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "FALSE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/421b9fd8-e40a-505a-b3d0-02ce6628ab19"
+            }
+          }
+        },
+        "modelName": "NIKE VOMERO PRM SP",
+        "id": "9478a072-4d99-57ca-a47e-e449ca242a91",
+        "sizes": [
+          {
+            "id": "8619d0e2-66d3-5b38-8377-195bc369db38",
+            "gtin": "00198729046451",
+            "size": "4",
+            "level": "OOS"
+          },
+          {
+            "id": "d9cf56da-343f-5b86-955a-9a10eb1fabc8",
+            "gtin": "00198729042378",
+            "size": "4.5",
+            "level": "OOS"
+          },
+          {
+            "id": "d9edaee5-ac84-51c5-8ef9-a63f03ea6d55",
+            "gtin": "00198729042941",
+            "size": "5",
+            "level": "LOW"
+          },
+          {
+            "id": "3883ff54-d18c-515c-bc6b-dc0781b23ba7",
+            "gtin": "00198729045942",
+            "size": "5.5",
+            "level": "LOW"
+          },
+          {
+            "id": "a78fab2c-3d36-5bc3-9f04-1c447b62155b",
+            "gtin": "00198729044525",
+            "size": "6",
+            "level": "LOW"
+          },
+          {
+            "id": "0c4da221-2247-519e-b283-8c5c11470a22",
+            "gtin": "00198729043757",
+            "size": "6.5",
+            "level": "OOS"
+          },
+          {
+            "id": "b23bd2b6-d33c-5100-8a0e-280d8e40708d",
+            "gtin": "00198729044808",
+            "size": "7",
+            "level": "OOS"
+          },
+          {
+            "id": "f4e4fe19-0dad-577a-ad5d-9a1dcc077ab7",
+            "gtin": "00198729044303",
+            "size": "7.5",
+            "level": "OOS"
+          },
+          {
+            "id": "639fec7e-a76a-58f0-b7d6-bb24d9a658d2",
+            "gtin": "00198729045904",
+            "size": "8",
+            "level": "LOW"
+          },
+          {
+            "id": "07f94b96-df12-5854-ba46-22f530389e0d",
+            "gtin": "00198729047304",
+            "size": "8.5",
+            "level": "LOW"
+          },
+          {
+            "id": "f8145652-309c-5d60-9b6e-02d6790dfd1d",
+            "gtin": "00198729047335",
+            "size": "9",
+            "level": "LOW"
+          },
+          {
+            "id": "80d664c8-7df3-59b9-86eb-046ac17d4095",
+            "gtin": "00198729044563",
+            "size": "9.5",
+            "level": "LOW"
+          },
+          {
+            "id": "b2f72747-696e-5220-916f-7445ddb82108",
+            "gtin": "00198729045522",
+            "size": "10",
+            "level": "LOW"
+          },
+          {
+            "id": "b0615d51-f9f6-5752-b75c-22df8df7c2d5",
+            "gtin": "00198729047847",
+            "size": "10.5",
+            "level": "LOW"
+          },
+          {
+            "id": "52feac23-9048-51d5-a593-700c7feeac33",
+            "gtin": "00198729045591",
+            "size": "11",
+            "level": "LOW"
+          },
+          {
+            "id": "35c89ab8-bf52-5d8e-b86d-8cdd2ce96a06",
+            "gtin": "00198729045164",
+            "size": "11.5",
+            "level": "LOW"
+          },
+          {
+            "id": "388c8bc2-a590-50a6-9384-5d3b27b56214",
+            "gtin": "00198729043429",
+            "size": "12",
+            "level": "LOW"
+          },
+          {
+            "id": "c706b536-f585-5230-bc15-2097e47d808f",
+            "gtin": "00198729042415",
+            "size": "12.5",
+            "level": "LOW"
+          },
+          {
+            "id": "76e5e5ec-d443-5668-90a4-4e8cac35c1f9",
+            "gtin": "00198729042835",
+            "size": "13",
+            "level": "LOW"
+          },
+          {
+            "id": "cb75dfe1-3552-526c-af4d-a9838d832034",
+            "gtin": "00198729045232",
+            "size": "14",
+            "level": "OOS"
+          },
+          {
+            "id": "61242528-7369-5232-a0d0-df9fca7b2452",
+            "gtin": "00198729044235",
+            "size": "15",
+            "level": "OOS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "kobe-11-protro-black-and-metallic-gold",
+    "title": "Black and Metallic Gold",
+    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/aba19d48-66e2-45a4-a5c1-4750b6ab3940/kobe-11-protro-black-and-metallic-gold-iu4902-900-release-date.jpg",
+    "models": [
+      {
+        "merchPrice": {
+          "id": "cf5c605a-1105-58e0-916b-42faa2946a13",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001776068024",
+          "productId": "adf237c6-8560-507b-95e8-7124f948fdfa",
+          "parentId": "adf237c6-8560-507b-95e8-7124f948fdfa",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-13T08:13:44.355Z",
+          "country": "GB",
+          "msrp": 174.99,
+          "fullPrice": 174.99,
+          "currentPrice": 174.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "FALSE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/cf5c605a-1105-58e0-916b-42faa2946a13"
+            }
+          }
+        },
+        "modelName": "KOBE XI EM PROTRO",
+        "id": "adf237c6-8560-507b-95e8-7124f948fdfa",
+        "sizes": [
+          {
+            "id": "2a216765-407e-5d88-9213-03fe8374f437",
+            "gtin": "00198731287002",
+            "size": "6",
+            "level": "OOS"
+          },
+          {
+            "id": "2faaa642-c72b-585a-95c8-76a139a7c6b5",
+            "gtin": "00198731301265",
+            "size": "6.5",
+            "level": "OOS"
+          },
+          {
+            "id": "80c2fce2-9a42-558b-8f26-a78ddf02680d",
+            "gtin": "00198731303993",
+            "size": "7",
+            "level": "OOS"
+          },
+          {
+            "id": "6f7687f9-2b2d-5f0e-bed5-174539be1f89",
+            "gtin": "00198731312674",
+            "size": "7.5",
+            "level": "OOS"
+          },
+          {
+            "id": "a55799a3-1b92-5181-befa-f81aa5cb26a7",
+            "gtin": "00198731290378",
+            "size": "8",
+            "level": "OOS"
+          },
+          {
+            "id": "c7070975-1fb0-5860-bdb9-105981a0fdea",
+            "gtin": "00198731301821",
+            "size": "8.5",
+            "level": "OOS"
+          },
+          {
+            "id": "c0ff70be-4f05-56a2-b8b0-1cde701c9839",
+            "gtin": "00198731280645",
+            "size": "9",
+            "level": "OOS"
+          },
+          {
+            "id": "2aa4834f-a173-5fd8-ac6c-9ef646d7abfe",
+            "gtin": "00198731287408",
+            "size": "9.5",
+            "level": "OOS"
+          },
+          {
+            "id": "f65f0ef2-f6df-5757-863e-84182cb93b51",
+            "gtin": "00198731306758",
+            "size": "10",
+            "level": "OOS"
+          },
+          {
+            "id": "1d225aa1-3f26-515b-b821-3c927123901a",
+            "gtin": "00198731297858",
+            "size": "10.5",
+            "level": "OOS"
+          },
+          {
+            "id": "0165bc24-ac78-572f-ae4f-bec36e027f23",
+            "gtin": "00198731297414",
+            "size": "11",
+            "level": "OOS"
+          },
+          {
+            "id": "576d2c8e-f403-5fab-a9ff-caae033e8794",
+            "gtin": "00198731277621",
+            "size": "11.5",
+            "level": "OOS"
+          },
+          {
+            "id": "ea9cf56b-2008-5359-b0d9-e32fe9767f5c",
+            "gtin": "00198731303641",
+            "size": "12",
+            "level": "OOS"
+          },
+          {
+            "id": "16f6e8fa-e17c-50c2-a062-342a61f9e833",
+            "gtin": "00198731278987",
+            "size": "13",
+            "level": "OOS"
+          },
+          {
+            "id": "b84288ca-c35d-569a-bc3e-be380d362174",
+            "gtin": "00198731284483",
+            "size": "14",
+            "level": "OOS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "kobe-11-elite-protro-black-and-metallic-gold",
+    "title": "Black and Metallic Gold",
+    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/f385f8cd-bbe1-4dbd-99a3-4071750d579c/kobe-11-elite-protro-black-and-metallic-gold-im4260-001-release-date.jpg",
+    "models": [
+      {
+        "merchPrice": {
+          "id": "119bd7a2-9716-5dff-872c-ea33abb68847",
+          "snapshotId": "a24a6ea4-ce75-4665-a070-001776068912",
+          "productId": "515ce128-ec9d-51e1-a798-3e3280d31f78",
+          "parentId": "515ce128-ec9d-51e1-a798-3e3280d31f78",
+          "parentType": "merchProduct",
+          "modificationDate": "2026-04-13T08:28:32.904Z",
+          "country": "GB",
+          "msrp": 189.99,
+          "fullPrice": 189.99,
+          "currentPrice": 189.99,
+          "currency": "GBP",
+          "discounted": false,
+          "promoInclusions": [],
+          "promoExclusions": [
+            "FALSE"
+          ],
+          "resourceType": "merchPrice",
+          "links": {
+            "self": {
+              "ref": "/merch/prices/v2/119bd7a2-9716-5dff-872c-ea33abb68847"
+            }
+          }
+        },
+        "modelName": "KOBE XI ELITE PROTRO",
+        "id": "515ce128-ec9d-51e1-a798-3e3280d31f78",
+        "sizes": [
+          {
+            "id": "da6fda7d-42e7-5cd2-8c2d-d1f1bf025654",
+            "gtin": "00198731301616",
+            "size": "3.5",
+            "level": "LOW"
+          },
+          {
+            "id": "fc503dad-e276-5651-b77a-605069901631",
+            "gtin": "00198731308127",
+            "size": "4",
+            "level": "LOW"
+          },
+          {
+            "id": "682d2556-edc6-5d82-897e-bbd8264e1fe0",
+            "gtin": "00198731315972",
+            "size": "4.5",
+            "level": "LOW"
+          },
+          {
+            "id": "c1cd0e30-c078-5b7b-bb9c-827bb67161d0",
+            "gtin": "00198731281253",
+            "size": "5",
+            "level": "LOW"
+          },
+          {
+            "id": "38e4c759-f666-5640-85ad-b18fe4c7ef1c",
+            "gtin": "00198731295113",
+            "size": "5.5",
+            "level": "LOW"
+          },
+          {
+            "id": "123d7088-fb8a-5225-9293-a8e012b388f7",
+            "gtin": "00198731286876",
+            "size": "6",
+            "level": "LOW"
+          },
+          {
+            "id": "13ce606d-b487-5905-946e-5110a816db54",
+            "gtin": "00198731309414",
+            "size": "6.5",
+            "level": "LOW"
+          },
+          {
+            "id": "8e7a99d3-be0f-504b-ae0f-293c76499340",
+            "gtin": "00198731309568",
+            "size": "7",
+            "level": "LOW"
+          },
+          {
+            "id": "a7fb3021-ee3d-580c-8084-c5c501489f86",
+            "gtin": "00198731283851",
+            "size": "7.5",
+            "level": "LOW"
+          },
+          {
+            "id": "ae0f24c6-44cd-5d34-857e-c0f2786d8262",
+            "gtin": "00198731277362",
+            "size": "8",
+            "level": "LOW"
+          },
+          {
+            "id": "663a0834-54c6-5d44-baf6-9c0c94ce68ec",
+            "gtin": "00198731316535",
+            "size": "8.5",
+            "level": "OOS"
+          },
+          {
+            "id": "60b1fa67-ad62-551c-94fd-097a35884522",
+            "gtin": "00198731296684",
+            "size": "9",
+            "level": "OOS"
+          },
+          {
+            "id": "d47cfee8-7eb6-5332-8991-679c3aa077d5",
+            "gtin": "00198731302378",
+            "size": "9.5",
+            "level": "OOS"
+          },
+          {
+            "id": "d04e9c35-cb2b-5e0b-a792-484c9fffb17e",
+            "gtin": "00198731284346",
+            "size": "10",
+            "level": "OOS"
+          },
+          {
+            "id": "532e79d0-e7e5-5ace-b953-51ce2e028fff",
+            "gtin": "00198731288078",
+            "size": "10.5",
+            "level": "OOS"
+          },
+          {
+            "id": "4dbd9444-5556-5c89-a182-8420b2d400eb",
+            "gtin": "00198731291276",
+            "size": "11",
+            "level": "OOS"
+          },
+          {
+            "id": "78787005-389b-5922-b059-f6345f3e204e",
+            "gtin": "00198731302415",
+            "size": "11.5",
+            "level": "OOS"
+          },
+          {
+            "id": "8a04c965-1626-56d2-9670-da8a0658136d",
+            "gtin": "00198731296769",
+            "size": "12",
+            "level": "OOS"
+          },
+          {
+            "id": "57e04379-0fd5-5c0c-b4bb-536aaff52ff0",
+            "gtin": "00198731302866",
+            "size": "12.5",
+            "level": "OOS"
+          },
+          {
+            "id": "4a5df0ac-df16-52af-a5b3-11fc76054d03",
+            "gtin": "00198731294079",
+            "size": "13",
+            "level": "OOS"
+          },
+          {
+            "id": "374b2f99-096c-5ae7-a092-cf095f1f4c42",
+            "gtin": "00198731288887",
+            "size": "14",
+            "level": "OOS"
+          }
+        ]
+      }
+    ]
+  }
+]
