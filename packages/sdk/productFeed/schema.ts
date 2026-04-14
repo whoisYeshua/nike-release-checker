@@ -111,7 +111,7 @@ export const AvailableGtinSchema = v.object({
 	locationId: LocationIDSchema,
 	method: v.literal('SHIP'),
 	styleColor: v.string(),
-	styleType: v.literal('INLINE'),
+	styleType: v.optional(v.literal('INLINE')),
 })
 
 export const FastAvailabilitySchema = v.object({
