@@ -581,19 +581,10 @@ export const JSONBodySchema = v.object({
 	type: v.literal('doc'),
 })
 
-export const DestinationSchema = v.variant('type', [
-	v.object({
-		product: ProductSchema,
-		type: v.literal('BUYING_TOOLS'),
-	}),
-	v.object({
-		product: ProductSchema,
-		type: v.literal('THREAD_ID'),
-	}),
-	v.object({
-		type: v.literal('URL'),
-	}),
-])
+export const DestinationSchema = v.object({
+	product: v.optional(ProductSchema),
+	type: v.union([v.literal('BUYING_TOOLS'), v.literal('THREAD_ID'), v.literal('URL')]),
+})
 
 export const ActionSchema = v.object({
 	actionType: v.union([v.literal('cta_buying_tools'), v.literal('minicard_link')]),
