@@ -13,7 +13,7 @@
 		"build": "rspack build",
 		"build:sea": "node ./scripts/pack-sea.ts",
 		"build:check": "node --experimental-webstorage --localstorage-file=local.db dist/bundle.cjs",
-		"test": "node --experimental-webstorage --localstorage-file=test.db --no-warnings --test",
+		"test": "node --experimental-webstorage --localstorage-file=test.db --no-warnings --experimental-test-module-mocks --test",
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:prettier && npm run lint:ts",

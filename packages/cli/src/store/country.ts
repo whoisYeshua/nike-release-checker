@@ -17,16 +17,13 @@ export const createCountry = () => {
 		decode: JSON.parse,
 	})
 
-	$country.subscribe((country) => {
-		logger.info('country selected', { scope: LOG_SCOPE, country })
-		$router.open(country ? HOME.url : COUNTRY.url)
-	})
+	$router.open($country.get() ? HOME.url : COUNTRY.url)
 
 	return {
 		get value(): typeof $country {
 			return $country
 		},
-		set value(countryCode: CountryCode) {
+		set(countryCode: CountryCode) {
 			const targetCountry = availableCountries.find(({ code }) => countryCode === code)
 			if (!targetCountry) {
 				logger.info('country code not found', { scope: LOG_SCOPE, countryCode })
@@ -34,10 +31,12 @@ export const createCountry = () => {
 			}
 
 			$country.set(targetCountry)
+			$router.open(HOME.url)
 		},
 		reset: () => {
 			logger.info('country reset requested', { scope: LOG_SCOPE })
 			$country.set(null)
+			$router.open(COUNTRY.url)
 		},
 		readableValue: computed($country, (countryObj) =>
 			countryObj ? countryObj.name : 'Not Selected'

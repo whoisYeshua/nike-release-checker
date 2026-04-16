@@ -17,12 +17,16 @@ export const isVoid = (
 
 export const isEmptyString = (variable: unknown) => typeof variable === 'string' && variable === ''
 
-export const isEmptyObject = (variable: unknown): variable is EmptyObject | NullObject =>
-	typeof variable === 'object' &&
-	variable !== null &&
-	((variable.constructor.prototype === Object.prototype &&
-		Object.getOwnPropertyNames(variable).length === 0) ||
-		variable.valueOf() === null)
+export const isEmptyObject = (variable: unknown): variable is EmptyObject | NullObject => {
+	if (!variable || typeof variable !== 'object') return false
+
+	const proto = Object.getPrototypeOf(variable)
+	return (
+		((proto === Object.prototype || proto === null) &&
+			Object.getOwnPropertyNames(variable).length === 0) ||
+		variable.valueOf() === null
+	)
+}
 
 export const isEmpty = <T>(variable: T | Empty): variable is Empty =>
 	isVoid(variable) || isEmptyString(variable) || isEmptyArray(variable) || isEmptyObject(variable)

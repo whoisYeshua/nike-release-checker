@@ -12,6 +12,6 @@ const countryItems = availableCountries.map(({ code, name, description }) => ({
 export const Country = () => (
 	<Box flexDirection="column">
 		<Text>Select Country: </Text>
-		<Select items={countryItems} onSelect={({ value }) => ($country.value = value)} />
+		<Select items={countryItems} onSelect={({ value }) => ($country.set(value))} />
 	</Box>
 )

@@ -14,7 +14,7 @@ interface ProductState {
 	data: FormatProductFeedResponse | null
 }
 
-const createProducts = () => {
+export const createProducts = () => {
 	const LOG_SCOPE = 'products'
 	const initialState: ProductState = {
 		loading: true,
@@ -81,7 +81,7 @@ const createProducts = () => {
 	}
 }
 
-const createSelectedProductSlug = () => {
+export const createSelectedProductSlug = () => {
 	const LOG_SCOPE = 'selected-product-slug'
 	const $store = atom<string | null>(null)
 	const $lastSelected = atom<string | null>(null)
@@ -90,12 +90,6 @@ const createSelectedProductSlug = () => {
 		logger.info('product slug cleared', { scope: LOG_SCOPE })
 		$store.set(null)
 	}
-
-	$store.listen((selectedProduct) => {
-		if (selectedProduct) {
-			$router.open(inputDictionary.PRODUCT.routeName)
-		}
-	})
 
 	$router.listen((routerState) => {
 		if (routerState?.route !== inputDictionary.PRODUCT.routeName) {
@@ -107,10 +101,13 @@ const createSelectedProductSlug = () => {
 		get value(): typeof $store {
 			return $store
 		},
-		set value(slug: string | null) {
+		set(slug: string | null) {
 			logger.info('product slug set', { scope: LOG_SCOPE, slug })
 			$store.set(slug)
-			if (slug) $lastSelected.set(slug)
+			if (slug) {
+				$lastSelected.set(slug)
+				$router.open(inputDictionary.PRODUCT.routeName)
+			}
 		},
 		get lastSelected(): typeof $lastSelected {
 			return $lastSelected
@@ -132,7 +129,7 @@ export const $selectedProduct = computed($selectedProductSlug.value, (selectedPr
 	return product
 })
 
-const createSelectedModel = () => {
+export const createSelectedModel = () => {
 	const LOG_SCOPE = 'selected-model'
 	const $selectedModelIdAtom = atom<string | null>(null)
 
