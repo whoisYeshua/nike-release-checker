@@ -1,5 +1,12 @@
 # @nike-release-checker/sdk
 
+## 0.3.7
+
+### Patch Changes
+
+- a05de43: Make `styleType` optional in `AvailableGtinSchema` to handle API responses where the field is absent
+- a7cb6eb: tolerate product feed schema drift for Italy
+
 ## 0.3.6
 
 ### Patch Changes
