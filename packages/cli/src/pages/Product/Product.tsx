@@ -54,13 +54,13 @@ export const Product = () => {
 }
 
 const ModelImage = () => {
-	const selectedProduct = useStore($selectedProduct)
+	const selectedModel = useStore($selectedModel.value)
 
-	if (!selectedProduct?.imageUrl) return null
+	if (!selectedModel?.imageUrl) return null
 
 	return (
 		<Box height={6}>
-			<ProductImage src={selectedProduct.imageUrl} />
+			<ProductImage src={selectedModel.imageUrl} />
 		</Box>
 	)
 }

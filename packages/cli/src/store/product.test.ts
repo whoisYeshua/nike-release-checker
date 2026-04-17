@@ -21,18 +21,21 @@ const mockModels = {
 	airMax90Mens: {
 		id: 'air-max-90-mens',
 		modelName: 'Men',
+		imageUrl: 'https://example.test/air-max-90-mens.jpg',
 		launchView: { startEntryDate: '2026-04-01T09:00:00.000Z' },
 		sizes: [],
 	},
 	airMax90Gs: {
 		id: 'air-max-90-gs',
 		modelName: 'GS',
+		imageUrl: 'https://example.test/air-max-90-gs.jpg',
 		launchView: { startEntryDate: '2026-04-01T09:00:00.000Z' },
 		sizes: [],
 	},
 	pegasus41: {
 		id: 'pegasus-41-standard',
 		modelName: 'Standard',
+		imageUrl: 'https://example.test/pegasus-41-standard.jpg',
 		launchView: { startEntryDate: '2026-04-02T09:00:00.000Z' },
 		sizes: [],
 	},
