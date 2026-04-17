@@ -37,7 +37,7 @@ export const Home = () => {
 			<Select
 				items={productsList}
 				initialIndex={initialIndex}
-				onSelect={({ value }) => ($selectedProductSlug.set(value ?? null))}
+				onSelect={({ value }) => $selectedProductSlug.set(value ?? null)}
 			/>
 		</Box>
 	)

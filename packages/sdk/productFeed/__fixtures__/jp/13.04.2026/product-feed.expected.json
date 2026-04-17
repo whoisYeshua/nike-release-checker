@@ -1,1220 +1,1200 @@
 [
-  {
-    "slug": "womens-general-purpose-shoe-bricolage-light-cream-and-pine-green",
-    "title": "Light Cream and Pine Green",
-    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/13ffec43-1cb9-436d-9eb5-ed92d47081d8/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%A9%E3%83%AB-%E3%83%91%E3%83%BC%E3%83%91%E3%82%B9-%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-bricolage-light-cream-and-pine-green-da6672-100-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-    "models": [
-      {
-        "launchView": {
-          "id": "b20dda1c-fd5f-3d62-a0d4-c323fc6ed7b9",
-          "resourceType": "launchview",
-          "productId": "9bfb3d39-5bc0-521e-bc90-1ff8feb726de",
-          "method": "DAN",
-          "paymentMethod": "PREPAY",
-          "startEntryDate": "2026-04-14T00:00:00.000Z",
-          "stopEntryDate": "2026-04-14T00:10:00.000Z",
-          "links": {
-            "self": {
-              "ref": "/launch/launch_views/v2/b20dda1c-fd5f-3d62-a0d4-c323fc6ed7b9"
-            }
-          }
-        },
-        "merchPrice": {
-          "id": "79308576-7d00-53e5-a887-0f80e69341f4",
-          "snapshotId": "a24a6ea4-ce75-4665-a070-001775655077",
-          "productId": "9bfb3d39-5bc0-521e-bc90-1ff8feb726de",
-          "parentId": "9bfb3d39-5bc0-521e-bc90-1ff8feb726de",
-          "parentType": "merchProduct",
-          "modificationDate": "2026-04-08T13:31:17.646Z",
-          "country": "JP",
-          "msrp": 17300,
-          "fullPrice": 19030,
-          "currentPrice": 19030,
-          "currency": "JPY",
-          "discounted": false,
-          "promoInclusions": [],
-          "promoExclusions": [
-            "TRUE"
-          ],
-          "resourceType": "merchPrice",
-          "links": {
-            "self": {
-              "ref": "/merch/prices/v2/79308576-7d00-53e5-a887-0f80e69341f4"
-            }
-          }
-        },
-        "modelName": "GENERAL PURPOSE SHOE",
-        "id": "9bfb3d39-5bc0-521e-bc90-1ff8feb726de",
-        "sizes": [
-          {
-            "id": "b857f815-f42c-59a7-ae14-bf0361a557f8",
-            "gtin": "00196155524390",
-            "size": "5",
-            "level": "HIGH"
-          },
-          {
-            "id": "aadaabe6-4c83-59a9-8981-bc63e4e77a2c",
-            "gtin": "00196155524406",
-            "size": "5.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "71f984d6-15af-507d-b0a5-668690887b19",
-            "gtin": "00196155524413",
-            "size": "6",
-            "level": "HIGH"
-          },
-          {
-            "id": "2dde0be3-2a3a-5169-a6f0-5dd171474eee",
-            "gtin": "00196155524420",
-            "size": "6.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "be7b3f55-02b4-5524-b519-10774b51cb66",
-            "gtin": "00196155524437",
-            "size": "7",
-            "level": "HIGH"
-          },
-          {
-            "id": "e97f2f74-1315-518f-9f7c-628684e9f076",
-            "gtin": "00196155524444",
-            "size": "7.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "4b57b773-1411-52b2-b7f4-b1b9106751bd",
-            "gtin": "00196155524451",
-            "size": "8",
-            "level": "HIGH"
-          },
-          {
-            "id": "e57f0bd3-6028-5c79-815e-5f9dd1d79d0e",
-            "gtin": "00196155524468",
-            "size": "8.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "2703126b-7a58-52f6-a803-639a310d9daa",
-            "gtin": "00196155524475",
-            "size": "9",
-            "level": "HIGH"
-          },
-          {
-            "id": "083fe21a-7112-5093-a6fd-49af215815c5",
-            "gtin": "00196155524482",
-            "size": "9.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "77b1d537-3c8b-536e-a61c-e1f3dbca5882",
-            "gtin": "00196155524499",
-            "size": "10",
-            "level": "HIGH"
-          },
-          {
-            "id": "e86b5197-6273-52f5-a28b-1b9634774856",
-            "gtin": "00196155524505",
-            "size": "10.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "b9a72abd-7a5e-5701-a5d4-ace117f1dbee",
-            "gtin": "00196155524512",
-            "size": "11",
-            "level": "HIGH"
-          },
-          {
-            "id": "8658709e-95cb-5f88-9a86-15b17b427363",
-            "gtin": "00196155524529",
-            "size": "11.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "3d666dd0-0c26-5a8a-9dca-3a093bc24207",
-            "gtin": "00196155524536",
-            "size": "12",
-            "level": "HIGH"
-          },
-          {
-            "id": "2e82faaf-041f-567e-8da1-f4f63d7eb351",
-            "gtin": "00196155524550",
-            "size": "13",
-            "level": "HIGH"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "womens-shox-z-calistra-labelhood-black-and-university-red",
-    "title": "Black and University Red",
-    "imageUrl": "",
-    "models": [
-      {
-        "launchView": {
-          "id": "8f63d86d-8d09-3166-9d02-248478b3bd1a",
-          "resourceType": "launchview",
-          "productId": "dc020717-8e1b-5004-8d0b-8fb58cc25370",
-          "method": "LEO",
-          "paymentMethod": "PREPAY",
-          "startEntryDate": "2026-04-15T00:00:00.000Z",
-          "links": {
-            "self": {
-              "ref": "/launch/launch_views/v2/8f63d86d-8d09-3166-9d02-248478b3bd1a"
-            }
-          }
-        },
-        "merchPrice": {
-          "id": "dc5f1f06-70cf-5c43-8816-b7a7363329e3",
-          "snapshotId": "a24a6ea4-ce75-4665-a070-001775924912",
-          "productId": "dc020717-8e1b-5004-8d0b-8fb58cc25370",
-          "parentId": "dc020717-8e1b-5004-8d0b-8fb58cc25370",
-          "parentType": "merchProduct",
-          "modificationDate": "2026-04-11T16:28:32.679Z",
-          "country": "JP",
-          "msrp": 23500,
-          "fullPrice": 25850,
-          "currentPrice": 25850,
-          "currency": "JPY",
-          "discounted": false,
-          "promoInclusions": [],
-          "promoExclusions": [
-            "TRUE"
-          ],
-          "resourceType": "merchPrice",
-          "links": {
-            "self": {
-              "ref": "/merch/prices/v2/dc5f1f06-70cf-5c43-8816-b7a7363329e3"
-            }
-          }
-        },
-        "modelName": "W NIKE SHOX Z CALISTRA",
-        "id": "dc020717-8e1b-5004-8d0b-8fb58cc25370",
-        "sizes": [
-          {
-            "id": "b926853b-d5da-5847-8d24-7034af77da33",
-            "gtin": "00198962627813",
-            "size": "5",
-            "level": "LOW"
-          },
-          {
-            "id": "5171a9b3-878e-58b6-92ea-304cd7b8b875",
-            "gtin": "00198962627646",
-            "size": "6",
-            "level": "LOW"
-          },
-          {
-            "id": "05e830f7-c050-557d-b69c-577e1fd92398",
-            "gtin": "00198962627912",
-            "size": "6.5",
-            "level": "LOW"
-          },
-          {
-            "id": "e88cf058-a136-51f1-87de-ff19a1466a8a",
-            "gtin": "00198962627714",
-            "size": "7",
-            "level": "LOW"
-          },
-          {
-            "id": "ff3e426f-8090-5979-9ef1-cc083f74f290",
-            "gtin": "00198962627707",
-            "size": "7.5",
-            "level": "LOW"
-          },
-          {
-            "id": "86f118ce-7f86-57dd-8b56-9efd85a2bcf4",
-            "gtin": "00198962627578",
-            "size": "8",
-            "level": "LOW"
-          },
-          {
-            "id": "6942e9b6-8938-5f8c-b844-365b60e90ffb",
-            "gtin": "00198962627899",
-            "size": "8.5",
-            "level": "LOW"
-          },
-          {
-            "id": "20c3a44b-e562-5ea3-9401-37a870ab2411",
-            "gtin": "00198962627738",
-            "size": "9",
-            "level": "LOW"
-          },
-          {
-            "id": "c1d21b3f-d34d-53ef-8256-553569bad2a7",
-            "gtin": "00198962627684",
-            "size": "9.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "6f5def6e-fed2-55b9-b0cc-0a6bcebf15e0",
-            "gtin": "00198962627851",
-            "size": "10",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "2ca0e684-3894-5962-853d-ec55f8a49927",
-            "gtin": "00198962627806",
-            "size": "10.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "c169f5b1-9a50-52ad-ae69-9f41b9320257",
-            "gtin": "00198962627752",
-            "size": "11",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "b6e2833e-8ac6-590c-9ca5-9e2c307cd330",
-            "gtin": "00198962627622",
-            "size": "11.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "6b85c0dd-2ba2-5f28-97eb-fdd637193fae",
-            "gtin": "00198962627776",
-            "size": "12",
-            "level": "MEDIUM"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "air-max-95-big-bubble-palace-metallic-silver-and-aluminum",
-    "title": "Metallic Silver and Aluminum",
-    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/c5dee3b4-b996-4700-92ed-87d3fab4d404/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%C2%A095-%E3%83%93%E3%83%83%E3%82%B0-%E3%83%90%E3%83%96%E3%83%AB%C2%A0x-%E3%83%91%E3%83%AC%E3%82%B9-metallic-silver-and-aluminum-iq7708-095-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-    "models": [
-      {
-        "launchView": {
-          "id": "867472b8-5a06-3099-ba55-735a50d03f74",
-          "resourceType": "launchview",
-          "productId": "80d33582-400e-5cc5-b412-3f704acedce4",
-          "method": "DAN",
-          "paymentMethod": "PREPAY",
-          "startEntryDate": "2026-04-16T00:00:00.000Z",
-          "stopEntryDate": "2026-04-16T00:10:00.000Z",
-          "links": {
-            "self": {
-              "ref": "/launch/launch_views/v2/867472b8-5a06-3099-ba55-735a50d03f74"
-            }
-          }
-        },
-        "merchPrice": {
-          "id": "03251ca8-3bcf-5e97-b282-e819fa5e4c6f",
-          "snapshotId": "a24a6ea4-ce75-4665-a070-001776048440",
-          "productId": "80d33582-400e-5cc5-b412-3f704acedce4",
-          "parentId": "80d33582-400e-5cc5-b412-3f704acedce4",
-          "parentType": "merchProduct",
-          "modificationDate": "2026-04-13T02:47:20.957Z",
-          "country": "JP",
-          "msrp": 24500,
-          "fullPrice": 26950,
-          "currentPrice": 26950,
-          "currency": "JPY",
-          "discounted": false,
-          "promoInclusions": [],
-          "promoExclusions": [
-            "TRUE"
-          ],
-          "resourceType": "merchPrice",
-          "links": {
-            "self": {
-              "ref": "/merch/prices/v2/03251ca8-3bcf-5e97-b282-e819fa5e4c6f"
-            }
-          }
-        },
-        "modelName": "NIKE AIR MAX 95 BIG BUBBLE",
-        "id": "80d33582-400e-5cc5-b412-3f704acedce4",
-        "sizes": [
-          {
-            "id": "ddddf2bb-9906-52c9-9721-bb4e4899763f",
-            "gtin": "00198731115251",
-            "size": "6",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "8d55188d-377b-5931-a585-fe3b6253be4e",
-            "gtin": "00198731109090",
-            "size": "6.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "3c9f7a44-533d-5d55-96bf-c37b129bc0fc",
-            "gtin": "00198731108413",
-            "size": "7",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "c4010711-42ca-5627-83fb-0957b49577ae",
-            "gtin": "00198731109250",
-            "size": "7.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "29534de1-8aea-58f7-b7e1-fde1b183e03a",
-            "gtin": "00198731112052",
-            "size": "8",
-            "level": "HIGH"
-          },
-          {
-            "id": "214b6b86-977c-577d-92ae-a88d3b52a336",
-            "gtin": "00198731110683",
-            "size": "8.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "de3307ea-c5bc-5e97-bf9e-693336a8f75d",
-            "gtin": "00198731108284",
-            "size": "9",
-            "level": "HIGH"
-          },
-          {
-            "id": "7c0f1851-b868-55c6-b454-1ce9bf4b3a65",
-            "gtin": "00198731115060",
-            "size": "9.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "b4cd17d9-b0ce-573f-8de5-8cb24a20cbee",
-            "gtin": "00198731113479",
-            "size": "10",
-            "level": "HIGH"
-          },
-          {
-            "id": "20c0ecdc-3dbe-58a6-b2bb-23704b41b993",
-            "gtin": "00198731111819",
-            "size": "10.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "7594e156-6e74-52bb-9e54-bbf47995f56c",
-            "gtin": "00198731112328",
-            "size": "11",
-            "level": "HIGH"
-          },
-          {
-            "id": "2b734f27-ce57-5009-8b0b-50589c97ce75",
-            "gtin": "00198731115909",
-            "size": "12",
-            "level": "HIGH"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "womens-first-sight-noir-black",
-    "title": "Black",
-    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/549d3b2d-4cf9-4d93-96b8-39040d5f0157/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88-%E3%82%B5%E3%82%A4%E3%83%88-%E3%83%8E%E3%83%AF%E3%83%BC%E3%83%AB-black-hq2409-001-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-    "models": [
-      {
-        "launchView": {
-          "id": "a6800512-111e-3546-88ac-dd50e5a691ee",
-          "resourceType": "launchview",
-          "productId": "36292f9f-5303-5a11-b88e-546109185dbd",
-          "method": "LEO",
-          "paymentMethod": "PREPAY",
-          "startEntryDate": "2026-04-21T00:00:00.000Z",
-          "links": {
-            "self": {
-              "ref": "/launch/launch_views/v2/a6800512-111e-3546-88ac-dd50e5a691ee"
-            }
-          }
-        },
-        "merchPrice": {
-          "id": "39ee0b6c-0c1a-5c10-ac28-d9f642193eda",
-          "snapshotId": "a24a6ea4-ce75-4665-a070-001775781799",
-          "productId": "36292f9f-5303-5a11-b88e-546109185dbd",
-          "parentId": "36292f9f-5303-5a11-b88e-546109185dbd",
-          "parentType": "merchProduct",
-          "modificationDate": "2026-04-10T00:43:19.023Z",
-          "country": "JP",
-          "msrp": 15000,
-          "fullPrice": 16500,
-          "currentPrice": 16500,
-          "currency": "JPY",
-          "discounted": false,
-          "promoInclusions": [],
-          "promoExclusions": [
-            "TRUE"
-          ],
-          "resourceType": "merchPrice",
-          "links": {
-            "self": {
-              "ref": "/merch/prices/v2/39ee0b6c-0c1a-5c10-ac28-d9f642193eda"
-            }
-          }
-        },
-        "modelName": "WMNS NIKE FIRST SIGHT NOIR",
-        "id": "36292f9f-5303-5a11-b88e-546109185dbd",
-        "sizes": [
-          {
-            "id": "8f6f0b10-e343-5c21-aeee-9bda31ba279c",
-            "gtin": "00198488564241",
-            "size": "5",
-            "level": "LOW"
-          },
-          {
-            "id": "032be411-3a86-5d8f-90aa-ef8c18ec92e6",
-            "gtin": "00198488573281",
-            "size": "5.5",
-            "level": "LOW"
-          },
-          {
-            "id": "2f62f204-a22a-5774-ac33-bba6f4e1f384",
-            "gtin": "00198488612409",
-            "size": "6",
-            "level": "HIGH"
-          },
-          {
-            "id": "87f8cb36-0c1d-5342-80b0-06557701ecd3",
-            "gtin": "00198488605692",
-            "size": "6.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "981c26a1-6c4d-5b2f-aaf2-a32dae5f2541",
-            "gtin": "00198488599212",
-            "size": "7",
-            "level": "HIGH"
-          },
-          {
-            "id": "e9999d7d-0312-520d-89ee-5fc8e9ffe7b4",
-            "gtin": "00198488561134",
-            "size": "7.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "760fd367-ec14-5ae7-abe5-b979f7f9d4a3",
-            "gtin": "00198488560373",
-            "size": "8",
-            "level": "HIGH"
-          },
-          {
-            "id": "d7e2b0d9-3119-5602-ae5d-52cebd3ec576",
-            "gtin": "00198488543383",
-            "size": "8.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "1675802e-f68e-5a22-8390-d227a0f3c515",
-            "gtin": "00198488540405",
-            "size": "9",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "4af30a73-e54f-5e9a-bc9a-ee8af997ac69",
-            "gtin": "00198488588124",
-            "size": "9.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "071986f4-f4db-534a-a622-8e8e3568bcf8",
-            "gtin": "00198488605005",
-            "size": "10",
-            "level": "HIGH"
-          },
-          {
-            "id": "bb527b27-d93d-5cc9-8ded-9ea5f2163a15",
-            "gtin": "00198488587318",
-            "size": "10.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "053a4506-e623-594e-b534-c501ab58f5cc",
-            "gtin": "00198488599557",
-            "size": "11",
-            "level": "HIGH"
-          },
-          {
-            "id": "fcff791f-cf1f-5df4-b3bd-d1dcfbefb336",
-            "gtin": "00198488610115",
-            "size": "11.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "49c6a64f-5557-5f88-b0e0-4f6a92ef0195",
-            "gtin": "00198488580845",
-            "size": "12",
-            "level": "HIGH"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "womens-first-sight-noir-light-bone",
-    "title": "Light Bone",
-    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/2bff3abc-ed9f-4eab-8a38-5f0fe805a5c4/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88-%E3%82%B5%E3%82%A4%E3%83%88-%E3%83%8E%E3%83%AF%E3%83%BC%E3%83%AB-light-bone-hq2409-003-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-    "models": [
-      {
-        "launchView": {
-          "id": "42080843-d9cc-3f72-906d-6578527f4481",
-          "resourceType": "launchview",
-          "productId": "ebb03cdc-9355-5b27-85d2-cd3567f0a6d7",
-          "method": "LEO",
-          "paymentMethod": "PREPAY",
-          "startEntryDate": "2026-04-21T00:00:00.000Z",
-          "links": {
-            "self": {
-              "ref": "/launch/launch_views/v2/42080843-d9cc-3f72-906d-6578527f4481"
-            }
-          }
-        },
-        "merchPrice": {
-          "id": "96b890b8-adc7-5e37-8791-ba22b14097dd",
-          "snapshotId": "a24a6ea4-ce75-4665-a070-001775781787",
-          "productId": "ebb03cdc-9355-5b27-85d2-cd3567f0a6d7",
-          "parentId": "ebb03cdc-9355-5b27-85d2-cd3567f0a6d7",
-          "parentType": "merchProduct",
-          "modificationDate": "2026-04-10T00:43:07.902Z",
-          "country": "JP",
-          "msrp": 15000,
-          "fullPrice": 16500,
-          "currentPrice": 16500,
-          "currency": "JPY",
-          "discounted": false,
-          "promoInclusions": [],
-          "promoExclusions": [
-            "TRUE"
-          ],
-          "resourceType": "merchPrice",
-          "links": {
-            "self": {
-              "ref": "/merch/prices/v2/96b890b8-adc7-5e37-8791-ba22b14097dd"
-            }
-          }
-        },
-        "modelName": "WMNS NIKE FIRST SIGHT NOIR",
-        "id": "ebb03cdc-9355-5b27-85d2-cd3567f0a6d7",
-        "sizes": [
-          {
-            "id": "9ef3c224-2273-54cc-b5a8-2e0e10b53184",
-            "gtin": "00198729076540",
-            "size": "5",
-            "level": "LOW"
-          },
-          {
-            "id": "1eb4d560-3373-519b-ae26-95907f6bfea9",
-            "gtin": "00198729193049",
-            "size": "5.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "8a0fb666-2ab3-5ffa-bab9-0cd59effb340",
-            "gtin": "00198729079732",
-            "size": "6",
-            "level": "LOW"
-          },
-          {
-            "id": "e65de566-4f81-528b-9725-494c6b430e05",
-            "gtin": "00198729133090",
-            "size": "6.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "0f5e8926-0407-523c-984b-7ba0f6452aa4",
-            "gtin": "00198729204561",
-            "size": "7",
-            "level": "HIGH"
-          },
-          {
-            "id": "a158e45c-2cc2-5b66-873f-4cbeb749a4f2",
-            "gtin": "00198729188878",
-            "size": "7.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "a44716b1-7a2a-5bc0-bca5-cce3624697a0",
-            "gtin": "00198729063298",
-            "size": "8",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "8b11d9f5-4c8e-5d15-84db-5e97ef7b86d2",
-            "gtin": "00198729183040",
-            "size": "8.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "076567a0-0f5a-5c49-8e6c-34a982582667",
-            "gtin": "00198729221841",
-            "size": "9",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "a0c80548-4161-53a4-9c5c-6d5ff0361827",
-            "gtin": "00198729102010",
-            "size": "9.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "1200d646-9a86-5e02-a5d1-51bb3d84512e",
-            "gtin": "00198729144898",
-            "size": "10",
-            "level": "HIGH"
-          },
-          {
-            "id": "065147bb-8bae-51ea-b618-7315305dd7fd",
-            "gtin": "00198729065711",
-            "size": "10.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "f9291f4b-fca8-5ae6-81c6-9f68599300e9",
-            "gtin": "00198729168214",
-            "size": "11",
-            "level": "HIGH"
-          },
-          {
-            "id": "94fc7c53-54a8-5e24-bdbe-b498a0aa4007",
-            "gtin": "00198729185082",
-            "size": "11.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "9f82edd5-2fb3-54ac-8306-fff150144e61",
-            "gtin": "00198729166517",
-            "size": "12",
-            "level": "HIGH"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "nike-sb-dunk-low-som-tum-canvas-and-parachute-beige",
-    "title": "Canvas and Parachute Beige",
-    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/02abc6e6-8eb8-4d8b-9015-39a49fbeef07/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%8A%E3%82%A4%E3%82%AD-sb-%E3%83%80%E3%83%B3%E3%82%AF-low-som-tum-canvas-and-parachute-beige-ib6206-701-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-    "models": [
-      {
-        "launchView": {
-          "id": "6c0d4bb1-0d27-314d-9ce1-098aa95133aa",
-          "resourceType": "launchview",
-          "productId": "3390354a-95d6-523d-bfa1-2640afae8454",
-          "method": "LEO",
-          "paymentMethod": "PREPAY",
-          "startEntryDate": "2026-04-28T00:00:00.000Z",
-          "links": {
-            "self": {
-              "ref": "/launch/launch_views/v2/6c0d4bb1-0d27-314d-9ce1-098aa95133aa"
-            }
-          }
-        },
-        "merchPrice": {
-          "id": "9a879509-47b6-522a-a026-ed5cef33b800",
-          "snapshotId": "a24a6ea4-ce75-4665-a070-001775719476",
-          "productId": "3390354a-95d6-523d-bfa1-2640afae8454",
-          "parentId": "3390354a-95d6-523d-bfa1-2640afae8454",
-          "parentType": "merchProduct",
-          "modificationDate": "2026-04-09T07:24:36.662Z",
-          "country": "JP",
-          "msrp": 15500,
-          "fullPrice": 17050,
-          "currentPrice": 17050,
-          "currency": "JPY",
-          "discounted": false,
-          "promoInclusions": [],
-          "promoExclusions": [
-            "TRUE"
-          ],
-          "resourceType": "merchPrice",
-          "links": {
-            "self": {
-              "ref": "/merch/prices/v2/9a879509-47b6-522a-a026-ed5cef33b800"
-            }
-          }
-        },
-        "modelName": "NIKE SB DUNK LOW PRO",
-        "id": "3390354a-95d6-523d-bfa1-2640afae8454",
-        "sizes": [
-          {
-            "id": "770b2f29-1892-5cf6-ad47-37a1f2320e8c",
-            "gtin": "00198730159560",
-            "size": "4",
-            "level": "LOW"
-          },
-          {
-            "id": "8059ed6c-970e-5a02-8103-1048b60a8988",
-            "gtin": "00198730132389",
-            "size": "5",
-            "level": "LOW"
-          },
-          {
-            "id": "b849bd0c-a10f-5082-a083-419c1a635d24",
-            "gtin": "00198730177908",
-            "size": "6",
-            "level": "LOW"
-          },
-          {
-            "id": "e664db75-ba83-50d5-aa94-e8eca6fa26f2",
-            "gtin": "00198730164182",
-            "size": "6.5",
-            "level": "LOW"
-          },
-          {
-            "id": "91b699c4-e48a-5453-a4e7-d775ae0d8cac",
-            "gtin": "00198730179070",
-            "size": "7",
-            "level": "LOW"
-          },
-          {
-            "id": "0a5908f1-b56b-5075-b250-77168bbf9cae",
-            "gtin": "00198730144399",
-            "size": "7.5",
-            "level": "LOW"
-          },
-          {
-            "id": "2d2ac843-3ed6-552f-9c4c-fc3b78f8d4c8",
-            "gtin": "00198730205120",
-            "size": "8",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "ec5864fc-3f8b-58ae-b37f-92f43653f016",
-            "gtin": "00198730081557",
-            "size": "8.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "928a50bd-1d58-5f69-b1ca-bb31eb3e2811",
-            "gtin": "00198730069807",
-            "size": "9",
-            "level": "HIGH"
-          },
-          {
-            "id": "a0265a3e-4eb5-5089-a14f-1f0c40c58ab7",
-            "gtin": "00198730088549",
-            "size": "9.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "8b7dda31-06f2-565b-816b-9b7acfd29380",
-            "gtin": "00198730103389",
-            "size": "10",
-            "level": "HIGH"
-          },
-          {
-            "id": "b22d21b6-1d33-5777-af9f-fe91c69a28f3",
-            "gtin": "00198730133140",
-            "size": "10.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "9d87d51f-0bcc-5e04-9f3a-3c93c87198f5",
-            "gtin": "00198730205069",
-            "size": "11",
-            "level": "HIGH"
-          },
-          {
-            "id": "c8eca12c-73c5-55c7-9b4a-eb38aaa70621",
-            "gtin": "00198730201689",
-            "size": "12",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "00a9139f-2df0-53d5-81d9-ca042899db1c",
-            "gtin": "00198730057569",
-            "size": "13",
-            "level": "LOW"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "m2k-tekno-atmosphere-grey-dark-grey-gunsmoke-jp",
-    "title": "ATMOSPHERE GREY",
-    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/d0m8qwgt2dmhouabjyc3/jp-bv0074-001-m2k-tekno.jpg",
-    "models": [
-      {
-        "merchPrice": {
-          "id": "9929ba97-2a34-5273-92db-9bd04c49fe65",
-          "snapshotId": "a24a6ea4-ce75-4665-a070-001775660684",
-          "productId": "84b8c02e-3f5f-5cab-87a5-43a6916d6b90",
-          "parentId": "84b8c02e-3f5f-5cab-87a5-43a6916d6b90",
-          "parentType": "merchProduct",
-          "modificationDate": "2026-04-08T15:04:44.934Z",
-          "country": "JP",
-          "msrp": 15300,
-          "fullPrice": 16830,
-          "currentPrice": 16830,
-          "currency": "JPY",
-          "discounted": false,
-          "promoInclusions": [],
-          "promoExclusions": [
-            "FALSE"
-          ],
-          "resourceType": "merchPrice",
-          "links": {
-            "self": {
-              "ref": "/merch/prices/v2/9929ba97-2a34-5273-92db-9bd04c49fe65"
-            }
-          }
-        },
-        "modelName": "NIKE M2K TEKNO SP",
-        "id": "84b8c02e-3f5f-5cab-87a5-43a6916d6b90",
-        "sizes": [
-          {
-            "id": "dadff482-2b8f-58dc-8989-fac8a2c954d1",
-            "gtin": "00192499095114",
-            "size": "14",
-            "level": "LOW"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "kobe-11-elite-protro-black-and-metallic-gold",
-    "title": "Black and Metallic Gold",
-    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/f385f8cd-bbe1-4dbd-99a3-4071750d579c/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%B3%E3%83%BC%E3%83%93%E3%83%BC%C2%A011-%E3%82%A8%E3%83%AA%E3%83%BC%E3%83%88-%E3%83%97%E3%83%AD%E3%83%88%E3%83%AD%C2%A0-black-and-metallic-gold-im4260-001-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-    "models": [
-      {
-        "merchPrice": {
-          "id": "35c4b736-6b2d-5093-bc49-679a50df5f88",
-          "snapshotId": "a24a6ea4-ce75-4665-a070-001776061074",
-          "productId": "c508487e-60e7-55c5-8300-9e5c8d155dbe",
-          "parentId": "c508487e-60e7-55c5-8300-9e5c8d155dbe",
-          "parentType": "merchProduct",
-          "modificationDate": "2026-04-13T06:17:54.745Z",
-          "country": "JP",
-          "msrp": 28500,
-          "fullPrice": 31350,
-          "currentPrice": 31350,
-          "currency": "JPY",
-          "discounted": false,
-          "promoInclusions": [],
-          "promoExclusions": [
-            "TRUE"
-          ],
-          "resourceType": "merchPrice",
-          "links": {
-            "self": {
-              "ref": "/merch/prices/v2/35c4b736-6b2d-5093-bc49-679a50df5f88"
-            }
-          }
-        },
-        "modelName": "KOBE XI ELITE PROTRO",
-        "id": "c508487e-60e7-55c5-8300-9e5c8d155dbe",
-        "sizes": [
-          {
-            "id": "a7117063-dc6e-5a8f-a111-9d35f10f7b0a",
-            "gtin": "00198731309568",
-            "size": "7",
-            "level": "HIGH"
-          },
-          {
-            "id": "5069ddfe-ba0a-5772-92b3-f6ee1c8c55e0",
-            "gtin": "00198731283851",
-            "size": "7.5",
-            "level": "OOS"
-          },
-          {
-            "id": "d14d78fe-f79a-5518-950a-44074c13a8ed",
-            "gtin": "00198731277362",
-            "size": "8",
-            "level": "OOS"
-          },
-          {
-            "id": "d6c1aa81-e77c-5ccc-a087-c32c1afe7940",
-            "gtin": "00198731316535",
-            "size": "8.5",
-            "level": "OOS"
-          },
-          {
-            "id": "000a0ea1-e337-5b51-81a5-81df6bd96e38",
-            "gtin": "00198731296684",
-            "size": "9",
-            "level": "OOS"
-          },
-          {
-            "id": "cc5f7cb8-3585-5ded-a3c9-f492fba5aaaf",
-            "gtin": "00198731302378",
-            "size": "9.5",
-            "level": "OOS"
-          },
-          {
-            "id": "884af46f-e024-51eb-bde6-4b5cb86ab89d",
-            "gtin": "00198731284346",
-            "size": "10",
-            "level": "OOS"
-          },
-          {
-            "id": "dd171d97-0f5d-578d-a417-76f90495071b",
-            "gtin": "00198731288078",
-            "size": "10.5",
-            "level": "OOS"
-          },
-          {
-            "id": "e74c311f-bde6-5260-8c06-f9d37330d42a",
-            "gtin": "00198731291276",
-            "size": "11",
-            "level": "OOS"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "kobe-11-protro-black-and-metallic-gold",
-    "title": "Black and Metallic Gold",
-    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/aba19d48-66e2-45a4-a5c1-4750b6ab3940/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%B3%E3%83%BC%E3%83%93%E3%83%BC%C2%A011-%E3%83%97%E3%83%AD%E3%83%88%E3%83%AD%C2%A0-black-and-metallic-gold-iu4902-900-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-    "models": [
-      {
-        "merchPrice": {
-          "id": "2d40f706-340b-5ad1-b365-d35fbe95daf4",
-          "snapshotId": "a24a6ea4-ce75-4665-a070-001776044004",
-          "productId": "6f3cc098-30b1-558d-8c79-adca6999dcea",
-          "parentId": "6f3cc098-30b1-558d-8c79-adca6999dcea",
-          "parentType": "merchProduct",
-          "modificationDate": "2026-04-13T01:33:24.604Z",
-          "country": "JP",
-          "msrp": 26000,
-          "fullPrice": 28600,
-          "currentPrice": 28600,
-          "currency": "JPY",
-          "discounted": false,
-          "promoInclusions": [],
-          "promoExclusions": [
-            "TRUE"
-          ],
-          "resourceType": "merchPrice",
-          "links": {
-            "self": {
-              "ref": "/merch/prices/v2/2d40f706-340b-5ad1-b365-d35fbe95daf4"
-            }
-          }
-        },
-        "modelName": "KOBE XI EM PROTRO",
-        "id": "6f3cc098-30b1-558d-8c79-adca6999dcea",
-        "sizes": [
-          {
-            "id": "95dd2759-0749-52b8-8eb3-3bc936bdc4ba",
-            "gtin": "00198731303993",
-            "size": "7",
-            "level": "HIGH"
-          },
-          {
-            "id": "1824a48f-478a-5743-bd03-2bca34cca3a6",
-            "gtin": "00198731312674",
-            "size": "7.5",
-            "level": "LOW"
-          },
-          {
-            "id": "7487ead3-33cf-54f7-8a55-949effee09c6",
-            "gtin": "00198731290378",
-            "size": "8",
-            "level": "OOS"
-          },
-          {
-            "id": "a42d3321-7a0b-5557-b93c-2273720af1be",
-            "gtin": "00198731301821",
-            "size": "8.5",
-            "level": "OOS"
-          },
-          {
-            "id": "843cd204-1130-51bc-b0d4-7a56af190588",
-            "gtin": "00198731280645",
-            "size": "9",
-            "level": "OOS"
-          },
-          {
-            "id": "5ba54d4e-7909-5b0f-a490-6b970af4fee7",
-            "gtin": "00198731287408",
-            "size": "9.5",
-            "level": "OOS"
-          },
-          {
-            "id": "1a4d30b9-c516-52ef-a645-3163c1a3efab",
-            "gtin": "00198731306758",
-            "size": "10",
-            "level": "OOS"
-          },
-          {
-            "id": "1538b0a7-d5dc-5ca9-9549-055632d10ade",
-            "gtin": "00198731297858",
-            "size": "10.5",
-            "level": "OOS"
-          },
-          {
-            "id": "863c48fc-5218-54c7-9376-530369dae918",
-            "gtin": "00198731297414",
-            "size": "11",
-            "level": "OOS"
-          },
-          {
-            "id": "3f20dfdd-0084-5d39-a606-c056c68b14e2",
-            "gtin": "00198731277621",
-            "size": "11.5",
-            "level": "OOS"
-          },
-          {
-            "id": "03f04cad-4c95-54ff-b756-552630d2a954",
-            "gtin": "00198731303641",
-            "size": "12",
-            "level": "OOS"
-          },
-          {
-            "id": "caa851de-55c0-5600-8e4e-2a68ce0904e3",
-            "gtin": "00198731298169",
-            "size": "12.5",
-            "level": "OOS"
-          },
-          {
-            "id": "00bca568-0277-512f-9a35-e1fe0ec00a67",
-            "gtin": "00198731278987",
-            "size": "13",
-            "level": "OOS"
-          },
-          {
-            "id": "97fd5912-38a8-5621-8636-ce212cc99224",
-            "gtin": "00198731284483",
-            "size": "14",
-            "level": "OOS"
-          },
-          {
-            "id": "349ed20d-7fb4-54e7-a177-e8f4c93a2e8b",
-            "gtin": "00198731303368",
-            "size": "15",
-            "level": "OOS"
-          },
-          {
-            "id": "770aba6c-adff-542e-ab68-671d02ec537a",
-            "gtin": "00198731282809",
-            "size": "16",
-            "level": "OOS"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "womens-first-sight-noir-cacao-wow",
-    "title": "Cacao Wow",
-    "imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/ea74190f-015d-4ee5-8745-28c430484976/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88-%E3%82%B5%E3%82%A4%E3%83%88-%E3%83%8E%E3%83%AF%E3%83%BC%E3%83%AB-cacao-wow-hq2409-200-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
-    "models": [
-      {
-        "merchPrice": {
-          "id": "33915467-3493-5b1c-8109-b5da844dd2fa",
-          "snapshotId": "a24a6ea4-ce75-4665-a070-001776040329",
-          "productId": "cd093125-2d2b-5c05-9712-2ebd162cd130",
-          "parentId": "cd093125-2d2b-5c05-9712-2ebd162cd130",
-          "parentType": "merchProduct",
-          "modificationDate": "2026-04-13T00:32:09.098Z",
-          "country": "JP",
-          "msrp": 15000,
-          "fullPrice": 16500,
-          "currentPrice": 16500,
-          "currency": "JPY",
-          "discounted": false,
-          "promoInclusions": [],
-          "promoExclusions": [
-            "TRUE"
-          ],
-          "resourceType": "merchPrice",
-          "links": {
-            "self": {
-              "ref": "/merch/prices/v2/33915467-3493-5b1c-8109-b5da844dd2fa"
-            }
-          }
-        },
-        "modelName": "WMNS NIKE FIRST SIGHT NOIR",
-        "id": "cd093125-2d2b-5c05-9712-2ebd162cd130",
-        "sizes": [
-          {
-            "id": "77aa77e8-a060-5265-8a5b-ca2a92c65a9b",
-            "gtin": "00198729213532",
-            "size": "5",
-            "level": "LOW"
-          },
-          {
-            "id": "6cfb40a4-e9f6-5406-921c-e0ecd21121dd",
-            "gtin": "00198729202116",
-            "size": "5.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "d88302b7-de83-5523-a263-5e20cb110dc0",
-            "gtin": "00198729176455",
-            "size": "6",
-            "level": "LOW"
-          },
-          {
-            "id": "b16fa418-fd81-50e8-83f6-2b6938c30b5b",
-            "gtin": "00198729220455",
-            "size": "6.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "f1991a95-ba1c-57a7-a9a8-7b0cc2269e3f",
-            "gtin": "00198729176189",
-            "size": "7",
-            "level": "HIGH"
-          },
-          {
-            "id": "8c86877c-a9c8-581a-a2b0-629600f553c5",
-            "gtin": "00198729179234",
-            "size": "7.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "c5ecaf6a-63a7-5101-8e63-84c4720d78e8",
-            "gtin": "00198729210234",
-            "size": "8",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "60538db2-5137-56b0-b984-6ff386a687c6",
-            "gtin": "00198729087591",
-            "size": "8.5",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "284f2456-d99e-54cb-8cac-985dc32a1d52",
-            "gtin": "00198729209030",
-            "size": "9",
-            "level": "MEDIUM"
-          },
-          {
-            "id": "347e122e-5277-5728-a1b7-5b250549451e",
-            "gtin": "00198729161963",
-            "size": "9.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "27a1ba8c-0dbb-5c3a-a6e4-7cd4d26f017e",
-            "gtin": "00198729110794",
-            "size": "10",
-            "level": "HIGH"
-          },
-          {
-            "id": "20111538-0532-5c15-aa60-c7ea9235ed1e",
-            "gtin": "00198729137357",
-            "size": "10.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "903f357c-07ec-5a73-bd54-658e9dc28141",
-            "gtin": "00198729197160",
-            "size": "11",
-            "level": "HIGH"
-          },
-          {
-            "id": "cfb72144-a93d-5f91-8236-47fd54e7390a",
-            "gtin": "00198729196682",
-            "size": "11.5",
-            "level": "HIGH"
-          },
-          {
-            "id": "1048719c-d014-5cd8-9f0d-4383dccf88d7",
-            "gtin": "00198729151100",
-            "size": "12",
-            "level": "HIGH"
-          }
-        ]
-      }
-    ]
-  }
+	{
+		"slug": "womens-general-purpose-shoe-bricolage-light-cream-and-pine-green",
+		"title": "Light Cream and Pine Green",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/13ffec43-1cb9-436d-9eb5-ed92d47081d8/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%A9%E3%83%AB-%E3%83%91%E3%83%BC%E3%83%91%E3%82%B9-%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-bricolage-light-cream-and-pine-green-da6672-100-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"launchView": {
+					"id": "b20dda1c-fd5f-3d62-a0d4-c323fc6ed7b9",
+					"resourceType": "launchview",
+					"productId": "9bfb3d39-5bc0-521e-bc90-1ff8feb726de",
+					"method": "DAN",
+					"paymentMethod": "PREPAY",
+					"startEntryDate": "2026-04-14T00:00:00.000Z",
+					"stopEntryDate": "2026-04-14T00:10:00.000Z",
+					"links": {
+						"self": {
+							"ref": "/launch/launch_views/v2/b20dda1c-fd5f-3d62-a0d4-c323fc6ed7b9"
+						}
+					}
+				},
+				"merchPrice": {
+					"id": "79308576-7d00-53e5-a887-0f80e69341f4",
+					"snapshotId": "a24a6ea4-ce75-4665-a070-001775655077",
+					"productId": "9bfb3d39-5bc0-521e-bc90-1ff8feb726de",
+					"parentId": "9bfb3d39-5bc0-521e-bc90-1ff8feb726de",
+					"parentType": "merchProduct",
+					"modificationDate": "2026-04-08T13:31:17.646Z",
+					"country": "JP",
+					"msrp": 17300,
+					"fullPrice": 19030,
+					"currentPrice": 19030,
+					"currency": "JPY",
+					"discounted": false,
+					"promoInclusions": [],
+					"promoExclusions": ["TRUE"],
+					"resourceType": "merchPrice",
+					"links": {
+						"self": {
+							"ref": "/merch/prices/v2/79308576-7d00-53e5-a887-0f80e69341f4"
+						}
+					}
+				},
+				"modelName": "GENERAL PURPOSE SHOE",
+				"id": "9bfb3d39-5bc0-521e-bc90-1ff8feb726de",
+				"sizes": [
+					{
+						"id": "b857f815-f42c-59a7-ae14-bf0361a557f8",
+						"gtin": "00196155524390",
+						"size": "5",
+						"level": "HIGH"
+					},
+					{
+						"id": "aadaabe6-4c83-59a9-8981-bc63e4e77a2c",
+						"gtin": "00196155524406",
+						"size": "5.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "71f984d6-15af-507d-b0a5-668690887b19",
+						"gtin": "00196155524413",
+						"size": "6",
+						"level": "HIGH"
+					},
+					{
+						"id": "2dde0be3-2a3a-5169-a6f0-5dd171474eee",
+						"gtin": "00196155524420",
+						"size": "6.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "be7b3f55-02b4-5524-b519-10774b51cb66",
+						"gtin": "00196155524437",
+						"size": "7",
+						"level": "HIGH"
+					},
+					{
+						"id": "e97f2f74-1315-518f-9f7c-628684e9f076",
+						"gtin": "00196155524444",
+						"size": "7.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "4b57b773-1411-52b2-b7f4-b1b9106751bd",
+						"gtin": "00196155524451",
+						"size": "8",
+						"level": "HIGH"
+					},
+					{
+						"id": "e57f0bd3-6028-5c79-815e-5f9dd1d79d0e",
+						"gtin": "00196155524468",
+						"size": "8.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "2703126b-7a58-52f6-a803-639a310d9daa",
+						"gtin": "00196155524475",
+						"size": "9",
+						"level": "HIGH"
+					},
+					{
+						"id": "083fe21a-7112-5093-a6fd-49af215815c5",
+						"gtin": "00196155524482",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "77b1d537-3c8b-536e-a61c-e1f3dbca5882",
+						"gtin": "00196155524499",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "e86b5197-6273-52f5-a28b-1b9634774856",
+						"gtin": "00196155524505",
+						"size": "10.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "b9a72abd-7a5e-5701-a5d4-ace117f1dbee",
+						"gtin": "00196155524512",
+						"size": "11",
+						"level": "HIGH"
+					},
+					{
+						"id": "8658709e-95cb-5f88-9a86-15b17b427363",
+						"gtin": "00196155524529",
+						"size": "11.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "3d666dd0-0c26-5a8a-9dca-3a093bc24207",
+						"gtin": "00196155524536",
+						"size": "12",
+						"level": "HIGH"
+					},
+					{
+						"id": "2e82faaf-041f-567e-8da1-f4f63d7eb351",
+						"gtin": "00196155524550",
+						"size": "13",
+						"level": "HIGH"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "womens-shox-z-calistra-labelhood-black-and-university-red",
+		"title": "Black and University Red",
+		"imageUrl": "",
+		"models": [
+			{
+				"launchView": {
+					"id": "8f63d86d-8d09-3166-9d02-248478b3bd1a",
+					"resourceType": "launchview",
+					"productId": "dc020717-8e1b-5004-8d0b-8fb58cc25370",
+					"method": "LEO",
+					"paymentMethod": "PREPAY",
+					"startEntryDate": "2026-04-15T00:00:00.000Z",
+					"links": {
+						"self": {
+							"ref": "/launch/launch_views/v2/8f63d86d-8d09-3166-9d02-248478b3bd1a"
+						}
+					}
+				},
+				"merchPrice": {
+					"id": "dc5f1f06-70cf-5c43-8816-b7a7363329e3",
+					"snapshotId": "a24a6ea4-ce75-4665-a070-001775924912",
+					"productId": "dc020717-8e1b-5004-8d0b-8fb58cc25370",
+					"parentId": "dc020717-8e1b-5004-8d0b-8fb58cc25370",
+					"parentType": "merchProduct",
+					"modificationDate": "2026-04-11T16:28:32.679Z",
+					"country": "JP",
+					"msrp": 23500,
+					"fullPrice": 25850,
+					"currentPrice": 25850,
+					"currency": "JPY",
+					"discounted": false,
+					"promoInclusions": [],
+					"promoExclusions": ["TRUE"],
+					"resourceType": "merchPrice",
+					"links": {
+						"self": {
+							"ref": "/merch/prices/v2/dc5f1f06-70cf-5c43-8816-b7a7363329e3"
+						}
+					}
+				},
+				"modelName": "W NIKE SHOX Z CALISTRA",
+				"id": "dc020717-8e1b-5004-8d0b-8fb58cc25370",
+				"sizes": [
+					{
+						"id": "b926853b-d5da-5847-8d24-7034af77da33",
+						"gtin": "00198962627813",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "5171a9b3-878e-58b6-92ea-304cd7b8b875",
+						"gtin": "00198962627646",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "05e830f7-c050-557d-b69c-577e1fd92398",
+						"gtin": "00198962627912",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "e88cf058-a136-51f1-87de-ff19a1466a8a",
+						"gtin": "00198962627714",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "ff3e426f-8090-5979-9ef1-cc083f74f290",
+						"gtin": "00198962627707",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "86f118ce-7f86-57dd-8b56-9efd85a2bcf4",
+						"gtin": "00198962627578",
+						"size": "8",
+						"level": "LOW"
+					},
+					{
+						"id": "6942e9b6-8938-5f8c-b844-365b60e90ffb",
+						"gtin": "00198962627899",
+						"size": "8.5",
+						"level": "LOW"
+					},
+					{
+						"id": "20c3a44b-e562-5ea3-9401-37a870ab2411",
+						"gtin": "00198962627738",
+						"size": "9",
+						"level": "LOW"
+					},
+					{
+						"id": "c1d21b3f-d34d-53ef-8256-553569bad2a7",
+						"gtin": "00198962627684",
+						"size": "9.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "6f5def6e-fed2-55b9-b0cc-0a6bcebf15e0",
+						"gtin": "00198962627851",
+						"size": "10",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "2ca0e684-3894-5962-853d-ec55f8a49927",
+						"gtin": "00198962627806",
+						"size": "10.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "c169f5b1-9a50-52ad-ae69-9f41b9320257",
+						"gtin": "00198962627752",
+						"size": "11",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "b6e2833e-8ac6-590c-9ca5-9e2c307cd330",
+						"gtin": "00198962627622",
+						"size": "11.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "6b85c0dd-2ba2-5f28-97eb-fdd637193fae",
+						"gtin": "00198962627776",
+						"size": "12",
+						"level": "MEDIUM"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "air-max-95-big-bubble-palace-metallic-silver-and-aluminum",
+		"title": "Metallic Silver and Aluminum",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/c5dee3b4-b996-4700-92ed-87d3fab4d404/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%A8%E3%82%A2-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%C2%A095-%E3%83%93%E3%83%83%E3%82%B0-%E3%83%90%E3%83%96%E3%83%AB%C2%A0x-%E3%83%91%E3%83%AC%E3%82%B9-metallic-silver-and-aluminum-iq7708-095-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"launchView": {
+					"id": "867472b8-5a06-3099-ba55-735a50d03f74",
+					"resourceType": "launchview",
+					"productId": "80d33582-400e-5cc5-b412-3f704acedce4",
+					"method": "DAN",
+					"paymentMethod": "PREPAY",
+					"startEntryDate": "2026-04-16T00:00:00.000Z",
+					"stopEntryDate": "2026-04-16T00:10:00.000Z",
+					"links": {
+						"self": {
+							"ref": "/launch/launch_views/v2/867472b8-5a06-3099-ba55-735a50d03f74"
+						}
+					}
+				},
+				"merchPrice": {
+					"id": "03251ca8-3bcf-5e97-b282-e819fa5e4c6f",
+					"snapshotId": "a24a6ea4-ce75-4665-a070-001776048440",
+					"productId": "80d33582-400e-5cc5-b412-3f704acedce4",
+					"parentId": "80d33582-400e-5cc5-b412-3f704acedce4",
+					"parentType": "merchProduct",
+					"modificationDate": "2026-04-13T02:47:20.957Z",
+					"country": "JP",
+					"msrp": 24500,
+					"fullPrice": 26950,
+					"currentPrice": 26950,
+					"currency": "JPY",
+					"discounted": false,
+					"promoInclusions": [],
+					"promoExclusions": ["TRUE"],
+					"resourceType": "merchPrice",
+					"links": {
+						"self": {
+							"ref": "/merch/prices/v2/03251ca8-3bcf-5e97-b282-e819fa5e4c6f"
+						}
+					}
+				},
+				"modelName": "NIKE AIR MAX 95 BIG BUBBLE",
+				"id": "80d33582-400e-5cc5-b412-3f704acedce4",
+				"sizes": [
+					{
+						"id": "ddddf2bb-9906-52c9-9721-bb4e4899763f",
+						"gtin": "00198731115251",
+						"size": "6",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "8d55188d-377b-5931-a585-fe3b6253be4e",
+						"gtin": "00198731109090",
+						"size": "6.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "3c9f7a44-533d-5d55-96bf-c37b129bc0fc",
+						"gtin": "00198731108413",
+						"size": "7",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "c4010711-42ca-5627-83fb-0957b49577ae",
+						"gtin": "00198731109250",
+						"size": "7.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "29534de1-8aea-58f7-b7e1-fde1b183e03a",
+						"gtin": "00198731112052",
+						"size": "8",
+						"level": "HIGH"
+					},
+					{
+						"id": "214b6b86-977c-577d-92ae-a88d3b52a336",
+						"gtin": "00198731110683",
+						"size": "8.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "de3307ea-c5bc-5e97-bf9e-693336a8f75d",
+						"gtin": "00198731108284",
+						"size": "9",
+						"level": "HIGH"
+					},
+					{
+						"id": "7c0f1851-b868-55c6-b454-1ce9bf4b3a65",
+						"gtin": "00198731115060",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "b4cd17d9-b0ce-573f-8de5-8cb24a20cbee",
+						"gtin": "00198731113479",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "20c0ecdc-3dbe-58a6-b2bb-23704b41b993",
+						"gtin": "00198731111819",
+						"size": "10.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "7594e156-6e74-52bb-9e54-bbf47995f56c",
+						"gtin": "00198731112328",
+						"size": "11",
+						"level": "HIGH"
+					},
+					{
+						"id": "2b734f27-ce57-5009-8b0b-50589c97ce75",
+						"gtin": "00198731115909",
+						"size": "12",
+						"level": "HIGH"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "womens-first-sight-noir-black",
+		"title": "Black",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/549d3b2d-4cf9-4d93-96b8-39040d5f0157/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88-%E3%82%B5%E3%82%A4%E3%83%88-%E3%83%8E%E3%83%AF%E3%83%BC%E3%83%AB-black-hq2409-001-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"launchView": {
+					"id": "a6800512-111e-3546-88ac-dd50e5a691ee",
+					"resourceType": "launchview",
+					"productId": "36292f9f-5303-5a11-b88e-546109185dbd",
+					"method": "LEO",
+					"paymentMethod": "PREPAY",
+					"startEntryDate": "2026-04-21T00:00:00.000Z",
+					"links": {
+						"self": {
+							"ref": "/launch/launch_views/v2/a6800512-111e-3546-88ac-dd50e5a691ee"
+						}
+					}
+				},
+				"merchPrice": {
+					"id": "39ee0b6c-0c1a-5c10-ac28-d9f642193eda",
+					"snapshotId": "a24a6ea4-ce75-4665-a070-001775781799",
+					"productId": "36292f9f-5303-5a11-b88e-546109185dbd",
+					"parentId": "36292f9f-5303-5a11-b88e-546109185dbd",
+					"parentType": "merchProduct",
+					"modificationDate": "2026-04-10T00:43:19.023Z",
+					"country": "JP",
+					"msrp": 15000,
+					"fullPrice": 16500,
+					"currentPrice": 16500,
+					"currency": "JPY",
+					"discounted": false,
+					"promoInclusions": [],
+					"promoExclusions": ["TRUE"],
+					"resourceType": "merchPrice",
+					"links": {
+						"self": {
+							"ref": "/merch/prices/v2/39ee0b6c-0c1a-5c10-ac28-d9f642193eda"
+						}
+					}
+				},
+				"modelName": "WMNS NIKE FIRST SIGHT NOIR",
+				"id": "36292f9f-5303-5a11-b88e-546109185dbd",
+				"sizes": [
+					{
+						"id": "8f6f0b10-e343-5c21-aeee-9bda31ba279c",
+						"gtin": "00198488564241",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "032be411-3a86-5d8f-90aa-ef8c18ec92e6",
+						"gtin": "00198488573281",
+						"size": "5.5",
+						"level": "LOW"
+					},
+					{
+						"id": "2f62f204-a22a-5774-ac33-bba6f4e1f384",
+						"gtin": "00198488612409",
+						"size": "6",
+						"level": "HIGH"
+					},
+					{
+						"id": "87f8cb36-0c1d-5342-80b0-06557701ecd3",
+						"gtin": "00198488605692",
+						"size": "6.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "981c26a1-6c4d-5b2f-aaf2-a32dae5f2541",
+						"gtin": "00198488599212",
+						"size": "7",
+						"level": "HIGH"
+					},
+					{
+						"id": "e9999d7d-0312-520d-89ee-5fc8e9ffe7b4",
+						"gtin": "00198488561134",
+						"size": "7.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "760fd367-ec14-5ae7-abe5-b979f7f9d4a3",
+						"gtin": "00198488560373",
+						"size": "8",
+						"level": "HIGH"
+					},
+					{
+						"id": "d7e2b0d9-3119-5602-ae5d-52cebd3ec576",
+						"gtin": "00198488543383",
+						"size": "8.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "1675802e-f68e-5a22-8390-d227a0f3c515",
+						"gtin": "00198488540405",
+						"size": "9",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "4af30a73-e54f-5e9a-bc9a-ee8af997ac69",
+						"gtin": "00198488588124",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "071986f4-f4db-534a-a622-8e8e3568bcf8",
+						"gtin": "00198488605005",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "bb527b27-d93d-5cc9-8ded-9ea5f2163a15",
+						"gtin": "00198488587318",
+						"size": "10.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "053a4506-e623-594e-b534-c501ab58f5cc",
+						"gtin": "00198488599557",
+						"size": "11",
+						"level": "HIGH"
+					},
+					{
+						"id": "fcff791f-cf1f-5df4-b3bd-d1dcfbefb336",
+						"gtin": "00198488610115",
+						"size": "11.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "49c6a64f-5557-5f88-b0e0-4f6a92ef0195",
+						"gtin": "00198488580845",
+						"size": "12",
+						"level": "HIGH"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "womens-first-sight-noir-light-bone",
+		"title": "Light Bone",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/2bff3abc-ed9f-4eab-8a38-5f0fe805a5c4/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88-%E3%82%B5%E3%82%A4%E3%83%88-%E3%83%8E%E3%83%AF%E3%83%BC%E3%83%AB-light-bone-hq2409-003-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"launchView": {
+					"id": "42080843-d9cc-3f72-906d-6578527f4481",
+					"resourceType": "launchview",
+					"productId": "ebb03cdc-9355-5b27-85d2-cd3567f0a6d7",
+					"method": "LEO",
+					"paymentMethod": "PREPAY",
+					"startEntryDate": "2026-04-21T00:00:00.000Z",
+					"links": {
+						"self": {
+							"ref": "/launch/launch_views/v2/42080843-d9cc-3f72-906d-6578527f4481"
+						}
+					}
+				},
+				"merchPrice": {
+					"id": "96b890b8-adc7-5e37-8791-ba22b14097dd",
+					"snapshotId": "a24a6ea4-ce75-4665-a070-001775781787",
+					"productId": "ebb03cdc-9355-5b27-85d2-cd3567f0a6d7",
+					"parentId": "ebb03cdc-9355-5b27-85d2-cd3567f0a6d7",
+					"parentType": "merchProduct",
+					"modificationDate": "2026-04-10T00:43:07.902Z",
+					"country": "JP",
+					"msrp": 15000,
+					"fullPrice": 16500,
+					"currentPrice": 16500,
+					"currency": "JPY",
+					"discounted": false,
+					"promoInclusions": [],
+					"promoExclusions": ["TRUE"],
+					"resourceType": "merchPrice",
+					"links": {
+						"self": {
+							"ref": "/merch/prices/v2/96b890b8-adc7-5e37-8791-ba22b14097dd"
+						}
+					}
+				},
+				"modelName": "WMNS NIKE FIRST SIGHT NOIR",
+				"id": "ebb03cdc-9355-5b27-85d2-cd3567f0a6d7",
+				"sizes": [
+					{
+						"id": "9ef3c224-2273-54cc-b5a8-2e0e10b53184",
+						"gtin": "00198729076540",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "1eb4d560-3373-519b-ae26-95907f6bfea9",
+						"gtin": "00198729193049",
+						"size": "5.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "8a0fb666-2ab3-5ffa-bab9-0cd59effb340",
+						"gtin": "00198729079732",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "e65de566-4f81-528b-9725-494c6b430e05",
+						"gtin": "00198729133090",
+						"size": "6.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "0f5e8926-0407-523c-984b-7ba0f6452aa4",
+						"gtin": "00198729204561",
+						"size": "7",
+						"level": "HIGH"
+					},
+					{
+						"id": "a158e45c-2cc2-5b66-873f-4cbeb749a4f2",
+						"gtin": "00198729188878",
+						"size": "7.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "a44716b1-7a2a-5bc0-bca5-cce3624697a0",
+						"gtin": "00198729063298",
+						"size": "8",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "8b11d9f5-4c8e-5d15-84db-5e97ef7b86d2",
+						"gtin": "00198729183040",
+						"size": "8.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "076567a0-0f5a-5c49-8e6c-34a982582667",
+						"gtin": "00198729221841",
+						"size": "9",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "a0c80548-4161-53a4-9c5c-6d5ff0361827",
+						"gtin": "00198729102010",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "1200d646-9a86-5e02-a5d1-51bb3d84512e",
+						"gtin": "00198729144898",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "065147bb-8bae-51ea-b618-7315305dd7fd",
+						"gtin": "00198729065711",
+						"size": "10.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "f9291f4b-fca8-5ae6-81c6-9f68599300e9",
+						"gtin": "00198729168214",
+						"size": "11",
+						"level": "HIGH"
+					},
+					{
+						"id": "94fc7c53-54a8-5e24-bdbe-b498a0aa4007",
+						"gtin": "00198729185082",
+						"size": "11.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "9f82edd5-2fb3-54ac-8306-fff150144e61",
+						"gtin": "00198729166517",
+						"size": "12",
+						"level": "HIGH"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "nike-sb-dunk-low-som-tum-canvas-and-parachute-beige",
+		"title": "Canvas and Parachute Beige",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/02abc6e6-8eb8-4d8b-9015-39a49fbeef07/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%8A%E3%82%A4%E3%82%AD-sb-%E3%83%80%E3%83%B3%E3%82%AF-low-som-tum-canvas-and-parachute-beige-ib6206-701-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"launchView": {
+					"id": "6c0d4bb1-0d27-314d-9ce1-098aa95133aa",
+					"resourceType": "launchview",
+					"productId": "3390354a-95d6-523d-bfa1-2640afae8454",
+					"method": "LEO",
+					"paymentMethod": "PREPAY",
+					"startEntryDate": "2026-04-28T00:00:00.000Z",
+					"links": {
+						"self": {
+							"ref": "/launch/launch_views/v2/6c0d4bb1-0d27-314d-9ce1-098aa95133aa"
+						}
+					}
+				},
+				"merchPrice": {
+					"id": "9a879509-47b6-522a-a026-ed5cef33b800",
+					"snapshotId": "a24a6ea4-ce75-4665-a070-001775719476",
+					"productId": "3390354a-95d6-523d-bfa1-2640afae8454",
+					"parentId": "3390354a-95d6-523d-bfa1-2640afae8454",
+					"parentType": "merchProduct",
+					"modificationDate": "2026-04-09T07:24:36.662Z",
+					"country": "JP",
+					"msrp": 15500,
+					"fullPrice": 17050,
+					"currentPrice": 17050,
+					"currency": "JPY",
+					"discounted": false,
+					"promoInclusions": [],
+					"promoExclusions": ["TRUE"],
+					"resourceType": "merchPrice",
+					"links": {
+						"self": {
+							"ref": "/merch/prices/v2/9a879509-47b6-522a-a026-ed5cef33b800"
+						}
+					}
+				},
+				"modelName": "NIKE SB DUNK LOW PRO",
+				"id": "3390354a-95d6-523d-bfa1-2640afae8454",
+				"sizes": [
+					{
+						"id": "770b2f29-1892-5cf6-ad47-37a1f2320e8c",
+						"gtin": "00198730159560",
+						"size": "4",
+						"level": "LOW"
+					},
+					{
+						"id": "8059ed6c-970e-5a02-8103-1048b60a8988",
+						"gtin": "00198730132389",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "b849bd0c-a10f-5082-a083-419c1a635d24",
+						"gtin": "00198730177908",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "e664db75-ba83-50d5-aa94-e8eca6fa26f2",
+						"gtin": "00198730164182",
+						"size": "6.5",
+						"level": "LOW"
+					},
+					{
+						"id": "91b699c4-e48a-5453-a4e7-d775ae0d8cac",
+						"gtin": "00198730179070",
+						"size": "7",
+						"level": "LOW"
+					},
+					{
+						"id": "0a5908f1-b56b-5075-b250-77168bbf9cae",
+						"gtin": "00198730144399",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "2d2ac843-3ed6-552f-9c4c-fc3b78f8d4c8",
+						"gtin": "00198730205120",
+						"size": "8",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "ec5864fc-3f8b-58ae-b37f-92f43653f016",
+						"gtin": "00198730081557",
+						"size": "8.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "928a50bd-1d58-5f69-b1ca-bb31eb3e2811",
+						"gtin": "00198730069807",
+						"size": "9",
+						"level": "HIGH"
+					},
+					{
+						"id": "a0265a3e-4eb5-5089-a14f-1f0c40c58ab7",
+						"gtin": "00198730088549",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "8b7dda31-06f2-565b-816b-9b7acfd29380",
+						"gtin": "00198730103389",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "b22d21b6-1d33-5777-af9f-fe91c69a28f3",
+						"gtin": "00198730133140",
+						"size": "10.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "9d87d51f-0bcc-5e04-9f3a-3c93c87198f5",
+						"gtin": "00198730205069",
+						"size": "11",
+						"level": "HIGH"
+					},
+					{
+						"id": "c8eca12c-73c5-55c7-9b4a-eb38aaa70621",
+						"gtin": "00198730201689",
+						"size": "12",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "00a9139f-2df0-53d5-81d9-ca042899db1c",
+						"gtin": "00198730057569",
+						"size": "13",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "m2k-tekno-atmosphere-grey-dark-grey-gunsmoke-jp",
+		"title": "ATMOSPHERE GREY",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/d0m8qwgt2dmhouabjyc3/jp-bv0074-001-m2k-tekno.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"id": "9929ba97-2a34-5273-92db-9bd04c49fe65",
+					"snapshotId": "a24a6ea4-ce75-4665-a070-001775660684",
+					"productId": "84b8c02e-3f5f-5cab-87a5-43a6916d6b90",
+					"parentId": "84b8c02e-3f5f-5cab-87a5-43a6916d6b90",
+					"parentType": "merchProduct",
+					"modificationDate": "2026-04-08T15:04:44.934Z",
+					"country": "JP",
+					"msrp": 15300,
+					"fullPrice": 16830,
+					"currentPrice": 16830,
+					"currency": "JPY",
+					"discounted": false,
+					"promoInclusions": [],
+					"promoExclusions": ["FALSE"],
+					"resourceType": "merchPrice",
+					"links": {
+						"self": {
+							"ref": "/merch/prices/v2/9929ba97-2a34-5273-92db-9bd04c49fe65"
+						}
+					}
+				},
+				"modelName": "NIKE M2K TEKNO SP",
+				"id": "84b8c02e-3f5f-5cab-87a5-43a6916d6b90",
+				"sizes": [
+					{
+						"id": "dadff482-2b8f-58dc-8989-fac8a2c954d1",
+						"gtin": "00192499095114",
+						"size": "14",
+						"level": "LOW"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "kobe-11-elite-protro-black-and-metallic-gold",
+		"title": "Black and Metallic Gold",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/f385f8cd-bbe1-4dbd-99a3-4071750d579c/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%B3%E3%83%BC%E3%83%93%E3%83%BC%C2%A011-%E3%82%A8%E3%83%AA%E3%83%BC%E3%83%88-%E3%83%97%E3%83%AD%E3%83%88%E3%83%AD%C2%A0-black-and-metallic-gold-im4260-001-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"id": "35c4b736-6b2d-5093-bc49-679a50df5f88",
+					"snapshotId": "a24a6ea4-ce75-4665-a070-001776061074",
+					"productId": "c508487e-60e7-55c5-8300-9e5c8d155dbe",
+					"parentId": "c508487e-60e7-55c5-8300-9e5c8d155dbe",
+					"parentType": "merchProduct",
+					"modificationDate": "2026-04-13T06:17:54.745Z",
+					"country": "JP",
+					"msrp": 28500,
+					"fullPrice": 31350,
+					"currentPrice": 31350,
+					"currency": "JPY",
+					"discounted": false,
+					"promoInclusions": [],
+					"promoExclusions": ["TRUE"],
+					"resourceType": "merchPrice",
+					"links": {
+						"self": {
+							"ref": "/merch/prices/v2/35c4b736-6b2d-5093-bc49-679a50df5f88"
+						}
+					}
+				},
+				"modelName": "KOBE XI ELITE PROTRO",
+				"id": "c508487e-60e7-55c5-8300-9e5c8d155dbe",
+				"sizes": [
+					{
+						"id": "a7117063-dc6e-5a8f-a111-9d35f10f7b0a",
+						"gtin": "00198731309568",
+						"size": "7",
+						"level": "HIGH"
+					},
+					{
+						"id": "5069ddfe-ba0a-5772-92b3-f6ee1c8c55e0",
+						"gtin": "00198731283851",
+						"size": "7.5",
+						"level": "OOS"
+					},
+					{
+						"id": "d14d78fe-f79a-5518-950a-44074c13a8ed",
+						"gtin": "00198731277362",
+						"size": "8",
+						"level": "OOS"
+					},
+					{
+						"id": "d6c1aa81-e77c-5ccc-a087-c32c1afe7940",
+						"gtin": "00198731316535",
+						"size": "8.5",
+						"level": "OOS"
+					},
+					{
+						"id": "000a0ea1-e337-5b51-81a5-81df6bd96e38",
+						"gtin": "00198731296684",
+						"size": "9",
+						"level": "OOS"
+					},
+					{
+						"id": "cc5f7cb8-3585-5ded-a3c9-f492fba5aaaf",
+						"gtin": "00198731302378",
+						"size": "9.5",
+						"level": "OOS"
+					},
+					{
+						"id": "884af46f-e024-51eb-bde6-4b5cb86ab89d",
+						"gtin": "00198731284346",
+						"size": "10",
+						"level": "OOS"
+					},
+					{
+						"id": "dd171d97-0f5d-578d-a417-76f90495071b",
+						"gtin": "00198731288078",
+						"size": "10.5",
+						"level": "OOS"
+					},
+					{
+						"id": "e74c311f-bde6-5260-8c06-f9d37330d42a",
+						"gtin": "00198731291276",
+						"size": "11",
+						"level": "OOS"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "kobe-11-protro-black-and-metallic-gold",
+		"title": "Black and Metallic Gold",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/aba19d48-66e2-45a4-a5c1-4750b6ab3940/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%82%B3%E3%83%BC%E3%83%93%E3%83%BC%C2%A011-%E3%83%97%E3%83%AD%E3%83%88%E3%83%AD%C2%A0-black-and-metallic-gold-iu4902-900-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"id": "2d40f706-340b-5ad1-b365-d35fbe95daf4",
+					"snapshotId": "a24a6ea4-ce75-4665-a070-001776044004",
+					"productId": "6f3cc098-30b1-558d-8c79-adca6999dcea",
+					"parentId": "6f3cc098-30b1-558d-8c79-adca6999dcea",
+					"parentType": "merchProduct",
+					"modificationDate": "2026-04-13T01:33:24.604Z",
+					"country": "JP",
+					"msrp": 26000,
+					"fullPrice": 28600,
+					"currentPrice": 28600,
+					"currency": "JPY",
+					"discounted": false,
+					"promoInclusions": [],
+					"promoExclusions": ["TRUE"],
+					"resourceType": "merchPrice",
+					"links": {
+						"self": {
+							"ref": "/merch/prices/v2/2d40f706-340b-5ad1-b365-d35fbe95daf4"
+						}
+					}
+				},
+				"modelName": "KOBE XI EM PROTRO",
+				"id": "6f3cc098-30b1-558d-8c79-adca6999dcea",
+				"sizes": [
+					{
+						"id": "95dd2759-0749-52b8-8eb3-3bc936bdc4ba",
+						"gtin": "00198731303993",
+						"size": "7",
+						"level": "HIGH"
+					},
+					{
+						"id": "1824a48f-478a-5743-bd03-2bca34cca3a6",
+						"gtin": "00198731312674",
+						"size": "7.5",
+						"level": "LOW"
+					},
+					{
+						"id": "7487ead3-33cf-54f7-8a55-949effee09c6",
+						"gtin": "00198731290378",
+						"size": "8",
+						"level": "OOS"
+					},
+					{
+						"id": "a42d3321-7a0b-5557-b93c-2273720af1be",
+						"gtin": "00198731301821",
+						"size": "8.5",
+						"level": "OOS"
+					},
+					{
+						"id": "843cd204-1130-51bc-b0d4-7a56af190588",
+						"gtin": "00198731280645",
+						"size": "9",
+						"level": "OOS"
+					},
+					{
+						"id": "5ba54d4e-7909-5b0f-a490-6b970af4fee7",
+						"gtin": "00198731287408",
+						"size": "9.5",
+						"level": "OOS"
+					},
+					{
+						"id": "1a4d30b9-c516-52ef-a645-3163c1a3efab",
+						"gtin": "00198731306758",
+						"size": "10",
+						"level": "OOS"
+					},
+					{
+						"id": "1538b0a7-d5dc-5ca9-9549-055632d10ade",
+						"gtin": "00198731297858",
+						"size": "10.5",
+						"level": "OOS"
+					},
+					{
+						"id": "863c48fc-5218-54c7-9376-530369dae918",
+						"gtin": "00198731297414",
+						"size": "11",
+						"level": "OOS"
+					},
+					{
+						"id": "3f20dfdd-0084-5d39-a606-c056c68b14e2",
+						"gtin": "00198731277621",
+						"size": "11.5",
+						"level": "OOS"
+					},
+					{
+						"id": "03f04cad-4c95-54ff-b756-552630d2a954",
+						"gtin": "00198731303641",
+						"size": "12",
+						"level": "OOS"
+					},
+					{
+						"id": "caa851de-55c0-5600-8e4e-2a68ce0904e3",
+						"gtin": "00198731298169",
+						"size": "12.5",
+						"level": "OOS"
+					},
+					{
+						"id": "00bca568-0277-512f-9a35-e1fe0ec00a67",
+						"gtin": "00198731278987",
+						"size": "13",
+						"level": "OOS"
+					},
+					{
+						"id": "97fd5912-38a8-5621-8636-ce212cc99224",
+						"gtin": "00198731284483",
+						"size": "14",
+						"level": "OOS"
+					},
+					{
+						"id": "349ed20d-7fb4-54e7-a177-e8f4c93a2e8b",
+						"gtin": "00198731303368",
+						"size": "15",
+						"level": "OOS"
+					},
+					{
+						"id": "770aba6c-adff-542e-ab68-671d02ec537a",
+						"gtin": "00198731282809",
+						"size": "16",
+						"level": "OOS"
+					}
+				]
+			}
+		]
+	},
+	{
+		"slug": "womens-first-sight-noir-cacao-wow",
+		"title": "Cacao Wow",
+		"imageUrl": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit/ea74190f-015d-4ee5-8745-28c430484976/%E3%80%90nike%E5%85%AC%E5%BC%8F%E3%80%91%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B9-%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88-%E3%82%B5%E3%82%A4%E3%83%88-%E3%83%8E%E3%83%AF%E3%83%BC%E3%83%AB-cacao-wow-hq2409-200-%E7%99%BA%E5%A3%B2%E6%97%A5.jpg",
+		"models": [
+			{
+				"merchPrice": {
+					"id": "33915467-3493-5b1c-8109-b5da844dd2fa",
+					"snapshotId": "a24a6ea4-ce75-4665-a070-001776040329",
+					"productId": "cd093125-2d2b-5c05-9712-2ebd162cd130",
+					"parentId": "cd093125-2d2b-5c05-9712-2ebd162cd130",
+					"parentType": "merchProduct",
+					"modificationDate": "2026-04-13T00:32:09.098Z",
+					"country": "JP",
+					"msrp": 15000,
+					"fullPrice": 16500,
+					"currentPrice": 16500,
+					"currency": "JPY",
+					"discounted": false,
+					"promoInclusions": [],
+					"promoExclusions": ["TRUE"],
+					"resourceType": "merchPrice",
+					"links": {
+						"self": {
+							"ref": "/merch/prices/v2/33915467-3493-5b1c-8109-b5da844dd2fa"
+						}
+					}
+				},
+				"modelName": "WMNS NIKE FIRST SIGHT NOIR",
+				"id": "cd093125-2d2b-5c05-9712-2ebd162cd130",
+				"sizes": [
+					{
+						"id": "77aa77e8-a060-5265-8a5b-ca2a92c65a9b",
+						"gtin": "00198729213532",
+						"size": "5",
+						"level": "LOW"
+					},
+					{
+						"id": "6cfb40a4-e9f6-5406-921c-e0ecd21121dd",
+						"gtin": "00198729202116",
+						"size": "5.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "d88302b7-de83-5523-a263-5e20cb110dc0",
+						"gtin": "00198729176455",
+						"size": "6",
+						"level": "LOW"
+					},
+					{
+						"id": "b16fa418-fd81-50e8-83f6-2b6938c30b5b",
+						"gtin": "00198729220455",
+						"size": "6.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "f1991a95-ba1c-57a7-a9a8-7b0cc2269e3f",
+						"gtin": "00198729176189",
+						"size": "7",
+						"level": "HIGH"
+					},
+					{
+						"id": "8c86877c-a9c8-581a-a2b0-629600f553c5",
+						"gtin": "00198729179234",
+						"size": "7.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "c5ecaf6a-63a7-5101-8e63-84c4720d78e8",
+						"gtin": "00198729210234",
+						"size": "8",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "60538db2-5137-56b0-b984-6ff386a687c6",
+						"gtin": "00198729087591",
+						"size": "8.5",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "284f2456-d99e-54cb-8cac-985dc32a1d52",
+						"gtin": "00198729209030",
+						"size": "9",
+						"level": "MEDIUM"
+					},
+					{
+						"id": "347e122e-5277-5728-a1b7-5b250549451e",
+						"gtin": "00198729161963",
+						"size": "9.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "27a1ba8c-0dbb-5c3a-a6e4-7cd4d26f017e",
+						"gtin": "00198729110794",
+						"size": "10",
+						"level": "HIGH"
+					},
+					{
+						"id": "20111538-0532-5c15-aa60-c7ea9235ed1e",
+						"gtin": "00198729137357",
+						"size": "10.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "903f357c-07ec-5a73-bd54-658e9dc28141",
+						"gtin": "00198729197160",
+						"size": "11",
+						"level": "HIGH"
+					},
+					{
+						"id": "cfb72144-a93d-5f91-8236-47fd54e7390a",
+						"gtin": "00198729196682",
+						"size": "11.5",
+						"level": "HIGH"
+					},
+					{
+						"id": "1048719c-d014-5cd8-9f0d-4383dccf88d7",
+						"gtin": "00198729151100",
+						"size": "12",
+						"level": "HIGH"
+					}
+				]
+			}
+		]
+	}
 ]
