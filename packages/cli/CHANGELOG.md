@@ -1,5 +1,14 @@
 # @nike-release-checker/cli
 
+## 0.3.2
+
+### Patch Changes
+
+- 1ef1cd7: Improve CLI product image loading by caching selected model images locally
+- 26223e0: Render the per-model product image in the release view, updating the picture as the user switches between Men/GS/PS/TD in the Select.
+- Updated dependencies [7f44d29]
+  - @nike-release-checker/sdk@0.4.0
+
 ## 0.3.1
 
 ### Patch Changes
