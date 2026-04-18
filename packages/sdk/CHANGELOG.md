@@ -1,5 +1,11 @@
 # @nike-release-checker/sdk
 
+## 0.4.0
+
+### Minor Changes
+
+- 7f44d29: Add per-model image URLs to formatted product feed releases by mapping published content nodes to models via product ID, while keeping the release cover image as a fallback.
+
 ## 0.3.7
 
 ### Patch Changes
