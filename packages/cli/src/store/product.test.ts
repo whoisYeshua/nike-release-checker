@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict'
-import { beforeEach, describe, mock, test } from 'node:test'
+import { tmpdir } from 'node:os'
+import path from 'node:path'
+import { afterEach, beforeEach, describe, mock, test } from 'node:test'
 
 import { allTasks, atom, cleanStores, keepMount } from 'nanostores'
 
@@ -66,6 +68,16 @@ const emptyProductsState = () => ({
 
 const loadedMockProductsState = { loading: false, error: null, data: mockProducts as any }
 
+const mockMkdir = mock.fn(async (_path: string, _opts?: { recursive?: boolean }) => undefined)
+const mockWriteFile = mock.fn(async (_path: string, _data: unknown) => undefined)
+const mockRm = mock.fn(
+	async (_path: string, _opts?: { recursive?: boolean; force?: boolean }) => undefined
+)
+
+mock.module('node:fs/promises', {
+	namedExports: { mkdir: mockMkdir, writeFile: mockWriteFile, rm: mockRm },
+})
+
 const mockGetProductFeed = mock.fn(
 	async (_params: { countryCode: string; language: string }) => [] as never[]
 )
@@ -93,7 +105,22 @@ const {
 	$products,
 	$selectedProductSlug,
 	$selectedProduct,
+	$selectedModel,
+	$productImageCache,
+	$selectedModelImage,
 } = await import('./product.ts')
+
+const makeOkResponse = (bytes = new Uint8Array([1, 2, 3, 4])) => ({
+	ok: true,
+	arrayBuffer: async () =>
+		bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength) as ArrayBuffer,
+})
+const makeNotOkResponse = () => ({
+	ok: false,
+	arrayBuffer: async () => new ArrayBuffer(0),
+})
+const expectedPathFor = (modelId: string) =>
+	path.join(tmpdir(), 'nike-release-checker', 'images', `${modelId}.bin`)
 
 describe('$products store - createProducts', () => {
 	beforeEach(() => {
@@ -398,5 +425,244 @@ describe('createSelectedModel', () => {
 		const selectedModel = createSelectedModel()
 
 		assert.strictEqual(selectedModel.value.get(), null)
+	})
+})
+
+describe('$productImageCache - createProductImageCache', () => {
+	let fetchMock: ReturnType<typeof mock.method>
+
+	afterEach(() => {
+		fetchMock.mock.restore()
+	})
+
+	beforeEach(() => {
+		$selectedProductSlug.value.set(null)
+		$productImageCache.set({})
+		$products.value.set(loadedMockProductsState)
+		mockMkdir.mock.resetCalls()
+		mockWriteFile.mock.resetCalls()
+		fetchMock = mock.method(globalThis, 'fetch', async () => makeOkResponse())
+		keepMount($productImageCache)
+	})
+
+	test('does not fetch when no product is selected', async () => {
+		await allTasks()
+
+		assert.strictEqual(fetchMock.mock.callCount(), 0)
+		assert.deepStrictEqual($productImageCache.get(), {})
+	})
+
+	test('does not fetch for a product with no models', async () => {
+		$selectedProductSlug.value.set(mockProducts[2].slug) // calm-slide, models: []
+		await allTasks()
+
+		assert.strictEqual(fetchMock.mock.callCount(), 0)
+		assert.deepStrictEqual($productImageCache.get(), {})
+	})
+
+	test('fetches image and stores tmp path for selected model', async () => {
+		$selectedProductSlug.value.set(mockProducts[0].slug)
+		await allTasks()
+
+		const { airMax90Mens } = mockModels
+		const expectedPath = expectedPathFor(airMax90Mens.id)
+		assert.strictEqual(fetchMock.mock.callCount(), 1)
+		assert.deepStrictEqual(fetchMock.mock.calls[0].arguments[0], airMax90Mens.imageUrl)
+		assert.strictEqual(mockMkdir.mock.callCount(), 1)
+		assert.deepStrictEqual(mockMkdir.mock.calls[0].arguments[1], { recursive: true })
+		assert.strictEqual(mockWriteFile.mock.callCount(), 1)
+		assert.strictEqual(mockWriteFile.mock.calls[0].arguments[0], expectedPath)
+		assert.ok(Buffer.isBuffer(mockWriteFile.mock.calls[0].arguments[1]))
+		assert.deepStrictEqual($productImageCache.get()[airMax90Mens.id], {
+			loading: false,
+			path: expectedPath,
+		})
+	})
+
+	test('sets loading:true synchronously before fetch resolves', async () => {
+		const { promise: fetchPromise, resolve: resolveFetch } =
+			Promise.withResolvers<ReturnType<typeof makeOkResponse>>()
+		fetchMock.mock.mockImplementation(() => fetchPromise)
+
+		$selectedProductSlug.value.set(mockProducts[0].slug)
+
+		assert.deepStrictEqual($productImageCache.get()[mockModels.airMax90Mens.id], {
+			loading: true,
+			path: null,
+		})
+
+		resolveFetch(makeOkResponse())
+		await allTasks()
+	})
+
+	test('cache hit: does not re-fetch when switching back to already-loaded model', async () => {
+		$selectedProductSlug.value.set(mockProducts[0].slug)
+		await allTasks()
+
+		$selectedModel.setId(mockModels.airMax90Gs.id)
+		await allTasks()
+
+		fetchMock.mock.resetCalls()
+
+		$selectedModel.setId(mockModels.airMax90Mens.id)
+		await allTasks()
+
+		assert.strictEqual(fetchMock.mock.callCount(), 0)
+	})
+
+	test('caches separate entries for each model in the same product', async () => {
+		$selectedProductSlug.value.set(mockProducts[0].slug)
+		await allTasks()
+
+		$selectedModel.setId(mockModels.airMax90Gs.id)
+		await allTasks()
+
+		const cache = $productImageCache.get()
+		assert.deepStrictEqual(cache[mockModels.airMax90Mens.id], {
+			loading: false,
+			path: expectedPathFor(mockModels.airMax90Mens.id),
+		})
+		assert.deepStrictEqual(cache[mockModels.airMax90Gs.id], {
+			loading: false,
+			path: expectedPathFor(mockModels.airMax90Gs.id),
+		})
+	})
+
+	test('clears cache when selected product changes', async () => {
+		$selectedProductSlug.value.set(mockProducts[0].slug)
+		await allTasks()
+
+		$selectedProductSlug.value.set(mockProducts[1].slug)
+		await allTasks()
+
+		const cache = $productImageCache.get()
+		assert.strictEqual(cache[mockModels.airMax90Mens.id], undefined)
+		assert.deepStrictEqual(cache[mockModels.pegasus41.id], {
+			loading: false,
+			path: expectedPathFor(mockModels.pegasus41.id),
+		})
+	})
+
+	test('handles non-ok response by setting loading:false and path:null', async () => {
+		fetchMock.mock.mockImplementation(async () => makeNotOkResponse())
+
+		$selectedProductSlug.value.set(mockProducts[0].slug)
+		await allTasks()
+
+		assert.deepStrictEqual($productImageCache.get()[mockModels.airMax90Mens.id], {
+			loading: false,
+			path: null,
+		})
+		assert.strictEqual(mockWriteFile.mock.callCount(), 0)
+	})
+
+	test('handles fetch throw by setting loading:false and path:null', async () => {
+		fetchMock.mock.mockImplementation(async () => {
+			throw new Error('network error')
+		})
+
+		$selectedProductSlug.value.set(mockProducts[0].slug)
+		await allTasks()
+
+		assert.deepStrictEqual($productImageCache.get()[mockModels.airMax90Mens.id], {
+			loading: false,
+			path: null,
+		})
+		assert.strictEqual(mockWriteFile.mock.callCount(), 0)
+	})
+
+	test('race guard: discards stale fetch result when product changes mid-fetch', async () => {
+		const resolvers: Array<(r: ReturnType<typeof makeOkResponse>) => void> = []
+		fetchMock.mock.mockImplementation(
+			() =>
+				new Promise((resolve) => {
+					resolvers.push(resolve)
+				})
+		)
+
+		$selectedProductSlug.value.set(mockProducts[0].slug) // air-max-90
+		// nanostores fires $selectedProduct.listen (cache clear) before propagating to
+		// $selectedModel.value subscribers (new fetch), so resolvers[0] is the stale air-max-90 fetch.
+		$selectedProductSlug.value.set(mockProducts[1].slug) // pegasus-41
+
+		resolvers.forEach((r) => r(makeOkResponse()))
+		await allTasks()
+
+		const cache = $productImageCache.get()
+		assert.strictEqual(cache[mockModels.airMax90Mens.id], undefined)
+		assert.deepStrictEqual(cache[mockModels.pegasus41.id], {
+			loading: false,
+			path: expectedPathFor(mockModels.pegasus41.id),
+		})
+		assert.strictEqual(mockWriteFile.mock.callCount(), 1)
+		assert.strictEqual(
+			mockWriteFile.mock.calls[0].arguments[0],
+			expectedPathFor(mockModels.pegasus41.id)
+		)
+	})
+})
+
+describe('$selectedModelImage', () => {
+	let fetchMock: ReturnType<typeof mock.method>
+
+	afterEach(() => {
+		fetchMock.mock.restore()
+	})
+
+	beforeEach(() => {
+		$selectedProductSlug.value.set(null)
+		$productImageCache.set({})
+		$products.value.set(loadedMockProductsState)
+		mockMkdir.mock.resetCalls()
+		mockWriteFile.mock.resetCalls()
+		fetchMock = mock.method(globalThis, 'fetch', async () => makeOkResponse())
+		keepMount($productImageCache)
+	})
+
+	test('returns null when no product is selected', () => {
+		assert.strictEqual($selectedModelImage.get(), null)
+	})
+
+	test('returns loading entry before fetch resolves', async () => {
+		const { promise: fetchPromise, resolve: resolveFetch } =
+			Promise.withResolvers<ReturnType<typeof makeOkResponse>>()
+		fetchMock.mock.mockImplementation(() => fetchPromise)
+
+		$selectedProductSlug.value.set(mockProducts[0].slug)
+
+		assert.deepStrictEqual($selectedModelImage.get(), { loading: true, path: null })
+
+		resolveFetch(makeOkResponse())
+		await allTasks()
+	})
+
+	test('returns cache entry for selected model after fetch completes', async () => {
+		$selectedProductSlug.value.set(mockProducts[0].slug)
+		await allTasks()
+
+		assert.deepStrictEqual($selectedModelImage.get(), {
+			loading: false,
+			path: expectedPathFor(mockModels.airMax90Mens.id),
+		})
+	})
+
+	test('follows the selected model id when switching between models', async () => {
+		$selectedProductSlug.value.set(mockProducts[0].slug)
+		$selectedModel.setId(mockModels.airMax90Gs.id)
+		await allTasks()
+
+		$selectedModel.setId(mockModels.airMax90Mens.id)
+
+		assert.deepStrictEqual($selectedModelImage.get(), {
+			loading: false,
+			path: expectedPathFor(mockModels.airMax90Mens.id),
+		})
+
+		$selectedModel.setId(mockModels.airMax90Gs.id)
+
+		assert.deepStrictEqual($selectedModelImage.get(), {
+			loading: false,
+			path: expectedPathFor(mockModels.airMax90Gs.id),
+		})
 	})
 })

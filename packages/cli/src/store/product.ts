@@ -1,3 +1,7 @@
+import { mkdir, rm, writeFile } from 'node:fs/promises'
+import { tmpdir } from 'node:os'
+import path from 'node:path'
+
 import { formatProductFeedResponse, getProductFeed } from '@nike-release-checker/sdk'
 import { atom, computed, map, onMount, task } from 'nanostores'
 
@@ -121,10 +125,7 @@ export const $selectedProduct = computed($selectedProductSlug.value, (selectedPr
 	const product =
 		$products.value.get().data?.find(({ slug }) => slug === selectedProductSlug) ?? null
 
-	logger.debug('selected product resolved', {
-		scope: 'selected-product',
-		slug: selectedProductSlug,
-	})
+	logger.debug('selected product resolved', { scope: 'selected-product', selectedProductSlug })
 
 	return product
 })
@@ -180,3 +181,91 @@ export const createSelectedModel = () => {
 	}
 }
 export const $selectedModel = createSelectedModel()
+
+interface CachedImage {
+	path: string | null
+	loading: boolean
+}
+
+const imageCacheDir = path.join(tmpdir(), 'nike-release-checker', 'images')
+
+export const createProductImageCache = () => {
+	const LOG_SCOPE = 'product-image-cache'
+	const store = map<Record<string, CachedImage>>()
+
+	onMount(store, () => {
+		logger.debug('image cache mounted', { scope: LOG_SCOPE, imageCacheDir })
+		const unsubscribeProduct = $selectedProduct.listen((selectedProduct) => {
+			logger.debug('selected product changed, clearing image cache', {
+				scope: LOG_SCOPE,
+				slug: selectedProduct?.slug ?? null,
+			})
+			store.set({})
+		})
+
+		const unsubscribeModel = $selectedModel.value.subscribe((selectedModel) => {
+			if (!selectedModel?.imageUrl) return
+			const modelId = selectedModel.id
+			const imageUrl = selectedModel.imageUrl
+			if (store.get()[modelId]) return
+
+			const requestedSlug = $selectedProductSlug.value.get()
+
+			task(async () => {
+				try {
+					store.setKey(modelId, { loading: true, path: null })
+					logger.debug('image fetch started', { scope: LOG_SCOPE, modelId, imageUrl })
+					const response = await fetch(imageUrl)
+					if (!response.ok) {
+						logger.warn('image fetch responded with error', {
+							scope: LOG_SCOPE,
+							modelId,
+							status: response.status,
+						})
+						if ($selectedProductSlug.value.get() === requestedSlug) {
+							store.setKey(modelId, { loading: false, path: null })
+						}
+						return
+					}
+					const buffer = Buffer.from(await response.arrayBuffer())
+					if ($selectedProductSlug.value.get() !== requestedSlug) {
+						logger.debug('image fetch stale, product changed', { scope: LOG_SCOPE, modelId })
+						return
+					}
+					await mkdir(imageCacheDir, { recursive: true })
+					const filePath = path.join(imageCacheDir, `${modelId}.bin`)
+					await writeFile(filePath, buffer)
+					if ($selectedProductSlug.value.get() !== requestedSlug) {
+						logger.debug('image write stale, product changed', { scope: LOG_SCOPE, modelId })
+						return
+					}
+					store.setKey(modelId, { loading: false, path: filePath })
+					logger.info('image cached', { scope: LOG_SCOPE, modelId, size: buffer.byteLength })
+				} catch (error) {
+					const errorMsg = error instanceof Error ? error.message : 'unknown error'
+					logger.error('image fetch failed', { scope: LOG_SCOPE, modelId, error: errorMsg })
+					if ($selectedProductSlug.value.get() === requestedSlug) {
+						store.setKey(modelId, { loading: false, path: null })
+					}
+				}
+			})
+		})
+
+		return () => {
+			unsubscribeProduct()
+			unsubscribeModel()
+			rm(imageCacheDir, { recursive: true, force: true }).catch(() => {})
+		}
+	})
+
+	return store
+}
+export const $productImageCache = createProductImageCache()
+
+export const $selectedModelImage = computed(
+	[$selectedModel.value, $productImageCache],
+	(selectedModel, cache) => {
+		if (!selectedModel?.id) return null
+		return cache[selectedModel.id] ?? null
+	}
+)

@@ -4,7 +4,7 @@ import { Box, Text } from 'ink'
 import ProductImage from 'ink-picture'
 
 import { Select } from '../../components/Select/Select.tsx'
-import { $selectedModel, $selectedProduct } from '../../store/product.ts'
+import { $selectedModel, $selectedModelImage, $selectedProduct } from '../../store/product.ts'
 import { theme } from '../../utils/theme.ts'
 import { Model } from './Model/Model.tsx'
 
@@ -54,13 +54,9 @@ export const Product = () => {
 }
 
 const ModelImage = () => {
-	const selectedModel = useStore($selectedModel.value)
-
-	if (!selectedModel?.imageUrl) return null
+	const image = useStore($selectedModelImage)
 
 	return (
-		<Box height={6}>
-			<ProductImage src={selectedModel.imageUrl} />
-		</Box>
+		<Box height={theme.sizes.image}>{image?.path ? <ProductImage src={image.path} /> : null}</Box>
 	)
 }
