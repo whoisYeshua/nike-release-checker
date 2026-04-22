@@ -1,5 +1,11 @@
 # @nike-release-checker/sdk
 
+## 0.4.1
+
+### Patch Changes
+
+- 54cae07: Allow `"light"` as a valid `colorTheme` value in `PublishedContentNodePropertiesSchema` and `PurplePropertiesSchema`
+
 ## 0.4.0
 
 ### Minor Changes
