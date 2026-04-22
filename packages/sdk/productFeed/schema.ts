@@ -600,7 +600,7 @@ export const PublishedContentNodePropertiesSchema = v.object({
 	altText: v.optional(v.string()),
 	autoPlay: v.optional(v.boolean()),
 	body: v.optional(v.string()),
-	colorTheme: v.literal('dark'),
+	colorTheme: v.union([v.literal('dark'), v.literal('light')]),
 	containerType: v.optional(ContainerTypeEnumSchema),
 	copyId: v.string(),
 	custom: v.optional(v.unknown()),
@@ -637,7 +637,7 @@ export const PublishedContentNodePropertiesSchema = v.object({
 export const PurplePropertiesSchema = v.object({
 	actions: v.array(v.unknown()),
 	altText: v.string(),
-	colorTheme: v.literal('dark'),
+	colorTheme: v.union([v.literal('dark'), v.literal('light')]),
 	copyId: v.string(),
 	custom: v.optional(v.unknown()),
 	fallbacks: v.optional(v.array(v.unknown())),
