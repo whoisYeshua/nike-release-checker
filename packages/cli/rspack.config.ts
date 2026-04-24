@@ -1,6 +1,11 @@
 import { defineConfig } from '@rspack/cli'
 import { rspack } from '@rspack/core'
 
+// @ts-expect-error no types
+import seaNativeBootstrapFn from './scripts/sea-native-bootstrap.cjs'
+
+const createStringIife = (fn: () => void) => `;(${fn.toString()})();`
+
 export default defineConfig({
 	entry: './src/index.tsx',
 	target: 'node24.11',
@@ -10,6 +15,10 @@ export default defineConfig({
 	},
 	devtool: false,
 	optimization: { minimize: false },
+	externalsType: 'commonjs',
+	externals: {
+		sharp: 'sharp',
+	},
 	/**
 	 * `node-fetch` заменяем на пустой модуль через alias: false.
 	 *
@@ -35,6 +44,11 @@ export default defineConfig({
 		alias: { 'node-fetch': false },
 	},
 	plugins: [
+		new rspack.BannerPlugin({
+			banner: createStringIife(seaNativeBootstrapFn),
+			raw: true,
+			entryOnly: true,
+		}),
 		new rspack.DefinePlugin({
 			'process.env.DEV': false,
 			'process.browser': false,
