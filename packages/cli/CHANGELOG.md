@@ -1,5 +1,11 @@
 # @nike-release-checker/cli
 
+## 0.3.4
+
+### Patch Changes
+
+- 11ee7ba: add missing sharp binaries
+
 ## 0.3.3
 
 ### Patch Changes

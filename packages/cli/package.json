@@ -1,7 +1,7 @@
 {
 	"name": "@nike-release-checker/cli",
 	"description": "Simple terminal Nike stock checker (50+ countries)",
-	"version": "0.3.3",
+	"version": "0.3.4",
 	"type": "module",
 	"private": true,
 	"scripts": {
