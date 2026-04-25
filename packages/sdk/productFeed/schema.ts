@@ -61,8 +61,8 @@ export const MarketplaceSchema = v.union([
 ])
 
 export const Collectionsv2Schema = v.object({
-	collectionTermIds: v.array(v.unknown()),
-	groupedCollectionTermIds: v.unknown(),
+	collectionTermIds: v.optional(v.array(v.unknown())),
+	groupedCollectionTermIds: v.optional(v.unknown()),
 })
 
 export const SelfSchema = v.object({
@@ -722,7 +722,7 @@ export const ProductFeedSchema = v.object({
 	channelId: v.string(),
 	channelName: v.string(),
 	collectionsv2: Collectionsv2Schema,
-	collectionTermIds: v.array(v.unknown()),
+	collectionTermIds: v.optional(v.array(v.unknown())),
 	id: v.string(),
 	language: v.string(),
 	lastFetchTime: v.string(),
