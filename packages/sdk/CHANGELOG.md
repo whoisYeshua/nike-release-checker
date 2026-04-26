@@ -1,5 +1,11 @@
 # @nike-release-checker/sdk
 
+## 0.4.2
+
+### Patch Changes
+
+- 60161e3: Make `collectionTermIds` and `groupedCollectionTermIds` optional in product feed schema to handle API responses that omit these fields (e.g. SG marketplace).
+
 ## 0.4.1
 
 ### Patch Changes
