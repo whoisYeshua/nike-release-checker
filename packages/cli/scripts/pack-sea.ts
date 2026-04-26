@@ -14,6 +14,11 @@ import {
 } from 'node:fs'
 import path from 'node:path'
 
+import sharpPackage from 'sharp/package.json' with { type: 'json' }
+
+const SHARP_DEPENDENCIES = Object.keys(sharpPackage.dependencies)
+const SHARP_OPTIONAL_DEPENDENCIES = Object.keys(sharpPackage.optionalDependencies)
+
 const projectRoot = path.resolve(import.meta.dirname, '..')
 const repoRoot = path.resolve(projectRoot, '../..')
 const nodeModulesRoot = path.join(repoRoot, 'node_modules')
@@ -62,9 +67,9 @@ if (!existsSync(bundlePath)) {
 interface NativeAsset {
 	key: string
 	path: string
-	relativePath: string
 }
 
+/** Converts platform paths to SEA asset keys, e.g. `sharp\lib\index.js` -> `sharp/lib/index.js`. */
 const toPosixPath = (value: string) => value.split(path.sep).join('/')
 
 const listFilesRecursive = (dir: string): string[] =>
@@ -75,12 +80,15 @@ const listFilesRecursive = (dir: string): string[] =>
 		return []
 	})
 
+/** Resolves a package name to workspace node_modules, e.g. `@img/colour` -> `<repo>/node_modules/@img/colour`. */
 const packagePath = (packageName: string) => path.join(nodeModulesRoot, ...packageName.split('/'))
 
-const addPackageAssets = (packageName: string, assets: NativeAsset[], required = true) => {
+/** Collects all files from a package and maps them to native/node_modules SEA assets. */
+const getPackageAssets = (packageName: string, required = true) => {
+	const result: NativeAsset[] = []
 	const root = packagePath(packageName)
 	if (!existsSync(root)) {
-		if (!required) return
+		if (!required) return result
 		throw new Error(
 			`Required native package "${packageName}" is not installed. Run npm install --include=optional before building SEA.`
 		)
@@ -93,52 +101,39 @@ const addPackageAssets = (packageName: string, assets: NativeAsset[], required =
 
 	for (const file of files) {
 		const relativePath = toPosixPath(path.relative(nodeModulesRoot, file))
-		assets.push({
+		result.push({
 			key: `native/node_modules/${relativePath}`,
 			path: file,
-			relativePath,
 		})
 	}
+	return result
 }
+const getOptionalPackageAssets = (packageName: string) => getPackageAssets(packageName, false)
 
-const getSharpRuntimePlatform = (): `${'darwin' | 'win32'}-${typeof process.arch}` => {
-	if (isMacos()) return `darwin-${process.arch}`
-	if (isWindows()) return `win32-${process.arch}`
-	throw new Error(`Unsupported SEA build platform: ${process.platform}-${process.arch}`)
-}
-
+/** Builds the SEA assets map needed for sharp and its installed runtime dependencies. */
 const createNativeAssets = () => {
-	const runtimePlatform = getSharpRuntimePlatform()
-	const assets: NativeAsset[] = []
+	let assets: NativeAsset[] = []
 
-	for (const packageName of ['sharp', 'detect-libc', 'semver', '@img/colour']) {
-		addPackageAssets(packageName, assets)
+	for (const packageName of ['sharp', ...SHARP_DEPENDENCIES]) {
+		const results = getPackageAssets(packageName)
+		assets = assets.concat(results)
 	}
 
-	addPackageAssets(`@img/sharp-${runtimePlatform}`, assets)
-	addPackageAssets(`@img/sharp-libvips-${runtimePlatform}`, assets, false)
-
-	return {
-		assets: Object.fromEntries(assets.map((asset) => [asset.key, asset.path] as const)),
-		count: assets.length,
-		runtimePlatform,
+	for (const packageName of SHARP_OPTIONAL_DEPENDENCIES) {
+		const results = getOptionalPackageAssets(packageName)
+		assets = assets.concat(results)
 	}
+
+	return Object.fromEntries(assets.map((asset) => [asset.key, asset.path] as const))
 }
 
-const { assets, count, runtimePlatform } = createNativeAssets()
-console.log(`Bundling ${count} sharp native asset files for ${runtimePlatform}`)
+const assets = createNativeAssets()
 
-writeFileSync(
-	generatedSeaConfigPath,
-	`${JSON.stringify(
-		{
-			...SEA_CONFIG,
-			assets,
-		},
-		null,
-		'\t'
-	)}\n`
-)
+// Write SEA config file
+const seaConfigContent = JSON.stringify({ ...SEA_CONFIG, assets }, null, '\t')
+writeFileSync(generatedSeaConfigPath, seaConfigContent)
+console.log(`SEA config file written to ${generatedSeaConfigPath}`)
+console.log(seaConfigContent)
 
 // Generate SEA blob
 console.log(`Generating SEA blob using config file ${generatedSeaConfigPath}`)

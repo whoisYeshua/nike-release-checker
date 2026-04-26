@@ -20,25 +20,26 @@ export default defineConfig({
 		sharp: 'sharp',
 	},
 	/**
-	 * `node-fetch` заменяем на пустой модуль через alias: false.
+	 * Replace `node-fetch` with an empty module via `alias: false`.
 	 *
-	 * `ink-picture` (через `build/utils/image.js`) делает статический
-	 * `import fetch from "node-fetch"` на верхнем уровне. Нам этот пакет
-	 * не нужен: мы всегда передаём в `<ProductImage />` локальный путь
-	 * из `tmpdir()` — http-ветка `if (src.startsWith("http"))` недостижима
-	 * (удалённые картинки скачиваются глобальным fetch Node 24 и кешируются
-	 * на диск в `src/store/product.ts`, в ink-picture уходит только путь).
+	 * `ink-picture` (via `build/utils/image.js`) has a top-level static
+	 * `import fetch from "node-fetch"`. We do not need that package: we always
+	 * pass `<ProductImage />` a local path from `tmpdir()` — the HTTP branch
+	 * `if (src.startsWith("http"))` is unreachable (remote images are fetched
+	 * with Node 24’s global fetch, cached to disk in `src/store/product.ts`;
+	 * ink-picture only receives the path).
 	 *
-	 * Статический импорт тянет в бандл весь node-fetch@3 + транзитивки
-	 * (multipart-parser, fetch-blob, data-uri-to-buffer, formdata-polyfill),
-	 * причём body.js использует `await import('./utils/multipart-parser.js')`
-	 * → rspack выделяет его в отдельный чанк dist/<id>.bundle.cjs.
+	 * The static import would pull all of node-fetch@3 plus transitive deps
+	 * (multipart-parser, fetch-blob, data-uri-to-buffer, formdata-polyfill)
+	 * into the bundle; `body.js` also uses
+	 * `await import('./utils/multipart-parser.js')`, so rspack splits that
+	 * into a separate chunk `dist/<id>.bundle.cjs`.
 	 *
-	 * `alias: false` заменяет модуль пустышкой (fetch === undefined) без
-	 * броска исключений при инициализации — в отличие от IgnorePlugin,
-	 * который создаёт "throwing stub" и падает на верхнеуровневом импорте
-	 * ещё до исполнения любого кода. externals не подходят: node-fetch@3
-	 * ESM-only, а вывод CJS — require() сломается в рантайме.
+	 * `alias: false` swaps the module for a stub (`fetch === undefined`)
+	 * without throwing on init — unlike IgnorePlugin, which emits a throwing
+	 * stub and fails on the top-level import before any code runs. Externals
+	 * do not work: node-fetch@3 is ESM-only while output is CJS, so
+	 * `require()` would break at runtime.
 	 */
 	resolve: {
 		alias: { 'node-fetch': false },
