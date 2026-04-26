@@ -26,7 +26,11 @@ jobs:
             product-feed-state-${{ runner.os }}-v1-
 
       - name: Run product feed check
-        run: npm run ci:check-product-feed
+        id: product-feed-check
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run ci:check-product-feed 2>&1 | tee product-feed-health.log
 
       - name: Save product feed state
         # Save state even on failure so the next run continues the rotation instead of repeating
@@ -36,3 +40,22 @@ jobs:
           path: .gh-cache/product-feed-state.json
           key: product-feed-state-${{ runner.os }}-v1-${{ github.run_id }}
 
+      - name: Fire Claude routine
+        if: ${{ failure() && steps.product-feed-check.conclusion == 'failure' }}
+        env:
+          ROUTINE_FIRE_URL: ${{ secrets.ROUTINE_FIRE_URL }}
+          ROUTINE_FIRE_TOKEN: ${{ secrets.ROUTINE_FIRE_TOKEN }}
+        run: |
+          if [ -z "$ROUTINE_FIRE_URL" ] || [ -z "$ROUTINE_FIRE_TOKEN" ]; then
+            echo "ROUTINE_FIRE_URL and ROUTINE_FIRE_TOKEN secrets are required to fire the Claude routine."
+            exit 1
+          fi
+
+          payload="$(jq -n --rawfile text product-feed-health.log '{text: $text}')"
+
+          curl --fail-with-body --show-error --silent -X POST "$ROUTINE_FIRE_URL" \
+            -H "Authorization: Bearer $ROUTINE_FIRE_TOKEN" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "anthropic-beta: experimental-cc-routine-2026-04-01" \
+            -H "Content-Type: application/json" \
+            -d "$payload"
