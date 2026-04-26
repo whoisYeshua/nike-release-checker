@@ -1,5 +1,13 @@
 # @nike-release-checker/cli
 
+## 0.3.6
+
+### Patch Changes
+
+- 0c3a6f0: Upgrade the CLI to Rspack 2, bump related runtime dependencies (Ink, nanostores, and MSW), and align the SDK’s MSW peer range with the CLI. Refresh root dev tooling (@changesets/cli, Prettier, TypeScript) and the lockfile.
+- Updated dependencies [0c3a6f0]
+  - @nike-release-checker/sdk@0.4.3
+
 ## 0.3.5
 
 ### Patch Changes
