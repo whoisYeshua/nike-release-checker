@@ -587,7 +587,11 @@ export const DestinationSchema = v.object({
 })
 
 export const ActionSchema = v.object({
-	actionType: v.union([v.literal('cta_buying_tools'), v.literal('minicard_link')]),
+	actionType: v.union([
+		v.literal('button'),
+		v.literal('cta_buying_tools'),
+		v.literal('minicard_link'),
+	]),
 	analytics: AnalyticsSchema,
 	destination: DestinationSchema,
 	destinationId: v.optional(v.string()),
