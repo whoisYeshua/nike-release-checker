@@ -7,18 +7,16 @@
 		"./mocks": "./mocks/node.ts",
 		"./mocks/handlers": "./mocks/handlers/handlers.ts"
 	},
-	"files": [
-		"mocks/**/*.ts",
-		"models/**/*.ts",
-		"productFeed/**/*.ts",
-		"utils/**/*.ts",
-		"index.ts",
-		"!**/*.test.*",
-		"!**/*.spec.*",
-		"!**/__tests__/**",
-		"!**/__fixtures__/**"
-	],
+	"files": ["dist", "CHANGELOG.md"],
+	"publishConfig": {
+		"exports": {
+			".": "./dist/index.js",
+			"./mocks": "./dist/mocks/node.js",
+			"./mocks/handlers": "./dist/mocks/handlers/handlers.js"
+		}
+	},
 	"scripts": {
+		"build": "tsc --project tsconfig.build.json",
 		"check-product-feed": "node scripts/check-product-feed.ts",
 		"ci:check-product-feed": "node scripts/ci-check-product-feed.ts",
 		"regen:fixtures:jp": "node scripts/regenerate-product-feed-expected.ts jp",
