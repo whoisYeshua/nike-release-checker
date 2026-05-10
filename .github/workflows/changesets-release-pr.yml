@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write # for gh workflow run
   contents: write
   pull-requests: write
 
@@ -25,9 +26,39 @@ jobs:
         uses: ./.github/composite-actions/install
 
       - name: Create or update release PR
+        id: changesets
         uses: changesets/action@v1
         with:
           commit: "chore: release"
           title: "chore: release"
           version: "npm run changeset:version"
           publish: "npm run changeset:publish"
+
+      - name: Dispatch release asset workflows
+        if: steps.changesets.outputs.published == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+
+          tags="$(git tag --points-at HEAD)"
+
+          if [[ -z "$tags" ]]; then
+            echo "No tags point at HEAD; no release asset workflows to dispatch."
+            exit 0
+          fi
+
+          while IFS= read -r tag; do
+            case "$tag" in
+              @nike-release-checker/cli@*)
+                gh workflow run cli-sea-release.yml --ref "$DEFAULT_BRANCH" -f tag="$tag"
+                ;;
+              @nike-release-checker/sdk@*)
+                gh workflow run sdk-tarball-release.yml --ref "$DEFAULT_BRANCH" -f tag="$tag"
+                ;;
+              *)
+                echo "Skipping tag '$tag'; it does not target a release asset workflow."
+                ;;
+            esac
+          done <<< "$tags"
