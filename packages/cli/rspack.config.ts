@@ -8,7 +8,7 @@ const createStringIife = (fn: () => void) => `;(${fn.toString()})();`
 
 export default defineConfig({
 	entry: './src/index.tsx',
-	target: 'node24.11',
+	target: 'node24.14',
 	output: {
 		filename: 'bundle.cjs',
 		chunkFormat: 'commonjs',
