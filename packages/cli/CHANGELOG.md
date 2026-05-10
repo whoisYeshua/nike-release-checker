@@ -1,5 +1,14 @@
 # @nike-release-checker/cli
 
+## 0.3.8
+
+### Patch Changes
+
+- c7b2263: chore: update dependencies
+- Updated dependencies [cb80984]
+- Updated dependencies [c7b2263]
+  - @nike-release-checker/sdk@0.5.0
+
 ## 0.3.7
 
 ### Patch Changes
