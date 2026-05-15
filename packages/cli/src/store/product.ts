@@ -193,23 +193,18 @@ export const createProductImageCache = () => {
 	const LOG_SCOPE = 'product-image-cache'
 	const store = map<Record<string, CachedImage>>()
 
+	logger.debug('clearing imageCacheDir from previous run', { scope: LOG_SCOPE, imageCacheDir })
+	rm(imageCacheDir, { recursive: true, force: true }).catch(() => {})
+
 	onMount(store, () => {
 		logger.debug('image cache mounted', { scope: LOG_SCOPE, imageCacheDir })
-		const unsubscribeProduct = $selectedProduct.listen((selectedProduct) => {
-			logger.debug('selected product changed, clearing image cache', {
-				scope: LOG_SCOPE,
-				slug: selectedProduct?.slug ?? null,
-			})
-			store.set({})
-		})
 
 		const unsubscribeModel = $selectedModel.value.subscribe((selectedModel) => {
 			if (!selectedModel?.imageUrl) return
 			const modelId = selectedModel.id
 			const imageUrl = selectedModel.imageUrl
-			if (store.get()[modelId]) return
 
-			const requestedSlug = $selectedProductSlug.value.get()
+			if (store.get()[modelId]) return
 
 			task(async () => {
 				try {
@@ -222,42 +217,25 @@ export const createProductImageCache = () => {
 							modelId,
 							status: response.status,
 						})
-						if ($selectedProductSlug.value.get() === requestedSlug) {
-							store.setKey(modelId, { loading: false, path: null })
-						}
+						store.setKey(modelId, { loading: false, path: null })
 						return
 					}
 					const buffer = Buffer.from(await response.arrayBuffer())
-					if ($selectedProductSlug.value.get() !== requestedSlug) {
-						logger.debug('image fetch stale, product changed', { scope: LOG_SCOPE, modelId })
-						return
-					}
 					await mkdir(imageCacheDir, { recursive: true })
 					const filePath = path.join(imageCacheDir, `${modelId}.bin`)
 					await writeFile(filePath, buffer)
-					if ($selectedProductSlug.value.get() !== requestedSlug) {
-						logger.debug('image write stale, product changed', { scope: LOG_SCOPE, modelId })
-						return
-					}
 					store.setKey(modelId, { loading: false, path: filePath })
 					logger.info('image cached', { scope: LOG_SCOPE, modelId, size: buffer.byteLength })
 				} catch (error) {
 					logger.error('image fetch failed', { scope: LOG_SCOPE, modelId, error })
-					if ($selectedProductSlug.value.get() === requestedSlug) {
-						store.setKey(modelId, { loading: false, path: null })
-					}
+					store.setKey(modelId, { loading: false, path: null })
 				}
 			})
 		})
 
 		return () => {
-			logger.debug('image cache unmounted, clear imageCacheDir', {
-				scope: LOG_SCOPE,
-				imageCacheDir,
-			})
-			unsubscribeProduct()
+			logger.debug('image cache unmounted', { scope: LOG_SCOPE })
 			unsubscribeModel()
-			rm(imageCacheDir, { recursive: true, force: true }).catch(() => {})
 		}
 	})
 
