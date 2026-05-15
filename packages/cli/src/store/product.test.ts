@@ -119,8 +119,8 @@ const makeNotOkResponse = () => ({
 	ok: false,
 	arrayBuffer: async () => new ArrayBuffer(0),
 })
-const expectedPathFor = (modelId: string) =>
-	path.join(tmpdir(), 'nike-release-checker', 'images', `${modelId}.bin`)
+const expectedImageCacheDir = path.join(tmpdir(), 'nike-release-checker', 'images')
+const expectedPathFor = (modelId: string) => path.join(expectedImageCacheDir, `${modelId}.bin`)
 
 describe('$products store - createProducts', () => {
 	beforeEach(() => {
@@ -433,6 +433,7 @@ describe('$productImageCache - createProductImageCache', () => {
 
 	afterEach(() => {
 		fetchMock.mock.restore()
+		cleanStores($productImageCache)
 	})
 
 	beforeEach(() => {
@@ -441,6 +442,7 @@ describe('$productImageCache - createProductImageCache', () => {
 		$products.value.set(loadedMockProductsState)
 		mockMkdir.mock.resetCalls()
 		mockWriteFile.mock.resetCalls()
+		mockRm.mock.resetCalls()
 		fetchMock = mock.method(globalThis, 'fetch', async () => makeOkResponse())
 		keepMount($productImageCache)
 	})
@@ -528,7 +530,7 @@ describe('$productImageCache - createProductImageCache', () => {
 		})
 	})
 
-	test('clears cache when selected product changes', async () => {
+	test('keeps cached images when selected product changes', async () => {
 		$selectedProductSlug.value.set(mockProducts[0].slug)
 		await allTasks()
 
@@ -536,11 +538,15 @@ describe('$productImageCache - createProductImageCache', () => {
 		await allTasks()
 
 		const cache = $productImageCache.get()
-		assert.strictEqual(cache[mockModels.airMax90Mens.id], undefined)
+		assert.deepStrictEqual(cache[mockModels.airMax90Mens.id], {
+			loading: false,
+			path: expectedPathFor(mockModels.airMax90Mens.id),
+		})
 		assert.deepStrictEqual(cache[mockModels.pegasus41.id], {
 			loading: false,
 			path: expectedPathFor(mockModels.pegasus41.id),
 		})
+		assert.strictEqual(mockRm.mock.callCount(), 0)
 	})
 
 	test('handles non-ok response by setting loading:false and path:null', async () => {
@@ -571,7 +577,7 @@ describe('$productImageCache - createProductImageCache', () => {
 		assert.strictEqual(mockWriteFile.mock.callCount(), 0)
 	})
 
-	test('race guard: discards stale fetch result when product changes mid-fetch', async () => {
+	test('keeps completed image fetches when product changes mid-fetch', async () => {
 		const resolvers: Array<(r: ReturnType<typeof makeOkResponse>) => void> = []
 		fetchMock.mock.mockImplementation(
 			() =>
@@ -589,14 +595,21 @@ describe('$productImageCache - createProductImageCache', () => {
 		await allTasks()
 
 		const cache = $productImageCache.get()
-		assert.strictEqual(cache[mockModels.airMax90Mens.id], undefined)
+		assert.deepStrictEqual(cache[mockModels.airMax90Mens.id], {
+			loading: false,
+			path: expectedPathFor(mockModels.airMax90Mens.id),
+		})
 		assert.deepStrictEqual(cache[mockModels.pegasus41.id], {
 			loading: false,
 			path: expectedPathFor(mockModels.pegasus41.id),
 		})
-		assert.strictEqual(mockWriteFile.mock.callCount(), 1)
+		assert.strictEqual(mockWriteFile.mock.callCount(), 2)
 		assert.strictEqual(
 			mockWriteFile.mock.calls[0].arguments[0],
+			expectedPathFor(mockModels.airMax90Mens.id)
+		)
+		assert.strictEqual(
+			mockWriteFile.mock.calls[1].arguments[0],
 			expectedPathFor(mockModels.pegasus41.id)
 		)
 	})
@@ -607,6 +620,7 @@ describe('$selectedModelImage', () => {
 
 	afterEach(() => {
 		fetchMock.mock.restore()
+		cleanStores($productImageCache)
 	})
 
 	beforeEach(() => {

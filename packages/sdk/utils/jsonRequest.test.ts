@@ -19,7 +19,7 @@ describe('jsonRequest', () => {
 	const originalSetTimeout = global.setTimeout
 	const originalAbortSignal = global.AbortSignal
 
-	let mockedConsoleError: Mock<VoidFunction>
+	let mockedConsoleError: Mock<() => void>
 	let mockedFetch: Mock<typeof originalFetch>
 	let mockedSetTimeout: Mock<typeof originalSetTimeout>
 

@@ -1,4 +1,5 @@
 import { Box, Spacer } from 'ink'
+import { TerminalInfoProvider } from 'ink-picture'
 
 import { useInputProcess } from '../hooks/useInputProcess.ts'
 import { theme } from '../utils/theme.ts'
@@ -17,7 +18,9 @@ export const Layout = ({ children }: LayoutProps) => {
 	return (
 		<Box flexDirection="column" height={theme.sizes.fullHeight}>
 			<Header />
-			<Box paddingLeft={2}>{children}</Box>
+			<Box paddingLeft={2}>
+				<TerminalInfoProvider>{children}</TerminalInfoProvider>
+			</Box>
 			<Spacer />
 			<Footer />
 		</Box>
