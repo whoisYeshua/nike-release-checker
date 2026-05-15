@@ -4,6 +4,7 @@
 		/* Language and Environment */
 		"target": "esnext",
 		"jsx": "react-jsx",
+		"lib": ["esnext"],
 
 		/* Modules */
 		"module": "nodenext" /* Specify what module code is generated. */,
@@ -28,5 +29,5 @@
 
 		/* Completeness */
 		"skipLibCheck": true /* Skip type checking all .d.ts files. */
-	},
+	}
 }

@@ -242,8 +242,7 @@ export const createProductImageCache = () => {
 					store.setKey(modelId, { loading: false, path: filePath })
 					logger.info('image cached', { scope: LOG_SCOPE, modelId, size: buffer.byteLength })
 				} catch (error) {
-					const errorMsg = error instanceof Error ? error.message : 'unknown error'
-					logger.error('image fetch failed', { scope: LOG_SCOPE, modelId, error: errorMsg })
+					logger.error('image fetch failed', { scope: LOG_SCOPE, modelId, error })
 					if ($selectedProductSlug.value.get() === requestedSlug) {
 						store.setKey(modelId, { loading: false, path: null })
 					}
@@ -252,6 +251,10 @@ export const createProductImageCache = () => {
 		})
 
 		return () => {
+			logger.debug('image cache unmounted, clear imageCacheDir', {
+				scope: LOG_SCOPE,
+				imageCacheDir,
+			})
 			unsubscribeProduct()
 			unsubscribeModel()
 			rm(imageCacheDir, { recursive: true, force: true }).catch(() => {})
