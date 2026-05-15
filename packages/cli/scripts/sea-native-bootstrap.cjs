@@ -44,5 +44,5 @@ module.exports = function () {
 		fs.writeFileSync(readyMarkerPath, 'node_modules structure is ready')
 	}
 
-	require = createRequire(path.join(nodeModulesRoot, '.require-virtual-anchor.cjs'))
+	require = createRequire(path.join(nodeModulesRoot, '.require-virtual-anchor-not-real-file.cjs'))
 }

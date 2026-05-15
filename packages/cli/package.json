@@ -5,15 +5,15 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"start": "tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
-		"start:mock": "tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/devEntry.ts",
-		"start:debug": "cross-env LOG_LEVEL=debug tsx --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
-		"start:devtools-debug": "node --eval \"process.stderr.write('\\nOpen in Chrome to connect debugger: chrome://inspect/#devices\\n\\n')\" && cross-env LOG_LEVEL=debug tsx --experimental-webstorage --localstorage-file=local.db --inspect-brk --no-warnings --experimental-network-inspection src/index.tsx",
-		"start:watch": "tsx --watch-path=./src --experimental-webstorage --localstorage-file=local.db --no-warnings src/index.tsx",
+		"start": "tsx --localstorage-file=local.db src/index.tsx",
+		"start:mock": "tsx --localstorage-file=local.db src/devEntry.ts",
+		"start:debug": "cross-env LOG_LEVEL=debug tsx --localstorage-file=local.db src/index.tsx",
+		"start:devtools-debug": "node --eval \"process.stderr.write('\\nOpen in Chrome to connect debugger: chrome://inspect/#devices\\n\\n')\" && cross-env LOG_LEVEL=debug tsx --localstorage-file=local.db --inspect-brk --no-warnings --experimental-network-inspection src/index.tsx",
+		"start:watch": "tsx --watch-path=./src --localstorage-file=local.db src/index.tsx",
 		"build": "rspack build",
 		"build:sea": "node ./scripts/pack-sea.ts",
-		"build:check": "node --experimental-webstorage --localstorage-file=local.db dist/bundle.cjs",
-		"test": "node --experimental-webstorage --localstorage-file=test.db --no-warnings --experimental-test-module-mocks --test",
+		"build:check": "node --localstorage-file=local.db dist/bundle.cjs",
+		"test": "node --localstorage-file=test.db --no-warnings --experimental-test-module-mocks --test",
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:prettier && npm run lint:ts",
@@ -41,7 +41,9 @@
 		"@types/react": "19.2.14",
 		"cross-env": "10.1.0",
 		"msw": "2.14.5",
-		"postject": "1.0.0-alpha.6",
 		"tsx": "4.21.0"
+	},
+	"engines": {
+		"node": ">=26.1"
 	}
 }

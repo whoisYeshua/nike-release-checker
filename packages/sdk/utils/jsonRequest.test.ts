@@ -111,7 +111,8 @@ describe('jsonRequest', () => {
 	})
 
 	test('should handle abort TimeoutError', async () => {
-		global.AbortSignal = { timeout: () => originalAbortSignal.timeout(0) } as any
+		const originalTimeout = originalAbortSignal.timeout.bind(originalAbortSignal)
+		mock.method(global.AbortSignal, 'timeout', () => originalTimeout(0))
 
 		await assert.rejects(
 			() => jsonRequest(defaultOptions),
