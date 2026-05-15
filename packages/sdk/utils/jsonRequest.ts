@@ -62,7 +62,7 @@ export const jsonRequest = async <JsonResponse>(options: RequestOptions): Promis
 			throw new HttpError(response.status)
 		}
 
-		return response.json()
+		return response.json() as Promise<JsonResponse>
 	} catch (error) {
 		if (error instanceof Error) return handleError(error, options)
 		console.error('Unknown error')

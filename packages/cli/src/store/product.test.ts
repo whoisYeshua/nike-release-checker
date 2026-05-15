@@ -120,8 +120,7 @@ const makeNotOkResponse = () => ({
 	arrayBuffer: async () => new ArrayBuffer(0),
 })
 const expectedImageCacheDir = path.join(tmpdir(), 'nike-release-checker', 'images')
-const expectedPathFor = (modelId: string) =>
-	path.join(expectedImageCacheDir, `${modelId}.bin`)
+const expectedPathFor = (modelId: string) => path.join(expectedImageCacheDir, `${modelId}.bin`)
 
 describe('$products store - createProducts', () => {
 	beforeEach(() => {
