@@ -30,7 +30,7 @@ On macOS:
 
 ### Run from source
 
-Requires `Node.js` 24.11+ — download from [nodejs.org](https://nodejs.org/en/). You can check the installed version with `node -v`.
+Requires `Node.js` 26.3+ — download from [nodejs.org](https://nodejs.org/en/). You can check the installed version with `node -v`.
 
 ```bash
 git clone https://github.com/whoisYeshua/nike-release-checker.git
