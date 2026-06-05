@@ -57,6 +57,8 @@ const ModelImage = () => {
 	const image = useStore($selectedModelImage)
 
 	return (
-		<Box height={theme.sizes.image}>{image?.path ? <ProductImage src={image.path} /> : null}</Box>
+		<Box height={theme.sizes.image} width={theme.sizes.image * 2}>
+			{image?.src ? <ProductImage src={image.src} /> : null}
+		</Box>
 	)
 }

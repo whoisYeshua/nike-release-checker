@@ -1,7 +1,3 @@
-import { mkdir, rm, writeFile } from 'node:fs/promises'
-import { tmpdir } from 'node:os'
-import path from 'node:path'
-
 import { formatProductFeedResponse, getProductFeed } from '@nike-release-checker/sdk'
 import { atom, computed, map, onMount, task } from 'nanostores'
 
@@ -183,21 +179,16 @@ export const createSelectedModel = () => {
 export const $selectedModel = createSelectedModel()
 
 interface CachedImage {
-	path: string | null
+	src: ArrayBuffer | null
 	loading: boolean
 }
-
-const imageCacheDir = path.join(tmpdir(), 'nike-release-checker', 'images')
 
 export const createProductImageCache = () => {
 	const LOG_SCOPE = 'product-image-cache'
 	const store = map<Record<string, CachedImage>>()
 
-	logger.debug('clearing imageCacheDir from previous run', { scope: LOG_SCOPE, imageCacheDir })
-	rm(imageCacheDir, { recursive: true, force: true }).catch(() => {})
-
 	onMount(store, () => {
-		logger.debug('image cache mounted', { scope: LOG_SCOPE, imageCacheDir })
+		logger.debug('image cache mounted', { scope: LOG_SCOPE })
 
 		const unsubscribeModel = $selectedModel.value.subscribe((selectedModel) => {
 			if (!selectedModel?.imageUrl) return
@@ -208,7 +199,7 @@ export const createProductImageCache = () => {
 
 			task(async () => {
 				try {
-					store.setKey(modelId, { loading: true, path: null })
+					store.setKey(modelId, { loading: true, src: null })
 					logger.debug('image fetch started', { scope: LOG_SCOPE, modelId, imageUrl })
 					const response = await fetch(imageUrl)
 					if (!response.ok) {
@@ -217,18 +208,15 @@ export const createProductImageCache = () => {
 							modelId,
 							status: response.status,
 						})
-						store.setKey(modelId, { loading: false, path: null })
+						store.setKey(modelId, { loading: false, src: null })
 						return
 					}
-					const buffer = Buffer.from(await response.arrayBuffer())
-					await mkdir(imageCacheDir, { recursive: true })
-					const filePath = path.join(imageCacheDir, `${modelId}.bin`)
-					await writeFile(filePath, buffer)
-					store.setKey(modelId, { loading: false, path: filePath })
-					logger.info('image cached', { scope: LOG_SCOPE, modelId, size: buffer.byteLength })
+					const imageBytes = await response.arrayBuffer()
+					store.setKey(modelId, { loading: false, src: imageBytes })
+					logger.info('image cached', { scope: LOG_SCOPE, modelId, size: imageBytes.byteLength })
 				} catch (error) {
 					logger.error('image fetch failed', { scope: LOG_SCOPE, modelId, error })
-					store.setKey(modelId, { loading: false, path: null })
+					store.setKey(modelId, { loading: false, src: null })
 				}
 			})
 		})
