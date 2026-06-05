@@ -3,15 +3,7 @@
  * Replaces pack-sea.sh (macOS) and pack-sea.ps1 (Windows).
  */
 import { execFileSync, execSync } from 'node:child_process'
-import {
-	chmodSync,
-	cpSync,
-	existsSync,
-	readdirSync,
-	readFileSync,
-	rmSync,
-	writeFileSync,
-} from 'node:fs'
+import { chmodSync, existsSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 
 import sharpPackage from 'sharp/package.json' with { type: 'json' }
@@ -25,24 +17,12 @@ const nodeModulesRoot = path.join(repoRoot, 'node_modules')
 
 /** Standard executable permission: rwxr-xr-x (owner rwx, group/others r-x). */
 const SEA_BINARY_MODE = 0o755
-/** Node.js SEA sentinel fuse string required by postject for blob injection. */
-const NODE_SEA_SENTINEL_FUSE = 'NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2'
-
-const SEA_CONFIG = {
-	main: './dist/bundle.cjs',
-	output: './dist/sea-prep.blob',
-	disableExperimentalSEAWarning: true,
-	useSnapshot: false,
-	useCodeCache: true,
-	execArgv: ['--experimental-webstorage', '--localstorage-file=local.db'],
-}
 
 const isWindows = () => process.platform === 'win32'
 const isMacos = () => process.platform === 'darwin'
 
 const distDir = path.join(projectRoot, 'dist')
-const bundlePath = path.resolve(projectRoot, SEA_CONFIG.main)
-const outputBlobPath = path.resolve(projectRoot, SEA_CONFIG.output)
+const bundlePath = path.join(distDir, 'bundle.cjs')
 const generatedSeaConfigPath = path.join(distDir, 'sea-config.generated.json')
 
 // Build output filename based on platform/arch
@@ -51,8 +31,17 @@ const binaryName = isWindows()
 	: `nike-release-checker-macos-${process.arch}`
 const exePath = path.join(distDir, binaryName)
 
+const SEA_CONFIG = {
+	main: './dist/bundle.cjs',
+	output: exePath,
+	mainFormat: 'commonjs',
+	disableExperimentalSEAWarning: true,
+	useSnapshot: false,
+	useCodeCache: true,
+	execArgv: ['--localstorage-file=local.db'],
+}
+
 // Clean previous artifacts
-rmSync(outputBlobPath, { force: true })
 rmSync(exePath, { force: true })
 rmSync(generatedSeaConfigPath, { force: true })
 
@@ -135,40 +124,13 @@ writeFileSync(generatedSeaConfigPath, seaConfigContent)
 console.log(`SEA config file written to ${generatedSeaConfigPath}`)
 console.log(seaConfigContent)
 
-// Generate SEA blob
-console.log(`Generating SEA blob using config file ${generatedSeaConfigPath}`)
+// Build SEA executable (blob generation + injection in one step)
+console.log(`Building SEA executable: ${exePath}`)
 const nodeBin = process.execPath
-execFileSync(nodeBin, ['--experimental-sea-config', generatedSeaConfigPath], {
+execFileSync(nodeBin, ['--build-sea', generatedSeaConfigPath], {
 	cwd: projectRoot,
 	stdio: 'inherit',
 })
-
-// Copy Node binary
-console.log(`Copying Node binary ${nodeBin} to ${exePath}`)
-cpSync(nodeBin, exePath)
-
-// macOS: strip existing code signature before injection
-if (isMacos()) {
-	console.log('Stripping existing code signature...')
-	try {
-		execFileSync('codesign', ['--remove-signature', exePath], { stdio: 'inherit' })
-	} catch {
-		console.error('codesign not available, skipping code signature removal')
-	}
-}
-
-// Inject SEA blob using postject programmatic API
-console.log('Injecting SEA blob...')
-// @ts-expect-error postject could be load in this way
-const { inject } = await import('postject')
-
-const injectOptions = {
-	sentinelFuse: NODE_SEA_SENTINEL_FUSE,
-	...(isMacos() && { machoSegmentName: 'NODE_SEA' }),
-}
-
-const blobBuffer = readFileSync(outputBlobPath)
-await inject(exePath, 'NODE_SEA_BLOB', blobBuffer, injectOptions)
 
 // macOS: make executable and ad-hoc sign
 if (isMacos()) {

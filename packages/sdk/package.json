@@ -31,17 +31,20 @@
 		"lint": "npm run lint:prettier && npm run lint:ts",
 		"lint:prettier": "prettier \"**/*.{json,[jt]s,[jt]sx,[cm][jt]s}\" --check --ignore-path ../../.prettierignore",
 		"lint:ts": "tsc --noEmit --project tsconfig.json",
-		"test": "node --experimental-webstorage --localstorage-file=test.db --no-warnings --test"
+		"test": "node --test"
 	},
 	"dependencies": {
-		"valibot": "1.4.0"
+		"valibot": "^1.4.1"
 	},
 	"peerDependencies": {
-		"msw": "^2.14.5"
+		"msw": "^2.14.6"
 	},
 	"peerDependenciesMeta": {
 		"msw": {
 			"optional": true
 		}
+	},
+	"engines": {
+		"node": ">=26.3"
 	}
 }
