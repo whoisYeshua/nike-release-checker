@@ -1,6 +1,4 @@
 import assert from 'node:assert/strict'
-import { tmpdir } from 'node:os'
-import path from 'node:path'
 import { afterEach, beforeEach, describe, mock, test } from 'node:test'
 
 import { allTasks, atom, cleanStores, keepMount } from 'nanostores'
@@ -68,16 +66,6 @@ const emptyProductsState = () => ({
 
 const loadedMockProductsState = { loading: false, error: null, data: mockProducts as any }
 
-const mockMkdir = mock.fn(async (_path: string, _opts?: { recursive?: boolean }) => undefined)
-const mockWriteFile = mock.fn(async (_path: string, _data: unknown) => undefined)
-const mockRm = mock.fn(
-	async (_path: string, _opts?: { recursive?: boolean; force?: boolean }) => undefined
-)
-
-mock.module('node:fs/promises', {
-	namedExports: { mkdir: mockMkdir, writeFile: mockWriteFile, rm: mockRm },
-})
-
 const mockGetProductFeed = mock.fn(
 	async (_params: { countryCode: string; language: string }) => [] as never[]
 )
@@ -110,7 +98,9 @@ const {
 	$selectedModelImage,
 } = await import('./product.ts')
 
-const makeOkResponse = (bytes = new Uint8Array([1, 2, 3, 4])) => ({
+const defaultImageBytes = new Uint8Array([1, 2, 3, 4])
+
+const makeOkResponse = (bytes = defaultImageBytes) => ({
 	ok: true,
 	arrayBuffer: async () =>
 		bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength) as ArrayBuffer,
@@ -119,8 +109,8 @@ const makeNotOkResponse = () => ({
 	ok: false,
 	arrayBuffer: async () => new ArrayBuffer(0),
 })
-const expectedImageCacheDir = path.join(tmpdir(), 'nike-release-checker', 'images')
-const expectedPathFor = (modelId: string) => path.join(expectedImageCacheDir, `${modelId}.bin`)
+const readImageBytes = (value: ArrayBuffer | null) =>
+	value ? Array.from(new Uint8Array(value)) : null
 
 describe('$products store - createProducts', () => {
 	beforeEach(() => {
@@ -440,9 +430,6 @@ describe('$productImageCache - createProductImageCache', () => {
 		$selectedProductSlug.value.set(null)
 		$productImageCache.set({})
 		$products.value.set(loadedMockProductsState)
-		mockMkdir.mock.resetCalls()
-		mockWriteFile.mock.resetCalls()
-		mockRm.mock.resetCalls()
 		fetchMock = mock.method(globalThis, 'fetch', async () => makeOkResponse())
 		keepMount($productImageCache)
 	})
@@ -462,23 +449,16 @@ describe('$productImageCache - createProductImageCache', () => {
 		assert.deepStrictEqual($productImageCache.get(), {})
 	})
 
-	test('fetches image and stores tmp path for selected model', async () => {
+	test('fetches image and stores bytes for selected model', async () => {
 		$selectedProductSlug.value.set(mockProducts[0].slug)
 		await allTasks()
 
 		const { airMax90Mens } = mockModels
-		const expectedPath = expectedPathFor(airMax90Mens.id)
 		assert.strictEqual(fetchMock.mock.callCount(), 1)
 		assert.deepStrictEqual(fetchMock.mock.calls[0].arguments[0], airMax90Mens.imageUrl)
-		assert.strictEqual(mockMkdir.mock.callCount(), 1)
-		assert.deepStrictEqual(mockMkdir.mock.calls[0].arguments[1], { recursive: true })
-		assert.strictEqual(mockWriteFile.mock.callCount(), 1)
-		assert.strictEqual(mockWriteFile.mock.calls[0].arguments[0], expectedPath)
-		assert.ok(Buffer.isBuffer(mockWriteFile.mock.calls[0].arguments[1]))
-		assert.deepStrictEqual($productImageCache.get()[airMax90Mens.id], {
-			loading: false,
-			path: expectedPath,
-		})
+		const cacheEntry = $productImageCache.get()[airMax90Mens.id]
+		assert.strictEqual(cacheEntry.loading, false)
+		assert.deepStrictEqual(readImageBytes(cacheEntry.src), Array.from(defaultImageBytes))
 	})
 
 	test('sets loading:true synchronously before fetch resolves', async () => {
@@ -490,7 +470,7 @@ describe('$productImageCache - createProductImageCache', () => {
 
 		assert.deepStrictEqual($productImageCache.get()[mockModels.airMax90Mens.id], {
 			loading: true,
-			path: null,
+			src: null,
 		})
 
 		resolveFetch(makeOkResponse())
@@ -520,14 +500,16 @@ describe('$productImageCache - createProductImageCache', () => {
 		await allTasks()
 
 		const cache = $productImageCache.get()
-		assert.deepStrictEqual(cache[mockModels.airMax90Mens.id], {
-			loading: false,
-			path: expectedPathFor(mockModels.airMax90Mens.id),
-		})
-		assert.deepStrictEqual(cache[mockModels.airMax90Gs.id], {
-			loading: false,
-			path: expectedPathFor(mockModels.airMax90Gs.id),
-		})
+		assert.strictEqual(cache[mockModels.airMax90Mens.id].loading, false)
+		assert.strictEqual(cache[mockModels.airMax90Gs.id].loading, false)
+		assert.deepStrictEqual(
+			readImageBytes(cache[mockModels.airMax90Mens.id].src),
+			Array.from(defaultImageBytes)
+		)
+		assert.deepStrictEqual(
+			readImageBytes(cache[mockModels.airMax90Gs.id].src),
+			Array.from(defaultImageBytes)
+		)
 	})
 
 	test('keeps cached images when selected product changes', async () => {
@@ -538,18 +520,19 @@ describe('$productImageCache - createProductImageCache', () => {
 		await allTasks()
 
 		const cache = $productImageCache.get()
-		assert.deepStrictEqual(cache[mockModels.airMax90Mens.id], {
-			loading: false,
-			path: expectedPathFor(mockModels.airMax90Mens.id),
-		})
-		assert.deepStrictEqual(cache[mockModels.pegasus41.id], {
-			loading: false,
-			path: expectedPathFor(mockModels.pegasus41.id),
-		})
-		assert.strictEqual(mockRm.mock.callCount(), 0)
+		assert.strictEqual(cache[mockModels.airMax90Mens.id].loading, false)
+		assert.strictEqual(cache[mockModels.pegasus41.id].loading, false)
+		assert.deepStrictEqual(
+			readImageBytes(cache[mockModels.airMax90Mens.id].src),
+			Array.from(defaultImageBytes)
+		)
+		assert.deepStrictEqual(
+			readImageBytes(cache[mockModels.pegasus41.id].src),
+			Array.from(defaultImageBytes)
+		)
 	})
 
-	test('handles non-ok response by setting loading:false and path:null', async () => {
+	test('handles non-ok response by setting loading:false and src:null', async () => {
 		fetchMock.mock.mockImplementation(async () => makeNotOkResponse())
 
 		$selectedProductSlug.value.set(mockProducts[0].slug)
@@ -557,12 +540,11 @@ describe('$productImageCache - createProductImageCache', () => {
 
 		assert.deepStrictEqual($productImageCache.get()[mockModels.airMax90Mens.id], {
 			loading: false,
-			path: null,
+			src: null,
 		})
-		assert.strictEqual(mockWriteFile.mock.callCount(), 0)
 	})
 
-	test('handles fetch throw by setting loading:false and path:null', async () => {
+	test('handles fetch throw by setting loading:false and src:null', async () => {
 		fetchMock.mock.mockImplementation(async () => {
 			throw new Error('network error')
 		})
@@ -572,9 +554,8 @@ describe('$productImageCache - createProductImageCache', () => {
 
 		assert.deepStrictEqual($productImageCache.get()[mockModels.airMax90Mens.id], {
 			loading: false,
-			path: null,
+			src: null,
 		})
-		assert.strictEqual(mockWriteFile.mock.callCount(), 0)
 	})
 
 	test('keeps completed image fetches when product changes mid-fetch', async () => {
@@ -595,22 +576,15 @@ describe('$productImageCache - createProductImageCache', () => {
 		await allTasks()
 
 		const cache = $productImageCache.get()
-		assert.deepStrictEqual(cache[mockModels.airMax90Mens.id], {
-			loading: false,
-			path: expectedPathFor(mockModels.airMax90Mens.id),
-		})
-		assert.deepStrictEqual(cache[mockModels.pegasus41.id], {
-			loading: false,
-			path: expectedPathFor(mockModels.pegasus41.id),
-		})
-		assert.strictEqual(mockWriteFile.mock.callCount(), 2)
-		assert.strictEqual(
-			mockWriteFile.mock.calls[0].arguments[0],
-			expectedPathFor(mockModels.airMax90Mens.id)
+		assert.strictEqual(cache[mockModels.airMax90Mens.id].loading, false)
+		assert.strictEqual(cache[mockModels.pegasus41.id].loading, false)
+		assert.deepStrictEqual(
+			readImageBytes(cache[mockModels.airMax90Mens.id].src),
+			Array.from(defaultImageBytes)
 		)
-		assert.strictEqual(
-			mockWriteFile.mock.calls[1].arguments[0],
-			expectedPathFor(mockModels.pegasus41.id)
+		assert.deepStrictEqual(
+			readImageBytes(cache[mockModels.pegasus41.id].src),
+			Array.from(defaultImageBytes)
 		)
 	})
 })
@@ -627,8 +601,6 @@ describe('$selectedModelImage', () => {
 		$selectedProductSlug.value.set(null)
 		$productImageCache.set({})
 		$products.value.set(loadedMockProductsState)
-		mockMkdir.mock.resetCalls()
-		mockWriteFile.mock.resetCalls()
 		fetchMock = mock.method(globalThis, 'fetch', async () => makeOkResponse())
 		keepMount($productImageCache)
 	})
@@ -644,7 +616,7 @@ describe('$selectedModelImage', () => {
 
 		$selectedProductSlug.value.set(mockProducts[0].slug)
 
-		assert.deepStrictEqual($selectedModelImage.get(), { loading: true, path: null })
+		assert.deepStrictEqual($selectedModelImage.get(), { loading: true, src: null })
 
 		resolveFetch(makeOkResponse())
 		await allTasks()
@@ -654,10 +626,12 @@ describe('$selectedModelImage', () => {
 		$selectedProductSlug.value.set(mockProducts[0].slug)
 		await allTasks()
 
-		assert.deepStrictEqual($selectedModelImage.get(), {
-			loading: false,
-			path: expectedPathFor(mockModels.airMax90Mens.id),
-		})
+		const selectedImage = $selectedModelImage.get()
+		assert.strictEqual(selectedImage?.loading, false)
+		assert.deepStrictEqual(
+			readImageBytes(selectedImage?.src ?? null),
+			Array.from(defaultImageBytes)
+		)
 	})
 
 	test('follows the selected model id when switching between models', async () => {
@@ -667,16 +641,14 @@ describe('$selectedModelImage', () => {
 
 		$selectedModel.setId(mockModels.airMax90Mens.id)
 
-		assert.deepStrictEqual($selectedModelImage.get(), {
-			loading: false,
-			path: expectedPathFor(mockModels.airMax90Mens.id),
-		})
+		const menImage = $selectedModelImage.get()
+		assert.strictEqual(menImage?.loading, false)
+		assert.deepStrictEqual(readImageBytes(menImage?.src ?? null), Array.from(defaultImageBytes))
 
 		$selectedModel.setId(mockModels.airMax90Gs.id)
 
-		assert.deepStrictEqual($selectedModelImage.get(), {
-			loading: false,
-			path: expectedPathFor(mockModels.airMax90Gs.id),
-		})
+		const gsImage = $selectedModelImage.get()
+		assert.strictEqual(gsImage?.loading, false)
+		assert.deepStrictEqual(readImageBytes(gsImage?.src ?? null), Array.from(defaultImageBytes))
 	})
 })
