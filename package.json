@@ -1,7 +1,7 @@
 {
 	"name": "nike-release-checker",
 	"description": "Simple terminal Nike stock checker (50+ countries)",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"type": "module",
 	"workspaces": [
 		"packages/*"
