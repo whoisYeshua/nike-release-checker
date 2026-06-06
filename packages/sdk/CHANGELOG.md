@@ -1,5 +1,11 @@
 # @nike-release-checker/sdk
 
+## 1.0.0
+
+### Major Changes
+
+- 03b832d: Stable release ⭐️
+
 ## 0.6.0
 
 ### Minor Changes
