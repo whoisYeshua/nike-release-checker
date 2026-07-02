@@ -471,7 +471,9 @@ export const CoverCardPropertiesSchema = v.object({
 export const CoverCardSchema = v.object({
 	analytics: AnalyticsSchema,
 	id: v.string(),
-	properties: CoverCardPropertiesSchema,
+	// coverCard can also be a video card, whose properties match PublishedContentNodePropertiesSchema
+	// instead of the image-oriented CoverCardPropertiesSchema (declared further down the file, hence v.lazy)
+	properties: v.lazy(() => v.union([CoverCardPropertiesSchema, PublishedContentNodePropertiesSchema])),
 	subType: ContainerTypeEnumSchema,
 	type: v.literal('card'),
 	version: v.string(),
