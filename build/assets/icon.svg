@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#2a0a10"/>
+      <stop offset="0.5" stop-color="#c20e26"/>
+      <stop offset="1" stop-color="#7d0a18"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.3" cy="0.22" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mark" x1="0.1" y1="1" x2="0.95" y2="0.1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef2f5"/>
+    </linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#3a0008" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- App squircle -->
+  <rect x="0" y="0" width="1024" height="1024" rx="236" ry="236" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1024" height="1024" rx="236" ry="236" fill="url(#sheen)"/>
+  <rect x="6" y="6" width="1012" height="1012" rx="230" ry="230" fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="3"/>
+
+  <!-- Single elegant motion mark (original premium swoosh-style curve) -->
+  <g filter="url(#sh)">
+    <path fill="url(#mark)" d="M196 712
+      C 250 470, 470 300, 868 232
+      C 556 360, 392 520, 320 690
+      C 470 612, 612 556, 792 520
+      C 568 612, 392 720, 250 760
+      C 222 768, 200 748, 196 712 Z"/>
+  </g>
+
+  <!-- Automation accent: three trailing nodes feeding the mark (digital/bot motion) -->
+  <g fill="#16e0ff" filter="url(#sh)">
+    <circle cx="150" cy="788" r="30"/>
+    <circle cx="252" cy="828" r="22" fill-opacity="0.8"/>
+    <circle cx="338" cy="858" r="15" fill-opacity="0.6"/>
+  </g>
+</svg>

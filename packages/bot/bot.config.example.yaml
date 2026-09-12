@@ -1,0 +1,25 @@
+# Bot configuration
+# Copy to bot.config.yaml and customize
+# ⚠️ DO NOT commit bot.config.yaml (already in .gitignore)
+
+polling:
+  interval: 5000          # ms between Product Feed checks
+  timeout: 30000          # ms max checkout time before abort
+
+checkout:
+  market: "FR"            # Target Nike market
+  language: "fr"          # Language code for Product Feed
+  currency: "EUR"         # Currency code
+  defaultSizes: ["42", "42.5", "43"]  # Fallback sizes when --sizes not specified
+
+proxy:
+  rotationMode: "per-account"  # Each account gets dedicated proxy
+  testOnImport: true           # Validate proxy connectivity on import
+
+stealth:
+  headless: true          # Run browsers in headless mode
+  userAgent: "auto"       # Auto-generate realistic User-Agent per context
+
+daemon:
+  logFile: "./logs/bot.log"   # NDJSON log file path
+  pidFile: "./bot.pid"        # PID file for daemon mode

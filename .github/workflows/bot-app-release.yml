@@ -1,0 +1,78 @@
+name: Bot .app / installer release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_tag:
+        description: 'Tag (e.g. bot-v0.1.0)'
+        required: true
+  push:
+    tags:
+      - 'bot-v*'
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-14
+            target: macos-arm64
+            cmd: bash build/build-bot-app-macos.sh --arch arm64
+            artifact: 'packages/bot/dist/Nike Bot-*-macos-arm64.dmg'
+          - os: macos-13
+            target: macos-x64
+            cmd: bash build/build-bot-app-macos.sh --arch x64
+            artifact: 'packages/bot/dist/Nike Bot-*-macos-x64.dmg'
+          - os: ubuntu-22.04
+            target: linux-x64
+            cmd: bash build/build-bot-app-linux.sh --arch x64
+            artifact: 'packages/bot/dist/nike-bot-*-linux-x64.tar.gz'
+          - os: ubuntu-22.04-arm
+            target: linux-arm64
+            cmd: bash build/build-bot-app-linux.sh --arch arm64
+            artifact: 'packages/bot/dist/nike-bot-*-linux-arm64.tar.gz'
+          - os: windows-2022
+            target: windows-x64
+            cmd: pwsh -File build/build-bot-app-windows.ps1
+            artifact: 'packages/bot/dist/nike-bot-*-windows-x64.zip'
+
+    runs-on: ${{ matrix.os }}
+    name: Build ${{ matrix.target }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.18.0
+
+      - name: Build
+        run: ${{ matrix.cmd }}
+        shell: bash
+        if: runner.os != 'Windows'
+
+      - name: Build (Windows)
+        if: runner.os == 'Windows'
+        run: ${{ matrix.cmd }}
+        shell: pwsh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nike-bot-${{ matrix.target }}
+          path: ${{ matrix.artifact }}
+          if-no-files-found: error
+
+  release:
+    needs: build
+    runs-on: ubuntu-22.04
+    if: startsWith(github.ref, 'refs/tags/bot-v')
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/**/*
+          generate_release_notes: true

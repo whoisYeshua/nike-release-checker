@@ -21,7 +21,9 @@ const generatedSeaConfigPath = path.join(distDir, 'sea-config.generated.json')
 // Build output filename based on platform/arch
 const binaryName = isWindows
 	? `nike-release-checker-win-${process.arch}.exe`
-	: `nike-release-checker-macos-${process.arch}`
+	: isMacos
+		? `nike-release-checker-macos-${process.arch}`
+		: `nike-release-checker-linux-${process.arch}`
 const exePath = path.join(distDir, binaryName)
 
 const SEA_CONFIG = {
@@ -60,9 +62,13 @@ execFileSync(nodeBin, ['--build-sea', generatedSeaConfigPath], {
 	stdio: 'inherit',
 })
 
-// macOS: make executable and ad-hoc sign
-if (isMacos) {
+// Set executable permissions on non-Windows platforms
+if (!isWindows) {
 	chmodSync(exePath, SEA_BINARY_MODE)
+}
+
+// macOS: ad-hoc sign
+if (isMacos) {
 	console.log('Ad-hoc signing SEA binary...')
 	execFileSync('codesign', ['--sign', '-', '--force', '--timestamp=none', exePath], {
 		stdio: 'inherit',

@@ -1,0 +1,7 @@
+{
+	"main": "dist/nike-bot.bundle.mjs",
+	"output": "dist/nike-bot.blob",
+	"disableExperimentalSEAWarning": true,
+	"useSnapshot": false,
+	"useCodeCache": true
+}

@@ -1,0 +1,42 @@
+{
+	"name": "@nike-release-checker/api",
+	"version": "0.1.0",
+	"description": "Fastify B2B REST API gateway",
+	"type": "module",
+	"engines": {
+		"node": ">=24.0.0"
+	},
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"build": "tsc -p tsconfig.build.json",
+		"start": "node dist/index.js",
+		"worker": "node dist/workers/index.js",
+		"lint": "npm run typecheck",
+		"test": "node --import tsx --test 'src/**/*.test.ts' 'migrations/**/*.test.ts'",
+		"typecheck": "tsc --noEmit",
+		"migrate": "node --import tsx migrations/runner.ts up",
+		"migrate:rollback": "node --import tsx migrations/runner.ts down 1"
+	},
+	"dependencies": {
+		"@fastify/swagger": "^9.0.0",
+		"@fastify/swagger-ui": "^5.0.0",
+		"@fastify/websocket": "11.2.0",
+		"argon2": "0.44.0",
+		"fastify": "^5.0.0",
+		"ioredis": "5.10.1",
+		"lru-cache": "^11.0.0",
+		"node-pg-migrate": "8.0.4",
+		"pg": "8.20.0",
+		"pino": "^9.0.0",
+		"uuid": "^11.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^24.0.0",
+		"@types/pg": "8.20.0",
+		"@types/uuid": "^10.0.0",
+		"ioredis-mock": "8.13.1",
+		"pg-mem": "3.0.14",
+		"tsx": "^4.0.0",
+		"typescript": "^5.9.3"
+	}
+}

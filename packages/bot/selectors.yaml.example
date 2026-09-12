@@ -1,0 +1,47 @@
+# Nike FR selector configuration
+# Copy to selectors.yaml and update with real selector values from browser inspection
+
+# Login flow (accounts.nike.com)
+loginEmailInput: 'input[name="emailAddress"]'
+loginContinueButton: 'button[data-testid="continue-btn"]'
+loginPasswordInput: 'input[name="password"]'
+loginSubmitButton: 'button[data-testid="login-submit"]'
+loginSuccessIndicator: '[data-testid="user-info"]'
+loginErrorIndicator: '[data-testid="login-error"]'
+
+# Product page — legacy flat keys (login flow)
+sizeAvailable: '[data-testid="size-available"]'
+sizeSelected: '[data-testid="size-selected"]'
+purchaseButton: '[data-testid="purchase-button"]'
+checkoutLink: '[data-testid="checkout-link"]'
+
+# Checkout — legacy flat keys
+shippingSaveButton: '[data-qa="shipping-save-button"]'
+paymentContinueButton: '[data-qa="payment-continue-button"]'
+orderSubmitButton: '[data-qa="submit-order-button"]'
+
+# Error detection — legacy flat keys
+soldOutIndicator: '[data-testid="sold-out"]'
+blockDetectionSignal: '[data-testid="block-detection"]'
+threeDSecureIframe: 'iframe[name="threeDSIframe"], iframe[src*="3ds"]'
+
+# Product page — checkout pipeline selectors
+productPage:
+  sizeGrid: '[data-testid="size-grid"]'
+  sizeButton: '[data-testid="size-{size}"]'
+  addToCartButton: '[data-testid="atc-button"]'
+  soldOutIndicator: '[data-testid="sold-out"]'
+
+# Cart
+cart:
+  checkoutButton: '[data-qa="checkout-button"]'
+  cartCount: '[data-qa="cart-count"]'
+
+# Checkout pipeline selectors
+checkout:
+  shippingContinueButton: '[data-qa="shipping-continue-button"]'
+  paymentSection: '[data-qa="payment-section"]'
+  paymentContinueButton: '[data-qa="payment-continue-button"]'
+  threeDSIframe: 'iframe[name="threeDSIframe"], iframe[src*="3ds"]'
+  submitOrderButton: '[data-qa="submit-order-button"]'
+  orderConfirmation: '[data-qa="order-confirmation"]'

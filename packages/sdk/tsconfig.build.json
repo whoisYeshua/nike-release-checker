@@ -7,5 +7,5 @@
 		"outDir": "./dist",
 		"declaration": true
 	},
-	"exclude": ["**/*.test.ts", "**/__tests__/**", "**/__fixtures__/**", "scripts/**"]
+	"exclude": ["dist", "**/*.test.ts", "**/__tests__/**", "**/__fixtures__/**", "scripts/**"]
 }

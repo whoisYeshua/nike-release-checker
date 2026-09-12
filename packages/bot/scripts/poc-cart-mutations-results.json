@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-04-25T14:25:59.783Z",
+  "targetItemId": "8450ce20-f0ed-41c0-b67e-69c8f67e2582",
+  "results": [
+    {
+      "variant": "A1: remove, path=/items/{id}, no value (pure RFC 6902)",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"MISSING_REQUIRED\",\"message\":\"Required field\",\"errors\":[{\"field\":\"value\",\"message\":\"Required field\",\"code\":\"MISSING_REQUIRED\"},{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "A2: remove, path=/items/{id}, value: null",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "A3: remove, path=/items/{id}, value: \"\"",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "A4: remove, path=/items/{id}, value: {}",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "A5: remove, path=/items, value: {id: itemId}",
+      "status": 200,
+      "bodyPreview": "{\"id\":\"ff1d8c3e-c6ff-4edd-a815-865acb88441f\",\"country\":\"FR\",\"currency\":\"EUR\",\"brand\":\"NIKE\",\"channel\":\"NIKECOM\",\"totals\":{\"subtotal\":0,\"discountTotal\":0,\"valueAddedServicesTotal\":0,\"total\":0,\"quantity\":0},\"items\":[],\"commerceModifiers\":[],\"links\":{\"self\":{\"ref\":\"/buy/carts/v2/FR/NIKE/NIKECOM\"}},\"res",
+      "success": true
+    },
+    {
+      "variant": "A6: remove, path=/items, value: itemId (string)",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"},{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "A7: remove, path=/items/0, no value",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"MISSING_REQUIRED\",\"message\":\"Required field\",\"errors\":[{\"field\":\"value\",\"message\":\"Required field\",\"code\":\"MISSING_REQUIRED\"},{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "A8: remove, path=/items/0, value: null",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "A9: remove, path=/items/{id}, value: fullItemObject",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "A10: replace /items with array minus target item",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "A11: remove, path=/items, value: [itemId]",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"},{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "A12: remove, path=/items/{id}, value: {itemId: id}",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "B1: replace, path=/items/{id}/quantity, value: 2 (number)",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "B2: replace, path=/items/{id}/quantity, value: \"2\" (string)",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "B3: replace, path=/items/{id}, value: {quantity: 2}",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "B4: replace, path=/items/{id}, value: fullItem (qty=2)",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "B5: replace, path=/items, value: [{...item, quantity:2}]",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "B6: replace, path=/items/{id}/quantity, value: 0",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "B7: replace, path=/items/{id}/quantity, value: \"0\" (string)",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    },
+    {
+      "variant": "B8: merge, path=/items/{id}, value: {quantity: 2}",
+      "status": 400,
+      "bodyPreview": "{\"code\":\"FIELD_INVALID\",\"message\":\"Invalid field\",\"errors\":[{\"message\":\"Invalid field\",\"code\":\"FIELD_INVALID\"}]}",
+      "success": false
+    }
+  ]
+}

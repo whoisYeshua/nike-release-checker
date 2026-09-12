@@ -1,0 +1,15 @@
+# US-specific selector overrides.
+# This file is deep-merged on top of `selectors.yaml`.
+# Keys absent here inherit from the base (FR) selectors.
+# Only override the deltas — Nike US uses a slightly different shipping form
+# and the checkout URL omits the /fr/ locale prefix.
+#
+# Usage: register this file in the US country entry via:
+#   selectorOverridePath: 'selectors/US.yaml'
+# (kept null for now since US is not yet enabled in v3.0)
+
+# Nike US ships with a different save-address button data-attr and ZIP input name.
+shippingSaveButton: 'button[data-attr="saveAddressBtn-us"]'
+
+# US checkout URL — no locale segment (/fr/, /en-gb/, …) on the US flagship.
+checkoutLink: 'a[href*="nike.com/checkout"]'

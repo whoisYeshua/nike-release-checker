@@ -1,0 +1,47 @@
+name: Release SEA Binaries
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  macos:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26'
+      - run: npm ci
+      - run: bash build/build-macos.sh
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: packages/bot/dist/*.dmg
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26'
+      - run: npm ci
+      - run: powershell -File build/build-windows.ps1
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: packages/bot/dist/*.exe
+
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26'
+      - run: npm ci
+      - run: bash build/build-linux.sh
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            packages/bot/dist/nike-bot-linux-x64
+            packages/bot/dist/*.tar.gz

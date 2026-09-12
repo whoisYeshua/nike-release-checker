@@ -1,0 +1,129 @@
+# Nike France CSS selectors
+# Copy to selectors.yaml and update when Nike changes their DOM
+#
+# These selectors target the Nike FR store (nike.com/fr/) as of 2026-04-05.
+# Live-verified selectors are marked with ✓ — unverified ones (require logged-in
+# session to discover) are marked with ⚠ and use best-guess fallbacks.
+#
+# Verify with dry-run before live drops: nike-bot dry-run --slug <slug>
+
+# ========== LOGIN FLOW (accounts.nike.com) ==========
+# Nike uses a two-step form: (1) email lookup → (2) password entry.
+# Inputs are React-controlled — use page.fill() not .value= for input simulation.
+
+# ✓ Email lookup step
+loginEmailInput: 'input[name="credential"]'
+loginContinueButton: 'button[type="submit"][aria-label="continue"]'
+
+# ✓ Password step (same input element, becomes visible after email accepted)
+loginPasswordInput: 'input[name="password"]'
+loginSubmitButton: 'button[type="submit"]'
+
+# ⚠ Success indicator (needs login to verify) — user menu appears when authenticated
+loginSuccessIndicator: '[data-testid="top-nav-user-menu"]'
+
+# ✓ Error indicator — inline role="alert" on email/password validation failure
+loginErrorIndicator: '[role="alert"], [data-testid*="error"]'
+
+# ========== PRODUCT PAGE (nike.com/fr/t/...) ==========
+# Nike FR only renders AVAILABLE sizes in the grid — out-of-stock sizes are
+# removed from the DOM entirely (no `disabled` attribute on items).
+
+# ✓ Size grid container
+sizeAvailable: '[data-testid="pdp-grid-selector-item"]'
+
+# ✓ Selected size — Nike changes the testid from "pdp-grid-selector-item" to
+# "pdp-grid-selector-item-selected" when the size is chosen.
+sizeSelected: '[data-testid="pdp-grid-selector-item-selected"]'
+
+# ✓ Add to cart / purchase button
+purchaseButton: '[data-testid="atb-button"]'
+
+# ========== CART / CHECKOUT NAVIGATION ==========
+
+# ✓ Checkout button on cart page (nike.com/fr/cart)
+# Uses href-based selector because the button has no data-testid.
+checkoutLink: 'a[href$="/fr/checkout"], a[href*="/checkout/tunnel"]'
+
+# ========== CHECKOUT STEPS ==========
+# ⚠ All selectors below REQUIRE a logged-in session on nike.com/fr/checkout/tunnel.
+# Placeholders kept until a real login allows DOM inspection.
+
+# ⚠ Shipping
+shippingSaveButton: '[data-testid="shipping-continue"], button[type="submit"]'
+
+# ⚠ Payment
+paymentContinueButton: '[data-testid="payment-continue"], button[type="submit"]'
+
+# ⚠ Order review / final submit
+orderSubmitButton: '[data-testid="place-order-btn"], [data-testid="submit-order-btn"]'
+
+# ========== ERROR / BOT DETECTION ==========
+
+# ✓ Sold-out indicator — no dedicated element on Nike FR product pages.
+# Detection falls back to: (a) missing size grid items, (b) disabled ATC button,
+# (c) body text regex match on "épuisé" / "sold out".
+soldOutIndicator: '[data-testid="sold-out-indicator"]'
+
+# ✓ Bot detection / block signals (Akamai + Kasada + generic challenge pages)
+blockDetectionSignal: '#challenge-running, .block-page, #sec-cpt-if, h1:has-text("Access Denied"), [data-testid="bot-challenge"]'
+
+# ========== 3D SECURE ==========
+
+# ⚠ 3DS iframe selector — multiple patterns to catch Visa/Mastercard/Amex variants
+threeDSecureIframe: 'iframe[src*="acs"], iframe[src*="3ds"], iframe[name*="threeDSIframe"], iframe[title*="3D"]'
+
+# ========== CHECKOUT PIPELINE SELECTORS (nested) ==========
+# These drive the automated checkout pipeline — used by the steps/ modules.
+# Templates with {size} are runtime-substituted by selectSize.ts.
+
+productPage:
+  # ✓ Size grid container (fieldset)
+  sizeGrid: '[data-testid="pdp-grid-selector-grid"]'
+
+  # ✓ Size button template — {size} is the EU size number (e.g. "42", "42.5", "43")
+  # Target the LABEL directly (not the wrapping div) because clicking the div does NOT
+  # fire the radio input's change event — React listens for label clicks to toggle state.
+  sizeButton: '[data-testid="pdp-grid-selector-grid"] label:text-is("EU {size}")'
+
+  # ✓ Add to cart button
+  addToCartButton: '[data-testid="atb-button"]'
+
+  # ⚠ Sold-out indicator (Nike FR hides OOS sizes instead of marking them)
+  soldOutIndicator: '[data-testid="sold-out-indicator"]'
+
+  # ✓ Block / challenge indicator
+  blockIndicator: '#challenge-running, .block-page, #sec-cpt-if, h1:has-text("Access Denied")'
+
+cart:
+  # ✓ Checkout button (links to /fr/checkout/tunnel)
+  checkoutButton: 'a[href$="/fr/checkout"], a[href*="/checkout/tunnel"]'
+
+  # ✓ Cart count indicator (top nav shows count after ATC)
+  cartCount: 'a[href="https://www.nike.com/fr/cart"]'
+
+checkout:
+  # ✓ Shipping continue — text-based since Nike checkout has no data-testid
+  # ✓ 2026-05-29: the shipping save CTA is button[data-attr="saveAddressBtn"]
+  # ("Enregistrer et continuer"). Kept text fallbacks for older layouts.
+  shippingContinueButton: 'button[data-attr="saveAddressBtn"], button[type="submit"]:text-matches("Paiement|Enregistrer et continuer|Continue", "i")'
+  paymentSection: 'h2:has-text("Paiement"), [class*="payment-form"]'
+  # ✓ Payment continue (optional in the single-page flow) — best-effort click
+  # ✓ 2026-05-29: SNKRS launch checkout shows this between payment + order review.
+  # It is aria-disabled until the card passes client validation, then enables.
+  paymentContinueButton: '[data-attr="continueToOrderReviewBtn"], button:has-text("Continuer pour voir le récapitulatif"), button[type="submit"]:has-text("Continuer")'
+  threeDSIframe: 'iframe[src*="acs"], iframe[src*="3ds"], iframe[name*="threeDSIframe"]'
+  # ✓ Submit order — final "Passer la commande" on the order-summary step
+  # ✓ 2026-05-29: on SNKRS launches the final CTA is "Soumettre le paiement"
+  # (NOT "Passer la commande"). Keep both — submitOrder also appends fallbacks.
+  submitOrderButton: 'button:has-text("Soumettre le paiement"), button:has-text("Passer la commande"), button:has-text("Payer maintenant"), button[type="submit"]:has-text("Acheter"), button[type="submit"]:text-matches("Soumettre le paiement|Passer la commande|Acheter|Payer", "i"), [aria-label*="Passer la commande" i]'
+  orderConfirmation: 'h1:has-text("Commande confirmée"), h1:has-text("Merci"), h2:has-text("Commande confirmée"), h1:has-text("Merci pour ta commande"), [data-testid*="confirmation" i]'
+
+# ========== COOKIE CONSENT ==========
+# ✓ Nike shows a modal on every page load that blocks interaction.
+# dismissCookieConsent() is called at the start of checkout steps that navigate.
+
+cookieConsent:
+  modalRoot: '[data-testid="cookie-modal-root"]'
+  declineButton: '[data-testid="modal-decline-button"]'
+  acceptButton: '[data-testid="modal-accept-button"]'

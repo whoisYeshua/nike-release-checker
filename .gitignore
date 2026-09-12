@@ -11,3 +11,37 @@ yalc.lock
 
 #logs
 cli*.log
+
+#ai
+_bmad
+_bmad-output
+.agent
+.agents
+.agents/skills
+.claude
+.gemini
+.kiro
+.opencode
+.windsurf
+
+# Bot sensitive data (sessions, cookies, accounts with credentials)
+.bot-data/
+packages/bot/.bot-data/
+bot.config.yaml
+
+# Bot debug/live-test scripts + runtime artifacts
+packages/bot/scripts/.bot-data/
+.playwright-mcp/
+.rtk/
+accounts.json
+selectors.yaml
+bot.pid
+packages/bot/logs/
+# Sensitive bot config — never commit
+accounts.csv
+cards.csv
+cards.csv.imported
+addresses.csv
+drop.csv
+.bot-data
+~/.nike-bot
